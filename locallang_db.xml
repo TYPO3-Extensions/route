@@ -20,8 +20,8 @@
       <label index="tx_route_category.icon_offset_x">X-offset of the icon in a map</label>
       <label index="tx_route_category.icon_offset_y">Y-offset of the icon in a map</label>
       <label index="tx_route_path">Route</label>                        
-      <label index="tx_org_cal.div_control">Controlling</label>
-      <label index="tx_org_cal.div_seo">Search Engines</label>
+      <label index="tx_route_path.div_control">Controlling</label>
+      <label index="tx_route_path.div_seo">Search Engines</label>
     </languageKey>
     <languageKey index="de" type="array">
       <label index="tca_phrase.image">Bilder</label>
@@ -38,8 +38,8 @@
       <label index="tx_route_category.icon_offset_x">X-Offset des Piktogramms in einer Karte</label>
       <label index="tx_route_category.icon_offset_y">Y-Offset des Piktogramms in einer Karte</label>
       <label index="tx_route_path">Route</label>                        
-      <label index="tx_org_cal.div_control">Steuerung</label>
-      <label index="tx_org_cal.div_seo">Suchmaschinen</label>
+      <label index="tx_route_path.div_control">Steuerung</label>
+      <label index="tx_route_path.div_seo">Suchmaschinen</label>
     </languageKey>
   </data>
 </T3locallang>
