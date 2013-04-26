@@ -331,16 +331,71 @@ $TCA['tx_route_path'] = array (
       'config'    => $conf_text_30_05,
     ),
     'tx_route_category' => array (
-      'exclude'   => 0,
-      'l10n_mode' => 'prefixLangTitle',
+      'exclude'   => $bool_exclude_default,
+      'l10n_mode' => 'exclude',
       'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.tx_route_category',
-      'config'    => $conf_input_30_trimRequired,
+      'config'    => array (
+        'type'                => 'select',
+        'size'                => 10,
+        'minitems'            => 0,
+        'maxitems'            => 99,
+        'MM'                  => 'tx_route_path_mm_tx_route_category',
+        'foreign_table'       => 'tx_route_category',
+        'foreign_table_where' => 'AND tx_route_category.pid=###CURRENT_PID### AND tx_route_category.deleted = 0 AND tx_route_category.hidden = 0 ORDER BY tx_route_category.title',
+        'wizards' => array (
+          '_PADDING'  => 2,
+          '_VERTICAL' => 0,
+          'add' => array (
+            'type'   => 'script',
+            'title'  => 'LLL:EXT:route/locallang_db.xml:wizard.tx_route_category.add',
+            'icon'   => 'add.gif',
+            'params' => array (
+              'table'    => 'tx_route_category',
+              'pid'      => '###CURRENT_PID###',
+              'setValue' => 'prepend'
+            ),
+            'script' => 'wizard_add.php',
+          ),
+          'list' => array (
+            'type'   => 'script',
+            'title'  => 'LLL:EXT:route/locallang_db.xml:wizard.tx_route_category.list',
+            'icon'   => 'list.gif',
+            'params' => array (
+              'table' => 'tx_route_category',
+              'pid'      => '###CURRENT_PID###',
+            ),
+            'script' => 'wizard_list.php',
+          ),
+          'edit' => array (
+            'type'                      => 'popup',
+            'title'                     => 'LLL:EXT:route/locallang_db.xml:wizard.tx_route_category.edit',
+            'script'                    => 'wizard_edit.php',
+            'popup_onlyOpenIfSelected'  => 1,
+            'icon'                      => 'edit2.gif',
+            'JSopenParams'              => 'height=680,width=800,status=0,menubar=0,scrollbars=1',
+          ),
+        ),
+      ),
     ),
     'color' => array (
-      'exclude'   => 0,
-      'l10n_mode' => 'prefixLangTitle',
+      'exclude'   => $bool_exclude_default,
+      'l10n_mode' => 'exclude',
       'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.color',
-      'config'    => $conf_input_30_trimRequired,
+      'config'  => array (
+        'type'    => 'input',
+        'size'    => 10,
+        'eval'    => 'trim',
+        'wizards' => array (
+          'colorChoice' => array (
+            'type'          => 'colorbox',
+            'title'         => 'LLL:EXT:examples/locallang_db.xml:tx_examples_haiku.colorPick',
+            'script'        => 'wizard_colorpicker.php',
+            'dim'           => '20x20',
+            'tableStyle'    => 'border: solid 1px black; margin-left: 20px;',
+            'JSopenParams'  => 'height=300,width=380,status=0,menubar=0,scrollbars=0',
+          )
+        )
+      )
     ),
     'line_width' => array (
       'exclude'   => 0,
