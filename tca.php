@@ -559,7 +559,9 @@ $TCA['tx_route_path'] = array (
       'canNotCollapse' => 1,
     ),
     'time' => array (
-      'showitem'        => 'starttime,endtime,',
+      'showitem'        => 
+        'starttime;LLL:EXT:lang/locallang_general.xml:LGL.starttime,' .
+        'endtime;LLL:EXT:lang/locallang_general.xml:LGL.endtime,',
       'canNotCollapse'  => 1,
     ),
   )
