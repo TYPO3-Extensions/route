@@ -6,6 +6,11 @@
   </meta>
   <data type="array">
     <languageKey index="default" type="array">
+      <label index="tca_phrase.image">Images</label>
+      <label index="tca_phrase.imagecaption">Captions (one line per image)</label>
+      <label index="tca_phrase.imageseo">Label for Search Engines (one line per image)</label>
+      <label index="tca_phrase.seo_description">Description for Search Engine Optimisation</label>
+      <label index="tca_phrase.seo_keywords">Keywords for Search Engine Optimisation (CSV: comma separated values)</label>
       <label index="tx_route_category">Route: Categories</label>
       <label index="tx_route_category.div_cat">Category</label>
       <label index="tx_route_category.div_control">Controlling</label>
@@ -14,41 +19,16 @@
       <label index="tx_route_category.icons">Icons (1st: default. 2nd: big size)</label>
       <label index="tx_route_category.icon_offset_x">X-offset of the icon in a map</label>
       <label index="tx_route_category.icon_offset_y">Y-offset of the icon in a map</label>
-      <label index="tx_route_path">Order</label>                        
-      <label index="tx_route_path.customerEmail">to</label>                        
-      <label index="tx_route_path.div.email">E-mail</label>                        
-      <label index="tx_route_path.div.numbers">Numbers</label>                        
-      <label index="tx_route_path.div.sum">Sum</label>                        
-      <label index="tx_route_path.fileDeliveryorder">Delivery order</label>                        
-      <label index="tx_route_path.fileInvoice">Invoice</label>                        
-      <label index="tx_route_path.fileRevocation">Power of Revocation</label>                        
-      <label index="tx_route_path.fileTerms"><![CDATA[Terms & Conditions]]></label>                        
-      <label index="tx_route_path.item">Items</label>                        
-      <label index="tx_route_path.numberDeliveryorder">Delivery order</label>                        
-      <label index="tx_route_path.numberInvoice">Invoice</label>                        
-      <label index="tx_route_path.numberOrder">Order</label>                        
-      <label index="tx_route_path.palette.emailDate">Sent</label>
-      <label index="tx_route_path.palette.isSentToCustomer">Is sent to customer</label>                        
-      <label index="tx_route_path.palette.isSentToVendor">Is sent to vendor</label>                        
-      <label index="tx_route_path.palette.files">Files</label>                        
-      <label index="tx_route_path.palette.numbers">Numbers</label>                        
-      <label index="tx_route_path.palette.sum">Total</label>                        
-      <label index="tx_route_path.pdfDeliveryorderToCustomer">Delivery order</label>                        
-      <label index="tx_route_path.pdfDeliveryorderToVendor">Delivery order</label>                        
-      <label index="tx_route_path.pdfInvoiceToCustomer">Invoice</label>                        
-      <label index="tx_route_path.pdfInvoiceToVendor">Invoice</label>                        
-      <label index="tx_route_path.pdfRevocationToCustomer">Power of Revocation</label>                        
-      <label index="tx_route_path.pdfRevocationToVendor">Power of Revocation</label>                        
-      <label index="tx_route_path.pdfTermsToCustomer"><![CDATA[Terms & Conditions]]></label>                        
-      <label index="tx_route_path.pdfTermsToVendor"><![CDATA[Terms & Conditions]]></label>                        
-      <label index="tx_route_path.quantity">Number of items</label>                        
-      <label index="tx_route_path.sumNet">net</label>                        
-      <label index="tx_route_path.sumGross">gross</label>                        
-      <label index="tx_route_path.sumTaxNormal">tax (normal)</label>                        
-      <label index="tx_route_path.sumTaxReduced">tax (reduced)</label>                        
-      <label index="tx_route_path.tstamp">at</label>                        
+      <label index="tx_route_path">Route</label>                        
+      <label index="tx_org_cal.div_control">Controlling</label>
+      <label index="tx_org_cal.div_seo">Search Engines</label>
     </languageKey>
     <languageKey index="de" type="array">
+      <label index="tca_phrase.image">Bilder</label>
+      <label index="tca_phrase.imagecaption">Unterschriften (eine Zeile pro Datei)</label>
+      <label index="tca_phrase.imageseo">Bezeichnung f<![CDATA[ü]]>r Suchmaschinen (eine Zeile pro Datei)</label>
+      <label index="tca_phrase.seo_description">Beschreibung f<![CDATA[ü]]>r Suchmaschinen (bis etwa 200 Zeichen)</label>
+      <label index="tca_phrase.seo_keywords">Stichworte f<![CDATA[ü]]>r Suchmaschinen (drei bis f<![CDATA[ü]]>nf, mit Komma trennen)</label>
       <label index="tx_route_category">Route: Kategorien</label>
       <label index="tx_route_category.div_cat">Kategorie</label>
       <label index="tx_route_category.div_control">Steuerung</label>
@@ -57,39 +37,9 @@
       <label index="tx_route_category.icons">Piktogramm (1.: Standard. 2.: Gro<![CDATA[ß]]>es Format)</label>
       <label index="tx_route_category.icon_offset_x">X-Offset des Piktogramms in einer Karte</label>
       <label index="tx_route_category.icon_offset_y">Y-Offset des Piktogramms in einer Karte</label>
-      <label index="tx_route_path">Bestellung</label>                        
-      <label index="tx_route_path.customerEmail">an</label>                        
-      <label index="tx_route_path.div.email">E-Mail</label>                        
-      <label index="tx_route_path.div.numbers">Nummern</label>                        
-      <label index="tx_route_path.div.sum">Summe</label>                        
-      <label index="tx_route_path.fileDeliveryorder">Lieferschein</label>                        
-      <label index="tx_route_path.fileInvoice">Rechnung</label>                        
-      <label index="tx_route_path.fileRevocation">Widerrufsbelehrung</label>                        
-      <label index="tx_route_path.fileTerms">AGB</label>                        
-      <label index="tx_route_path.item">Artikel</label>                        
-      <label index="tx_route_path.numberDeliveryorder">Lieferschein</label>                        
-      <label index="tx_route_path.numberInvoice">Rechnung</label>                        
-      <label index="tx_route_path.numberOrder">Bestellung</label>                        
-      <label index="tx_route_path.palette.emailDate">Gesendet</label>                        
-      <label index="tx_route_path.palette.isSentToCustomer">An Kunden gesendet</label>                        
-      <label index="tx_route_path.palette.isSentToVendor">An Anbieter gesendet</label>                        
-      <label index="tx_route_path.palette.files">Dateien</label>                        
-      <label index="tx_route_path.palette.numbers">Nummern</label>                        
-      <label index="tx_route_path.palette.sum">Gesamtsumme</label>                        
-      <label index="tx_route_path.pdfDeliveryorderToCustomer">Lieferschein</label>                        
-      <label index="tx_route_path.pdfDeliveryorderToVendor">Lieferschein</label>                        
-      <label index="tx_route_path.pdfInvoiceToCustomer">Rechnung</label>                        
-      <label index="tx_route_path.pdfInvoiceToVendor">Rechnung</label>                        
-      <label index="tx_route_path.pdfRevocationToCustomer">Widerrufsbelehrung</label>                        
-      <label index="tx_route_path.pdfRevocationToVendor">Widerrufsbelehrung</label>                        
-      <label index="tx_route_path.pdfTermsToCustomer">AGB</label>                        
-      <label index="tx_route_path.pdfTermsToVendor">AGB</label>                        
-      <label index="tx_route_path.quantity">Anzahl der Artikel</label>                        
-      <label index="tx_route_path.sumNet">Netto</label>                        
-      <label index="tx_route_path.sumGross">Brutto</label>                        
-      <label index="tx_route_path.sumTaxNormal">MWSt. (normal)</label>                        
-      <label index="tx_route_path.sumTaxReduced">MWSt. (reduziert)</label>                        
-      <label index="tx_route_path.tstamp">am</label>                        
+      <label index="tx_route_path">Route</label>                        
+      <label index="tx_org_cal.div_control">Steuerung</label>
+      <label index="tx_org_cal.div_seo">Suchmaschinen</label>
     </languageKey>
   </data>
 </T3locallang>

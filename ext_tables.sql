@@ -46,7 +46,6 @@ CREATE TABLE tx_route_path (
   crdate int(11) DEFAULT '0' NOT NULL,
   cruser_id int(11) DEFAULT '0' NOT NULL,
   deleted tinyint(4) DEFAULT '0' NOT NULL,
-  hidden tinyint(4) DEFAULT '0' NOT NULL,
 
   title tinytext,
   short tinytext,
@@ -85,6 +84,11 @@ CREATE TABLE tx_route_path (
   list_short mediumtext,
   map_title tinytext,
   map_short mediumtext,
+
+  hidden tinyint(4) DEFAULT '0' NOT NULL,
+  starttime int(11) DEFAULT '0' NOT NULL,
+  endtime int(11) DEFAULT '0' NOT NULL,
+  fe_group varchar(100) DEFAULT '0' NOT NULL,
   
   seo_keywords text,
   seo_description text,
