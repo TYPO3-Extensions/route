@@ -15,9 +15,8 @@ if( ! defined( 'TYPO3_MODE' ) )
   //    Localization support
   // Enables the Include Static Templates
   // Add pagetree icons
-  // Plugin Configuration
   // TCA for tables
-  // Allow tables on pages
+  // addToInsertRecords
 
 
 
@@ -156,60 +155,70 @@ require_once(t3lib_extMgm::extPath($_EXTKEY).'lib/userfunc/class.tx_route_userfu
   //
   // TCA for tables
 
-  // Orders
+  // Path
 $TCA['tx_route_path'] = array (
   'ctrl' => array (
     'title'             => 'LLL:EXT:route/locallang_db.xml:tx_route_path',
-    'label'             => 'numberOrder',  
-    'label_alt'         => 'numberDeliveryorder,numberInvoice,customerEmail',  
-    'label_alt_force'   => true,  
+    'label'             => 'title',  
     'tstamp'            => 'tstamp',
     'crdate'            => 'crdate',
     'cruser_id'         => 'cruser_id',
     'delete'            => 'deleted',  
-    'default_sortby'    => 'ORDER BY numberOrder DESC, tstamp DESC',  
-    'readOnly'          => $confArr['databaseReadonly'],
+    'default_sortby'    => 'ORDER BY title',  
     'hideAtCopy'        => true,
     'dividers2tabs'     => true,
     'dynamicConfigFile' => t3lib_extMgm::extPath( $_EXTKEY ) . 'tca.php',
     'iconfile'          => t3lib_extMgm::extRelPath( $_EXTKEY ) . 'files/img/route.png',
   ),
 );
-  // Orders
+  // Path
 
-  // Items
-$TCA['tx_route_path_category'] = array (
+  // POI
+$TCA['tx_route_poi'] = array (
   'ctrl' => array (
-    'title'             => 'LLL:EXT:route/locallang_db.xml:tx_route_path_category',
-    'label'             => 'uid',  
-    'label_alt'         => 'title',  
-    'label_alt_force'   => true,  
+    'title'             => 'LLL:EXT:route/locallang_db.xml:tx_route_poi',
+    'label'             => 'title',  
     'tstamp'            => 'tstamp',
     'crdate'            => 'crdate',
     'cruser_id'         => 'cruser_id',
-    'delete'            => 'deleted',
-    'default_sortby'    => 'ORDER BY uid DESC',  
-    'readOnly'          => $confArr['databaseReadonly'],
+    'delete'            => 'deleted',  
+    'default_sortby'    => 'ORDER BY title',  
+    'hideAtCopy'        => true,
     'dividers2tabs'     => true,
     'dynamicConfigFile' => t3lib_extMgm::extPath( $_EXTKEY ) . 'tca.php',
     'iconfile'          => t3lib_extMgm::extRelPath( $_EXTKEY ) . 'files/img/route.png',
   ),
 );
-  // Items
-
+  // POI
+  
+  // Category
+$TCA['tx_route_category'] = array (
+  'ctrl' => array (
+    'title'             => 'LLL:EXT:route/locallang_db.xml:tx_route_category',
+    'label'             => 'title',  
+    'tstamp'            => 'tstamp',
+    'crdate'            => 'crdate',
+    'cruser_id'         => 'cruser_id',
+    'delete'            => 'deleted',
+    'default_sortby'    => 'ORDER BY title',  
+    'dividers2tabs'     => true,
+    'dynamicConfigFile' => t3lib_extMgm::extPath( $_EXTKEY ) . 'tca.php',
+    'iconfile'          => t3lib_extMgm::extRelPath( $_EXTKEY ) . 'files/img/route.png',
+  ),
+);
+  // Category
   // TCA for tables
 
 
 
   ////////////////////////////////////
   //
-  // Allow tables on pages
+  // addToInsertRecords
 
-#t3lib_extMgm::allowTableOnStandardPages( 'tx_route_path_category ');
-#t3lib_extMgm::allowTableOnStandardPages( 'tx_route_path ');
-#t3lib_extMgm::addToInsertRecords( 'tx_route_path_category ');
-#t3lib_extMgm::addToInsertRecords( 'tx_route_path ');
-  // Allow tables on pages
+t3lib_extMgm::addToInsertRecords( 'tx_route_category');
+t3lib_extMgm::addToInsertRecords( 'tx_route_path');
+t3lib_extMgm::addToInsertRecords( 'tx_route_poi');
+  // addToInsertRecords
 
 
 

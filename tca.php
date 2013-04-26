@@ -7,40 +7,76 @@ if (!defined ('TYPO3_MODE'))  die ('Access denied.');
   // 
   // INDEX
   // 
-  // tx_route_path_category
+  // tx_route_category
   // tx_route_path
 
 
 
   ///////////////////////////////////////
   // 
-  // tx_route_path_category
+  // tx_route_category
   
-$TCA['tx_route_path_category'] = array (
-  'ctrl' => $TCA['tx_route_path_category']['ctrl'],
+$TCA['tx_route_category'] = array(
+  'ctrl' => $TCA['tx_route_category']['ctrl'],
   'interface' => array (
-    'showRecordFieldList' => 'title'
+    'showRecordFieldList' =>  'title,title_lang_ol,icons,icon_offset_x,icon_offset_y,'.
+                              'hidden,'.
+                              'image,imagecaption,imageseo',
   ),
-  'feInterface' => $TCA['tx_route_path_category']['feInterface'],
   'columns' => array (
-    'title' => array (    
-      'exclude' => 0,    
-      'label' => 'LLL:EXT:route/locallang_db.xml:tx_route_path_category.title',
-      'config' => array (
-        'type' => 'input',  
-        'size' => '30',  
-        'eval' => 'required',
-      )
+    'title' => array (
+      'exclude' => 0,
+      'label'   => 'LLL:EXT:route/locallang_db.xml:tx_route_category.title',
+      'config'  => $conf_input_30_trimRequired,
     ),
+    'title_lang_ol' => array (
+      'exclude' => 0,
+      'label'   => 'LLL:EXT:route/locallang_db.xml:tx_route_category.title_lang_ol',
+      'config'  => $conf_input_30_trim,
+    ),
+    'icons' => array (
+      'exclude'   => $bool_exclude_default,
+//      'l10n_mode' => 'exclude',
+      'label'   => 'LLL:EXT:route/locallang_db.xml:tx_route_category.icons',
+      'config'    => $conf_file_image,
+    ),
+    'icon_offset_x' => array (
+      'exclude' => 0,
+      'label'   => 'LLL:EXT:route/locallang_db.xml:tx_route_category.icon_offset_x',
+      'config'    => array (
+        'type'     => 'input',
+        'size'     => '3',
+        'max'      => '3',
+        'eval'     => 'int',
+        'default'  => '0',
+      ),
+    ),
+    'icon_offset_y' => array (
+      'exclude' => 0,
+      'label'   => 'LLL:EXT:route/locallang_db.xml:tx_route_category.icon_offset_y',
+      'config'    => array (
+        'type'     => 'input',
+        'size'     => '3',
+        'max'      => '3',
+        'eval'     => 'int',
+        'default'  => '0',
+      ),
+    ),
+    'hidden'    => $conf_hidden,
   ),
   'types' => array (
-    '0' => array('showitem' => 'hidden;;1;;1-1-1, title;;%2%;;2-2-2')
+    '0' => array (
+      'showitem' =>  '--div--;LLL:EXT:route/locallang_db.xml:tx_route_category.div_cat,     title;;1;;1-1-1,icons,icon_offset_x,icon_offset_y,'.
+                     '--div--;LLL:EXT:route/locallang_db.xml:tx_route_category.div_control, hidden'
+    ),
   ),
   'palettes' => array (
-    '1' => array('showitem' => ''),
-  )
+    '1' => array (
+      'showitem' => 'title_lang_ol,'
+    ),
+  ),
 );
-  // tx_route_path_category
+  // tx_route_category
 
 
 
@@ -274,12 +310,12 @@ $TCA['tx_route_path'] = array (
       'label' => 'LLL:EXT:route/locallang_db.xml:tx_route_path.items',
       'config' => array (
         'type' => 'select',  
-        'foreign_table' => 'tx_route_path_category',  
-        'foreign_table_where' => 'AND tx_route_path_category.pid=###CURRENT_PID### ORDER BY tx_route_path_category.uid',  
+        'foreign_table' => 'tx_route_category',  
+        'foreign_table_where' => 'AND tx_route_category.pid=###CURRENT_PID### ORDER BY tx_route_category.uid',  
         'size' => 10,  
         'minitems' => 0,
         'maxitems' => 10,  
-        "MM" => "tx_route_path_mm_tx_route_path_category",  
+        "MM" => "tx_route_path_mm_tx_route_category",  
         'wizards' => array(
           '_PADDING'  => 2,
           '_VERTICAL' => 1,
@@ -288,7 +324,7 @@ $TCA['tx_route_path'] = array (
             'title'  => 'Create new record',
             'icon'   => 'add.gif',
             'params' => array(
-              'table'    => 'tx_route_path_category',
+              'table'    => 'tx_route_category',
               'pid'      => '###CURRENT_PID###',
               'setValue' => 'prepend'
             ),
@@ -299,7 +335,7 @@ $TCA['tx_route_path'] = array (
             'title'  => 'List',
             'icon'   => 'list.gif',
             'params' => array(
-              'table' => 'tx_route_path_category',
+              'table' => 'tx_route_category',
               'pid'   => '###CURRENT_PID###',
             ),
             'script' => 'wizard_list.php',
