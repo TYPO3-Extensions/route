@@ -51,6 +51,11 @@ CREATE TABLE tx_route_path (
   short tinytext,
   bodytext mediumtext NOT NULL,
 
+  list_title tinytext,
+  list_short mediumtext,
+  map_title tinytext,
+  map_short mediumtext,
+
   image text,
   imagecaption text,
   imageseo text,
@@ -73,17 +78,13 @@ CREATE TABLE tx_route_path (
   line_width int(3) DEFAULT '2' NOT NULL,
   icon_lat text NOT NULL,
   icon_lon text NOT NULL,
-  mail_address_start text NOT NULL,
-  mail_address_end text NOT NULL,
-  gpx text,
+  address_start text NOT NULL,
+  address_end text NOT NULL,
   url text NOT NULL,
 
-  tx_route_poi tinytext,
+  gpx text,
 
-  list_title tinytext,
-  list_short mediumtext,
-  map_title tinytext,
-  map_short mediumtext,
+  tx_route_poi tinytext,
 
   hidden tinyint(4) DEFAULT '0' NOT NULL,
   starttime int(11) DEFAULT '0' NOT NULL,

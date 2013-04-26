@@ -276,6 +276,11 @@ $TCA['tx_route_path'] = array (
   'ctrl' => $TCA['tx_route_path']['ctrl'],
   'interface' => array (
     'showRecordFieldList' =>  
+      'title,short,bodytext,' .
+      'list_title,list_short,map_title,map_short,' .
+      'tx_route_category,color,line_width,icon_lat,icon_lon,address_start,address_end,url,' .
+      'gpx,' .
+      'tx_route_poi,' .
       'image,imagecaption,imageseo,imagewidth,imageheight,imageorient,imagecaption,imagecols,imageborder,imagecaption_position,image_link,image_zoom,image_noRows,image_effects,image_compression,' .
       'hidden,starttime,endtime,fe_group,'.
       'seo_keywords,seo_description' .
@@ -283,6 +288,108 @@ $TCA['tx_route_path'] = array (
   ),
   'feInterface' => $TCA['tx_route_path']['feInterface'],
   'columns' => array (
+    'title' => array (
+      'exclude'   => 0,
+      'l10n_mode' => 'prefixLangTitle',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.title',
+      'config'    => $conf_input_30_trimRequired,
+    ),
+    'short' => array (
+      'exclude'   => 0,
+      'l10n_mode' => 'prefixLangTitle',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.short',
+      'config'    => $conf_input_30_trimRequired,
+    ),
+    'bodytext' => array (
+      'exclude'   => 0,
+      'l10n_mode' => 'prefixLangTitle',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.bodytext',
+      'config'    => $conf_input_30_trimRequired,
+    ),
+    'list_title' => array (
+      'exclude'   => 0,
+      'l10n_mode' => 'prefixLangTitle',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.list_title',
+      'config'    => $conf_input_30_trimRequired,
+    ),
+    'list_short' => array (
+      'exclude'   => 0,
+      'l10n_mode' => 'prefixLangTitle',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.list_short',
+      'config'    => $conf_input_30_trimRequired,
+    ),
+    'map_title' => array (
+      'exclude'   => 0,
+      'l10n_mode' => 'prefixLangTitle',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.map_title',
+      'config'    => $conf_input_30_trimRequired,
+    ),
+    'map_short' => array (
+      'exclude'   => 0,
+      'l10n_mode' => 'prefixLangTitle',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.map_short',
+      'config'    => $conf_input_30_trimRequired,
+    ),
+    'tx_route_category' => array (
+      'exclude'   => 0,
+      'l10n_mode' => 'prefixLangTitle',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.tx_route_category',
+      'config'    => $conf_input_30_trimRequired,
+    ),
+    'color' => array (
+      'exclude'   => 0,
+      'l10n_mode' => 'prefixLangTitle',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.color',
+      'config'    => $conf_input_30_trimRequired,
+    ),
+    'line_width' => array (
+      'exclude'   => 0,
+      'l10n_mode' => 'prefixLangTitle',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.line_width',
+      'config'    => $conf_input_30_trimRequired,
+    ),
+    'icon_lat' => array (
+      'exclude'   => 0,
+      'l10n_mode' => 'prefixLangTitle',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.icon_lat',
+      'config'    => $conf_input_30_trimRequired,
+    ),
+    'icon_lon' => array (
+      'exclude'   => 0,
+      'l10n_mode' => 'prefixLangTitle',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.icon_lon',
+      'config'    => $conf_input_30_trimRequired,
+    ),
+    'address_start' => array (
+      'exclude'   => 0,
+      'l10n_mode' => 'prefixLangTitle',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.address_start',
+      'config'    => $conf_input_30_trimRequired,
+    ),
+    'address_end' => array (
+      'exclude'   => 0,
+      'l10n_mode' => 'prefixLangTitle',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.address_end',
+      'config'    => $conf_input_30_trimRequired,
+    ),
+    'url' => array (
+      'exclude'   => 0,
+      'l10n_mode' => 'prefixLangTitle',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.url',
+      'config'    => $conf_input_30_trimRequired,
+    ),
+    'gpx' => array (
+      'exclude'   => 0,
+      'l10n_mode' => 'prefixLangTitle',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.gpx',
+      'config'    => $conf_input_30_trimRequired,
+    ),
+    'tx_route_poi' => array (
+      'exclude'   => 0,
+      'l10n_mode' => 'prefixLangTitle',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.tx_route_poi',
+      'config'    => $conf_input_30_trimRequired,
+    ),
     'image' => array (
       'exclude'   => $bool_exclude_default,
 //      'l10n_mode' => 'exclude',
@@ -519,6 +626,28 @@ $TCA['tx_route_path'] = array (
   'types' => array (
     '0' => array(
       'showitem' => 
+        '--div--;LLL:EXT:route/locallang_db.xml:tx_route_path.div_route,' . 
+          'title,' .
+          'short,' .
+          'bodytext,' .
+        '--div--;LLL:EXT:route/locallang_db.xml:tx_route_path.div_shortterms,' . 
+          'list_title,' .
+          'list_short,' .
+          'map_title,' .
+          'map_short,' .
+        '--div--;LLL:EXT:route/locallang_db.xml:tx_route_path.div_properties,' . 
+          'tx_route_category,' .
+          'color,' .
+          'line_width,' .
+          'icon_lat,' .
+          'icon_lon,' .
+          'address_start,' .
+          'address_end,' .
+          'url,' .
+        '--div--;LLL:EXT:route/locallang_db.xml:tx_route_path.div_gpx,' . 
+          'gpx,' .
+        '--div--;LLL:EXT:route/locallang_db.xml:tx_route_path.div_poi,' . 
+          'tx_route_poi,' .
         '--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.images,' .
           '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.imagefiles;imagefiles,' .
           '--palette--;LLL:EXT:route/locallang_db.xml:palette.image_accessibility;image_accessibility,' .

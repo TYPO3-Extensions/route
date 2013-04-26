@@ -23,7 +23,29 @@
       <label index="tx_route_category.icon_offset_y">Y-offset of the icon in a map</label>
       <label index="tx_route_path">Route</label>                        
       <label index="tx_route_path.div_control">Controlling</label>
+      <label index="tx_route_path.div_gpx">GPX File</label>
+      <label index="tx_route_path.div_poi">POI</label>
+      <label index="tx_route_path.div_properties">Properties</label>
+      <label index="tx_route_path.div_route">Route</label>
       <label index="tx_route_path.div_seo">Search Engines</label>
+      <label index="tx_route_path.div_shortterms">Short Terms</label>
+      <label index="tx_route_path.title">Title</label>                        
+      <label index="tx_route_path.short">Short</label>                        
+      <label index="tx_route_path.bodytext">Bodytext</label>                        
+      <label index="tx_route_path.list_title">List Title</label>                        
+      <label index="tx_route_path.list_short">List Short</label>                        
+      <label index="tx_route_path.map_title">Map Title</label>                        
+      <label index="tx_route_path.map_short">Map Short</label>                        
+      <label index="tx_route_path.tx_route_category">tx_route_category</label>                        
+      <label index="tx_route_path.color">Color</label>                        
+      <label index="tx_route_path.line_width">Line Width</label>                        
+      <label index="tx_route_path.icon_lat">Icon Lat</label>                        
+      <label index="tx_route_path.icon_lon">Icon Lon</label>                        
+      <label index="tx_route_path.address_start">address_start</label>                        
+      <label index="tx_route_path.address_end">address_end</label>                        
+      <label index="tx_route_path.url">URL</label>                        
+      <label index="tx_route_path.gpx">gpx</label>                        
+      <label index="tx_route_path.tx_route_poi">tx_route_poi</label>                        
     </languageKey>
     <languageKey index="de" type="array">
       <label index="palette.time">Auf Zeit beschr<![CDATA[ä]]>nkter Zugriff</label>
@@ -43,7 +65,12 @@
       <label index="tx_route_category.icon_offset_y">Y-Offset des Piktogramms in einer Karte</label>
       <label index="tx_route_path">Route</label>                        
       <label index="tx_route_path.div_control">Steuerung</label>
+      <label index="tx_route_path.div_gpx">GPX Datei</label>
+      <label index="tx_route_path.div_poi">POI</label>
+      <label index="tx_route_path.div_properties">Eigenschaften</label>
+      <label index="tx_route_path.div_route">Route</label>
       <label index="tx_route_path.div_seo">Suchmaschinen</label>
+      <label index="tx_route_path.div_shortterms">Kurze Bezeichnungen</label>
     </languageKey>
   </data>
 </T3locallang>
