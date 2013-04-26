@@ -9,7 +9,7 @@
       <label index="tx_route_category">Route: Categories</label>
       <label index="tx_route_category.div_cat">Category</label>
       <label index="tx_route_category.div_control">Controlling</label>
-      <label index="tx_route_category.title">Route: Category</label>
+      <label index="tx_route_category.title">Category label</label>
       <label index="tx_route_category.title_lang_ol">Translations (i.e. fr:Traduction|de:<![CDATA[Ü]]>bersetzung)</label>
       <label index="tx_route_category.icons">Icons (1st: default. 2nd: big size)</label>
       <label index="tx_route_category.icon_offset_x">X-offset of the icon in a map</label>
@@ -52,7 +52,7 @@
       <label index="tx_route_category">Route: Kategorien</label>
       <label index="tx_route_category.div_cat">Kategorie</label>
       <label index="tx_route_category.div_control">Steuerung</label>
-      <label index="tx_route_category.title">Route: Kategorie</label>
+      <label index="tx_route_category.title">Bezeichnung der Kategorie</label>
       <label index="tx_route_category.title_lang_ol"><![CDATA[Ü]]>bersetzungen (z.B. en:Translation|fr:Traduction)</label>
       <label index="tx_route_category.icons">Piktogramm (1.: Standard. 2.: Gro<![CDATA[ß]]>es Format)</label>
       <label index="tx_route_category.icon_offset_x">X-Offset des Piktogramms in einer Karte</label>
