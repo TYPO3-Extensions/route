@@ -2,5 +2,5 @@
 beLanguage = English
   # cat=language/others/198;      type=user[EXT:route/lib/userfunc/class.tx_route_userfunc.php:tx_route_userfunc->promptExternalLinks]; label=External Links
 beLanguageExternalLinks = 1
-  # cat=language/others/199;      type=user[EXT:route/lib/userfunc/class.tx_route_userfunc.php:tx_route_userfunc->promptSponsors]; label=Subsidise the Caddy project!
+  # cat=language/others/199;      type=user[EXT:route/lib/userfunc/class.tx_route_userfunc.php:tx_route_userfunc->promptSponsors]; label=Subsidise the Route project!
 beLanguageSponsors = 1
