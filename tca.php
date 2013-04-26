@@ -182,7 +182,7 @@ if (!defined ('TYPO3_MODE'))  die ('Access denied.');
   $conf_fegroup = array (
     'exclude'     => $bool_exclude_default,
     //'l10n_mode'   => 'mergeIfNotBlank',
-    'label'       => 'LLL:EXT:lang/locallang_general.php:LGL.fe_group',
+    'label'     => 'LLL:EXT:route/locallang_db.xml:tca_phrase.accessByFeGroup',
     'config'      => array (
       'type'      => 'select',
       'size'      => $size_fegroup,
