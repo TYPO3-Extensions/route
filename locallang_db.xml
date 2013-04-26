@@ -6,6 +6,7 @@
   </meta>
   <data type="array">
     <languageKey index="default" type="array">
+      <label index="palette.time">Access by time</label>
       <label index="tca_phrase.image">Images</label>
       <label index="tca_phrase.imagecaption">Captions (one line per image)</label>
       <label index="tca_phrase.imageseo">Label for Search Engines (one line per image)</label>
@@ -24,6 +25,7 @@
       <label index="tx_route_path.div_seo">Search Engines</label>
     </languageKey>
     <languageKey index="de" type="array">
+      <label index="palette.time">Access by time</label>
       <label index="tca_phrase.image">Bilder</label>
       <label index="tca_phrase.imagecaption">Unterschriften (eine Zeile pro Datei)</label>
       <label index="tca_phrase.imageseo">Bezeichnung f<![CDATA[ü]]>r Suchmaschinen (eine Zeile pro Datei)</label>

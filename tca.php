@@ -525,7 +525,10 @@ $TCA['tx_route_path'] = array (
           '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.imageblock;imageblock,' .
           '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.imagelinks;imagelinks,' .
           '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.image_settings;image_settings,' .
-        '--div--;LLL:EXT:route/locallang_db.xml:tx_route_path.div_control,     hidden,time,fe_group,'.
+        '--div--;LLL:EXT:route/locallang_db.xml:tx_route_path.div_control,' . 
+          'hidden,' .
+          '--palette--;LLL:EXT:route/locallang_db.xml:palette.time;time,' .
+          'fe_group,'.
         '--div--;LLL:EXT:route/locallang_db.xml:tx_route_path.div_seo,         seo_keywords,seo_description'.
         '',
       ),
