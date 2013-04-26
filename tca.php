@@ -25,7 +25,7 @@ $TCA['tx_route_path_category'] = array (
   'columns' => array (
     'title' => array (    
       'exclude' => 0,    
-      'label' => 'LLL:EXT:caddy/locallang_db.xml:tx_route_path_category.title',
+      'label' => 'LLL:EXT:route/locallang_db.xml:tx_route_path_category.title',
       'config' => array (
         'type' => 'input',  
         'size' => '30',  
@@ -65,7 +65,7 @@ $TCA['tx_route_path'] = array (
   'columns' => array (
     'customerEmail' => array (
       'exclude' => 0,
-      'label' => 'LLL:EXT:caddy/locallang_db.xml:tx_route_path.customerEmail',
+      'label' => 'LLL:EXT:route/locallang_db.xml:tx_route_path.customerEmail',
       'config' => array (
         'type' => 'input',  
         'size' => '40',  
@@ -74,13 +74,13 @@ $TCA['tx_route_path'] = array (
     ),
     'fileDeliveryorder' => array (
       'exclude' => 0,
-      'label' => 'LLL:EXT:caddy/locallang_db.xml:tx_route_path.fileDeliveryorder',
+      'label' => 'LLL:EXT:route/locallang_db.xml:tx_route_path.fileDeliveryorder',
       'config' => array (
         'type' => 'group',
         'internal_type' => 'file',
         'allowed' => 'pdf',  
         'max_size' => $GLOBALS['TYPO3_CONF_VARS']['BE']['maxFileSize'],  
-        'uploadfolder' => 'uploads/tx_caddy',
+        'uploadfolder' => 'uploads/tx_route',
         'show_thumbs' => 1,  
         'size' => 1,  
         'minitems' => 0,
@@ -89,13 +89,13 @@ $TCA['tx_route_path'] = array (
     ),
     'fileInvoice' => array (
       'exclude' => 0,
-      'label' => 'LLL:EXT:caddy/locallang_db.xml:tx_route_path.fileInvoice',
+      'label' => 'LLL:EXT:route/locallang_db.xml:tx_route_path.fileInvoice',
       'config' => array (
         'type' => 'group',
         'internal_type' => 'file',
         'allowed' => 'pdf',  
         'max_size' => $GLOBALS['TYPO3_CONF_VARS']['BE']['maxFileSize'],  
-        'uploadfolder' => 'uploads/tx_caddy',
+        'uploadfolder' => 'uploads/tx_route',
         'show_thumbs' => 1,  
         'size' => 1,  
         'minitems' => 0,
@@ -104,13 +104,13 @@ $TCA['tx_route_path'] = array (
     ),
     'fileRevocation' => array (
       'exclude' => 0,
-      'label' => 'LLL:EXT:caddy/locallang_db.xml:tx_route_path.fileRevocation',
+      'label' => 'LLL:EXT:route/locallang_db.xml:tx_route_path.fileRevocation',
       'config' => array (
         'type' => 'group',
         'internal_type' => 'file',
         'allowed' => 'pdf',  
         'max_size' => $GLOBALS['TYPO3_CONF_VARS']['BE']['maxFileSize'],  
-        'uploadfolder' => 'uploads/tx_caddy',
+        'uploadfolder' => 'uploads/tx_route',
         'show_thumbs' => 1,  
         'size' => 1,  
         'minitems' => 0,
@@ -119,13 +119,13 @@ $TCA['tx_route_path'] = array (
     ),
     'fileTerms' => array (
       'exclude' => 0,
-      'label' => 'LLL:EXT:caddy/locallang_db.xml:tx_route_path.fileTerms',
+      'label' => 'LLL:EXT:route/locallang_db.xml:tx_route_path.fileTerms',
       'config' => array (
         'type' => 'group',
         'internal_type' => 'file',
         'allowed' => 'pdf',  
         'max_size' => $GLOBALS['TYPO3_CONF_VARS']['BE']['maxFileSize'],  
-        'uploadfolder' => 'uploads/tx_caddy',
+        'uploadfolder' => 'uploads/tx_route',
         'show_thumbs' => 1,  
         'size' => 1,  
         'minitems' => 0,
@@ -134,7 +134,7 @@ $TCA['tx_route_path'] = array (
     ),
     'numberDeliveryorder' => array (
       'exclude' => 0,
-      'label' => 'LLL:EXT:caddy/locallang_db.xml:tx_route_path.numberDeliveryorder',
+      'label' => 'LLL:EXT:route/locallang_db.xml:tx_route_path.numberDeliveryorder',
       'config' => array (
         'type' => 'input',  
         'size' => '10',  
@@ -143,7 +143,7 @@ $TCA['tx_route_path'] = array (
     ),
     'numberInvoice' => array (
       'exclude' => 0,
-      'label' => 'LLL:EXT:caddy/locallang_db.xml:tx_route_path.numberInvoice',
+      'label' => 'LLL:EXT:route/locallang_db.xml:tx_route_path.numberInvoice',
       'config' => array (
         'type' => 'input',  
         'size' => '10',  
@@ -152,7 +152,7 @@ $TCA['tx_route_path'] = array (
     ),
     'numberOrder' => array (
       'exclude' => 0,
-      'label' => 'LLL:EXT:caddy/locallang_db.xml:tx_route_path.numberOrder',
+      'label' => 'LLL:EXT:route/locallang_db.xml:tx_route_path.numberOrder',
       'config' => array (
         'type' => 'input',  
         'size' => '10',  
@@ -161,7 +161,7 @@ $TCA['tx_route_path'] = array (
     ),
     'pdfDeliveryorderToCustomer' => array (
       'exclude' => 0,
-      'label' => 'LLL:EXT:caddy/locallang_db.xml:tx_route_path.pdfDeliveryorderToCustomer',
+      'label' => 'LLL:EXT:route/locallang_db.xml:tx_route_path.pdfDeliveryorderToCustomer',
       'config' => array (
         'type' => 'check',
         'default' => 1,
@@ -169,7 +169,7 @@ $TCA['tx_route_path'] = array (
     ),
     'pdfDeliveryorderToVendor' => array (
       'exclude' => 0,
-      'label' => 'LLL:EXT:caddy/locallang_db.xml:tx_route_path.pdfDeliveryorderToVendor',
+      'label' => 'LLL:EXT:route/locallang_db.xml:tx_route_path.pdfDeliveryorderToVendor',
       'config' => array (
         'type' => 'check',
         'default' => 1,
@@ -177,7 +177,7 @@ $TCA['tx_route_path'] = array (
     ),
     'pdfInvoiceToCustomer' => array (
       'exclude' => 0,
-      'label' => 'LLL:EXT:caddy/locallang_db.xml:tx_route_path.pdfInvoiceToCustomer',
+      'label' => 'LLL:EXT:route/locallang_db.xml:tx_route_path.pdfInvoiceToCustomer',
       'config' => array (
         'type' => 'check',
         'default' => 1,
@@ -185,7 +185,7 @@ $TCA['tx_route_path'] = array (
     ),
     'pdfInvoiceToVendor' => array (
       'exclude' => 0,
-      'label' => 'LLL:EXT:caddy/locallang_db.xml:tx_route_path.pdfInvoiceToVendor',
+      'label' => 'LLL:EXT:route/locallang_db.xml:tx_route_path.pdfInvoiceToVendor',
       'config' => array (
         'type' => 'check',
         'default' => 1,
@@ -193,7 +193,7 @@ $TCA['tx_route_path'] = array (
     ),
     'pdfRevocationToCustomer' => array (
       'exclude' => 0,
-      'label' => 'LLL:EXT:caddy/locallang_db.xml:tx_route_path.pdfRevocationToCustomer',
+      'label' => 'LLL:EXT:route/locallang_db.xml:tx_route_path.pdfRevocationToCustomer',
       'config' => array (
         'type' => 'check',
         'default' => 1,
@@ -201,7 +201,7 @@ $TCA['tx_route_path'] = array (
     ),
     'pdfRevocationToVendor' => array (
       'exclude' => 0,
-      'label' => 'LLL:EXT:caddy/locallang_db.xml:tx_route_path.pdfRevocationToVendor',
+      'label' => 'LLL:EXT:route/locallang_db.xml:tx_route_path.pdfRevocationToVendor',
       'config' => array (
         'type' => 'check',
         'default' => 1,
@@ -209,7 +209,7 @@ $TCA['tx_route_path'] = array (
     ),
     'pdfTermsToCustomer' => array (
       'exclude' => 0,
-      'label' => 'LLL:EXT:caddy/locallang_db.xml:tx_route_path.pdfTermsToCustomer',
+      'label' => 'LLL:EXT:route/locallang_db.xml:tx_route_path.pdfTermsToCustomer',
       'config' => array (
         'type' => 'check',
         'default' => 1,
@@ -217,7 +217,7 @@ $TCA['tx_route_path'] = array (
     ),
     'pdfTermsToVendor' => array (
       'exclude' => 0,
-      'label' => 'LLL:EXT:caddy/locallang_db.xml:tx_route_path.pdfTermsToVendor',
+      'label' => 'LLL:EXT:route/locallang_db.xml:tx_route_path.pdfTermsToVendor',
       'config' => array (
         'type' => 'check',
         'default' => 1,
@@ -225,7 +225,7 @@ $TCA['tx_route_path'] = array (
     ),
     'sumGross' => array (
       'exclude' => 0,
-      'label' => 'LLL:EXT:caddy/locallang_db.xml:tx_route_path.sumGross',
+      'label' => 'LLL:EXT:route/locallang_db.xml:tx_route_path.sumGross',
       'config' => array (
         'type' => 'input',  
         'size' => '10',  
@@ -234,7 +234,7 @@ $TCA['tx_route_path'] = array (
     ),
     'sumNet' => array (
       'exclude' => 0,
-      'label' => 'LLL:EXT:caddy/locallang_db.xml:tx_route_path.sumNet',
+      'label' => 'LLL:EXT:route/locallang_db.xml:tx_route_path.sumNet',
       'config' => array (
         'type' => 'input',  
         'size' => '10',  
@@ -243,7 +243,7 @@ $TCA['tx_route_path'] = array (
     ),
     'sumTaxNormal' => array (
       'exclude' => 0,
-      'label' => 'LLL:EXT:caddy/locallang_db.xml:tx_route_path.sumTaxNormal',
+      'label' => 'LLL:EXT:route/locallang_db.xml:tx_route_path.sumTaxNormal',
       'config' => array (
         'type' => 'input',  
         'size' => '10',  
@@ -252,7 +252,7 @@ $TCA['tx_route_path'] = array (
     ),
     'sumTaxReduced' => array (
       'exclude' => 0,
-      'label' => 'LLL:EXT:caddy/locallang_db.xml:tx_route_path.sumTaxReduced',
+      'label' => 'LLL:EXT:route/locallang_db.xml:tx_route_path.sumTaxReduced',
       'config' => array (
         'type' => 'input',  
         'size' => '10',  
@@ -261,7 +261,7 @@ $TCA['tx_route_path'] = array (
     ),
     'quantity' => array (
       'exclude' => 0,
-      'label' => 'LLL:EXT:caddy/locallang_db.xml:tx_route_path.quantity',
+      'label' => 'LLL:EXT:route/locallang_db.xml:tx_route_path.quantity',
       'config' => array (
         'type' => 'input',
         'size' => '10',
@@ -271,7 +271,7 @@ $TCA['tx_route_path'] = array (
     'items' => array (
       'l10n_mode' => 'exclude',
       'exclude' => 0,
-      'label' => 'LLL:EXT:caddy/locallang_db.xml:tx_route_path.items',
+      'label' => 'LLL:EXT:route/locallang_db.xml:tx_route_path.items',
       'config' => array (
         'type' => 'select',  
         'foreign_table' => 'tx_route_path_category',  
@@ -318,7 +318,7 @@ $TCA['tx_route_path'] = array (
     'tstamp' => array (
       'exclude'   => 0,
       'l10n_mode' => 'exclude',
-      'label'     => 'LLL:EXT:caddy/locallang_db.xml:tx_route_path.tstamp',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.tstamp',
       'config'    => array (
         'type'    => 'input',
         'size'    => '10',
@@ -332,71 +332,71 @@ $TCA['tx_route_path'] = array (
   'types' => array (
     '0' => array(
       'showitem' => 
-        '--div--;LLL:EXT:caddy/locallang_db.xml:tx_route_path.div.email,' .
-          '--palette--;LLL:EXT:caddy/locallang_db.xml:tx_route_path.palette.emailDate;emailDate,' .
-          '--palette--;LLL:EXT:caddy/locallang_db.xml:tx_route_path.palette.isSentToCustomer;isSentToCustomer,' .
-          '--palette--;LLL:EXT:caddy/locallang_db.xml:tx_route_path.palette.isSentToVendor;isSentToVendor,' .
-          '--palette--;LLL:EXT:caddy/locallang_db.xml:tx_route_path.palette.files;files,' .
-        '--div--;LLL:EXT:caddy/locallang_db.xml:tx_route_path.div.numbers,' .
-          '--palette--;LLL:EXT:caddy/locallang_db.xml:tx_route_path.palette.numbers;numbers,' .
-        '--div--;LLL:EXT:caddy/locallang_db.xml:tx_route_path.div.sum,' .
-          '--palette--;LLL:EXT:caddy/locallang_db.xml:tx_route_path.palette.sum;sum,' .
+        '--div--;LLL:EXT:route/locallang_db.xml:tx_route_path.div.email,' .
+          '--palette--;LLL:EXT:route/locallang_db.xml:tx_route_path.palette.emailDate;emailDate,' .
+          '--palette--;LLL:EXT:route/locallang_db.xml:tx_route_path.palette.isSentToCustomer;isSentToCustomer,' .
+          '--palette--;LLL:EXT:route/locallang_db.xml:tx_route_path.palette.isSentToVendor;isSentToVendor,' .
+          '--palette--;LLL:EXT:route/locallang_db.xml:tx_route_path.palette.files;files,' .
+        '--div--;LLL:EXT:route/locallang_db.xml:tx_route_path.div.numbers,' .
+          '--palette--;LLL:EXT:route/locallang_db.xml:tx_route_path.palette.numbers;numbers,' .
+        '--div--;LLL:EXT:route/locallang_db.xml:tx_route_path.div.sum,' .
+          '--palette--;LLL:EXT:route/locallang_db.xml:tx_route_path.palette.sum;sum,' .
         '',
       ),
   ),
   'palettes' => array (
     'emailDate' => array (
       'showitem' => 
-        'customerEmail;LLL:EXT:caddy/locallang_db.xml:tx_route_path.customerEmail,' .
-        'tstamp;LLL:EXT:caddy/locallang_db.xml:tx_route_path.tstamp,' .
+        'customerEmail;LLL:EXT:route/locallang_db.xml:tx_route_path.customerEmail,' .
+        'tstamp;LLL:EXT:route/locallang_db.xml:tx_route_path.tstamp,' .
         '',
       'canNotCollapse' => 1,
     ),
     'files' => array (
       'showitem' => 
-        'fileDeliveryorder;LLL:EXT:caddy/locallang_db.xml:tx_route_path.fileDeliveryorder,' .
-        'fileInvoice;LLL:EXT:caddy/locallang_db.xml:tx_route_path.fileInvoice,' .
+        'fileDeliveryorder;LLL:EXT:route/locallang_db.xml:tx_route_path.fileDeliveryorder,' .
+        'fileInvoice;LLL:EXT:route/locallang_db.xml:tx_route_path.fileInvoice,' .
         '--linebreak--,' . 
-        'fileRevocation;LLL:EXT:caddy/locallang_db.xml:tx_route_path.fileRevocation,' .
-        'fileTerms;LLL:EXT:caddy/locallang_db.xml:tx_route_path.fileTerms,' .
+        'fileRevocation;LLL:EXT:route/locallang_db.xml:tx_route_path.fileRevocation,' .
+        'fileTerms;LLL:EXT:route/locallang_db.xml:tx_route_path.fileTerms,' .
         '',
       'canNotCollapse' => 1,
     ),
     'isSentToCustomer' => array (
       'showitem' => 
-        'pdfDeliveryorderToCustomer;LLL:EXT:caddy/locallang_db.xml:tx_route_path.pdfDeliveryorderToCustomer,' .
-        'pdfInvoiceToCustomer;LLL:EXT:caddy/locallang_db.xml:tx_route_path.pdfInvoiceToCustomer,' .
-        'pdfRevocationToCustomer;LLL:EXT:caddy/locallang_db.xml:tx_route_path.pdfRevocationToCustomer,' .
-        'pdfTermsToCustomer;LLL:EXT:caddy/locallang_db.xml:tx_route_path.pdfTermsToCustomer,' .
+        'pdfDeliveryorderToCustomer;LLL:EXT:route/locallang_db.xml:tx_route_path.pdfDeliveryorderToCustomer,' .
+        'pdfInvoiceToCustomer;LLL:EXT:route/locallang_db.xml:tx_route_path.pdfInvoiceToCustomer,' .
+        'pdfRevocationToCustomer;LLL:EXT:route/locallang_db.xml:tx_route_path.pdfRevocationToCustomer,' .
+        'pdfTermsToCustomer;LLL:EXT:route/locallang_db.xml:tx_route_path.pdfTermsToCustomer,' .
         '',
       'canNotCollapse' => 1,
     ),
     'isSentToVendor' => array (
       'showitem' => 
-        'pdfDeliveryorderToVendor;LLL:EXT:caddy/locallang_db.xml:tx_route_path.pdfDeliveryorderToVendor,' .
-        'pdfInvoiceToVendor;LLL:EXT:caddy/locallang_db.xml:tx_route_path.pdfInvoiceToVendor,' .
-        'pdfRevocationToVendor;LLL:EXT:caddy/locallang_db.xml:tx_route_path.pdfRevocationToVendor,' .
-        'pdfTermsToVendor;LLL:EXT:caddy/locallang_db.xml:tx_route_path.pdfTermsToVendor,' .
+        'pdfDeliveryorderToVendor;LLL:EXT:route/locallang_db.xml:tx_route_path.pdfDeliveryorderToVendor,' .
+        'pdfInvoiceToVendor;LLL:EXT:route/locallang_db.xml:tx_route_path.pdfInvoiceToVendor,' .
+        'pdfRevocationToVendor;LLL:EXT:route/locallang_db.xml:tx_route_path.pdfRevocationToVendor,' .
+        'pdfTermsToVendor;LLL:EXT:route/locallang_db.xml:tx_route_path.pdfTermsToVendor,' .
         '',
       'canNotCollapse' => 1,
     ),
     'numbers' => array (
       'showitem' => 
-        'numberOrder;LLL:EXT:caddy/locallang_db.xml:tx_route_path.numberOrder,' .
-        'numberDeliveryorder;LLL:EXT:caddy/locallang_db.xml:tx_route_path.numberDeliveryorder,' .
-        'numberInvoice;LLL:EXT:caddy/locallang_db.xml:tx_route_path.numberInvoice,' .
+        'numberOrder;LLL:EXT:route/locallang_db.xml:tx_route_path.numberOrder,' .
+        'numberDeliveryorder;LLL:EXT:route/locallang_db.xml:tx_route_path.numberDeliveryorder,' .
+        'numberInvoice;LLL:EXT:route/locallang_db.xml:tx_route_path.numberInvoice,' .
         '',
       'canNotCollapse' => 1,
     ),
     'sum' => array (
       'showitem' => 
-        'sumNet;LLL:EXT:caddy/locallang_db.xml:tx_route_path.sumNet,' .
+        'sumNet;LLL:EXT:route/locallang_db.xml:tx_route_path.sumNet,' .
         '--linebreak--,' . 
-        'sumTaxReduced;LLL:EXT:caddy/locallang_db.xml:tx_route_path.sumTaxReduced,' .
+        'sumTaxReduced;LLL:EXT:route/locallang_db.xml:tx_route_path.sumTaxReduced,' .
         '--linebreak--,' . 
-        'sumTaxNormal;LLL:EXT:caddy/locallang_db.xml:tx_route_path.sumTaxNormal,' .
+        'sumTaxNormal;LLL:EXT:route/locallang_db.xml:tx_route_path.sumTaxNormal,' .
         '--linebreak--,' . 
-        'sumGross;LLL:EXT:caddy/locallang_db.xml:tx_route_path.sumGross,' .
+        'sumGross;LLL:EXT:route/locallang_db.xml:tx_route_path.sumGross,' .
         '',
       'canNotCollapse' => 1,
     ),
