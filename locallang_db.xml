@@ -33,7 +33,7 @@
       <label index="tx_route_path.div_control">Controlling</label>
       <label index="tx_route_path.div_design">Design</label>
       <label index="tx_route_path.div_gpx">Data</label>
-      <label index="tx_route_path.div_poi">POI</label>
+      <label index="tx_route_path.div_poi">Marker</label>
       <label index="tx_route_path.div_address">Address</label>
       <label index="tx_route_path.div_path">Path</label>
       <label index="tx_route_path.div_seo">Search Engines</label>
@@ -64,7 +64,7 @@
       <label index="tx_route_poi.div_properties">Eigenschaften</label>
       <label index="tx_route_poi.div_seo">Search Engines</label>
       <label index="tx_route_poi.div_shortterms">Short Terms</label>
-      <label index="tx_route_poi.address">Address of the POI</label>
+      <label index="tx_route_poi.address">Address of the Marker</label>
       <label index="tx_route_poi.bodytext">Bodytext</label>                        
       <label index="tx_route_poi.lat">Latitude</label>
       <label index="tx_route_poi.list_title">Label in List View (leave it empty, if default value should taken)</label>                        
@@ -110,7 +110,7 @@
       <label index="tx_route_path.div_control">Steuerung</label>
       <label index="tx_route_path.div_design">Design</label>
       <label index="tx_route_path.div_gpx">Daten</label>
-      <label index="tx_route_path.div_poi">POI</label>
+      <label index="tx_route_path.div_poi">Markierungen</label>
       <label index="tx_route_path.div_properties">Eigenschaften</label>
       <label index="tx_route_path.div_path">Pfad</label>
       <label index="tx_route_path.div_seo">Suchmaschinen</label>
