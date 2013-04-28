@@ -149,10 +149,15 @@ plugin.tx_browser_pi1 {
               </h2>
               <ul>
                 <li>
-                  ###TX_ROUTE_CATEGORY.TITLE###
+                  ###TX_ROUTE_PATH_CAT.TITLE###
                 </li>
+              </ul>
+              <h3>
+                ###TX_ROUTE_POI.TITLE###
+              </h3>
+              <ul>
                 <li>
-                  ###TX_ROUTE_POI.TITLE###
+                  ###TX_ROUTE_POI_CAT.TITLE###
                 </li>
               </ul>
               <div class="cleaner">&nbsp;</div>
