@@ -249,7 +249,7 @@ $TCA['tx_route_category'] = array (
     ),
     'title_lang_ol' => array (
       'exclude' => 0,
-      'label'   => 'LLL:EXT:route/locallang_db.xml:tx_route_category.title_lang_ol',
+      'label'   => 'LLL:EXT:route/locallang_db.xml:tca_phrase.lang_ol',
       'config'  => $conf_input_30_trim,
     ),
     'text' => array (
@@ -259,7 +259,7 @@ $TCA['tx_route_category'] = array (
     ),
     'text_lang_ol' => array (
       'exclude' => $bool_exclude_default,
-      'label'   => 'LLL:EXT:route/locallang_db.xml:tx_route_category.text_lang_ol',
+      'label'   => 'LLL:EXT:route/locallang_db.xml:tca_phrase.lang_ol',
       'config'  => $conf_text_30_05,
     ),
     'color' => array (
@@ -285,17 +285,17 @@ $TCA['tx_route_category'] = array (
     'image' => array (
       'l10n_mode' => 'exclude',
       'exclude'   => $bool_exclude_default,
-      'label'     => 'LLL:EXT:route/locallang_db.xml:tca_phrase.image.cat',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tca_phrase.icon',
       'config'    => $conf_file_icon,
     ),
     'imageseo' => array (
       'exclude' => $bool_exclude_default,
-      'label'   => 'LLL:EXT:route/locallang_db.xml:tca_phrase.imageseo.oneline',
+      'label'   => 'LLL:EXT:route/locallang_db.xml:tca_phrase.seo_description',
       'config'  => $conf_input_30,
     ),
     'imageseo_lang_ol' => array (
       'exclude' => $bool_exclude_default,
-      'label'   => 'LLL:EXT:route/locallang_db.xml:tca_phrase.imageseo_lang_ol.oneline',
+      'label'   => 'LLL:EXT:route/locallang_db.xml:tca_phrase.lang_ol',
       'config'  => $conf_input_30,
     ),
     'imagewidth' => array (
@@ -398,7 +398,7 @@ $TCA['tx_route_category'] = array (
     'imagefiles'      => array (
       'showitem'        =>  
           'image;LLL:EXT:route/locallang_db.xml:tca_phrase.image.cat,' . 
-          'imageseo;LLL:EXT:route/locallang_db.xml:tca_phrase.imageseo.oneline' ,
+          'imageseo;LLL:EXT:route/locallang_db.xml:tca_phrase.seo_description' ,
       'canNotCollapse'  =>  1,
     ),
     'image_settings'  => array (
@@ -903,13 +903,17 @@ $TCA['tx_route_path'] = array (
     ),
     'imageblock' => array (
       'showitem'        => 
-        'imageorient;LLL:EXT:cms/locallang_ttc.xml:imageorient_formlabel, imagecols;LLL:EXT:cms/locallang_ttc.xml:imagecols_formlabel, --linebreak--,' .
-        'image_noRows;LLL:EXT:cms/locallang_ttc.xml:image_noRows_formlabel, imagecaption_position;LLL:EXT:cms/locallang_ttc.xml:imagecaption_position_formlabel',
+        'imageorient;LLL:EXT:cms/locallang_ttc.xml:imageorient_formlabel,' . 
+        'imagecols;LLL:EXT:cms/locallang_ttc.xml:imagecols_formlabel,' . 
+        '--linebreak--,' .
+        'image_noRows;LLL:EXT:cms/locallang_ttc.xml:image_noRows_formlabel,' . 
+        'imagecaption_position;LLL:EXT:cms/locallang_ttc.xml:imagecaption_position_formlabel',
       'canNotCollapse'  => 1,
     ),
     'imagefiles' => array (
       'showitem'        => 
-        'image;LLL:EXT:cms/locallang_ttc.xml:image_formlabel, imagecaption;LLL:EXT:cms/locallang_ttc.xml:imagecaption_formlabel,',
+        'image;LLL:EXT:cms/locallang_ttc.xml:image_formlabel,' . 
+        'imagecaption;LLL:EXT:cms/locallang_ttc.xml:imagecaption_formlabel,',
       'canNotCollapse'  => 1,
     ),
     'imagelinks' => array (
@@ -920,8 +924,13 @@ $TCA['tx_route_path'] = array (
     ),
     'image_settings' => array (
       'showitem'        => 
-        'imagewidth;LLL:EXT:cms/locallang_ttc.xml:imagewidth_formlabel, imageheight;LLL:EXT:cms/locallang_ttc.xml:imageheight_formlabel, imageborder;LLL:EXT:cms/locallang_ttc.xml:imageborder_formlabel, --linebreak--,' .
-        'image_compression;LLL:EXT:cms/locallang_ttc.xml:image_compression_formlabel, image_effects;LLL:EXT:cms/locallang_ttc.xml:image_effects_formlabel, image_frames;LLL:EXT:cms/locallang_ttc.xml:image_frames_formlabel',
+        'imagewidth;LLL:EXT:cms/locallang_ttc.xml:imagewidth_formlabel,' . 
+        'imageheight;LLL:EXT:cms/locallang_ttc.xml:imageheight_formlabel,' . 
+        'imageborder;LLL:EXT:cms/locallang_ttc.xml:imageborder_formlabel,' . 
+        '--linebreak--,' .
+        'image_compression;LLL:EXT:cms/locallang_ttc.xml:image_compression_formlabel,' . 
+        'image_effects;LLL:EXT:cms/locallang_ttc.xml:image_effects_formlabel,' . 
+        'image_frames;LLL:EXT:cms/locallang_ttc.xml:image_frames_formlabel',
       'canNotCollapse' => 1,
     ),
     'time' => array (
