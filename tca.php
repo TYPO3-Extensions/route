@@ -459,9 +459,9 @@ $TCA['tx_route_path'] = array (
       'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.tx_route_category',
       'config'    => array (
         'type'                => 'select',
-        'size'                => 1,
-        'minitems'            => 1,
-        'maxitems'            => 1,
+        'size'                => 10,
+        'minitems'            => 0,
+        'maxitems'            => 99,
         'MM'                  => 'tx_route_path_mm_tx_route_category',
         'foreign_table'       => 'tx_route_category',
         'foreign_table_where' => 'AND tx_route_category.pid=###CURRENT_PID### AND tx_route_category.deleted = 0 AND tx_route_category.hidden = 0 ORDER BY tx_route_category.title',
