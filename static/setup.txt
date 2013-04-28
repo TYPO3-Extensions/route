@@ -56,19 +56,31 @@ plugin.tx_browser_pi1 {
             type  = LEFT JOIN
             table = tx_route_category
             alias = path_cat
-            on    = path.uid = path_mm_cat.uid_forein
+            on    = path_cat.uid = path_mm_cat.uid_foreign
           }
           2 {
+            type  = LEFT JOIN
+            table = tx_route_path_mm_tx_route_poi
+            alias = path_mm_poi
+            on    = path.uid = path_mm_poi.uid_local
+          }
+          3 {
+            type  = LEFT JOIN
+            table = tx_route_poi
+            alias = poi
+            on    = poi.uid = path_mm_poi.uid_foreign
+          }
+          4 {
             type  = LEFT JOIN
             table = tx_route_poi_mm_tx_route_category
             alias = poi_mm_cat
             on    = poi.uid = poi_mm_cat.uid_local
           }
-          3 {
+          5 {
             type  = LEFT JOIN
             table = tx_route_category
             alias = poi_cat
-            on    = poi.uid = poi_mm_cat.uid_forein
+            on    = poi_cat.uid = poi_mm_cat.uid_foreign
           }
         }
         aliases {
