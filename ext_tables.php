@@ -158,15 +158,18 @@ require_once(t3lib_extMgm::extPath($_EXTKEY).'lib/userfunc/class.tx_route_userfu
   // Path
 $TCA['tx_route_path'] = array (
   'ctrl' => array (
-    'title'             => 'LLL:EXT:route/locallang_db.xml:tx_route_path',
-    'label'             => 'title',  
-    'tstamp'            => 'tstamp',
-    'crdate'            => 'crdate',
-    'cruser_id'         => 'cruser_id',
-    'delete'            => 'deleted',  
-    'default_sortby'    => 'ORDER BY title',  
-    'hideAtCopy'        => true,
-    'enablecolumns'     => array (
+    'title'                     => 'LLL:EXT:route/locallang_db.xml:tx_route_path',
+    'label'                     => 'title',  
+    'tstamp'                    => 'tstamp',
+    'crdate'                    => 'crdate',
+    'cruser_id'                 => 'cruser_id',
+    'languageField'             => 'sys_language_uid',
+    'transOrigPointerField'     => 'l10n_parent',
+    'transOrigDiffSourceField'  => 'l10n_diffsource',
+    'delete'                    => 'deleted',  
+    'default_sortby'            => 'ORDER BY title',  
+    'hideAtCopy'                => true,
+    'enablecolumns'             => array (
       'disabled'  => 'hidden',
       'starttime' => 'starttime',
       'endtime'   => 'endtime',
@@ -212,10 +215,18 @@ $TCA['tx_route_category'] = array (
     'crdate'            => 'crdate',
     'cruser_id'         => 'cruser_id',
     'delete'            => 'deleted',
-    'default_sortby'    => 'ORDER BY title',  
+    'sortby'            => 'sorting',
     'dividers2tabs'     => true,
     'dynamicConfigFile' => t3lib_extMgm::extPath( $_EXTKEY ) . 'tca.php',
-    'iconfile'          => t3lib_extMgm::extRelPath( $_EXTKEY ) . 'files/img/route.png',
+    'thumbnail'         => 'image',
+    'iconfile'          => t3lib_extMgm::extRelPath($_EXTKEY).'ext_icon/downloadcat.gif',
+    'type'              => 'type',
+    'typeicon_column'   => 'type',
+    'typeicons'         => array(
+      'cat_text'  => '../typo3conf/ext/route/ext_icon/cat_text.gif',
+      'cat_color' => '../typo3conf/ext/route/ext_icon/cat_color.gif',
+      'cat_image' => '../typo3conf/ext/route/ext_icon/cat_image.gif',
+    ),
   ),
 );
   // Category
