@@ -267,7 +267,7 @@ $TCA['tx_route_category'] = array (
     '1'               => array ('showitem' => 'title_lang_ol'),
     'icon'      => array (
       'showitem'        =>  
-          'icon;LLL:EXT:route/locallang_db.xml:tca_phrase.icon,' 
+          'icons;LLL:EXT:route/locallang_db.xml:tca_phrase.icons,' 
         . '--linebreak--,'
         . 'icon_offset_x;LLL:EXT:route/locallang_db.xml:tx_route_category.icon_offset_x,' 
         . 'icon_offset_y;LLL:EXT:route/locallang_db.xml:tx_route_category.icon_offset_y,' 
