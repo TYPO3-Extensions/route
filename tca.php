@@ -213,32 +213,6 @@ $TCA['tx_route_category'] = array (
       'hidden' ,
   ),
   'columns' => array (
-    'type' => array (
-      'exclude'   => $bool_exclude_default,
-      'l10n_mode' => 'exclude',
-      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_category.type',
-      'config'    => array (
-        'type'    => 'select',
-        'items'   => array (
-          'cat_text' => array (
-            '0' => 'LLL:EXT:route/locallang_db.xml:tx_route_category.type.cat_text',
-            '1' => 'cat_text',
-            '2' => 'EXT:route/ext_icon/cat_text.gif',
-          ),
-          'cat_color' => array (
-            '0' => 'LLL:EXT:route/locallang_db.xml:tx_route_category.type.cat_color',
-            '1' => 'cat_color',
-            '2' => 'EXT:route/ext_icon/cat_color.gif',
-          ),
-          'cat_image' => array (
-            '0' => 'LLL:EXT:route/locallang_db.xml:tx_route_category.type.cat_image',
-            '1' => 'cat_image',
-            '2' => 'EXT:route/ext_icon/cat_image.gif',
-          ),
-        ),
-        'default' => 'cat_text',
-      ),
-    ),
     'title' => array (
       'exclude' => 0,
       'label'   => 'LLL:EXT:route/locallang_db.xml:tx_route_category.title',
