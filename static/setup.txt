@@ -66,6 +66,10 @@ plugin.tx_browser_pi1 {
             poi_cat     = tx_route_category
             poi_mm_cat  = tx_route_poi_mm_tx_route_category
           }
+          fields {
+            uid = path.uid
+            pid = path.pid
+          }
         }
         htmlSnippets =
         htmlSnippets {
