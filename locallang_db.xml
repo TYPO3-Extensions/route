@@ -96,8 +96,8 @@
       <label index="tx_route_path.bodytext">Beschreibung</label>                        
       <label index="tx_route_path.list_title">Bezeichnung der Route in Listen-Ansichten (lass es leer, wenn der Standard-Wert genommen werden soll)</label>
       <label index="tx_route_path.list_short">Kurzbeschreibung der Route in Listen-Ansichten (lass es leer, wenn der Standard-Wert genommen werden soll)</label>
-      <label index="tx_route_path.map_title">Bezeichnung der Route in Karten (lass es leer, wenn der Standard-Wert genommen werden soll)</label>
-      <label index="tx_route_path.map_short">Kurzbeschreibung der Route in Karten (lass es leer, wenn der Standard-Wert genommen werden soll)</label>
+      <label index="tx_route_path.map_title">Bezeichnung der Route in Karten (lass es leer, wenn der Wert aus der Listenansicht genommen werden soll)</label>
+      <label index="tx_route_path.map_short">Kurzbeschreibung der Route in Karten (lass es leer, wenn der Wert aus der Listenansicht genommen werden soll)</label>
       <label index="tx_route_path.tx_route_category">tx_route_category</label>                        
       <label index="tx_route_path.color">Farbe der Route</label>                        
       <label index="tx_route_path.line_width">Linien-Stärke der Route</label>                        

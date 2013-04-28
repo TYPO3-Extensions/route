@@ -568,7 +568,7 @@ $TCA['tx_route_path'] = array (
       'config'  => array (
         'type'    => 'input',
         'size'    => 10,
-        'eval'    => 'trim',
+        'eval'    => 'required,trim',
         'wizards' => array (
           'colorChoice' => array (
             'type'          => 'colorbox',
@@ -585,37 +585,47 @@ $TCA['tx_route_path'] = array (
       'exclude'   => 0,
       'l10n_mode' => 'prefixLangTitle',
       'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.line_width',
-      'config'    => $conf_input_30_trimRequired,
+      'config'    => array (
+        'type'    => 'input',  
+        'size'    => '2',
+        'max'     => '2',
+        'eval'    => 'required,int',
+        'range'   => array (
+          'lower' => '1',  
+          'upper' => '99',
+        ),
+        'default' => '1',
+      ),
     ),
     'icon_lat' => array (
       'exclude'   => 0,
       'l10n_mode' => 'prefixLangTitle',
       'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.icon_lat',
-      'config'    => $conf_input_30_trimRequired,
+      'config'    => $conf_input_30_trim,
     ),
     'icon_lon' => array (
       'exclude'   => 0,
       'l10n_mode' => 'prefixLangTitle',
       'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.icon_lon',
-      'config'    => $conf_input_30_trimRequired,
+      'config'    => $conf_input_30_trim,
     ),
     'address_start' => array (
       'exclude'   => 0,
       'l10n_mode' => 'prefixLangTitle',
       'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.address_start',
-      'config'    => $conf_input_30_trimRequired,
+      'config'    => $conf_text_30_05,
     ),
     'address_end' => array (
       'exclude'   => 0,
       'l10n_mode' => 'prefixLangTitle',
       'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.address_end',
-      'config'    => $conf_input_30_trimRequired,
+      'config'    => $conf_text_30_05,
     ),
     'url' => array (
       'exclude'   => 0,
       'l10n_mode' => 'prefixLangTitle',
       'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.url',
-      'config'    => $conf_input_30_trimRequired,
+      'config'    => $conf_input_30_trim,
     ),
     'gpx' => array (
       'exclude'   => 0,
@@ -627,7 +637,7 @@ $TCA['tx_route_path'] = array (
       'exclude'   => 0,
       'l10n_mode' => 'prefixLangTitle',
       'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.tx_route_poi',
-      'config'    => $conf_input_30_trimRequired,
+      'config'    => $conf_input_30_trim,
     ),
     'image' => array (
       'exclude'   => $bool_exclude_default,
