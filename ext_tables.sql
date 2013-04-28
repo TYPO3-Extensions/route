@@ -112,7 +112,7 @@ CREATE TABLE tx_route_path (
 #
 # Table structure for table 'tx_route_path_mm_tx_route_category'
 # 
-CREATE TABLE tx_route_path_mm_tx_route_path_category (
+CREATE TABLE tx_route_path_mm_tx_route_category (
   uid_local int(11) DEFAULT '0' NOT NULL,
   uid_foreign int(11) DEFAULT '0' NOT NULL,
   tablenames varchar(30) DEFAULT '' NOT NULL,

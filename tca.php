@@ -465,6 +465,7 @@ $TCA['tx_route_path'] = array (
         'MM'                  => 'tx_route_path_mm_tx_route_category',
         'foreign_table'       => 'tx_route_category',
         'foreign_table_where' => 'AND tx_route_category.pid=###CURRENT_PID### AND tx_route_category.deleted = 0 AND tx_route_category.hidden = 0 ORDER BY tx_route_category.title',
+        'suppress_icons' => 1,
         'wizards' => array (
           '_PADDING'  => 2,
           '_VERTICAL' => 0,
