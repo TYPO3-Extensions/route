@@ -394,13 +394,14 @@ $TCA['tx_route_category'] = array (
   'palettes' => array (
     '1'               => array ('showitem' => 'title_lang_ol'),
     '2'               => array ('showitem' => 'text_lang_ol'),
-//    '3'               => array ('showitem' => 'imageseo_lang_ol'),
+    '3'               => array ('showitem' => 'imageseo_lang_ol'),
     'imagefiles'      => array (
       'showitem'        =>  
-          'image;LLL:EXT:route/locallang_db.xml:tca_phrase.image.cat,' . 
-        '--linebreak--,' .
-          'imageseo;LLL:EXT:route/locallang_db.xml:tca_phrase.seo_description,' ,
-          'imageseo_lang_ol;LLL:EXT:route/locallang_db.xml:tca_phrase.lang_ol' ,
+          'image;LLL:EXT:route/locallang_db.xml:tca_phrase.image.cat,' 
+        . '--linebreak--,'
+        . 'imageseo;LLL:EXT:route/locallang_db.xml:tca_phrase.seo_description;3;;3-3-3,' 
+//        . 'imageseo_lang_ol;LLL:EXT:route/locallang_db.xml:tca_phrase.lang_ol' 
+        ,
       'canNotCollapse'  =>  1,
     ),
     'image_settings'  => array (
