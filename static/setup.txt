@@ -31,8 +31,8 @@ plugin.tx_browser_pi1 {
 
   views {
     list {
-      47676 = Route
-      47676 {
+      47677 = Route
+      47677 {
         name    = Route
         select (
           path.title      AS `path.title`,
@@ -127,9 +127,8 @@ plugin.tx_browser_pi1 {
           }
         }
       }
-      47676 >
-      47677 = Route Auto
-      47677 {
+      47676 = Route Auto
+      47676 {
         name    = Route Auto
         select (
             tx_route_path.title
@@ -164,8 +163,8 @@ plugin.tx_browser_pi1 {
       }
     }
     single {
-      47676 = Route
-      47676 {
+      47677 = Route
+      47677 {
         name    = Route
         select (
           tx_route_path.title
@@ -185,9 +184,8 @@ plugin.tx_browser_pi1 {
           }
         }
       }
-      47676 >
-      47677 = Route Auto
-      47677 {
+      47676 = Route Auto
+      47676 {
         name    = Route Auto
         select (
           tx_route_path.title
