@@ -387,7 +387,8 @@ $TCA['tx_route_category'] = array (
     'cat_image' => array ( 'showitem' =>
       '--div--;LLL:EXT:route/locallang_db.xml:tx_route_category.div_cat,     type,title;;1;;1-1-1,text;;2;;2-2-2,' .
       '--div--;LLL:EXT:route/locallang_db.xml:tx_route_category.div_media,   ' .
-        '--palette--;LLL:EXT:route/locallang_db.xml:tca_phrase.image.cat;imagefiles,' .
+//        '--palette--;LLL:EXT:route/locallang_db.xml:tca_phrase.icon;imagefiles,' .
+        'image,imageseo;;3;;3-3-3' .
         '--palette--;LLL:EXT:route/locallang_db.xml:tca_phrase.image_settings.cat;image_settings,' .
       '--div--;LLL:EXT:route/locallang_db.xml:tx_route_category.div_control, hidden' ),
   ),
@@ -397,9 +398,9 @@ $TCA['tx_route_category'] = array (
     '3'               => array ('showitem' => 'imageseo_lang_ol'),
     'imagefiles'      => array (
       'showitem'        =>  
-          'image;LLL:EXT:route/locallang_db.xml:tca_phrase.image.cat,' 
+          'image;LLL:EXT:route/locallang_db.xml:tca_phrase.icon,' 
         . '--linebreak--,'
-        . 'imageseo;LLL:EXT:route/locallang_db.xml:tca_phrase.seo_description;3;;3-3-3,' 
+        . 'imageseo;LLL:EXT:route/locallang_db.xml:tca_phrase.seo_description,' 
         . 'imageseo_lang_ol;LLL:EXT:route/locallang_db.xml:tca_phrase.lang_ol' 
         ,
       'canNotCollapse'  =>  1,

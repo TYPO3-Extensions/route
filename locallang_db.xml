@@ -13,6 +13,7 @@
       <label index="tca_phrase.image">Images</label>
       <label index="tca_phrase.imagecaption">Captions (one line per image)</label>
       <label index="tca_phrase.imageseo">Label for Search Engines (one line per image)</label>
+      <label index="tca_phrase.image_settings">Settings</label>
       <label index="tca_phrase.lang_ol">Translations (i.e. fr:Traduction|de:<![CDATA[Ü]]>bersetzung)</label>
       <label index="tca_phrase.seo_description">Description for Search Engine Optimisation</label>
       <label index="tca_phrase.seo_keywords">Keywords for Search Engine Optimisation (CSV: comma separated values)</label>
@@ -65,6 +66,7 @@
       <label index="tca_phrase.image">Bilder</label>
       <label index="tca_phrase.imagecaption">Unterschriften (eine Zeile pro Datei)</label>
       <label index="tca_phrase.imageseo">Bezeichnung f<![CDATA[ü]]>r Suchmaschinen (eine Zeile pro Datei)</label>
+      <label index="tca_phrase.image_settings">Einstellungen</label>
       <label index="tca_phrase.seo_description">Beschreibung f<![CDATA[ü]]>r Suchmaschinen (bis etwa 200 Zeichen)</label>
       <label index="tca_phrase.seo_keywords">Stichworte f<![CDATA[ü]]>r Suchmaschinen (drei bis f<![CDATA[ü]]>nf, mit Komma trennen)</label>
       <label index="tx_route_category">Kategorien</label>
