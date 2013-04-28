@@ -398,13 +398,16 @@ $TCA['tx_route_category'] = array (
     'imagefiles'      => array (
       'showitem'        =>  
           'image;LLL:EXT:route/locallang_db.xml:tca_phrase.image.cat,' . 
+        '--linebreak--,' .
           'imageseo;LLL:EXT:route/locallang_db.xml:tca_phrase.seo_description' ,
+          'imageseo_lang_ol;LLL:EXT:route/locallang_db.xml:tca_phrase.lang_ol' ,
       'canNotCollapse'  =>  1,
     ),
     'image_settings'  => array (
       'showitem'        =>  
         'imagewidth;LLL:EXT:cms/locallang_ttc.xml:imagewidth_formlabel,' .
-        'imageheight;LLL:EXT:cms/locallang_ttc.xml:imageheight_formlabel, --linebreak--,' .
+        'imageheight;LLL:EXT:cms/locallang_ttc.xml:imageheight_formlabel,' . 
+        '--linebreak--,' .
         'image_compression;LLL:EXT:cms/locallang_ttc.xml:image_compression_formlabel,' . 
         'image_effects;LLL:EXT:cms/locallang_ttc.xml:image_effects_formlabel',
       'canNotCollapse'  =>  1,
