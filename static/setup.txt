@@ -40,6 +40,7 @@ plugin.tx_browser_pi1 {
           poi.title       AS `poi.title`,
           poi_cat.title   AS `poi_cat.title`
         )
+        orderBy = path.title 
         from {
           table = tx_route_path
           alias = path
