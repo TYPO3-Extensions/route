@@ -388,7 +388,7 @@ $TCA['tx_route_category'] = array (
       '--div--;LLL:EXT:route/locallang_db.xml:tx_route_category.div_cat,     type,title;;1;;1-1-1,text;;2;;2-2-2,' .
       '--div--;LLL:EXT:route/locallang_db.xml:tx_route_category.div_media,   ' .
 //        '--palette--;LLL:EXT:route/locallang_db.xml:tca_phrase.icon;imagefiles,' .
-        'image,imageseo;;3;;3-3-3' .
+        'image,imageseo;;3;;3-3-3,' .
         '--palette--;LLL:EXT:route/locallang_db.xml:tca_phrase.image_settings.cat;image_settings,' .
       '--div--;LLL:EXT:route/locallang_db.xml:tx_route_category.div_control, hidden' ),
   ),
