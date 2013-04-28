@@ -20,6 +20,16 @@ plugin.tx_browser_pi1 {
       47676 = Route
       47676 {
         name    = Route
+        relations {
+          mm {
+            tx_route_path {
+              tx_route_path_mm_tx_route_category = tx_route_category
+            }
+            tx_route_poi {
+              tx_route_poi_mm_tx_route_category = tx_route_category
+            }
+          }
+        }
         select (
           tx_route_path.title,
           tx_route_category.title,
