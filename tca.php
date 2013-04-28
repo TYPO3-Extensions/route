@@ -258,14 +258,14 @@ $TCA['tx_route_category'] = array (
       '--div--;LLL:EXT:route/locallang_db.xml:tx_route_category.div_cat,' .
         'type,title;;1;;1-1-1,' .
       '--div--;LLL:EXT:route/locallang_db.xml:tx_route_category.div_icon,   ' .
-        '--palette--;LLL:EXT:route/locallang_db.xml:tca_phrase.icon;icons,' .
+        '--palette--;LLL:EXT:route/locallang_db.xml:tca_phrase.icons;icons,' .
       '--div--;LLL:EXT:route/locallang_db.xml:tx_route_category.div_control,' .
         'hidden'
     ),
   ),
   'palettes' => array (
     '1'               => array ('showitem' => 'title_lang_ol'),
-    'icon'      => array (
+    'icons'      => array (
       'showitem'        =>  
           'icons;LLL:EXT:route/locallang_db.xml:tca_phrase.files,' 
         . '--linebreak--,'
