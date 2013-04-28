@@ -684,7 +684,7 @@ $TCA['tx_route_path'] = array (
         '--div--;LLL:EXT:route/locallang_db.xml:tx_route_path.div_route,' . 
           'title,' .
           'short,' .
-          'bodytext,' .
+          'bodytext;;;richtext[]:rte_transform[mode=ts];,' .
         '--div--;LLL:EXT:route/locallang_db.xml:tx_route_path.div_shortterms,' . 
           'list_title,' .
           'list_short,' .
