@@ -111,6 +111,7 @@
       <label index="tx_route_category.tx_route_path">Pfade</label>
       <label index="tx_route_category.tx_route_poi">Markierungen</label>
       <label index="tx_route_path">Pfade</label>                        
+      <label index="tx_route_path.div_address">Adresse</label>
       <label index="tx_route_path.div_cat">Kategorie</label>
       <label index="tx_route_path.div_design">Design</label>
       <label index="tx_route_path.div_gpx">Daten</label>
@@ -119,7 +120,7 @@
       <label index="tx_route_path.div_path">Pfad</label>
       <label index="tx_route_path.div_seo">Suchmaschinen</label>
       <label index="tx_route_path.div_shortterms">Kurze Bezeichnungen</label>
-      <label index="tx_route_path.address_start">Addresse Pfad-Beginn</label>                        
+      <label index="tx_route_path.address_start">Adresse Pfad-Beginn</label>                        
       <label index="tx_route_path.address_end">Adresse Pfad-Ende</label>                        
       <label index="tx_route_path.bodytext">Beschreibung</label>                        
       <label index="tx_route_path.color">Farbe des Pfads</label>                        
