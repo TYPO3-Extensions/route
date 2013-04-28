@@ -19,27 +19,16 @@ CREATE TABLE tx_route_category (
   tstamp int(11) DEFAULT '0' NOT NULL,
   crdate int(11) DEFAULT '0' NOT NULL,
   cruser_id int(11) DEFAULT '0' NOT NULL,
-  sorting int(10) unsigned DEFAULT '0' NOT NULL,
+  sorting int(10) DEFAULT '0' NOT NULL,
   deleted tinyint(4) DEFAULT '0' NOT NULL,
   hidden tinyint(4) DEFAULT '0' NOT NULL,
 
-  type tinytext NOT NULL,
-
   title tinytext NOT NULL,
-  title_lang_ol tinytext NOT NULL,
+  title_lang_ol tinytext,
 
-  text text,
-  text_lang_ol text,
-
-  color tinytext NOT NULL,
-
-  image text,
-  imageseo text,
-  imageseo_lang_ol text,
-  imageheight tinytext,
-  imagewidth tinytext,
-  image_effects tinyint(3) unsigned NOT NULL default '0',
-  image_compression tinyint(3) unsigned NOT NULL default '0',
+  icons text,
+  icon_offset_x int(11) DEFAULT '0' NOT NULL,
+  icon_offset_y int(11) DEFAULT '0' NOT NULL
 
   PRIMARY KEY (uid),
   KEY parent (pid)
