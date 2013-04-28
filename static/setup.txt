@@ -69,70 +69,70 @@ plugin.tx_browser_pi1 {
       47677 {
         name    = Route
         select (
-          path.title      AS `path.title`,
-          path.uid        AS `path.uid`,
-          path_cat.title  AS `path_cat.title`,
-          path_cat.uid    AS `path_cat.uid`,
-          poi.title       AS `poi.title`,
-          poi.uid         AS `poi.uid`,
-          poi_cat.title   AS `poi_cat.title`,
-          poi_cat.uid     AS `poi_cat.uid`
+          tx_route_path.title      AS `tx_route_path.title`,
+          tx_route_path.uid        AS `tx_route_path.uid`,
+          tx_route_path_cat.title  AS `tx_route_path_cat.title`,
+          tx_route_path_cat.uid    AS `tx_route_path_cat.uid`,
+          tx_route_poi.title       AS `tx_route_poi.title`,
+          tx_route_poi.uid         AS `tx_route_poi.uid`,
+          tx_route_poi_cat.title   AS `tx_route_poi_cat.title`,
+          tx_route_poi_cat.uid     AS `tx_route_poi_cat.uid`
         )
         from {
           table = tx_route_path
-          alias = path
+          alias = tx_route_path
         }
-        andWhere  = path.pid IN (###PID_LIST###)
+        andWhere  = tx_route_path.pid IN (###PID_LIST###)
         joins {
           0 {
             type  = LEFT JOIN
             table = tx_route_path_mm_tx_route_category
-            alias = path_mm_cat
-            on    = path.uid = path_mm_cat.uid_local
+            alias = tx_route_path_mm_cat
+            on    = tx_route_path.uid = tx_route_path_mm_cat.uid_local
           }
           1 {
             type  = LEFT JOIN
             table = tx_route_category
-            alias = path_cat
-            on    = path_cat.uid = path_mm_cat.uid_foreign
+            alias = tx_route_path_cat
+            on    = tx_route_path_cat.uid = tx_route_path_mm_cat.uid_foreign
           }
           2 {
             type  = LEFT JOIN
             table = tx_route_path_mm_tx_route_poi
-            alias = path_mm_poi
-            on    = path.uid = path_mm_poi.uid_local
+            alias = tx_route_path_mm_tx_route_poi
+            on    = tx_route_path.uid = tx_route_path_mm_tx_route_poi.uid_local
           }
           3 {
             type  = LEFT JOIN
             table = tx_route_poi
-            alias = poi
-            on    = poi.uid = path_mm_poi.uid_foreign
+            alias = tx_route_poi
+            on    = tx_route_poi.uid = tx_route_path_mm_tx_route_poi.uid_foreign
           }
           4 {
             type  = LEFT JOIN
             table = tx_route_poi_mm_tx_route_category
-            alias = poi_mm_cat
-            on    = poi.uid = poi_mm_cat.uid_local
+            alias = tx_route_poi_mm_cat
+            on    = tx_route_poi.uid = tx_route_poi_mm_cat.uid_local
           }
           5 {
             type  = LEFT JOIN
             table = tx_route_category
-            alias = poi_cat
-            on    = poi_cat.uid = poi_mm_cat.uid_foreign
+            alias = tx_route_poi_cat
+            on    = tx_route_poi_cat.uid = tx_route_poi_mm_cat.uid_foreign
           }
         }
         aliases {
           tables {
-            path        = tx_route_path
-            path_cat    = tx_route_category
-            path_mm_cat = tx_route_path_mm_tx_route_category
-            poi         = tx_route_poi
-            poi_cat     = tx_route_category
-            poi_mm_cat  = tx_route_poi_mm_tx_route_category
+            tx_route_path        = tx_route_path
+            tx_route_path_cat    = tx_route_category
+            tx_route_path_mm_cat = tx_route_path_mm_tx_route_category
+            tx_route_poi         = tx_route_poi
+            tx_route_poi_cat     = tx_route_category
+            tx_route_poi_mm_cat  = tx_route_poi_mm_tx_route_category
           }
           fields {
-            uid = path.uid
-            pid = path.pid
+            uid = tx_route_path.uid
+            pid = tx_route_path.pid
           }
         }
         htmlSnippets =
