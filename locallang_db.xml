@@ -26,9 +26,7 @@
       <label index="tx_route_category.type.cat_image">Icon</label>
       <label index="tx_route_category.type.cat_text">Text</label>
       <label index="tx_route_category.title">Category label</label>
-      <label index="tx_route_category.title_lang_ol">Translations (i.e. fr:Traduction|de:<![CDATA[Ü]]>bersetzung)</label>
       <label index="tx_route_category.text">Description</label>
-      <label index="tx_route_category.text_lang_ol">Translations (i.e. fr:Traduction|de:<![CDATA[Ü]]>bersetzung)</label>
       <label index="tx_route_category.note">Note (internal)</label>
       <label index="tx_route_path">Route</label>                        
       <label index="tx_route_path.div_control">Controlling</label>
