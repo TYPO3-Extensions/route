@@ -44,7 +44,6 @@ plugin.tx_browser_pi1 {
           poi_cat.title   AS `poi_cat.title`,
           poi_cat.uid     AS `poi_cat.uid`
         )
-        orderBy = path.title 
         from {
           table = tx_route_path
           alias = path
@@ -104,18 +103,40 @@ plugin.tx_browser_pi1 {
         }
         htmlSnippets =
         htmlSnippets {
-          marker {
-            filter = TEXT
-            filter {
+          subparts {
+            listbodyitem = TEXT
+            listbodyitem {
               value (
-                <div class="filter">
-                  ###TX_ORG_DOWNLOADSCAT.TITLE###
-                  ###TX_ORG_DOWNLOADSMEDIA.TITLE###
-                  ###TX_ORG_DOWNLOADS.DATETIME###
-                </div>
+              <div class="sbmFloatRight">
+                ###SOCIALMEDIA_BOOKMARKS###
+              </div>
+              <h2>
+                ###TX_ROUTE_PATH.TITLE###
+              </h2>
+              <ul>
+                <li>
+                  ###TX_ROUTE_CATEGORY.TITLE###
+                </li>
+                <li>
+                  ###TX_ROUTE_POI.TITLE###
+                </li>
+              </ul>
+              <div class="cleaner">&nbsp;</div>
 )
             }
           }
+        }
+      }
+      47676 >
+      47676 {
+        name    = Route
+        select (
+            tx_route_path.title
+          , tx_route_category.title
+          , tx_route_poi.title
+        )
+        htmlSnippets =
+        htmlSnippets {
           subparts {
             listbodyitem = TEXT
             listbodyitem {
