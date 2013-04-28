@@ -158,11 +158,27 @@ CREATE TABLE tx_route_poi (
   crdate int(11) DEFAULT '0' NOT NULL,
   cruser_id int(11) DEFAULT '0' NOT NULL,
   deleted tinyint(4) DEFAULT '0' NOT NULL,
-  hidden tinyint(4) DEFAULT '0' NOT NULL,
+
+  sys_language_uid int(11) DEFAULT '0' NOT NULL,
+  l10n_parent int(11) DEFAULT '0' NOT NULL,
+  l10n_diffsource mediumtext,
 
   title tinytext,
+  tx_route_category tinytext,
   short tinytext,
   bodytext mediumtext NOT NULL,
+
+  lat text NOT NULL,
+  lon text NOT NULL,
+  address text NOT NULL,
+  url text NOT NULL,
+
+  tx_route_path tinytext,
+
+  list_title tinytext,
+  list_short mediumtext,
+  map_title tinytext,
+  map_short mediumtext,
 
   image text,
   imagecaption text,
@@ -181,19 +197,6 @@ CREATE TABLE tx_route_poi (
   image_compression tinyint(3) unsigned NOT NULL default '0',
   image_frames tinyint(3) unsigned NOT NULL default '0',
 
-  tx_poi_category tinytext,
-  lat text NOT NULL,
-  lon text NOT NULL,
-  mail_address text NOT NULL,
-  url text NOT NULL,
-
-  tx_route_path tinytext,
-
-  list_title tinytext,
-  list_short mediumtext,
-  map_title tinytext,
-  map_short mediumtext,
-  
   hidden tinyint(4) DEFAULT '0' NOT NULL,
   starttime int(11) DEFAULT '0' NOT NULL,
   endtime int(11) DEFAULT '0' NOT NULL,
