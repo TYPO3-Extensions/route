@@ -36,9 +36,13 @@ plugin.tx_browser_pi1 {
         name    = Route
         select (
           path.title      AS `path.title`,
+          path.uid        AS `path.uid`,
           path_cat.title  AS `path_cat.title`,
+          path_cat.uid    AS `path_cat.uid`,
           poi.title       AS `poi.title`,
-          poi_cat.title   AS `poi_cat.title`
+          poi.uid         AS `poi.uid`,
+          poi_cat.title   AS `poi_cat.title`,
+          poi_cat.uid     AS `poi_cat.uid`
         )
         orderBy = path.title 
         from {
