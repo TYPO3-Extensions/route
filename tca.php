@@ -372,7 +372,7 @@ $TCA['tx_route_category'] = array (
       '--div--;LLL:EXT:route/locallang_db.xml:tx_route_category.div_path,   ' .
         'tx_route_path,' .
       '--div--;LLL:EXT:route/locallang_db.xml:tx_route_category.div_poi,   ' .
-        'tx_route_path,' .
+        'tx_route_poi,' .
       '--div--;LLL:EXT:route/locallang_db.xml:tx_route_category.div_control,' .
         'hidden'
     ),
