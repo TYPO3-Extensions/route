@@ -38,7 +38,7 @@ plugin.tx_browser_pi1 {
           path.title      AS `path.title`,
           path_cat.title  AS `path_cat.title`,
           poi.title       AS `poi.title`,
-          poi_cat.title   AS `poi_cat.title`,
+          poi_cat.title   AS `poi_cat.title`
         )
         from {
           table = tx_route_path
