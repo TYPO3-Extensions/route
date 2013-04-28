@@ -1,0 +1,4 @@
+plugin.tx_browser_pi1 {
+  map.modules.debugging = Error,OSM.Route,OSM.Base,OSM.Filter 
+  map.modules.default   = OSM.Route,OSM.Base,OSM.Filter 
+}

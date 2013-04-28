@@ -1,0 +1,82 @@
+
+  ////////////////////////////////////////
+  //
+  // INDEX
+
+  // plugin.tx_browser_pi1
+
+
+
+  ////////////////////////////////////////////////////////////////////////////////
+  //
+  // plugin.tx_browser_pi1
+
+plugin.tx_browser_pi1 {
+
+  general_stdWrap >
+
+  views {
+    list {
+      47676 = Route
+      47676 {
+        name    = Route
+        select (
+          tx_route_path.title
+        )
+        htmlSnippets =
+        htmlSnippets {
+          marker {
+            filter = TEXT
+            filter {
+              value (
+                <div class="filter">
+                  ###TX_ORG_DOWNLOADSCAT.TITLE###
+                  ###TX_ORG_DOWNLOADSMEDIA.TITLE###
+                  ###TX_ORG_DOWNLOADS.DATETIME###
+                </div>
+)
+            }
+          }
+          subparts {
+            listbodyitem = TEXT
+            listbodyitem {
+              value (
+              <div class="sbmFloatRight">
+                ###SOCIALMEDIA_BOOKMARKS###
+              </div>
+              <h2>
+                ###TX_ROUTE_PATH.TITLE###
+              </h2>
+              <div class="cleaner">&nbsp;</div>
+)
+            }
+          }
+        }
+      }
+    }
+    single {
+      47676 = Route
+      47676 {
+        name    = Route
+        select (
+          tx_route_path.title
+        )
+        htmlSnippets =
+        htmlSnippets {
+          subparts {
+            singlebodyrow = TEXT
+            singlebodyrow {
+              value (
+              <div class="socialbookmarks">
+                ###SOCIALMEDIA_BOOKMARKS###
+              </div>
+              ###TX_ROUTE_PATH.TITLE###
+)
+            }
+          }
+        }
+      }
+    }
+  }
+}
+  // plugin.tx_browser_pi1

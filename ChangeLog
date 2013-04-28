@@ -1,6 +1,7 @@
 0.0.1
   13-04-26
   Initial Release
+  * #47676: Get Id for the route view
   * #47633: Manual
   * #47627: HTML
   * #47626: TypoScript
