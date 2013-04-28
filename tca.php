@@ -400,7 +400,7 @@ $TCA['tx_route_category'] = array (
           'image;LLL:EXT:route/locallang_db.xml:tca_phrase.image.cat,' 
         . '--linebreak--,'
         . 'imageseo;LLL:EXT:route/locallang_db.xml:tca_phrase.seo_description;3;;3-3-3,' 
-//        . 'imageseo_lang_ol;LLL:EXT:route/locallang_db.xml:tca_phrase.lang_ol' 
+        . 'imageseo_lang_ol;LLL:EXT:route/locallang_db.xml:tca_phrase.lang_ol' 
         ,
       'canNotCollapse'  =>  1,
     ),
