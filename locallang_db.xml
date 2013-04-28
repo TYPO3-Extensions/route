@@ -23,6 +23,8 @@
       <label index="tx_route_category.div_cat">Category</label>
       <label index="tx_route_category.div_control">Controlling</label>
       <label index="tx_route_category.div_icon">Icon</label>
+      <label index="tx_route_category.div_path">Paths</label>
+      <label index="tx_route_category.div_poi">Marker</label>
       <label index="tx_route_category.title">Category label</label>
       <label index="tx_route_category.icons">Icons (1st: default. 2nd: big size)</label>
       <label index="tx_route_category.icon_offset_x">Move it by x pixel to the right</label>
@@ -99,6 +101,8 @@
       <label index="tx_route_category.div_cat">Kategorie</label>
       <label index="tx_route_category.div_control">Steuerung</label>
       <label index="tx_route_category.div_icon">Piktogramm</label>
+      <label index="tx_route_category.div_path">Pfade</label>
+      <label index="tx_route_category.div_poi">Markierungen</label>
       <label index="tx_route_category.title">Bezeichnung der Kategorie</label>
       <label index="tx_route_category.icons">Piktogramm (1.: Standard. 2.: Gro<![CDATA[ß]]>es Format)</label>
       <label index="tx_route_category.icon_offset_x">Um x-Pixel nach rechts verschieben</label>
