@@ -565,6 +565,7 @@ $TCA['tx_route_path'] = array (
         'type'    => 'input',
         'size'    => 10,
         'eval'    => 'required,trim',
+        'default' => '#800000',
         'wizards' => array (
           'colorChoice' => array (
             'type'          => 'colorbox',
@@ -633,7 +634,7 @@ $TCA['tx_route_path'] = array (
       'exclude'   => 0,
       'l10n_mode' => 'prefixLangTitle',
       'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.gpxdata',
-      'config'    => $conf_text_30_05_trimRequired,
+      'config'    => $conf_text_30_05,
     ),
     'tx_route_poi' => array (
       'exclude'   => 0,
