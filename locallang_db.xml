@@ -105,7 +105,7 @@
       <label index="tx_route_category.div_path">Pfade</label>
       <label index="tx_route_category.div_poi">Markierungen</label>
       <label index="tx_route_category.title">Bezeichnung der Kategorie</label>
-      <label index="tx_route_category.icons">Piktogramm (1: klein. Optional: 2: mittel, 3: gro<![CDATA[&szlig]]>)</label>
+      <label index="tx_route_category.icons">Piktogramm (1: klein. Optional: 2: mittel, 3: gro<![CDATA[&szlig;]]>)</label>
       <label index="tx_route_category.icon_offset_x">Um x-Pixel nach rechts verschieben</label>
       <label index="tx_route_category.icon_offset_y">Um x-Pixel nach unten verschieben</label>
       <label index="tx_route_category.tx_route_path">Pfade</label>
