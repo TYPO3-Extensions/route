@@ -219,24 +219,24 @@ $TCA['tx_route_category'] = array (
     'type' => array (
       'exclude'   => $bool_exclude_default,
       'l10n_mode' => 'exclude',
-      'label'     => 'LLL:EXT:org/locallang_db.xml:tx_route_category.type',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_category.type',
       'config'    => array (
         'type'    => 'select',
         'items'   => array (
           'cat_text' => array (
-            '0' => 'LLL:EXT:org/locallang_db.xml:tx_route_category.type.cat_text',
+            '0' => 'LLL:EXT:route/locallang_db.xml:tx_route_category.type.cat_text',
             '1' => 'cat_text',
-            '2' => 'EXT:org/ext_icon/cat_text.gif',
+            '2' => 'EXT:route/ext_icon/cat_text.gif',
           ),
           'cat_color' => array (
-            '0' => 'LLL:EXT:org/locallang_db.xml:tx_route_category.type.cat_color',
+            '0' => 'LLL:EXT:route/locallang_db.xml:tx_route_category.type.cat_color',
             '1' => 'cat_color',
-            '2' => 'EXT:org/ext_icon/cat_color.gif',
+            '2' => 'EXT:route/ext_icon/cat_color.gif',
           ),
           'cat_image' => array (
-            '0' => 'LLL:EXT:org/locallang_db.xml:tx_route_category.type.cat_image',
+            '0' => 'LLL:EXT:route/locallang_db.xml:tx_route_category.type.cat_image',
             '1' => 'cat_image',
-            '2' => 'EXT:org/ext_icon/cat_image.gif',
+            '2' => 'EXT:route/ext_icon/cat_image.gif',
           ),
         ),
         'default' => 'cat_text',
@@ -244,28 +244,28 @@ $TCA['tx_route_category'] = array (
     ),
     'title' => array (
       'exclude' => 0,
-      'label'   => 'LLL:EXT:org/locallang_db.xml:tx_route_category.title',
+      'label'   => 'LLL:EXT:route/locallang_db.xml:tx_route_category.title',
       'config'  => $conf_input_30_trimRequired,
     ),
     'title_lang_ol' => array (
       'exclude' => 0,
-      'label'   => 'LLL:EXT:org/locallang_db.xml:tx_route_category.title_lang_ol',
+      'label'   => 'LLL:EXT:route/locallang_db.xml:tx_route_category.title_lang_ol',
       'config'  => $conf_input_30_trim,
     ),
     'text' => array (
       'exclude' => $bool_exclude_default,
-      'label'   => 'LLL:EXT:org/locallang_db.xml:tx_route_category.text',
+      'label'   => 'LLL:EXT:route/locallang_db.xml:tx_route_category.text',
       'config'  => $conf_text_30_05,
     ),
     'text_lang_ol' => array (
       'exclude' => $bool_exclude_default,
-      'label'   => 'LLL:EXT:org/locallang_db.xml:tx_route_category.text_lang_ol',
+      'label'   => 'LLL:EXT:route/locallang_db.xml:tx_route_category.text_lang_ol',
       'config'  => $conf_text_30_05,
     ),
     'color' => array (
       'l10n_mode' => 'exclude',
       'exclude'   => $bool_exclude_default,
-      'label'     => 'LLL:EXT:org/locallang_db.xml:tca_phrase.color',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tca_phrase.color',
       'config'  => array (
         'type'    => 'input',
         'size'    => 10,
@@ -285,17 +285,17 @@ $TCA['tx_route_category'] = array (
     'image' => array (
       'l10n_mode' => 'exclude',
       'exclude'   => $bool_exclude_default,
-      'label'     => 'LLL:EXT:org/locallang_db.xml:tca_phrase.image.cat',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tca_phrase.image.cat',
       'config'    => $conf_file_icon,
     ),
     'imageseo' => array (
       'exclude' => $bool_exclude_default,
-      'label'   => 'LLL:EXT:org/locallang_db.xml:tca_phrase.imageseo.oneline',
+      'label'   => 'LLL:EXT:route/locallang_db.xml:tca_phrase.imageseo.oneline',
       'config'  => $conf_input_30,
     ),
     'imageseo_lang_ol' => array (
       'exclude' => $bool_exclude_default,
-      'label'   => 'LLL:EXT:org/locallang_db.xml:tca_phrase.imageseo_lang_ol.oneline',
+      'label'   => 'LLL:EXT:route/locallang_db.xml:tca_phrase.imageseo_lang_ol.oneline',
       'config'  => $conf_input_30,
     ),
     'imagewidth' => array (
@@ -378,30 +378,35 @@ $TCA['tx_route_category'] = array (
   ),
   'types' => array (
     'cat_text'  => array ( 'showitem' =>
-      '--div--;LLL:EXT:org/locallang_db.xml:tx_route_category.div_cat,     type,title;;1;;1-1-1,text;;2;;2-2-2,' .
-      '--div--;LLL:EXT:org/locallang_db.xml:tx_route_category.div_control, hidden'),
+      '--div--;LLL:EXT:route/locallang_db.xml:tx_route_category.div_cat,     type,title;;1;;1-1-1,text;;2;;2-2-2,' .
+      '--div--;LLL:EXT:route/locallang_db.xml:tx_route_category.div_control, hidden'),
     'cat_color' => array ( 'showitem' =>
-      '--div--;LLL:EXT:org/locallang_db.xml:tx_route_category.div_cat,     type,title;;1;;1-1-1,text;;2;;2-2-2,' .
-      '--div--;LLL:EXT:org/locallang_db.xml:tx_route_category.div_color,   color,' .
-      '--div--;LLL:EXT:org/locallang_db.xml:tx_route_category.div_control, hidden' ),
+      '--div--;LLL:EXT:route/locallang_db.xml:tx_route_category.div_cat,     type,title;;1;;1-1-1,text;;2;;2-2-2,' .
+      '--div--;LLL:EXT:route/locallang_db.xml:tx_route_category.div_color,   color,' .
+      '--div--;LLL:EXT:route/locallang_db.xml:tx_route_category.div_control, hidden' ),
     'cat_image' => array ( 'showitem' =>
-      '--div--;LLL:EXT:org/locallang_db.xml:tx_route_category.div_cat,     type,title;;1;;1-1-1,text;;2;;2-2-2,' .
-      '--div--;LLL:EXT:org/locallang_db.xml:tx_route_category.div_media,   ' .
-        '--palette--;LLL:EXT:org/locallang_db.xml:tca_phrase.image.cat;imagefiles,' .
-        '--palette--;LLL:EXT:org/locallang_db.xml:tca_phrase.image_settings.cat;image_settings,' .
-      '--div--;LLL:EXT:org/locallang_db.xml:tx_route_category.div_control, hidden' ),
+      '--div--;LLL:EXT:route/locallang_db.xml:tx_route_category.div_cat,     type,title;;1;;1-1-1,text;;2;;2-2-2,' .
+      '--div--;LLL:EXT:route/locallang_db.xml:tx_route_category.div_media,   ' .
+        '--palette--;LLL:EXT:route/locallang_db.xml:tca_phrase.image.cat;imagefiles,' .
+        '--palette--;LLL:EXT:route/locallang_db.xml:tca_phrase.image_settings.cat;image_settings,' .
+      '--div--;LLL:EXT:route/locallang_db.xml:tx_route_category.div_control, hidden' ),
   ),
   'palettes' => array (
     '1'               => array ('showitem' => 'title_lang_ol'),
     '2'               => array ('showitem' => 'text_lang_ol'),
     '3'               => array ('showitem' => 'imageseo_lang_ol'),
     'imagefiles'      => array (
-      'showitem'        =>  'image;LLL:EXT:org/locallang_db.xml:tca_phrase.image.cat, imageseo;LLL:EXT:org/locallang_db.xml:tca_phrase.imageseo.oneline' ,
+      'showitem'        =>  
+          'image;LLL:EXT:route/locallang_db.xml:tca_phrase.image.cat,' . 
+          'imageseo;LLL:EXT:route/locallang_db.xml:tca_phrase.imageseo.oneline' ,
       'canNotCollapse'  =>  1,
     ),
     'image_settings'  => array (
-      'showitem'        =>  'imagewidth;LLL:EXT:cms/locallang_ttc.xml:imagewidth_formlabel, imageheight;LLL:EXT:cms/locallang_ttc.xml:imageheight_formlabel, --linebreak--,' .
-                            'image_compression;LLL:EXT:cms/locallang_ttc.xml:image_compression_formlabel, image_effects;LLL:EXT:cms/locallang_ttc.xml:image_effects_formlabel',
+      'showitem'        =>  
+        'imagewidth;LLL:EXT:cms/locallang_ttc.xml:imagewidth_formlabel,' .
+        'imageheight;LLL:EXT:cms/locallang_ttc.xml:imageheight_formlabel, --linebreak--,' .
+        'image_compression;LLL:EXT:cms/locallang_ttc.xml:image_compression_formlabel,' . 
+        'image_effects;LLL:EXT:cms/locallang_ttc.xml:image_effects_formlabel',
       'canNotCollapse'  =>  1,
     ),
   ),

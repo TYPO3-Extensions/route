@@ -215,6 +215,9 @@ $TCA['tx_route_category'] = array (
     'crdate'            => 'crdate',
     'cruser_id'         => 'cruser_id',
     'delete'            => 'deleted',
+    'enablecolumns'   => array (
+      'disabled'  => 'hidden',
+    ),
     'sortby'            => 'sorting',
     'dividers2tabs'     => true,
     'dynamicConfigFile' => t3lib_extMgm::extPath( $_EXTKEY ) . 'tca.php',
