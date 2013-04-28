@@ -1194,12 +1194,19 @@ $TCA['tx_route_poi'] = array (
       'config'    => array (
         'type'                => 'select',
         'size'                => 10,
-        'minitems'            => 1,
+        'minitems'            => 0,
         'maxitems'            => 99,
         'MM'                  => 'tx_route_path_mm_tx_route_poi',
         'MM_opposite_field'   => 'tx_route_poi',
         'foreign_table'       => 'tx_route_path',
         'foreign_table_where' => 'AND tx_route_path.pid=###CURRENT_PID### AND tx_route_path.deleted = 0 AND tx_route_path.hidden = 0 AND tx_route_path.sys_language_uid=###REC_FIELD_sys_language_uid### ORDER BY tx_route_path.title',
+        'items' => array (
+          '0' => array (
+            '0' => '',
+            '1' => '',
+          ),
+        ),
+        'suppress_icons' => 1,
         'wizards' => array (
           '_PADDING'  => 2,
           '_VERTICAL' => 0,
