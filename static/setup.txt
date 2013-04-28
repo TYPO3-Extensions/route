@@ -127,6 +127,7 @@ plugin.tx_browser_pi1 {
           }
         }
       }
+      47676 >
       47677 = Route Auto
       47677 {
         name    = Route Auto
@@ -184,10 +185,27 @@ plugin.tx_browser_pi1 {
           }
         }
       }
-      47677 < .47676
+      47676 >
       47677 = Route Auto
       47677 {
         name    = Route Auto
+        select (
+          tx_route_path.title
+        )
+        htmlSnippets =
+        htmlSnippets {
+          subparts {
+            singlebodyrow = TEXT
+            singlebodyrow {
+              value (
+              <div class="socialbookmarks">
+                ###SOCIALMEDIA_BOOKMARKS###
+              </div>
+              ###TX_ROUTE_PATH.TITLE###
+)
+            }
+          }
+        }
       }
     }
   }
