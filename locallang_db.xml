@@ -13,6 +13,7 @@
       <label index="tca_phrase.image">Images</label>
       <label index="tca_phrase.imagecaption">Captions (one line per image)</label>
       <label index="tca_phrase.imageseo">Label for Search Engines (one line per image)</label>
+      <label index="tca_phrase.lang_ol">Translations (i.e. fr:Traduction|de:<![CDATA[Ü]]>bersetzung)</label>
       <label index="tca_phrase.seo_description">Description for Search Engine Optimisation</label>
       <label index="tca_phrase.seo_keywords">Keywords for Search Engine Optimisation (CSV: comma separated values)</label>
       <label index="tx_route_category">Categories</label>
