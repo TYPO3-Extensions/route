@@ -21,7 +21,8 @@ plugin.tx_browser_pi1 {
       47676 {
         name    = Route
         select (
-          tx_route_path.title
+          tx_route_path.title,
+          tx_route_category.title
         )
         htmlSnippets =
         htmlSnippets {
@@ -47,6 +48,11 @@ plugin.tx_browser_pi1 {
               <h2>
                 ###TX_ROUTE_PATH.TITLE###
               </h2>
+              <ul>
+                <li>
+                  ###TX_ROUTE_CATEGORY.TITLE###
+                </li>
+              </ul>
               <div class="cleaner">&nbsp;</div>
 )
             }
