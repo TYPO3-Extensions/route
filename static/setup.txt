@@ -31,6 +31,40 @@ plugin.tx_browser_pi1 {
 
   views {
     list {
+      47676 = Route Auto
+      47676 {
+        name    = Route Auto
+        select (
+            tx_route_path.title
+          , tx_route_category.title
+          , tx_route_poi.title
+        )
+        htmlSnippets =
+        htmlSnippets {
+          subparts {
+            listbodyitem = TEXT
+            listbodyitem {
+              value (
+              <div class="sbmFloatRight">
+                ###SOCIALMEDIA_BOOKMARKS###
+              </div>
+              <h2>
+                ###TX_ROUTE_PATH.TITLE###
+              </h2>
+              <ul>
+                <li>
+                  ###TX_ROUTE_CATEGORY.TITLE###
+                </li>
+                <li>
+                  ###TX_ROUTE_POI.TITLE###
+                </li>
+              </ul>
+              <div class="cleaner">&nbsp;</div>
+)
+            }
+          }
+        }
+      }
       47677 = Route
       47677 {
         name    = Route
@@ -127,45 +161,11 @@ plugin.tx_browser_pi1 {
           }
         }
       }
+    }
+    single {
       47676 = Route Auto
       47676 {
         name    = Route Auto
-        select (
-            tx_route_path.title
-          , tx_route_category.title
-          , tx_route_poi.title
-        )
-        htmlSnippets =
-        htmlSnippets {
-          subparts {
-            listbodyitem = TEXT
-            listbodyitem {
-              value (
-              <div class="sbmFloatRight">
-                ###SOCIALMEDIA_BOOKMARKS###
-              </div>
-              <h2>
-                ###TX_ROUTE_PATH.TITLE###
-              </h2>
-              <ul>
-                <li>
-                  ###TX_ROUTE_CATEGORY.TITLE###
-                </li>
-                <li>
-                  ###TX_ROUTE_POI.TITLE###
-                </li>
-              </ul>
-              <div class="cleaner">&nbsp;</div>
-)
-            }
-          }
-        }
-      }
-    }
-    single {
-      47677 = Route
-      47677 {
-        name    = Route
         select (
           tx_route_path.title
         )
@@ -184,9 +184,9 @@ plugin.tx_browser_pi1 {
           }
         }
       }
-      47676 = Route Auto
-      47676 {
-        name    = Route Auto
+      47677 = Route
+      47677 {
+        name    = Route
         select (
           tx_route_path.title
         )
