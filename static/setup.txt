@@ -42,9 +42,11 @@ plugin.tx_browser_pi1 {
         htmlSnippets =
         htmlSnippets {
           subparts {
-            listbodyitem = TEXT
-            listbodyitem {
+            listview = TEXT
+            listview {
               value (
+            <div id="c###TT_CONTENT.UID###-listview-###MODE###" class="###VIEW###view ###VIEW###view-content ###VIEW###view-###MODE### ###VIEW###view-content-###MODE###">
+              <!-- ###LISTBODY### begin --><!-- ###LISTBODYITEM### begin -->
               <div class="sbmFloatRight">
                 ###SOCIALMEDIA_BOOKMARKS###
               </div>
@@ -59,7 +61,8 @@ plugin.tx_browser_pi1 {
                   ###TX_ROUTE_POI.TITLE###
                 </li>
               </ul>
-              <div class="cleaner">&nbsp;</div>
+              <div class="cleaner">&nbsp;</div><!-- ###LISTBODYITEM### end --><!-- ###LISTBODY### end -->
+            </div> <!-- /listview -->
 )
             }
           }
@@ -138,9 +141,11 @@ plugin.tx_browser_pi1 {
         htmlSnippets =
         htmlSnippets {
           subparts {
-            listbodyitem = TEXT
-            listbodyitem {
+            listview = TEXT
+            listview {
               value (
+            <div id="c###TT_CONTENT.UID###-listview-###MODE###" class="###VIEW###view ###VIEW###view-content ###VIEW###view-###MODE### ###VIEW###view-content-###MODE###">
+              <!-- ###LISTBODY### begin --><!-- ###LISTBODYITEM### begin -->
               <div class="sbmFloatRight">
                 ###SOCIALMEDIA_BOOKMARKS###
               </div>
@@ -160,7 +165,9 @@ plugin.tx_browser_pi1 {
                   ###TX_ROUTE_POI_CAT.TITLE###
                 </li>
               </ul>
-              <div class="cleaner">&nbsp;</div>
+              <div class="cleaner">&nbsp;</div><!-- ###LISTBODYITEM### end --><!-- ###LISTBODY### end -->
+            </div> <!-- /listview -->
+
 )
             }
           }
