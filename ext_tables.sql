@@ -97,7 +97,8 @@ CREATE TABLE tx_route_path (
   address_end text NOT NULL,
   url text NOT NULL,
 
-  gpx text,
+  gpxfile text,
+  gpxdata text,
 
   tx_route_poi tinytext,
 

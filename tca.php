@@ -432,7 +432,7 @@ $TCA['tx_route_path'] = array (
       'title,short,bodytext,' .
       'list_title,list_short,map_title,map_short,' .
       'tx_route_category,color,line_width,icon_lat,icon_lon,address_start,address_end,url,' .
-      'gpx,' .
+      'gpxfile, gpxdata,' .
       'tx_route_poi,' .
       'image,imagecaption,imageseo,imagewidth,imageheight,imageorient,imagecaption,imagecols,imageborder,imagecaption_position,image_link,image_zoom,image_noRows,image_effects,image_compression,' .
       'hidden,starttime,endtime,fe_group,'.
@@ -627,11 +627,17 @@ $TCA['tx_route_path'] = array (
       'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.url',
       'config'    => $conf_input_30_trim,
     ),
-    'gpx' => array (
+    'gpxfile' => array (
       'exclude'   => 0,
       'l10n_mode' => 'prefixLangTitle',
-      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.gpx',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.gpxfile',
       'config'    => $conf_input_30_trimRequired,
+    ),
+    'gpxdata' => array (
+      'exclude'   => 0,
+      'l10n_mode' => 'prefixLangTitle',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.gpxdata',
+      'config'    => $conf_text_30_05_trimRequired,
     ),
     'tx_route_poi' => array (
       'exclude'   => 0,
@@ -894,7 +900,7 @@ $TCA['tx_route_path'] = array (
           'address_end,' .
           'url,' .
         '--div--;LLL:EXT:route/locallang_db.xml:tx_route_path.div_gpx,' . 
-          'gpx,' .
+          'gpxfile,gpxdata,' .
         '--div--;LLL:EXT:route/locallang_db.xml:tx_route_path.div_poi,' . 
           'tx_route_poi,' .
         '--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.images,' .
