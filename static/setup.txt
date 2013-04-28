@@ -127,9 +127,9 @@ plugin.tx_browser_pi1 {
           }
         }
       }
-      47676 >
-      47676 {
-        name    = Route
+      47677 = Route Auto
+      47677 {
+        name    = Route Auto
         select (
             tx_route_path.title
           , tx_route_category.title
@@ -183,6 +183,11 @@ plugin.tx_browser_pi1 {
             }
           }
         }
+      }
+      47677 < .47676
+      47677 = Route Auto
+      47677 {
+        name    = Route Auto
       }
     }
   }
