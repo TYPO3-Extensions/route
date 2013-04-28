@@ -207,9 +207,9 @@ $TCA['tx_route_category'] = array (
     'showRecordFieldList' =>  
       'type,' . 
       'title,title_lang_ol,' . 
-      'text,text_lang_ol,' .
-      'color,' .
-      'image,imageseo,imageseo_lang_ol,image_width,image_height,image_compression,image_effects,' .
+      'icons,icon_offset_x,icon_offset_y,' .
+      'tx_route_poi,' .
+      'tx_route_path,' .
       'hidden' ,
   ),
   'columns' => array (
@@ -251,6 +251,116 @@ $TCA['tx_route_category'] = array (
         'default'  => '0',
       ),
     ),
+    'tx_route_path' => array (
+      'exclude'   => $bool_exclude_default,
+      'l10n_mode' => 'exclude',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_category.tx_route_path',
+      'config'    => array (
+        'type'                => 'select',
+        'size'                => 1,
+        'minitems'            => 1,
+        'maxitems'            => 1,
+        'MM'                  => 'tx_route_path_mm_tx_route_category',
+        'MM_opposite_field'   => 'tx_route_category',
+        'foreign_table'       => 'tx_route_path',
+        'foreign_table_where' => 'AND tx_route_path.pid=###CURRENT_PID### AND tx_route_path.deleted = 0 AND tx_route_path.hidden = 0 ORDER BY tx_route_path.title',
+        'items' => array (
+          '0' => array (
+            '0' => '',
+            '1' => '',
+          ),
+        ),
+        'suppress_icons' => 1,
+        'wizards' => array (
+          '_PADDING'  => 2,
+          '_VERTICAL' => 0,
+          'add' => array (
+            'type'   => 'script',
+            'title'  => 'LLL:EXT:route/locallang_db.xml:wizard.add',
+            'icon'   => 'add.gif',
+            'params' => array (
+              'table'    => 'tx_route_path',
+              'pid'      => '###CURRENT_PID###',
+              'setValue' => 'prepend'
+            ),
+            'script' => 'wizard_add.php',
+          ),
+          'list' => array (
+            'type'   => 'script',
+            'title'  => 'LLL:EXT:route/locallang_db.xml:wizard.list',
+            'icon'   => 'list.gif',
+            'params' => array (
+              'table' => 'tx_route_path',
+              'pid'      => '###CURRENT_PID###',
+            ),
+            'script' => 'wizard_list.php',
+          ),
+          'edit' => array (
+            'type'                      => 'popup',
+            'title'                     => 'LLL:EXT:route/locallang_db.xml:wizard.edit',
+            'script'                    => 'wizard_edit.php',
+            'popup_onlyOpenIfSelected'  => 1,
+            'icon'                      => 'edit2.gif',
+            'JSopenParams'              => 'height=680,width=800,status=0,menubar=0,scrollbars=1',
+          ),
+        ),
+      ),
+    ),
+    'tx_route_poi' => array (
+      'exclude'   => $bool_exclude_default,
+      'l10n_mode' => 'exclude',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_category.tx_route_poi',
+      'config'    => array (
+        'type'                => 'select',
+        'size'                => 1,
+        'minitems'            => 1,
+        'maxitems'            => 1,
+        'MM'                  => 'tx_route_poi_mm_tx_route_category',
+        'MM_opposite_field'   => 'tx_route_category',
+        'foreign_table'       => 'tx_route_poi',
+        'foreign_table_where' => 'AND tx_route_poi.pid=###CURRENT_PID### AND tx_route_poi.deleted = 0 AND tx_route_poi.hidden = 0 ORDER BY tx_route_poi.title',
+        'items' => array (
+          '0' => array (
+            '0' => '',
+            '1' => '',
+          ),
+        ),
+        'suppress_icons' => 1,
+        'wizards' => array (
+          '_PADDING'  => 2,
+          '_VERTICAL' => 0,
+          'add' => array (
+            'type'   => 'script',
+            'title'  => 'LLL:EXT:route/locallang_db.xml:wizard.add',
+            'icon'   => 'add.gif',
+            'params' => array (
+              'table'    => 'tx_route_poi',
+              'pid'      => '###CURRENT_PID###',
+              'setValue' => 'prepend'
+            ),
+            'script' => 'wizard_add.php',
+          ),
+          'list' => array (
+            'type'   => 'script',
+            'title'  => 'LLL:EXT:route/locallang_db.xml:wizard.list',
+            'icon'   => 'list.gif',
+            'params' => array (
+              'table' => 'tx_route_poi',
+              'pid'      => '###CURRENT_PID###',
+            ),
+            'script' => 'wizard_list.php',
+          ),
+          'edit' => array (
+            'type'                      => 'popup',
+            'title'                     => 'LLL:EXT:route/locallang_db.xml:wizard.edit',
+            'script'                    => 'wizard_edit.php',
+            'popup_onlyOpenIfSelected'  => 1,
+            'icon'                      => 'edit2.gif',
+            'JSopenParams'              => 'height=680,width=800,status=0,menubar=0,scrollbars=1',
+          ),
+        ),
+      ),
+    ),
     'hidden'    => $conf_hidden,
   ),
   'types' => array (
@@ -259,6 +369,10 @@ $TCA['tx_route_category'] = array (
         'type,title;;1;;1-1-1,' .
       '--div--;LLL:EXT:route/locallang_db.xml:tx_route_category.div_icon,   ' .
         '--palette--;LLL:EXT:route/locallang_db.xml:tca_phrase.icons;icons,' .
+      '--div--;LLL:EXT:route/locallang_db.xml:tx_route_category.div_path,   ' .
+        'tx_route_path,' .
+      '--div--;LLL:EXT:route/locallang_db.xml:tx_route_category.div_poi,   ' .
+        'tx_route_path,' .
       '--div--;LLL:EXT:route/locallang_db.xml:tx_route_category.div_control,' .
         'hidden'
     ),

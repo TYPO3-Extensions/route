@@ -27,6 +27,8 @@
       <label index="tx_route_category.icons">Icons (1st: default. 2nd: big size)</label>
       <label index="tx_route_category.icon_offset_x">Move it by x pixel to the right</label>
       <label index="tx_route_category.icon_offset_y">Move it by x pixel to the bottom</label>
+      <label index="tx_route_category.tx_route_path">Paths</label>
+      <label index="tx_route_category.tx_route_poi">Marker</label>
       <label index="tx_route_path">Paths</label>                        
       <label index="tx_route_path.div_control">Controlling</label>
       <label index="tx_route_path.div_design">Design</label>
@@ -101,6 +103,8 @@
       <label index="tx_route_category.icons">Piktogramm (1.: Standard. 2.: Gro<![CDATA[ß]]>es Format)</label>
       <label index="tx_route_category.icon_offset_x">Um x-Pixel nach rechts verschieben</label>
       <label index="tx_route_category.icon_offset_y">Um x-Pixel nach unten verschieben</label>
+      <label index="tx_route_category.tx_route_path">Pfade</label>
+      <label index="tx_route_category.tx_route_poi">Markierungen</label>
       <label index="tx_route_path">Pfade</label>                        
       <label index="tx_route_path.div_control">Steuerung</label>
       <label index="tx_route_path.div_design">Design</label>
