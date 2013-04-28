@@ -31,9 +31,10 @@
       <label index="tx_route_category.note">Note (internal)</label>
       <label index="tx_route_path">Route</label>                        
       <label index="tx_route_path.div_control">Controlling</label>
+      <label index="tx_route_path.div_design">Design</label>
       <label index="tx_route_path.div_gpx">Data</label>
       <label index="tx_route_path.div_poi">POI</label>
-      <label index="tx_route_path.div_properties">Properties</label>
+      <label index="tx_route_path.div_address">Adresse</label>
       <label index="tx_route_path.div_route">Route</label>
       <label index="tx_route_path.div_seo">Search Engines</label>
       <label index="tx_route_path.div_shortterms">Short Terms</label>
@@ -86,6 +87,7 @@
       <label index="tx_route_category.note">Bemerkung (intern)</label>
       <label index="tx_route_path">Route</label>                        
       <label index="tx_route_path.div_control">Steuerung</label>
+      <label index="tx_route_path.div_design">Design</label>
       <label index="tx_route_path.div_gpx">Daten</label>
       <label index="tx_route_path.div_poi">POI</label>
       <label index="tx_route_path.div_properties">Eigenschaften</label>

@@ -424,16 +424,17 @@ $TCA['tx_route_path'] = array (
   'ctrl' => $TCA['tx_route_path']['ctrl'],
   'interface' => array (
     'showRecordFieldList' =>  
-      'sys_language_uid,l10n_parent,l10n_diffsource,' .
-      'title,short,bodytext,' .
-      'list_title,list_short,map_title,map_short,' .
-      'tx_route_category,color,line_width,icon_lat,icon_lon,address_start,address_end,url,' .
-      'gpxfile, gpxdata,' .
-      'tx_route_poi,' .
-      'image,imagecaption,imageseo,imagewidth,imageheight,imageorient,imagecaption,imagecols,imageborder,imagecaption_position,image_link,image_zoom,image_noRows,image_effects,image_compression,' .
-      'hidden,starttime,endtime,fe_group,'.
-      'seo_keywords,seo_description' .
-      ''
+        'sys_language_uid,l10n_parent,l10n_diffsource,' 
+      . 'title,tx_route_category,short,bodytext,' 
+      . 'gpxfile, gpxdata,' 
+      . 'icon,iconwidth,iconheight,icon_lat,icon_lon,color,line_width,' 
+      . 'tx_route_poi,' 
+      . 'list_title,list_short,map_title,map_short,' 
+      . 'address_start,address_end,url,' 
+      . 'image,imagecaption,imageseo,imagewidth,imageheight,imageorient,imagecaption,imagecols,imageborder,imagecaption_position,image_link,image_zoom,image_noRows,image_effects,image_compression,' 
+      . 'hidden,starttime,endtime,fe_group,'
+      . 'seo_keywords,seo_description' 
+      ,
   ),
   'feInterface' => $TCA['tx_route_path']['feInterface'],
   'columns' => array (
@@ -473,42 +474,6 @@ $TCA['tx_route_path'] = array (
       'l10n_mode' => 'prefixLangTitle',
       'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.title',
       'config'    => $conf_input_30_trimRequired,
-    ),
-    'short' => array (
-      'exclude'   => 0,
-      'l10n_mode' => 'prefixLangTitle',
-      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.short',
-      'config'    => $conf_text_30_05,
-    ),
-    'bodytext' => array (
-      'exclude'   => 0,
-      'l10n_mode' => 'prefixLangTitle',
-      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.bodytext',
-      'config'    => $conf_text_rte,
-    ),
-    'list_title' => array (
-      'exclude'   => 0,
-      'l10n_mode' => 'prefixLangTitle',
-      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.list_title',
-      'config'    => $conf_input_30,
-    ),
-    'list_short' => array (
-      'exclude'   => 0,
-      'l10n_mode' => 'prefixLangTitle',
-      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.list_short',
-      'config'    => $conf_text_30_05,
-    ),
-    'map_title' => array (
-      'exclude'   => 0,
-      'l10n_mode' => 'prefixLangTitle',
-      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.map_title',
-      'config'    => $conf_input_30,
-    ),
-    'map_short' => array (
-      'exclude'   => 0,
-      'l10n_mode' => 'prefixLangTitle',
-      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.map_short',
-      'config'    => $conf_text_30_05,
     ),
     'tx_route_category' => array (
       'exclude'   => $bool_exclude_default,
@@ -557,6 +522,74 @@ $TCA['tx_route_path'] = array (
         ),
       ),
     ),
+    'short' => array (
+      'exclude'   => 0,
+      'l10n_mode' => 'prefixLangTitle',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.short',
+      'config'    => $conf_text_30_05,
+    ),
+    'bodytext' => array (
+      'exclude'   => 0,
+      'l10n_mode' => 'prefixLangTitle',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.bodytext',
+      'config'    => $conf_text_rte,
+    ),
+    'gpxfile' => array (
+      'exclude'   => $bool_exclude_default,
+//      'l10n_mode' => 'exclude',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.gpxfile',
+      'config'    => $conf_file_gpx,
+    ),
+    'gpxdata' => array (
+      'exclude'   => 0,
+      'l10n_mode' => 'prefixLangTitle',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.gpxdata',
+      'config'    => $conf_text_30_05,
+    ),
+    'icon' => array (
+      'l10n_mode' => 'exclude',
+      'exclude'   => $bool_exclude_default,
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tca_phrase.icon',
+      'config'    => $conf_file_icon,
+    ),
+    'iconwidth' => array (
+      'exclude'   => $bool_exclude_default,
+      'l10n_mode' => 'exclude',
+      'label'     => 'LLL:EXT:cms/locallang_ttc.xml:imagewidth',
+      'config'    => array (
+        'type'      => 'input',
+        'size'      => '10',
+        'max'       => '10',
+        'eval'      => 'trim',
+        'checkbox'  => '0',
+        'default'   => ''
+      ),
+    ),
+    'iconheight' => array (
+      'exclude'   => $bool_exclude_default,
+      'l10n_mode' => 'exclude',
+      'label'     => 'LLL:EXT:cms/locallang_ttc.xml:imageheight',
+      'config'    => array (
+        'type'      => 'input',
+        'size'      => '10',
+        'max'       => '10',
+        'eval'      => 'trim',
+        'checkbox'  => '0',
+        'default'   => ''
+      ),
+    ),
+    'icon_lat' => array (
+      'exclude'   => 0,
+      'l10n_mode' => 'prefixLangTitle',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.icon_lat',
+      'config'    => $conf_input_30_trim,
+    ),
+    'icon_lon' => array (
+      'exclude'   => 0,
+      'l10n_mode' => 'prefixLangTitle',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.icon_lon',
+      'config'    => $conf_input_30_trim,
+    ),
     'color' => array (
       'exclude'   => $bool_exclude_default,
       'l10n_mode' => 'exclude',
@@ -594,17 +627,35 @@ $TCA['tx_route_path'] = array (
         'default' => '1',
       ),
     ),
-    'icon_lat' => array (
+    'tx_route_poi' => array (
       'exclude'   => 0,
       'l10n_mode' => 'prefixLangTitle',
-      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.icon_lat',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.tx_route_poi',
       'config'    => $conf_input_30_trim,
     ),
-    'icon_lon' => array (
+    'list_title' => array (
       'exclude'   => 0,
       'l10n_mode' => 'prefixLangTitle',
-      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.icon_lon',
-      'config'    => $conf_input_30_trim,
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.list_title',
+      'config'    => $conf_input_30,
+    ),
+    'list_short' => array (
+      'exclude'   => 0,
+      'l10n_mode' => 'prefixLangTitle',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.list_short',
+      'config'    => $conf_text_30_05,
+    ),
+    'map_title' => array (
+      'exclude'   => 0,
+      'l10n_mode' => 'prefixLangTitle',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.map_title',
+      'config'    => $conf_input_30,
+    ),
+    'map_short' => array (
+      'exclude'   => 0,
+      'l10n_mode' => 'prefixLangTitle',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.map_short',
+      'config'    => $conf_text_30_05,
     ),
     'address_start' => array (
       'exclude'   => 0,
@@ -622,24 +673,6 @@ $TCA['tx_route_path'] = array (
       'exclude'   => 0,
       'l10n_mode' => 'prefixLangTitle',
       'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.url',
-      'config'    => $conf_input_30_trim,
-    ),
-    'gpxfile' => array (
-      'exclude'   => $bool_exclude_default,
-//      'l10n_mode' => 'exclude',
-      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.gpxfile',
-      'config'    => $conf_file_gpx,
-    ),
-    'gpxdata' => array (
-      'exclude'   => 0,
-      'l10n_mode' => 'prefixLangTitle',
-      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.gpxdata',
-      'config'    => $conf_text_30_05,
-    ),
-    'tx_route_poi' => array (
-      'exclude'   => 0,
-      'l10n_mode' => 'prefixLangTitle',
-      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.tx_route_poi',
       'config'    => $conf_input_30_trim,
     ),
     'image' => array (
@@ -880,26 +913,28 @@ $TCA['tx_route_path'] = array (
       'showitem' => 
         '--div--;LLL:EXT:route/locallang_db.xml:tx_route_path.div_route,' . 
           'title,' .
+          'tx_route_category,' .
           'short,' .
           'bodytext;;;richtext[]:rte_transform[mode=ts];,' .
+        '--div--;LLL:EXT:route/locallang_db.xml:tx_route_path.div_gpx,' . 
+          'gpxfile,gpxdata,' .
+        '--div--;LLL:EXT:route/locallang_db.xml:tx_route_path.div_poi,' . 
+          'tx_route_poi,' .
+        '--div--;LLL:EXT:route/locallang_db.xml:tx_route_path.div_design,' . 
+          'icon,iconwidth,iconheight,' .
+          'icon_lat,' .
+          'icon_lon,' .
+          'color,' .
+          'line_width,' .
         '--div--;LLL:EXT:route/locallang_db.xml:tx_route_path.div_shortterms,' . 
           'list_title,' .
           'list_short,' .
           'map_title,' .
           'map_short,' .
-        '--div--;LLL:EXT:route/locallang_db.xml:tx_route_path.div_properties,' . 
-          'tx_route_category,' .
-          'color,' .
-          'line_width,' .
-          'icon_lat,' .
-          'icon_lon,' .
+        '--div--;LLL:EXT:route/locallang_db.xml:tx_route_path.div_address,' . 
           'address_start,' .
           'address_end,' .
           'url,' .
-        '--div--;LLL:EXT:route/locallang_db.xml:tx_route_path.div_gpx,' . 
-          'gpxfile,gpxdata,' .
-        '--div--;LLL:EXT:route/locallang_db.xml:tx_route_path.div_poi,' . 
-          'tx_route_poi,' .
         '--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.images,' .
           '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.imagefiles;imagefiles,' .
           '--palette--;LLL:EXT:route/locallang_db.xml:palette.image_accessibility;image_accessibility,' .

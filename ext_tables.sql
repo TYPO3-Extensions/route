@@ -63,13 +63,31 @@ CREATE TABLE tx_route_path (
   l10n_diffsource mediumtext,
 
   title tinytext,
+  tx_route_category tinytext,
   short tinytext,
   bodytext mediumtext NOT NULL,
+
+  gpxfile text,
+  gpxdata text,
+
+  icon text,
+  iconheight tinytext,
+  iconwidth tinytext,
+  icon_lat text NOT NULL,
+  icon_lon text NOT NULL,
+  color tinytext NOT NULL,
+  line_width int(3) DEFAULT '2' NOT NULL,
+
+  tx_route_poi tinytext,
 
   list_title tinytext,
   list_short mediumtext,
   map_title tinytext,
   map_short mediumtext,
+
+  address_start text NOT NULL,
+  address_end text NOT NULL,
+  url text NOT NULL,
 
   image text,
   imagecaption text,
@@ -87,20 +105,6 @@ CREATE TABLE tx_route_path (
   image_effects tinyint(3) unsigned NOT NULL default '0',
   image_compression tinyint(3) unsigned NOT NULL default '0',
   image_frames tinyint(3) unsigned NOT NULL default '0',
-
-  tx_route_category tinytext,
-  color tinytext NOT NULL,
-  line_width int(3) DEFAULT '2' NOT NULL,
-  icon_lat text NOT NULL,
-  icon_lon text NOT NULL,
-  address_start text NOT NULL,
-  address_end text NOT NULL,
-  url text NOT NULL,
-
-  gpxfile text,
-  gpxdata text,
-
-  tx_route_poi tinytext,
 
   hidden tinyint(4) DEFAULT '0' NOT NULL,
   starttime int(11) DEFAULT '0' NOT NULL,
