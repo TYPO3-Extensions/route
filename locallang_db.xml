@@ -85,19 +85,19 @@
       <label index="wizard.list">Display all records</label>
     </languageKey>
     <languageKey index="de" type="array">
-      <label index="palette.time">Auf Zeit beschr<![CDATA[ä]]>nkter Zugriff</label>
-      <label index="tca_phrase.accessByFeGroup">Auf Gruppen beschr<![CDATA[ä]]>nkter Zugriff</label>
+      <label index="palette.time">Auf Zeit beschr<![CDATA[&auml;]]>nkter Zugriff</label>
+      <label index="tca_phrase.accessByFeGroup">Auf Gruppen beschr<![CDATA[&auml;]]>nkter Zugriff</label>
       <label index="tca_phrase.color">Farbe</label>
       <label index="tca_phrase.files">Dateien</label>
       <label index="tca_phrase.icon">Piktogramm</label>
       <label index="tca_phrase.icons">Piktogramme</label>
       <label index="tca_phrase.image">Bilder</label>
       <label index="tca_phrase.imagecaption">Unterschriften (eine Zeile pro Datei)</label>
-      <label index="tca_phrase.imageseo">Bezeichnung f<![CDATA[ü]]>r Suchmaschinen (eine Zeile pro Datei)</label>
+      <label index="tca_phrase.imageseo">Bezeichnung f<![CDATA[&uuml;]]>r Suchmaschinen (eine Zeile pro Datei)</label>
       <label index="tca_phrase.image_settings">Einstellungen</label>
       <label index="tca_phrase.lang_ol"><![CDATA[Ü]]>bersetzungen (z.B. en:Translation|fr:Traduction)</label>
-      <label index="tca_phrase.seo_description">Beschreibung f<![CDATA[ü]]>r Suchmaschinen (bis etwa 200 Zeichen)</label>
-      <label index="tca_phrase.seo_keywords">Stichworte f<![CDATA[ü]]>r Suchmaschinen (drei bis f<![CDATA[ü]]>nf, mit Komma trennen)</label>
+      <label index="tca_phrase.seo_description">Beschreibung f<![CDATA[&uuml;]]>r Suchmaschinen (bis etwa 200 Zeichen)</label>
+      <label index="tca_phrase.seo_keywords">Stichworte f<![CDATA[&uuml;]]>r Suchmaschinen (drei bis f<![CDATA[&uuml;]]>nf, mit Komma trennen)</label>
       <label index="tx_route_category">Kategorien</label>
       <label index="tx_route_category.div_cat">Kategorie</label>
       <label index="tx_route_category.div_control">Steuerung</label>
@@ -105,7 +105,7 @@
       <label index="tx_route_category.div_path">Pfade</label>
       <label index="tx_route_category.div_poi">Markierungen</label>
       <label index="tx_route_category.title">Bezeichnung der Kategorie</label>
-      <label index="tx_route_category.icons">Piktogramm (1: klein. Optional: 2: mittel, 3: gro<![CDATA[ß]]>)</label>
+      <label index="tx_route_category.icons">Piktogramm (1: klein. Optional: 2: mittel, 3: gro<![CDATA[&szlig]]>)</label>
       <label index="tx_route_category.icon_offset_x">Um x-Pixel nach rechts verschieben</label>
       <label index="tx_route_category.icon_offset_y">Um x-Pixel nach unten verschieben</label>
       <label index="tx_route_category.tx_route_path">Pfade</label>
@@ -125,10 +125,10 @@
       <label index="tx_route_path.bodytext">Beschreibung</label>                        
       <label index="tx_route_path.color">Farbe des Pfads</label>                        
       <label index="tx_route_path.gpxdata">GPX-Daten</label>                        
-      <label index="tx_route_path.gpxfile">GPX-Datei (das Hochladen überschreibt die Daten)</label>                        
-      <label index="tx_route_path.icon_lat">Breitengrad des Piktogramms (leer lassen für Standard-Wert)</label>                        
-      <label index="tx_route_path.icon_lon">Längengrad des Piktogramms (leer lassen für Standard-Wert)</label>                        
-      <label index="tx_route_path.line_width">Linien-Stärke des Pfads</label>                        
+      <label index="tx_route_path.gpxfile">GPX-Datei (das Hochladen <![CDATA[&uuml;]]>berschreibt die Daten)</label>                        
+      <label index="tx_route_path.icon_lat">Breitengrad des Piktogramms (leer lassen f<![CDATA[&uuml;]]>r Standard-Wert)</label>                        
+      <label index="tx_route_path.icon_lon">L<![CDATA[&auml;]]>ngengrad des Piktogramms (leer lassen f<![CDATA[&uuml;]]>r Standard-Wert)</label>                        
+      <label index="tx_route_path.line_width">Linien-St<![CDATA[&auml;]]>rke des Pfads</label>                        
       <label index="tx_route_path.list_title">Bezeichnung in Listen-Ansichten (wenn leer: Standard-Wert wird genommen)</label>
       <label index="tx_route_path.list_short">Kurzbeschreibung in Listen-Ansichten (wenn leer: Standard-Wert wird genommen)</label>
       <label index="tx_route_path.map_title">Bezeichnung in Karten (wenn leer: Listen-Wert wird genommen)</label>
@@ -150,7 +150,7 @@
       <label index="tx_route_poi.lat">Breitengrad</label>
       <label index="tx_route_poi.list_title">Bezeichnung in Listen-Ansichten (wenn leer: Standard-Wert wird genommen)</label>
       <label index="tx_route_poi.list_short">Kurzbeschreibung in Listen-Ansichten (wenn leer: Standard-Wert wird genommen)</label>
-      <label index="tx_route_poi.lon">Längengrad</label>
+      <label index="tx_route_poi.lon">L&auml;ngengrad</label>
       <label index="tx_route_poi.map_title">Bezeichnung in Karten (wenn leer: Listen-Wert wird genommen)</label>
       <label index="tx_route_poi.map_short">Kurzbeschreibung in Karten (wenn leer: Listen-Wert wird genommen)</label>
       <label index="tx_route_poi.short">Kurzbeschreibung</label>                        
@@ -160,7 +160,7 @@
       <label index="tx_route_poi.url">URL (einer anderen Website)</label>                        
       <label index="wizard.add">Neuen Datensatz erstellen</label>
       <label index="wizard.edit">Markierten Datensatz bearbeiten</label>
-      <label index="wizard.list">Alle Datens<![CDATA[ä]]>tze anzeigen</label>
+        <label index="wizard.list">Alle Datens<![CDATA[&auml;]]>tze anzeigen</label>
     </languageKey>
   </data>
 </T3locallang>
