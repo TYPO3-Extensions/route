@@ -1410,13 +1410,13 @@ $TCA['tx_route_poi'] = array (
           'tx_route_category,' .
           'short,' .
           'bodytext;;;richtext[]:rte_transform[mode=ts];,' .
-        '--div--;LLL:EXT:route/locallang_db.xml:tx_route_poi.div_paths,' . 
-          'tx_route_path,' .
         '--div--;LLL:EXT:route/locallang_db.xml:tx_route_poi.div_properties,' . 
           'lat,' .
           'lon,' .
           'address,' .
           'url,' .
+        '--div--;LLL:EXT:route/locallang_db.xml:tx_route_poi.div_paths,' . 
+          'tx_route_path,' .
         '--div--;LLL:EXT:route/locallang_db.xml:tx_route_poi.div_shortterms,' . 
           'list_title,' .
           'list_short,' .
