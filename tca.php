@@ -399,8 +399,8 @@ $TCA['tx_route_category'] = array (
       'showitem'        =>  
           'image;LLL:EXT:route/locallang_db.xml:tca_phrase.image.cat,' . 
         '--linebreak--,' .
-          'imageseo;LLL:EXT:route/locallang_db.xml:tca_phrase.seo_description,' ,
-          'imageseo_lang_ol;LLL:EXT:route/locallang_db.xml:tca_phrase.lang_ol' ,
+          'imageseo;;3;;LLL:EXT:route/locallang_db.xml:tca_phrase.seo_description,' ,
+//          'imageseo_lang_ol;LLL:EXT:route/locallang_db.xml:tca_phrase.lang_ol' ,
       'canNotCollapse'  =>  1,
     ),
     'image_settings'  => array (
