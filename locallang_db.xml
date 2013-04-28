@@ -150,7 +150,7 @@
       <label index="tx_route_poi.lat">Breitengrad</label>
       <label index="tx_route_poi.list_title">Bezeichnung in Listen-Ansichten (wenn leer: Standard-Wert wird genommen)</label>
       <label index="tx_route_poi.list_short">Kurzbeschreibung in Listen-Ansichten (wenn leer: Standard-Wert wird genommen)</label>
-      <label index="tx_route_poi.lon">L&auml;ngengrad</label>
+      <label index="tx_route_poi.lon">L<![CDATA[&auml;]]>ngengrad</label>
       <label index="tx_route_poi.map_title">Bezeichnung in Karten (wenn leer: Listen-Wert wird genommen)</label>
       <label index="tx_route_poi.map_short">Kurzbeschreibung in Karten (wenn leer: Listen-Wert wird genommen)</label>
       <label index="tx_route_poi.short">Kurzbeschreibung</label>                        
