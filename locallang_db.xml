@@ -86,14 +86,14 @@
       <label index="tca_phrase.imagecaption">Unterschriften (eine Zeile pro Datei)</label>
       <label index="tca_phrase.imageseo">Bezeichnung f<![CDATA[ü]]>r Suchmaschinen (eine Zeile pro Datei)</label>
       <label index="tca_phrase.image_settings">Einstellungen</label>
+      <label index="tca_phrase.lang_ol"><![CDATA[Ü]]>bersetzungen (z.B. en:Translation|fr:Traduction)</label>
       <label index="tca_phrase.seo_description">Beschreibung f<![CDATA[ü]]>r Suchmaschinen (bis etwa 200 Zeichen)</label>
       <label index="tca_phrase.seo_keywords">Stichworte f<![CDATA[ü]]>r Suchmaschinen (drei bis f<![CDATA[ü]]>nf, mit Komma trennen)</label>
       <label index="tx_route_category">Kategorien</label>
       <label index="tx_route_category.div_cat">Kategorie</label>
       <label index="tx_route_category.div_control">Steuerung</label>
       <label index="tx_route_category.div_icon">Piktogramm</label>
-      <label index="tx_route_category.title">Bezeichnung der Dokumenten-Kategorie</label>
-      <label index="tx_route_category.title_lang_ol"><![CDATA[Ü]]>bersetzungen (z.B. en:Translation|fr:Traduction)</label>
+      <label index="tx_route_category.title">Bezeichnung der Kategorie</label>
       <label index="tx_route_category.icons">Piktogramm (1.: Standard. 2.: Gro<![CDATA[ß]]>es Format)</label>
       <label index="tx_route_category.icon_offset_x">X-Offset des Piktogramms in einer Karte</label>
       <label index="tx_route_category.icon_offset_y">Y-Offset des Piktogramms in einer Karte</label>
