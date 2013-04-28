@@ -223,13 +223,6 @@ $TCA['tx_route_category'] = array (
     'dynamicConfigFile' => t3lib_extMgm::extPath( $_EXTKEY ) . 'tca.php',
     'thumbnail'         => 'image',
     'iconfile'          => t3lib_extMgm::extRelPath($_EXTKEY) . 'ext_icon.gif',
-    'type'              => 'type',
-    'typeicon_column'   => 'type',
-    'typeicons'         => array(
-      'cat_text'  => '../typo3conf/ext/route/ext_icon/cat_text.gif',
-      'cat_color' => '../typo3conf/ext/route/ext_icon/cat_color.gif',
-      'cat_image' => '../typo3conf/ext/route/ext_icon/cat_image.gif',
-    ),
   ),
 );
   // Category
