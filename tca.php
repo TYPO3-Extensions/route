@@ -403,7 +403,8 @@ $TCA['tx_route_path'] = array (
   'interface' => array (
     'showRecordFieldList' =>  
         'sys_language_uid,l10n_parent,l10n_diffsource,' 
-      . 'title,tx_route_category,short,bodytext,' 
+      . 'title,short,bodytext,' 
+      . 'tx_route_category,' 
       . 'gpxfile, gpxdata,' 
       . 'icon,iconwidth,iconheight,icon_lat,icon_lon,color,line_width,' 
       . 'tx_route_poi,' 
@@ -453,13 +454,25 @@ $TCA['tx_route_path'] = array (
       'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.title',
       'config'    => $conf_input_30_trimRequired,
     ),
+    'short' => array (
+      'exclude'   => 0,
+      'l10n_mode' => 'prefixLangTitle',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.short',
+      'config'    => $conf_text_30_05,
+    ),
+    'bodytext' => array (
+      'exclude'   => 0,
+      'l10n_mode' => 'prefixLangTitle',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.bodytext',
+      'config'    => $conf_text_rte,
+    ),
     'tx_route_category' => array (
       'exclude'   => $bool_exclude_default,
       'l10n_mode' => 'exclude',
       'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.tx_route_category',
       'config'    => array (
         'type'                => 'select',
-        'size'                => 10,
+        'size'                => 20,
         'minitems'            => 0,
         'maxitems'            => 1,
         'MM'                  => 'tx_route_path_mm_tx_route_category',
@@ -506,18 +519,6 @@ $TCA['tx_route_path'] = array (
           ),
         ),
       ),
-    ),
-    'short' => array (
-      'exclude'   => 0,
-      'l10n_mode' => 'prefixLangTitle',
-      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.short',
-      'config'    => $conf_text_30_05,
-    ),
-    'bodytext' => array (
-      'exclude'   => 0,
-      'l10n_mode' => 'prefixLangTitle',
-      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.bodytext',
-      'config'    => $conf_text_rte,
     ),
     'gpxfile' => array (
       'exclude'   => $bool_exclude_default,
@@ -946,9 +947,10 @@ $TCA['tx_route_path'] = array (
       'showitem' => 
         '--div--;LLL:EXT:route/locallang_db.xml:tx_route_path.div_path,' . 
           'title,' .
-          'tx_route_category,' .
           'short,' .
           'bodytext;;;richtext[]:rte_transform[mode=ts];,' .
+        '--div--;LLL:EXT:route/locallang_db.xml:tx_route_path.div_cat,' . 
+          'tx_route_category,' .
         '--div--;LLL:EXT:route/locallang_db.xml:tx_route_path.div_gpx,' . 
           'gpxfile,gpxdata,' .
         '--div--;LLL:EXT:route/locallang_db.xml:tx_route_path.div_poi,' . 

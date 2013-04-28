@@ -32,6 +32,7 @@
       <label index="tx_route_category.tx_route_path">Paths</label>
       <label index="tx_route_category.tx_route_poi">Marker</label>
       <label index="tx_route_path">Paths</label>                        
+      <label index="tx_route_path.div_cat">Category</label>
       <label index="tx_route_path.div_control">Controlling</label>
       <label index="tx_route_path.div_design">Design</label>
       <label index="tx_route_path.div_gpx">Data</label>
@@ -110,7 +111,7 @@
       <label index="tx_route_category.tx_route_path">Pfade</label>
       <label index="tx_route_category.tx_route_poi">Markierungen</label>
       <label index="tx_route_path">Pfade</label>                        
-      <label index="tx_route_path.div_control">Steuerung</label>
+      <label index="tx_route_path.div_cat">Kategorie</label>
       <label index="tx_route_path.div_design">Design</label>
       <label index="tx_route_path.div_gpx">Daten</label>
       <label index="tx_route_path.div_poi">Markierungen</label>
