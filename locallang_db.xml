@@ -18,6 +18,7 @@
       <label index="tca_phrase.seo_description">Description for Search Engine Optimisation</label>
       <label index="tca_phrase.seo_keywords">Keywords for Search Engine Optimisation (CSV: comma separated values)</label>
       <label index="tx_route_category">Categories</label>
+      <label index="tx_route_category.div_cat">Category</label>
       <label index="tx_route_category.div_control">Controlling</label>
       <label index="tx_route_category.div_icon">Icon</label>
       <label index="tx_route_category.title">Category label</label>
@@ -88,6 +89,7 @@
       <label index="tca_phrase.seo_description">Beschreibung f<![CDATA[ü]]>r Suchmaschinen (bis etwa 200 Zeichen)</label>
       <label index="tca_phrase.seo_keywords">Stichworte f<![CDATA[ü]]>r Suchmaschinen (drei bis f<![CDATA[ü]]>nf, mit Komma trennen)</label>
       <label index="tx_route_category">Kategorien</label>
+      <label index="tx_route_category.div_cat">Kategorie</label>
       <label index="tx_route_category.div_control">Steuerung</label>
       <label index="tx_route_category.div_icon">Piktogramm</label>
       <label index="tx_route_category.title">Bezeichnung der Dokumenten-Kategorie</label>
