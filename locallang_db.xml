@@ -53,7 +53,7 @@
       <label index="tx_route_path.address_end">Adress of the Ending Point of the Route</label>                        
       <label index="tx_route_path.url">URL (of another Website)</label>                        
       <label index="tx_route_path.gpxdata">GPX Data</label>                        
-      <label index="tx_route_path.gpxfile">GPX File (file is overwriting data)</label>                        
+      <label index="tx_route_path.gpxfile">GPX File (an upload is overwriting data)</label>                        
       <label index="tx_route_path.tx_route_poi">tx_route_poi</label>      
       <label index="wizard.add">Add a record</label>
       <label index="wizard.edit">Edit the selected recorded</label>
@@ -108,7 +108,7 @@
       <label index="tx_route_path.address_end">Adresse Routen-Ende</label>                        
       <label index="tx_route_path.url">URL der Route (einer anderen Website)</label>                        
       <label index="tx_route_path.gpxdata">GPX-Daten</label>                        
-      <label index="tx_route_path.gpxfile">GPX-Datei (die Datei überschreibt die Daten)</label>                        
+      <label index="tx_route_path.gpxfile">GPX-Datei (das Hochladen überschreibt die Daten)</label>                        
       <label index="tx_route_path.tx_route_poi">tx_route_poi</label>      
       <label index="wizard.add">Neuen Datensatz erstellen</label>
       <label index="wizard.edit">Markierten Datensatz bearbeiten</label>

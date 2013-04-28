@@ -38,22 +38,18 @@ if (!defined ('TYPO3_MODE'))  die ('Access denied.');
     'softref' => 'typolink',
   );
 
-  $conf_file_document = array (
+  $conf_file_gpx = array (
     'type'          => 'group',
     'internal_type' => 'file',
-    'allowed'       => '',
-    'disallowed'    => 'php,php3', 
+    'allowed'       => 'gpx',
+    'disallowed'    => '', 
     'max_size'      => $GLOBALS['TYPO3_CONF_VARS']['BE']['maxFileSize'], 
     'uploadfolder'  => 'uploads/tx_route',
     'show_thumbs'   => 1,
-    'size'          => 10,
+    'size'          => 1,
     'minitems'      => 0,
-    'maxitems'      => 99,
+    'maxitems'      => 1,
   );
-
-  $conf_file_one_document             = $conf_file_document;
-  $conf_file_one_document['size']     = 1;
-  $conf_file_one_document['maxitems'] = 1;
 
   $conf_file_image = array (
     'type'          => 'group',
@@ -628,10 +624,10 @@ $TCA['tx_route_path'] = array (
       'config'    => $conf_input_30_trim,
     ),
     'gpxfile' => array (
-      'exclude'   => 0,
-      'l10n_mode' => 'prefixLangTitle',
+      'exclude'   => $bool_exclude_default,
+//      'l10n_mode' => 'exclude',
       'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.gpxfile',
-      'config'    => $conf_input_30_trimRequired,
+      'config'    => $conf_file_gpx,
     ),
     'gpxdata' => array (
       'exclude'   => 0,
