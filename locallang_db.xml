@@ -26,7 +26,7 @@
       <label index="tx_route_category.div_path">Paths</label>
       <label index="tx_route_category.div_poi">Marker</label>
       <label index="tx_route_category.title">Category label</label>
-      <label index="tx_route_category.icons">Icons (1st: default. 2nd: big size)</label>
+      <label index="tx_route_category.icons">Icons (1: small. Optional: 2: middle, 3: big)</label>
       <label index="tx_route_category.icon_offset_x">Move it by x pixel to the right</label>
       <label index="tx_route_category.icon_offset_y">Move it by x pixel to the bottom</label>
       <label index="tx_route_category.tx_route_path">Paths</label>
@@ -105,7 +105,7 @@
       <label index="tx_route_category.div_path">Pfade</label>
       <label index="tx_route_category.div_poi">Markierungen</label>
       <label index="tx_route_category.title">Bezeichnung der Kategorie</label>
-      <label index="tx_route_category.icons">Piktogramm (1.: Standard. 2.: Gro<![CDATA[ß]]>es Format)</label>
+      <label index="tx_route_category.icons">Piktogramm (1: klein. Optional: 2: mittel, 3: gro<![CDATA[ß]]>)</label>
       <label index="tx_route_category.icon_offset_x">Um x-Pixel nach rechts verschieben</label>
       <label index="tx_route_category.icon_offset_y">Um x-Pixel nach unten verschieben</label>
       <label index="tx_route_category.tx_route_path">Pfade</label>
