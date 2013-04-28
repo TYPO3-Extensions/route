@@ -8,6 +8,7 @@
     <languageKey index="default" type="array">
       <label index="palette.time">Access depending on time</label>
       <label index="tca_phrase.accessByFeGroup">Access depending on groups</label>
+      <label index="tca_phrase.color">Colour</label>
       <label index="tca_phrase.image">Images</label>
       <label index="tca_phrase.imagecaption">Captions (one line per image)</label>
       <label index="tca_phrase.imageseo">Label for Search Engines (one line per image)</label>
@@ -59,6 +60,7 @@
     <languageKey index="de" type="array">
       <label index="palette.time">Auf Zeit beschr<![CDATA[ä]]>nkter Zugriff</label>
       <label index="tca_phrase.accessByFeGroup">Auf Gruppen beschr<![CDATA[ä]]>nkter Zugriff</label>
+      <label index="tca_phrase.color">Farbe</label>
       <label index="tca_phrase.image">Bilder</label>
       <label index="tca_phrase.imagecaption">Unterschriften (eine Zeile pro Datei)</label>
       <label index="tca_phrase.imageseo">Bezeichnung f<![CDATA[ü]]>r Suchmaschinen (eine Zeile pro Datei)</label>
