@@ -127,10 +127,12 @@ plugin.tx_browser_pi1 {
         aliases {
           tables {
             tx_route_path        = tx_route_path
-            tx_route_path_cat    = tx_route_category
+            //tx_route_path_cat    = tx_route_category
+            tx_route_path_cat    = tx_route_path_cat
             tx_route_path_mm_cat = tx_route_path_mm_tx_route_category
             tx_route_poi         = tx_route_poi
-            tx_route_poi_cat     = tx_route_category
+            //tx_route_poi_cat     = tx_route_category
+            tx_route_poi_cat     = tx_route_poi_cat
             tx_route_poi_mm_cat  = tx_route_poi_mm_tx_route_category
           }
           fields {
@@ -167,7 +169,6 @@ plugin.tx_browser_pi1 {
               </ul>
               <div class="cleaner">&nbsp;</div><!-- ###LISTBODYITEM### end --><!-- ###LISTBODY### end -->
             </div> <!-- /listview -->
-
 )
             }
           }
