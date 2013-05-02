@@ -79,8 +79,17 @@ plugin.tx_browser_pi1 {
           tx_route_poi.title            AS 'tx_route_poi.title',
           tx_route_poi.uid              AS 'tx_route_poi.uid',
           tx_route_poi_cat.title        AS 'tx_route_poi_cat.title',
-          tx_route_poi_cat.uid          AS 'tx_route_poi_cat.uid'
+          tx_route_poi_cat.uid          AS 'tx_route_poi_cat.uid',
+          CONCAT( tx_route_poi.uid, '.', tx_route_poi_cat.uid ) AS 'poi.poi_cat'
         )
+        select {
+          deal_as_table {
+            0 {
+              statement = CONCAT( tx_route_poi.uid, '.', tx_route_poi_cat.uid )
+              alias     = poi.poi_cat
+            }
+          }
+        }
         from {
           table = tx_route_path
           alias = tx_route_path
