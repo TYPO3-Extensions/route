@@ -142,7 +142,7 @@ plugin.tx_browser_pi1 {
           }
         }
         orderBy = tx_route_path.title, tx_route_path_mm_poi.sorting
-          // title, uid
+          // table.field.uid: title
         tx_route_path =
         tx_route_path {
             // table.field.uid: title
@@ -165,7 +165,7 @@ plugin.tx_browser_pi1 {
             }
           }
         }
-          // title, uid
+          // table.field.uid: title
         tx_route_path_cat =
         tx_route_path_cat {
             // table.field.uid: title
@@ -189,7 +189,7 @@ plugin.tx_browser_pi1 {
             }
           }
         }
-          // title, uid
+          // table.field.uid: title
         tx_route_poi =
         tx_route_poi {
             // table.field.uid: title
@@ -198,7 +198,7 @@ plugin.tx_browser_pi1 {
               // table.field.
             10 = TEXT
             10 {
-              value = tx_route_poi.title
+              value = tx_route_poi.title.
             }
               // uid
             20 = TEXT
@@ -213,7 +213,7 @@ plugin.tx_browser_pi1 {
             }
           }
         }
-          // title, uid
+          // table.field.uid: title
         tx_route_poi_cat =
         tx_route_poi_cat {
             // table.field.uid: title
@@ -222,16 +222,31 @@ plugin.tx_browser_pi1 {
               // table.field.
             10 = TEXT
             10 {
-              value = tx_route_poi_cat.title
+              value = tx_route_poi.title.
             }
               // uid
             20 = TEXT
             20 {
+              field = tx_route_poi.uid
+            }
+              // pipe
+            30 = TEXT
+            30 {
+              value = |
+            }
+              // table.field.
+            40 = TEXT
+            40 {
+              value = tx_route_poi_cat.title.
+            }
+              // uid
+            50 = TEXT
+            50 {
               field = tx_route_poi_cat.uid
             }
               // title
-            30 = TEXT
-            30 {
+            60 = TEXT
+            60 {
               field = tx_route_poi_cat.title
               noTrimWrap = |: ||
             }
