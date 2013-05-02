@@ -140,16 +140,78 @@ plugin.tx_browser_pi1 {
             pid = tx_route_path.pid
           }
         }
+          // title
+        tx_route_path =
         tx_route_path {
+            // title, uid
           title = COA
           title {
+              // title
             10 = TEXT
             10 {
               field = tx_route_path.title
             }
+              // uid
             20 = TEXT
             20 {
               field = tx_route_path.uid
+              noTrimWrap = | (#|)|
+            }
+          }
+        }
+          // title
+        tx_route_path_cat =
+        tx_route_path_cat {
+            // title, uid
+          title = COA
+          title {
+              // title
+            10 = TEXT
+            10 {
+              field = tx_route_path_cat.title
+            }
+              // uid
+            20 = TEXT
+            20 {
+              field = tx_route_path_cat.uid
+              noTrimWrap = | (#|)|
+            }
+          }
+        }
+          // title
+        tx_route_poi =
+        tx_route_poi {
+            // title, uid
+          title = COA
+          title {
+              // title
+            10 = TEXT
+            10 {
+              field = tx_route_poi.title
+            }
+              // uid
+            20 = TEXT
+            20 {
+              field = tx_route_poi.uid
+              noTrimWrap = | (#|)|
+            }
+          }
+        }
+          // title
+        tx_route_poi_cat =
+        tx_route_poi_cat {
+            // title, uid
+          title = COA
+          title {
+              // title
+            10 = TEXT
+            10 {
+              field = tx_route_poi_cat.title
+            }
+              // uid
+            20 = TEXT
+            20 {
+              field = tx_route_poi_cat.uid
               noTrimWrap = | (#|)|
             }
           }
