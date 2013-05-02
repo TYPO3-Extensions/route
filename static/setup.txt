@@ -72,14 +72,15 @@ plugin.tx_browser_pi1 {
       47677 {
         name    = Route
         select (
-          tx_route_path.title      AS `tx_route_path.title`,
-          tx_route_path.uid        AS `tx_route_path.uid`,
-          tx_route_path_cat.title  AS `tx_route_path_cat.title`,
-          tx_route_path_cat.uid    AS `tx_route_path_cat.uid`,
-          tx_route_poi.title       AS `tx_route_poi.title`,
-          tx_route_poi.uid         AS `tx_route_poi.uid`,
-          tx_route_poi_cat.title   AS `tx_route_poi_cat.title`,
-          tx_route_poi_cat.uid     AS `tx_route_poi_cat.uid`
+          tx_route_path.title         AS `tx_route_path.title`,
+          tx_route_path.uid           AS `tx_route_path.uid`,
+          tx_route_path_cat.title     AS `tx_route_path_cat.title`,
+          tx_route_path_cat.uid       AS `tx_route_path_cat.uid`,
+          tx_route_poi.title          AS `tx_route_poi.title`,
+          tx_route_poi.uid            AS `tx_route_poi.uid`,
+          tx_route_poi_cat.title      AS `tx_route_poi_cat.title`,
+          tx_route_poi_cat.uid        AS `tx_route_poi_cat.uid`,
+          tx_route_poi_mm_cat.sorting AS `tx_route_poi_mm_cat.sorting`
         )
         from {
           table = tx_route_path
@@ -130,6 +131,7 @@ plugin.tx_browser_pi1 {
             // #47700 tx_route_path_cat    = tx_route_category
             tx_route_path_cat    = tx_route_path_cat
             tx_route_path_mm_cat = tx_route_path_mm_tx_route_category
+            tx_route_path_poi    = tx_route_path_mm_tx_route_poi
             tx_route_poi         = tx_route_poi
             // #47700 tx_route_poi_cat     = tx_route_category
             tx_route_poi_cat     = tx_route_poi_cat
@@ -140,6 +142,7 @@ plugin.tx_browser_pi1 {
             pid = tx_route_path.pid
           }
         }
+        orderBy = tx_route_path.title, tx_route_path_mm_poi.sorting
           // title, uid
         tx_route_path =
         tx_route_path {
