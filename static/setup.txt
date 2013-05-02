@@ -131,7 +131,7 @@ plugin.tx_browser_pi1 {
             // #47700 tx_route_path_cat    = tx_route_category
             tx_route_path_cat    = tx_route_path_cat
             tx_route_path_mm_cat = tx_route_path_mm_tx_route_category
-            tx_route_path_poi    = tx_route_path_mm_tx_route_poi
+            tx_route_path_mm_poi = tx_route_path_mm_tx_route_poi
             tx_route_poi         = tx_route_poi
             // #47700 tx_route_poi_cat     = tx_route_category
             tx_route_poi_cat     = tx_route_poi_cat
