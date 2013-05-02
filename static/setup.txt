@@ -103,14 +103,14 @@ plugin.tx_browser_pi1 {
           2 {
             type  = LEFT JOIN
             table = tx_route_path_mm_tx_route_poi
-            alias = tx_route_path_mm_tx_route_poi
-            on    = tx_route_path.uid = tx_route_path_mm_tx_route_poi.uid_local
+            alias = tx_route_path_mm_poi
+            on    = tx_route_path.uid = tx_route_path_mm_poi.uid_local
           }
           3 {
             type  = LEFT JOIN
             table = tx_route_poi
             alias = tx_route_poi
-            on    = tx_route_poi.uid = tx_route_path_mm_tx_route_poi.uid_foreign
+            on    = tx_route_poi.uid = tx_route_path_mm_poi.uid_foreign
           }
           4 {
             type  = LEFT JOIN
