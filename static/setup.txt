@@ -141,11 +141,18 @@ plugin.tx_browser_pi1 {
           }
         }
         tx_route_path {
-          title = TEXT
+          title = COA
           title {
-            field = tx_route_path.title
+            10 = TEXT
+            10 {
+              field = tx_route_path.title
+            }
+            20 = TEXT
+            20 {
+              field = tx_route_path.uid
+              noTrimWrap = | (#|)|
+            }
           }
-          //uid
         }
         htmlSnippets =
         htmlSnippets {
