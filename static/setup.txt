@@ -80,7 +80,7 @@ plugin.tx_browser_pi1 {
           tx_route_poi.uid        AS 'tx_route_poi.uid',
           tx_route_poi_cat.title  AS 'tx_route_poi_cat.title',
           tx_route_poi_cat.uid    AS 'tx_route_poi_cat.uid',
-          CONCAT( tx_route_path.uid, '.', tx_route_path_cat.uid ) AS 'path|path_cat.uid'
+          CONCAT( tx_route_path.uid, '.', tx_route_path_cat.uid ) AS 'path|path_cat.uid',
           CONCAT( tx_route_path.uid, '.', tx_route_poi.uid, '.', tx_route_poi_cat.uid ) AS 'path|poi|poi_cat.uid'
         )
         select {
