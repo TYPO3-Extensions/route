@@ -140,7 +140,7 @@ plugin.tx_browser_pi1 {
             pid = tx_route_path.pid
           }
         }
-          // title
+          // title, uid
         tx_route_path =
         tx_route_path {
             // title, uid
@@ -159,7 +159,7 @@ plugin.tx_browser_pi1 {
             }
           }
         }
-          // title
+          // title, uid
         tx_route_path_cat =
         tx_route_path_cat {
             // title, uid
@@ -178,7 +178,7 @@ plugin.tx_browser_pi1 {
             }
           }
         }
-          // title
+          // title, uid
         tx_route_poi =
         tx_route_poi {
             // title, uid
@@ -197,7 +197,7 @@ plugin.tx_browser_pi1 {
             }
           }
         }
-          // title
+          // title, uid
         tx_route_poi_cat =
         tx_route_poi_cat {
             // title, uid
