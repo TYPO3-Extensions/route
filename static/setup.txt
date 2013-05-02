@@ -145,10 +145,10 @@ plugin.tx_browser_pi1 {
           // title, uid
         tx_route_path =
         tx_route_path {
-            // title, uid
+            // table.field.uid: title
           title = COA
           title {
-              // table.field
+              // table.field.
             10 = TEXT
             10 {
               value = tx_route_path.title.
@@ -168,75 +168,72 @@ plugin.tx_browser_pi1 {
           // title, uid
         tx_route_path_cat =
         tx_route_path_cat {
-            // title, uid
+            // table.field.uid: title
           title = COA
           title {
-              // table.field
+              // table.field.
             10 = TEXT
             10 {
-              value       = tx_route_path_cat.title
-              noTrimWrap  = ||: |
-            }
-              // title
-            20 = TEXT
-            20 {
-              field = tx_route_path_cat.title
+              value = tx_route_path_cat.title.
             }
               // uid
+            20 = TEXT
+            20 {
+              field = tx_route_path_cat.uid
+            }
+              // title
             30 = TEXT
             30 {
-              field = tx_route_path_cat.uid
-              noTrimWrap = | (#|)|
+              field = tx_route_path_cat.title
+              noTrimWrap = |: ||
             }
           }
         }
           // title, uid
         tx_route_poi =
         tx_route_poi {
-            // title, uid
+            // table.field.uid: title
           title = COA
           title {
-              // table.field
+              // table.field.
             10 = TEXT
             10 {
-              value       = tx_route_poi.title
-              noTrimWrap  = ||: |
-            }
-              // title
-            20 = TEXT
-            20 {
-              field = tx_route_poi.title
+              value = tx_route_poi.title
             }
               // uid
+            20 = TEXT
+            20 {
+              field = tx_route_poi.uid
+            }
+              // title
             30 = TEXT
             30 {
-              field = tx_route_poi.uid
-              noTrimWrap = | (#|)|
+              field = tx_route_poi.title
+              noTrimWrap = |: ||
             }
           }
         }
           // title, uid
         tx_route_poi_cat =
         tx_route_poi_cat {
-            // title, uid
+            // table.field.uid: title
           title = COA
           title {
-              // table.field
+              // table.field.
             10 = TEXT
             10 {
-              value       = tx_route_poi_cat.title
-              noTrimWrap  = ||: |
-            }
-              // title
-            20 = TEXT
-            20 {
-              field = tx_route_poi_cat.title
+              value = tx_route_poi_cat.title
             }
               // uid
+            20 = TEXT
+            20 {
+              field = tx_route_poi_cat.uid
+            }
+              // title
             30 = TEXT
             30 {
-              field = tx_route_poi_cat.uid
-              noTrimWrap = | (#|)|
+              field = tx_route_poi_cat.title
+              noTrimWrap = |: ||
             }
           }
         }
