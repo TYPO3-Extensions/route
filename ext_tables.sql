@@ -28,7 +28,11 @@ CREATE TABLE tx_route_category (
 
   icons text,
   icon_offset_x int(11) DEFAULT '0' NOT NULL,
-  icon_offset_y int(11) DEFAULT '0' NOT NULL
+  icon_offset_y int(11) DEFAULT '0' NOT NULL,
+
+  tx_route_poi text,
+  tx_route_path text,
+
 
   PRIMARY KEY (uid),
   KEY parent (pid)
