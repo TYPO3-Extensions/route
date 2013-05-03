@@ -155,7 +155,7 @@ plugin.tx_browser_pi1 {
             pid = tx_route_path.pid
           }
         }
-        orderBy = tx_route_path.title, tx_route_path_mm_poi.sorting
+        orderBy = tx_route_path.title, tx_route_path_mm_poi.sorting, tx_route_poi_mm_cat.sorting
           // table.field.uid: title
         tx_route_path =
         tx_route_path {
