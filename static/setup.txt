@@ -80,18 +80,18 @@ plugin.tx_browser_pi1 {
           tx_route_poi.uid        AS 'tx_route_poi.uid',
           tx_route_poi_cat.title  AS 'tx_route_poi_cat.title',
           tx_route_poi_cat.uid    AS 'tx_route_poi_cat.uid',
-          CONCAT( tx_route_path.uid, '.', tx_route_path_cat.uid ) AS 'relation:tx_route_path->tx_route_path_cat->listOf.uid',
-          CONCAT( tx_route_path.uid, '.', tx_route_poi.uid, '.', tx_route_poi_cat.uid ) AS 'relation:tx_route_path->tx_route_poi->tx_route_poi_cat->listOf.uid'
+          CONCAT( tx_route_path.uid, '.', tx_route_path_cat.uid ) AS 'relation:tx_route_path.tx_route_path_cat.listOf.uid',
+          CONCAT( tx_route_path.uid, '.', tx_route_poi.uid, '.', tx_route_poi_cat.uid ) AS 'relation:tx_route_path.tx_route_poi.tx_route_poi_cat.listOf.uid'
         )
         select {
           deal_as_table {
             0 {
               statement = CONCAT( tx_route_path.uid, '.', tx_route_path_cat.uid )
-              alias     = relation:tx_route_path->tx_route_path_cat->listOf.uid
+              alias     = relation:tx_route_path.tx_route_path_cat.listOf.uid
             }
             1 {
               statement = CONCAT( tx_route_path.uid, '.', tx_route_poi.uid, '.', tx_route_poi_cat.uid )
-              alias     = relation:tx_route_path->tx_route_poi->tx_route_poi_cat->listOf.uid
+              alias     = relation:tx_route_path.tx_route_poi.tx_route_poi_cat.listOf.uid
             }
           }
         }
@@ -204,8 +204,8 @@ plugin.tx_browser_pi1 {
               // relation
             40 = TEXT
             40 {
-              field = relation:tx_route_path->tx_route_path_cat->listOf.uid
-              noTrimWrap = |<br />tx_route_path->tx_route_path_cat:  |<br />|
+              field = relation:tx_route_path.tx_route_path_cat.listOf.uid
+              noTrimWrap = |<br />tx_route_path.tx_route_path_cat:  |<br />|
             }
           }
         }
@@ -273,8 +273,8 @@ plugin.tx_browser_pi1 {
               // relation
             70 = TEXT
             70 {
-              field = relation:tx_route_path->tx_route_poi->tx_route_poi_cat->listOf.uid
-              noTrimWrap = |<br />tx_route_path->tx_route_poi->tx_route_poi_cat:  |<br />|
+              field = relation:tx_route_path.tx_route_poi.tx_route_poi_cat.listOf.uid
+              noTrimWrap = |<br />tx_route_path.tx_route_poi.tx_route_poi_cat:  |<br />|
             }
           }
         }
