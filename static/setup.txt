@@ -201,6 +201,12 @@ plugin.tx_browser_pi1 {
               field = tx_route_path_cat.title
               noTrimWrap = |: ||
             }
+              // relation
+            40 = TEXT
+            40 {
+              field = relation:tx_route_path->tx_route_path_cat->listOf.uid
+              noTrimWrap = |<br /> ||
+            }
           }
         }
           // table.field.uid: title
@@ -263,6 +269,12 @@ plugin.tx_browser_pi1 {
             60 {
               field = tx_route_poi_cat.title
               noTrimWrap = |: ||
+            }
+              // relation
+            70 = TEXT
+            70 {
+              field = relation:tx_route_path->tx_route_poi->tx_route_poi_cat->listOf.uid
+              noTrimWrap = |<br /> ||
             }
           }
         }
