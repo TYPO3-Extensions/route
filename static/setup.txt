@@ -298,6 +298,7 @@ plugin.tx_browser_pi1 {
                   ###TX_ROUTE_PATH_CAT.TITLE###
                 </li>
               </ul>
+              ###TX_ROUTE_MARKER.IMAGE###
               <h3>
                 ###TX_ROUTE_MARKER.TITLE###
               </h3>
