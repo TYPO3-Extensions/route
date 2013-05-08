@@ -147,27 +147,35 @@ plugin.tx_browser_pi1 {
             // table.field.uid: title
           title = COA
           title {
-              // table.field.
-            10 = TEXT
+            10 = COA
             10 {
-              value = tx_route_path_cat.title.
+                // table.field.
+              10 = TEXT
+              10 {
+                value = tx_route_path_cat.title.
+              }
+                // uid
+              20 = TEXT
+              20 {
+                field = tx_route_path_cat.uid
+              }
+                // title
+              30 = TEXT
+              30 {
+                field = tx_route_path_cat.title
+                noTrimWrap = |: ||
+              }
+              wrap = <li>|</li>
             }
-              // uid
-            20 = TEXT
+            20 = COA
             20 {
-              field = tx_route_path_cat.uid
-            }
-              // title
-            30 = TEXT
-            30 {
-              field = tx_route_path_cat.title
-              noTrimWrap = |: ||
-            }
-              // relation
-            40 = TEXT
-            40 {
-              field = PATH:tx_route_path->tx_route_path_cat->listOf.uid
-              noTrimWrap = |<br />tx_route_path.tx_route_path_cat:  |<br />|
+                // relation
+              40 = TEXT
+              40 {
+                field = PATH:tx_route_path->tx_route_path_cat->listOf.uid
+                noTrimWrap = |<br />tx_route_path.tx_route_path_cat:  |<br />|
+              }
+              wrap = <li>|</li>
             }
           }
         }
@@ -238,6 +246,7 @@ plugin.tx_browser_pi1 {
               field = MARKER:tx_route_path->tx_route_marker->tx_route_marker_cat->listOf.uid
               noTrimWrap = |<br />tx_route_path.tx_route_marker.tx_route_marker_cat:  |<br />|
             }
+            wrap = <li>|</li>
           }
         }
         htmlSnippets =
@@ -255,18 +264,14 @@ plugin.tx_browser_pi1 {
                 ###TX_ROUTE_PATH.TITLE###
               </h2>
               <ul>
-                <li>
-                  ###TX_ROUTE_PATH_CAT.TITLE###
-                </li>
+                ###TX_ROUTE_PATH_CAT.TITLE###
               </ul>
               ###TX_ROUTE_MARKER.IMAGE###
               <h3>
                 ###TX_ROUTE_MARKER.TITLE###
               </h3>
               <ul>
-                <li>
-                  ###TX_ROUTE_MARKER_CAT.TITLE###
-                </li>
+                ###TX_ROUTE_MARKER_CAT.TITLE###
               </ul>
               <div class="cleaner">&nbsp;</div><!-- ###LISTBODYITEM### end --><!-- ###LISTBODY### end -->
             </div> <!-- /listview -->
