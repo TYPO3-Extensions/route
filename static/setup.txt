@@ -206,11 +206,11 @@ plugin.tx_browser_pi1 {
           // table.field.uid: title
         tx_route_marker_cat =
         tx_route_marker_cat {
-          10 = COA
-          10 {
-              // table.field.uid: title
-            title = COA
-            title {
+            // table.field.uid: title
+          title = COA
+          title {
+            10 = COA
+            10 {
                 // table.field.
               10 = TEXT
               10 {
@@ -244,9 +244,8 @@ plugin.tx_browser_pi1 {
               }
               wrap = <li>|</li>
             }
-          }
-          20 = COA
-          20 {
+            20 = COA
+            20 {
                 // relation
               70 = TEXT
               70 {
