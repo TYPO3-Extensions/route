@@ -72,26 +72,27 @@ plugin.tx_browser_pi1 {
       47677 {
         name    = Route
         select (
-          tx_route_path.title     AS 'tx_route_path.title',
-          tx_route_path.uid       AS 'tx_route_path.uid',
-          tx_route_path_cat.title AS 'tx_route_path_cat.title',
-          tx_route_path_cat.uid   AS 'tx_route_path_cat.uid',
-          tx_route_marker.title      AS 'tx_route_marker.title',
-          tx_route_marker.uid        AS 'tx_route_marker.uid',
-          tx_route_marker_cat.title  AS 'tx_route_marker_cat.title',
-          tx_route_marker_cat.uid    AS 'tx_route_marker_cat.uid',
-          CONCAT( tx_route_path.uid, '.', tx_route_path_cat.uid ) AS 'relation:tx_route_path->tx_route_path_cat->listOf.uid',
-          CONCAT( tx_route_path.uid, '.', tx_route_marker.uid, '.', tx_route_marker_cat.uid ) AS 'relation:tx_route_path->tx_route_marker->tx_route_marker_cat->listOf.uid'
+          tx_route_path.title         AS 'tx_route_path.title',
+          tx_route_path.image         AS 'tx_route_path.image',
+          tx_route_path.uid           AS 'tx_route_path.uid',
+          tx_route_path_cat.title     AS 'tx_route_path_cat.title',
+          tx_route_path_cat.uid       AS 'tx_route_path_cat.uid',
+          tx_route_marker.title       AS 'tx_route_marker.title',
+          tx_route_marker.uid         AS 'tx_route_marker.uid',
+          tx_route_marker_cat.title   AS 'tx_route_marker_cat.title',
+          tx_route_marker_cat.uid     AS 'tx_route_marker_cat.uid',
+          CONCAT( tx_route_path.uid, '.', tx_route_path_cat.uid ) AS 'PATH:tx_route_path->tx_route_path_cat->listOf.uid',
+          CONCAT( tx_route_path.uid, '.', tx_route_marker.uid, '.', tx_route_marker_cat.uid ) AS 'MARKER:tx_route_path->tx_route_marker->tx_route_marker_cat->listOf.uid'
         )
         select {
           deal_as_table {
             0 {
               statement = CONCAT( tx_route_path.uid, '.', tx_route_path_cat.uid )
-              alias     = relation:tx_route_path->tx_route_path_cat->listOf.uid
+              alias     = PATH:tx_route_path->tx_route_path_cat->listOf.uid
             }
             1 {
               statement = CONCAT( tx_route_path.uid, '.', tx_route_marker.uid, '.', tx_route_marker_cat.uid )
-              alias     = relation:tx_route_path->tx_route_marker->tx_route_marker_cat->listOf.uid
+              alias     = MARKER:tx_route_path->tx_route_marker->tx_route_marker_cat->listOf.uid
             }
           }
         }
@@ -202,7 +203,7 @@ plugin.tx_browser_pi1 {
               // relation
             40 = TEXT
             40 {
-              field = relation:tx_route_path->tx_route_path_cat->listOf.uid
+              field = PATH:tx_route_path->tx_route_path_cat->listOf.uid
               noTrimWrap = |<br />tx_route_path.tx_route_path_cat:  |<br />|
             }
           }
@@ -271,7 +272,7 @@ plugin.tx_browser_pi1 {
               // relation
             70 = TEXT
             70 {
-              field = relation:tx_route_path->tx_route_marker->tx_route_marker_cat->listOf.uid
+              field = MARKER:tx_route_path->tx_route_marker->tx_route_marker_cat->listOf.uid
               noTrimWrap = |<br />tx_route_path.tx_route_marker.tx_route_marker_cat:  |<br />|
             }
           }
@@ -284,6 +285,7 @@ plugin.tx_browser_pi1 {
               value (
             <div id="c###TT_CONTENT.UID###-listview-###MODE###" class="###VIEW###view ###VIEW###view-content ###VIEW###view-###MODE### ###VIEW###view-content-###MODE###">
               <!-- ###LISTBODY### begin --><!-- ###LISTBODYITEM### begin -->
+              ###TX_ROUTE_PATH.IMAGE###
               <div class="sbmFloatRight">
                 ###SOCIALMEDIA_BOOKMARKS###
               </div>
