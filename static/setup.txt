@@ -173,7 +173,7 @@ plugin.tx_browser_pi1 {
               40 = TEXT
               40 {
                 field = PATH:tx_route_path->tx_route_path_cat->listOf.uid
-                noTrimWrap = |<br />tx_route_path.tx_route_path_cat:  |<br />|
+                noTrimWrap = |tx_route_path.tx_route_path_cat:  ||
               }
               wrap = <li>|</li>
             }
@@ -206,47 +206,55 @@ plugin.tx_browser_pi1 {
           // table.field.uid: title
         tx_route_marker_cat =
         tx_route_marker_cat {
-            // table.field.uid: title
-          title = COA
-          title {
-              // table.field.
-            10 = TEXT
-            10 {
-              value = tx_route_marker.title.
+          10 = COA
+          10 {
+              // table.field.uid: title
+            title = COA
+            title {
+                // table.field.
+              10 = TEXT
+              10 {
+                value = tx_route_marker.title.
+              }
+                // uid
+              20 = TEXT
+              20 {
+                field = tx_route_marker.uid
+              }
+                // pipe
+              30 = TEXT
+              30 {
+                value = |
+              }
+                // table.field.
+              40 = TEXT
+              40 {
+                value = tx_route_marker_cat.title.
+              }
+                // uid
+              50 = TEXT
+              50 {
+                field = tx_route_marker_cat.uid
+              }
+                // title
+              60 = TEXT
+              60 {
+                field = tx_route_marker_cat.title
+                noTrimWrap = |: ||
+              }
+              wrap = <li>|</li>
             }
-              // uid
-            20 = TEXT
-            20 {
-              field = tx_route_marker.uid
+          }
+          20 = COA
+          20 {
+                // relation
+              70 = TEXT
+              70 {
+                field = MARKER:tx_route_path->tx_route_marker->tx_route_marker_cat->listOf.uid
+                noTrimWrap = |tx_route_path.tx_route_marker.tx_route_marker_cat:  ||
+              }
+              wrap = <li>|</li>
             }
-              // pipe
-            30 = TEXT
-            30 {
-              value = |
-            }
-              // table.field.
-            40 = TEXT
-            40 {
-              value = tx_route_marker_cat.title.
-            }
-              // uid
-            50 = TEXT
-            50 {
-              field = tx_route_marker_cat.uid
-            }
-              // title
-            60 = TEXT
-            60 {
-              field = tx_route_marker_cat.title
-              noTrimWrap = |: ||
-            }
-              // relation
-            70 = TEXT
-            70 {
-              field = MARKER:tx_route_path->tx_route_marker->tx_route_marker_cat->listOf.uid
-              noTrimWrap = |<br />tx_route_path.tx_route_marker.tx_route_marker_cat:  |<br />|
-            }
-            wrap = <li>|</li>
           }
         }
         htmlSnippets =
