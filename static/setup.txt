@@ -240,8 +240,8 @@ plugin.tx_browser_pi1 {
             }
           }
         }
-        XXX_htmlSnippets =
-        XXX_htmlSnippets {
+        htmlSnippets =
+        htmlSnippets {
           subparts {
             listview = TEXT
             listview {
