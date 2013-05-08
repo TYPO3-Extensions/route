@@ -36,10 +36,17 @@ plugin.tx_browser_pi1 {
         name    = Route
         select (
           tx_route_path.title         AS 'tx_route_path.title',
+          tx_route_path.gpxdata       AS 'tx_route_path.gpxdata',
+          tx_route_path.icon_lat      AS 'tx_route_path.icon_lat',
+          tx_route_path.icon_lon      AS 'tx_route_path.icon_lon',
+          tx_route_path.color         AS 'tx_route_path.color',
+          tx_route_path.line_width    AS 'tx_route_path.line_width',
           tx_route_path.uid           AS 'tx_route_path.uid',
           tx_route_path_cat.title     AS 'tx_route_path_cat.title',
           tx_route_path_cat.uid       AS 'tx_route_path_cat.uid',
           tx_route_marker.title       AS 'tx_route_marker.title',
+          tx_route_marker.lat         AS 'tx_route_marker.lat',
+          tx_route_marker.lon         AS 'tx_route_marker.lon',
           tx_route_marker.image       AS 'tx_route_marker.image',
           tx_route_marker.uid         AS 'tx_route_marker.uid',
           tx_route_marker_cat.title   AS 'tx_route_marker_cat.title',
