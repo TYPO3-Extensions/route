@@ -182,10 +182,10 @@ $TCA['tx_route_path'] = array (
 );
   // Path
 
-  // POI
-$TCA['tx_route_poi'] = array (
+  // Marker
+$TCA['tx_route_marker'] = array (
   'ctrl' => array (
-    'title'                     => 'LLL:EXT:route/locallang_db.xml:tx_route_poi',
+    'title'                     => 'LLL:EXT:route/locallang_db.xml:tx_route_marker',
     'label'                     => 'title',  
     'tstamp'                    => 'tstamp',
     'crdate'                    => 'crdate',
@@ -207,7 +207,7 @@ $TCA['tx_route_poi'] = array (
     'iconfile'          => t3lib_extMgm::extRelPath( $_EXTKEY ) . 'files/img/route.png',
   ),
 );
-  // POI
+  // Marker
   
   // Category
 $TCA['tx_route_category'] = array (
@@ -239,7 +239,7 @@ $TCA['tx_route_category'] = array (
 
 t3lib_extMgm::addToInsertRecords( 'tx_route_category');
 t3lib_extMgm::addToInsertRecords( 'tx_route_path');
-t3lib_extMgm::addToInsertRecords( 'tx_route_poi');
+t3lib_extMgm::addToInsertRecords( 'tx_route_marker');
   // addToInsertRecords
 
 

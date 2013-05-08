@@ -4,9 +4,9 @@
 # tx_route_category
 # tx_route_path
 # tx_route_path_mm_tx_route_category
-# tx_route_path_mm_tx_route_poi
-# tx_route_poi
-# tx_route_poi_mm_tx_route_category
+# tx_route_path_mm_tx_route_marker
+# tx_route_marker
+# tx_route_marker_mm_tx_route_category
 
 
 
@@ -30,7 +30,7 @@ CREATE TABLE tx_route_category (
   icon_offset_x int(11) DEFAULT '0' NOT NULL,
   icon_offset_y int(11) DEFAULT '0' NOT NULL,
 
-  tx_route_poi text,
+  tx_route_marker text,
   tx_route_path text,
 
 
@@ -71,7 +71,7 @@ CREATE TABLE tx_route_path (
   color tinytext NOT NULL,
   line_width int(3) DEFAULT '2' NOT NULL,
 
-  tx_route_poi tinytext,
+  tx_route_marker tinytext,
 
   list_title tinytext,
   list_short mediumtext,
@@ -129,9 +129,9 @@ CREATE TABLE tx_route_path_mm_tx_route_category (
 
 
 #
-# Table structure for table 'tx_route_path_mm_tx_route_poi'
+# Table structure for table 'tx_route_path_mm_tx_route_marker'
 # 
-CREATE TABLE tx_route_path_mm_tx_route_poi (
+CREATE TABLE tx_route_path_mm_tx_route_marker (
   uid_local int(11) DEFAULT '0' NOT NULL,
   uid_foreign int(11) DEFAULT '0' NOT NULL,
   tablenames varchar(30) DEFAULT '' NOT NULL,
@@ -144,9 +144,9 @@ CREATE TABLE tx_route_path_mm_tx_route_poi (
 
 
 #
-# Table structure for table 'tx_route_poi'
+# Table structure for table 'tx_route_marker'
 #
-CREATE TABLE tx_route_poi (
+CREATE TABLE tx_route_marker (
   uid int(11) NOT NULL auto_increment,
   pid int(11) DEFAULT '0' NOT NULL,
   tstamp int(11) DEFAULT '0' NOT NULL,
@@ -207,9 +207,9 @@ CREATE TABLE tx_route_poi (
 
 
 #
-# Table structure for table 'tx_route_poi_mm_tx_route_category'
+# Table structure for table 'tx_route_marker_mm_tx_route_category'
 # 
-CREATE TABLE tx_route_poi_mm_tx_route_category (
+CREATE TABLE tx_route_marker_mm_tx_route_category (
   uid_local int(11) DEFAULT '0' NOT NULL,
   uid_foreign int(11) DEFAULT '0' NOT NULL,
   tablenames varchar(30) DEFAULT '' NOT NULL,

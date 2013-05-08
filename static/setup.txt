@@ -37,7 +37,7 @@ plugin.tx_browser_pi1 {
         select (
             tx_route_path.title
           , tx_route_category.title
-          , tx_route_poi.title
+          , tx_route_marker.title
         )
         htmlSnippets =
         htmlSnippets {
@@ -58,7 +58,7 @@ plugin.tx_browser_pi1 {
                   ###TX_ROUTE_CATEGORY.TITLE###
                 </li>
                 <li>
-                  ###TX_ROUTE_POI.TITLE###
+                  ###TX_ROUTE_MARKER.TITLE###
                 </li>
               </ul>
               <div class="cleaner">&nbsp;</div><!-- ###LISTBODYITEM### end --><!-- ###LISTBODY### end -->
@@ -76,12 +76,12 @@ plugin.tx_browser_pi1 {
           tx_route_path.uid       AS 'tx_route_path.uid',
           tx_route_path_cat.title AS 'tx_route_path_cat.title',
           tx_route_path_cat.uid   AS 'tx_route_path_cat.uid',
-          tx_route_poi.title      AS 'tx_route_poi.title',
-          tx_route_poi.uid        AS 'tx_route_poi.uid',
-          tx_route_poi_cat.title  AS 'tx_route_poi_cat.title',
-          tx_route_poi_cat.uid    AS 'tx_route_poi_cat.uid',
+          tx_route_marker.title      AS 'tx_route_marker.title',
+          tx_route_marker.uid        AS 'tx_route_marker.uid',
+          tx_route_marker_cat.title  AS 'tx_route_marker_cat.title',
+          tx_route_marker_cat.uid    AS 'tx_route_marker_cat.uid',
           CONCAT( tx_route_path.uid, '.', tx_route_path_cat.uid ) AS 'relation:tx_route_path->tx_route_path_cat->listOf.uid',
-          CONCAT( tx_route_path.uid, '.', tx_route_poi.uid, '.', tx_route_poi_cat.uid ) AS 'relation:tx_route_path->tx_route_poi->tx_route_poi_cat->listOf.uid'
+          CONCAT( tx_route_path.uid, '.', tx_route_marker.uid, '.', tx_route_marker_cat.uid ) AS 'relation:tx_route_path->tx_route_marker->tx_route_marker_cat->listOf.uid'
         )
         select {
           deal_as_table {
@@ -90,8 +90,8 @@ plugin.tx_browser_pi1 {
               alias     = relation:tx_route_path->tx_route_path_cat->listOf.uid
             }
             1 {
-              statement = CONCAT( tx_route_path.uid, '.', tx_route_poi.uid, '.', tx_route_poi_cat.uid )
-              alias     = relation:tx_route_path->tx_route_poi->tx_route_poi_cat->listOf.uid
+              statement = CONCAT( tx_route_path.uid, '.', tx_route_marker.uid, '.', tx_route_marker_cat.uid )
+              alias     = relation:tx_route_path->tx_route_marker->tx_route_marker_cat->listOf.uid
             }
           }
         }
@@ -115,47 +115,45 @@ plugin.tx_browser_pi1 {
           }
           2 {
             type  = LEFT JOIN
-            table = tx_route_path_mm_tx_route_poi
-            alias = tx_route_path_mm_poi
-            on    = tx_route_path.uid = tx_route_path_mm_poi.uid_local
+            table = tx_route_path_mm_tx_route_marker
+            alias = tx_route_path_mm_marker
+            on    = tx_route_path.uid = tx_route_path_mm_marker.uid_local
           }
           3 {
             type  = LEFT JOIN
-            table = tx_route_poi
-            alias = tx_route_poi
-            on    = tx_route_poi.uid = tx_route_path_mm_poi.uid_foreign
+            table = tx_route_marker
+            alias = tx_route_marker
+            on    = tx_route_marker.uid = tx_route_path_mm_marker.uid_foreign
           }
           4 {
             type  = LEFT JOIN
-            table = tx_route_poi_mm_tx_route_category
-            alias = tx_route_poi_mm_cat
-            on    = tx_route_poi.uid = tx_route_poi_mm_cat.uid_local
+            table = tx_route_marker_mm_tx_route_category
+            alias = tx_route_marker_mm_cat
+            on    = tx_route_marker.uid = tx_route_marker_mm_cat.uid_local
           }
           5 {
             type  = LEFT JOIN
             table = tx_route_category
-            alias = tx_route_poi_cat
-            on    = tx_route_poi_cat.uid = tx_route_poi_mm_cat.uid_foreign
+            alias = tx_route_marker_cat
+            on    = tx_route_marker_cat.uid = tx_route_marker_mm_cat.uid_foreign
           }
         }
         aliases {
           tables {
-            tx_route_path        = tx_route_path
-            // #47700 tx_route_path_cat    = tx_route_category
-            tx_route_path_cat    = tx_route_path_cat
-            tx_route_path_mm_cat = tx_route_path_mm_tx_route_category
-            tx_route_path_mm_poi = tx_route_path_mm_tx_route_poi
-            tx_route_poi         = tx_route_poi
-            // #47700 tx_route_poi_cat     = tx_route_category
-            tx_route_poi_cat     = tx_route_poi_cat
-            tx_route_poi_mm_cat  = tx_route_poi_mm_tx_route_category
+            tx_route_path           = tx_route_path
+            tx_route_path_cat       = tx_route_path_cat
+            tx_route_path_mm_cat    = tx_route_path_mm_tx_route_category
+            tx_route_path_mm_marker = tx_route_path_mm_tx_route_marker
+            tx_route_marker         = tx_route_marker
+            tx_route_marker_cat     = tx_route_marker_cat
+            tx_route_marker_mm_cat  = tx_route_marker_mm_tx_route_category
           }
           fields {
             uid = tx_route_path.uid
             pid = tx_route_path.pid
           }
         }
-        orderBy = tx_route_path.title, tx_route_path_mm_poi.sorting, tx_route_poi_cat.title
+        orderBy = tx_route_path.title, tx_route_path_mm_marker.sorting, tx_route_marker_cat.title
           // table.field.uid: title
         tx_route_path =
         tx_route_path {
@@ -210,44 +208,44 @@ plugin.tx_browser_pi1 {
           }
         }
           // table.field.uid: title
-        tx_route_poi =
-        tx_route_poi {
+        tx_route_marker =
+        tx_route_marker {
             // table.field.uid: title
           title = COA
           title {
               // table.field.
             10 = TEXT
             10 {
-              value = tx_route_poi.title.
+              value = tx_route_marker.title.
             }
               // uid
             20 = TEXT
             20 {
-              field = tx_route_poi.uid
+              field = tx_route_marker.uid
             }
               // title
             30 = TEXT
             30 {
-              field = tx_route_poi.title
+              field = tx_route_marker.title
               noTrimWrap = |: ||
             }
           }
         }
           // table.field.uid: title
-        tx_route_poi_cat =
-        tx_route_poi_cat {
+        tx_route_marker_cat =
+        tx_route_marker_cat {
             // table.field.uid: title
           title = COA
           title {
               // table.field.
             10 = TEXT
             10 {
-              value = tx_route_poi.title.
+              value = tx_route_marker.title.
             }
               // uid
             20 = TEXT
             20 {
-              field = tx_route_poi.uid
+              field = tx_route_marker.uid
             }
               // pipe
             30 = TEXT
@@ -257,24 +255,24 @@ plugin.tx_browser_pi1 {
               // table.field.
             40 = TEXT
             40 {
-              value = tx_route_poi_cat.title.
+              value = tx_route_marker_cat.title.
             }
               // uid
             50 = TEXT
             50 {
-              field = tx_route_poi_cat.uid
+              field = tx_route_marker_cat.uid
             }
               // title
             60 = TEXT
             60 {
-              field = tx_route_poi_cat.title
+              field = tx_route_marker_cat.title
               noTrimWrap = |: ||
             }
               // relation
             70 = TEXT
             70 {
-              field = relation:tx_route_path->tx_route_poi->tx_route_poi_cat->listOf.uid
-              noTrimWrap = |<br />tx_route_path.tx_route_poi.tx_route_poi_cat:  |<br />|
+              field = relation:tx_route_path->tx_route_marker->tx_route_marker_cat->listOf.uid
+              noTrimWrap = |<br />tx_route_path.tx_route_marker.tx_route_marker_cat:  |<br />|
             }
           }
         }
@@ -298,11 +296,11 @@ plugin.tx_browser_pi1 {
                 </li>
               </ul>
               <h3>
-                ###TX_ROUTE_POI.TITLE###
+                ###TX_ROUTE_MARKER.TITLE###
               </h3>
               <ul>
                 <li>
-                  ###TX_ROUTE_POI_CAT.TITLE###
+                  ###TX_ROUTE_MARKER_CAT.TITLE###
                 </li>
               </ul>
               <div class="cleaner">&nbsp;</div><!-- ###LISTBODYITEM### end --><!-- ###LISTBODY### end -->

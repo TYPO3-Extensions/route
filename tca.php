@@ -10,7 +10,7 @@ if (!defined ('TYPO3_MODE'))  die ('Access denied.');
   // Other wizards and config drafts
   // tx_route_category
   // tx_route_path
-  // tx_route_poi
+  // tx_route_marker
 
 
 
@@ -208,7 +208,7 @@ $TCA['tx_route_category'] = array (
       'type,' . 
       'title,title_lang_ol,' . 
       'icons,icon_offset_x,icon_offset_y,' .
-      'tx_route_poi,' .
+      'tx_route_marker,' .
       'tx_route_path,' .
       'hidden' ,
   ),
@@ -306,19 +306,19 @@ $TCA['tx_route_category'] = array (
         ),
       ),
     ),
-    'tx_route_poi' => array (
+    'tx_route_marker' => array (
       'exclude'   => $bool_exclude_default,
       'l10n_mode' => 'exclude',
-      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_category.tx_route_poi',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_category.tx_route_marker',
       'config'    => array (
         'type'                => 'select',
         'size'                => 20,
         'minitems'            => 0,
         'maxitems'            => 99,
-        'MM'                  => 'tx_route_poi_mm_tx_route_category',
+        'MM'                  => 'tx_route_marker_mm_tx_route_category',
         'MM_opposite_field'   => 'tx_route_category',
-        'foreign_table'       => 'tx_route_poi',
-        'foreign_table_where' => 'AND tx_route_poi.pid=###CURRENT_PID### AND tx_route_poi.deleted = 0 AND tx_route_poi.hidden = 0 ORDER BY tx_route_poi.title',
+        'foreign_table'       => 'tx_route_marker',
+        'foreign_table_where' => 'AND tx_route_marker.pid=###CURRENT_PID### AND tx_route_marker.deleted = 0 AND tx_route_marker.hidden = 0 ORDER BY tx_route_marker.title',
         'items' => array (
           '0' => array (
             '0' => '',
@@ -334,7 +334,7 @@ $TCA['tx_route_category'] = array (
             'title'  => 'LLL:EXT:route/locallang_db.xml:wizard.add',
             'icon'   => 'add.gif',
             'params' => array (
-              'table'    => 'tx_route_poi',
+              'table'    => 'tx_route_marker',
               'pid'      => '###CURRENT_PID###',
               'setValue' => 'prepend'
             ),
@@ -345,7 +345,7 @@ $TCA['tx_route_category'] = array (
             'title'  => 'LLL:EXT:route/locallang_db.xml:wizard.list',
             'icon'   => 'list.gif',
             'params' => array (
-              'table' => 'tx_route_poi',
+              'table' => 'tx_route_marker',
               'pid'      => '###CURRENT_PID###',
             ),
             'script' => 'wizard_list.php',
@@ -371,8 +371,8 @@ $TCA['tx_route_category'] = array (
         '--palette--;LLL:EXT:route/locallang_db.xml:tx_route_category.icons;icons,' .
       '--div--;LLL:EXT:route/locallang_db.xml:tx_route_category.div_path,   ' .
         'tx_route_path,' .
-      '--div--;LLL:EXT:route/locallang_db.xml:tx_route_category.div_poi,   ' .
-        'tx_route_poi,' .
+      '--div--;LLL:EXT:route/locallang_db.xml:tx_route_category.div_marker,   ' .
+        'tx_route_marker,' .
       '--div--;LLL:EXT:route/locallang_db.xml:tx_route_category.div_control,' .
         'hidden'
     ),
@@ -407,7 +407,7 @@ $TCA['tx_route_path'] = array (
       . 'tx_route_category,' 
       . 'gpxfile, gpxdata,' 
       . 'icon,iconwidth,iconheight,icon_lat,icon_lon,color,line_width,' 
-      . 'tx_route_poi,' 
+      . 'tx_route_marker,' 
       . 'list_title,list_short,map_title,map_short,' 
       . 'address_start,address_end,url,' 
       . 'image,imagecaption,imageseo,imagewidth,imageheight,imageorient,imagecaption,imagecols,imageborder,imagecaption_position,image_link,image_zoom,image_noRows,image_effects,image_compression,' 
@@ -613,18 +613,18 @@ $TCA['tx_route_path'] = array (
         'default' => '1',
       ),
     ),
-    'tx_route_poi' => array (
+    'tx_route_marker' => array (
       'exclude'   => $bool_exclude_default,
       'l10n_mode' => 'exclude',
-      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.tx_route_poi',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.tx_route_marker',
       'config'    => array (
         'type'                => 'select',
         'size'                => 20,
         'minitems'            => 0,
         'maxitems'            => 99,
-        'MM'                  => 'tx_route_path_mm_tx_route_poi',
-        'foreign_table'       => 'tx_route_poi',
-        'foreign_table_where' => 'AND tx_route_poi.pid=###CURRENT_PID### AND tx_route_poi.deleted = 0 AND tx_route_poi.hidden = 0  AND tx_route_poi.sys_language_uid=###REC_FIELD_sys_language_uid### ORDER BY tx_route_poi.title',
+        'MM'                  => 'tx_route_path_mm_tx_route_marker',
+        'foreign_table'       => 'tx_route_marker',
+        'foreign_table_where' => 'AND tx_route_marker.pid=###CURRENT_PID### AND tx_route_marker.deleted = 0 AND tx_route_marker.hidden = 0  AND tx_route_marker.sys_language_uid=###REC_FIELD_sys_language_uid### ORDER BY tx_route_marker.title',
         'items' => array (
           '0' => array (
             '0' => '',
@@ -640,7 +640,7 @@ $TCA['tx_route_path'] = array (
             'title'  => 'LLL:EXT:route/locallang_db.xml:wizard.add',
             'icon'   => 'add.gif',
             'params' => array (
-              'table'    => 'tx_route_poi',
+              'table'    => 'tx_route_marker',
               'pid'      => '###CURRENT_PID###',
               'setValue' => 'prepend'
             ),
@@ -651,7 +651,7 @@ $TCA['tx_route_path'] = array (
             'title'  => 'LLL:EXT:route/locallang_db.xml:wizard.list',
             'icon'   => 'list.gif',
             'params' => array (
-              'table' => 'tx_route_poi',
+              'table' => 'tx_route_marker',
               'pid'      => '###CURRENT_PID###',
             ),
             'script' => 'wizard_list.php',
@@ -953,8 +953,8 @@ $TCA['tx_route_path'] = array (
           'tx_route_category,' .
         '--div--;LLL:EXT:route/locallang_db.xml:tx_route_path.div_gpx,' . 
           'gpxfile,gpxdata,' .
-        '--div--;LLL:EXT:route/locallang_db.xml:tx_route_path.div_poi,' . 
-          'tx_route_poi,' .
+        '--div--;LLL:EXT:route/locallang_db.xml:tx_route_path.div_marker,' . 
+          'tx_route_marker,' .
         '--div--;LLL:EXT:route/locallang_db.xml:tx_route_path.div_design,' . 
           'icon,iconwidth,iconheight,' .
           'icon_lat,' .
@@ -1035,10 +1035,10 @@ $TCA['tx_route_path'] = array (
 
   ///////////////////////////////////////
   // 
-  // tx_route_poi
+  // tx_route_marker
   
-$TCA['tx_route_poi'] = array (
-  'ctrl' => $TCA['tx_route_poi']['ctrl'],
+$TCA['tx_route_marker'] = array (
+  'ctrl' => $TCA['tx_route_marker']['ctrl'],
   'interface' => array (
     'showRecordFieldList' =>  
         'sys_language_uid,l10n_parent,l10n_diffsource,' 
@@ -1051,7 +1051,7 @@ $TCA['tx_route_poi'] = array (
       . 'seo_keywords,seo_description' 
       ,
   ),
-  'feInterface' => $TCA['tx_route_poi']['feInterface'],
+  'feInterface' => $TCA['tx_route_marker']['feInterface'],
   'columns' => array (
     'sys_language_uid' => array (
       'exclude' => 1,
@@ -1075,8 +1075,8 @@ $TCA['tx_route_poi'] = array (
         'items' => array (
           array ('', 0),
         ),
-        'foreign_table' => 'tx_route_poi',
-        'foreign_table_where' => 'AND tx_route_poi.uid=###REC_FIELD_l10n_parent### AND tx_route_poi.sys_language_uid IN (-1,0)',
+        'foreign_table' => 'tx_route_marker',
+        'foreign_table_where' => 'AND tx_route_marker.uid=###REC_FIELD_l10n_parent### AND tx_route_marker.sys_language_uid IN (-1,0)',
       ),
     ),
     'l10n_diffsource' => array (
@@ -1087,19 +1087,19 @@ $TCA['tx_route_poi'] = array (
     'title' => array (
       'exclude'   => 0,
       'l10n_mode' => 'prefixLangTitle',
-      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_poi.title',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.title',
       'config'    => $conf_input_30_trimRequired,
     ),
     'tx_route_category' => array (
       'exclude'   => $bool_exclude_default,
       'l10n_mode' => 'exclude',
-      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_poi.tx_route_category',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.tx_route_category',
       'config'    => array (
         'type'                => 'select',
         'size'                => 10,
         'minitems'            => 0,
         'maxitems'            => 99,
-        'MM'                  => 'tx_route_poi_mm_tx_route_category',
+        'MM'                  => 'tx_route_marker_mm_tx_route_category',
         'foreign_table'       => 'tx_route_category',
         'foreign_table_where' => 'AND tx_route_category.pid=###CURRENT_PID### AND tx_route_category.deleted = 0 AND tx_route_category.hidden = 0 ORDER BY tx_route_category.title',
         'items' => array (
@@ -1146,50 +1146,50 @@ $TCA['tx_route_poi'] = array (
     'short' => array (
       'exclude'   => 0,
       'l10n_mode' => 'prefixLangTitle',
-      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_poi.short',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.short',
       'config'    => $conf_text_30_05,
     ),
     'bodytext' => array (
       'exclude'   => 0,
       'l10n_mode' => 'prefixLangTitle',
-      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_poi.bodytext',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.bodytext',
       'config'    => $conf_text_rte,
     ),
     'lat' => array (
       'exclude'   => 0,
       'l10n_mode' => 'prefixLangTitle',
-      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_poi.lat',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.lat',
       'config'    => $conf_input_30_trim,
     ),
     'lon' => array (
       'exclude'   => 0,
       'l10n_mode' => 'prefixLangTitle',
-      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_poi.lon',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.lon',
       'config'    => $conf_input_30_trim,
     ),
     'address' => array (
       'exclude'   => 0,
       'l10n_mode' => 'prefixLangTitle',
-      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_poi.address',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.address',
       'config'    => $conf_text_30_05,
     ),
     'url' => array (
       'exclude'   => 0,
       'l10n_mode' => 'prefixLangTitle',
-      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_poi.url',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.url',
       'config'    => $conf_input_30_trim,
     ),
     'tx_route_path' => array (
       'exclude'   => $bool_exclude_default,
       'l10n_mode' => 'exclude',
-      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_poi.tx_route_path',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.tx_route_path',
       'config'    => array (
         'type'                => 'select',
         'size'                => 10,
         'minitems'            => 0,
         'maxitems'            => 99,
-        'MM'                  => 'tx_route_path_mm_tx_route_poi',
-        'MM_opposite_field'   => 'tx_route_poi',
+        'MM'                  => 'tx_route_path_mm_tx_route_marker',
+        'MM_opposite_field'   => 'tx_route_marker',
         'foreign_table'       => 'tx_route_path',
         'foreign_table_where' => 'AND tx_route_path.pid=###CURRENT_PID### AND tx_route_path.deleted = 0 AND tx_route_path.hidden = 0 AND tx_route_path.sys_language_uid=###REC_FIELD_sys_language_uid### ORDER BY tx_route_path.title',
         'items' => array (
@@ -1237,25 +1237,25 @@ $TCA['tx_route_poi'] = array (
     'list_title' => array (
       'exclude'   => 0,
       'l10n_mode' => 'prefixLangTitle',
-      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_poi.list_title',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.list_title',
       'config'    => $conf_input_30,
     ),
     'list_short' => array (
       'exclude'   => 0,
       'l10n_mode' => 'prefixLangTitle',
-      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_poi.list_short',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.list_short',
       'config'    => $conf_text_30_05,
     ),
     'map_title' => array (
       'exclude'   => 0,
       'l10n_mode' => 'prefixLangTitle',
-      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_poi.map_title',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.map_title',
       'config'    => $conf_input_30,
     ),
     'map_short' => array (
       'exclude'   => 0,
       'l10n_mode' => 'prefixLangTitle',
-      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_poi.map_short',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.map_short',
       'config'    => $conf_text_30_05,
     ),
     'image' => array (
@@ -1494,19 +1494,19 @@ $TCA['tx_route_poi'] = array (
   'types' => array (
     '0' => array(
       'showitem' => 
-        '--div--;LLL:EXT:route/locallang_db.xml:tx_route_poi.div_poi,' . 
+        '--div--;LLL:EXT:route/locallang_db.xml:tx_route_marker.div_marker,' . 
           'title,' .
           'tx_route_category,' .
           'short,' .
           'bodytext;;;richtext[]:rte_transform[mode=ts];,' .
-        '--div--;LLL:EXT:route/locallang_db.xml:tx_route_poi.div_properties,' . 
+        '--div--;LLL:EXT:route/locallang_db.xml:tx_route_marker.div_properties,' . 
           'lat,' .
           'lon,' .
           'address,' .
           'url,' .
-        '--div--;LLL:EXT:route/locallang_db.xml:tx_route_poi.div_paths,' . 
+        '--div--;LLL:EXT:route/locallang_db.xml:tx_route_marker.div_paths,' . 
           'tx_route_path,' .
-        '--div--;LLL:EXT:route/locallang_db.xml:tx_route_poi.div_shortterms,' . 
+        '--div--;LLL:EXT:route/locallang_db.xml:tx_route_marker.div_shortterms,' . 
           'list_title,' .
           'list_short,' .
           'map_title,' .
@@ -1517,11 +1517,11 @@ $TCA['tx_route_poi'] = array (
           '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.imageblock;imageblock,' .
           '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.imagelinks;imagelinks,' .
           '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.image_settings;image_settings,' .
-        '--div--;LLL:EXT:route/locallang_db.xml:tx_route_poi.div_control,' . 
+        '--div--;LLL:EXT:route/locallang_db.xml:tx_route_marker.div_control,' . 
           'hidden,' .
           '--palette--;LLL:EXT:route/locallang_db.xml:palette.time;time,' .
           'fe_group,'.
-        '--div--;LLL:EXT:route/locallang_db.xml:tx_route_poi.div_seo,' . 
+        '--div--;LLL:EXT:route/locallang_db.xml:tx_route_marker.div_seo,' . 
           'seo_keywords,seo_description' .
         '',
       ),
@@ -1571,6 +1571,6 @@ $TCA['tx_route_poi'] = array (
     ),
   )
 );
-  // tx_route_poi
+  // tx_route_marker
 
 ?>
