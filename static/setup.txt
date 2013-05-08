@@ -78,6 +78,7 @@ plugin.tx_browser_pi1 {
           tx_route_path_cat.title     AS 'tx_route_path_cat.title',
           tx_route_path_cat.uid       AS 'tx_route_path_cat.uid',
           tx_route_marker.title       AS 'tx_route_marker.title',
+          tx_route_marker.image       AS 'tx_route_marker.image',
           tx_route_marker.uid         AS 'tx_route_marker.uid',
           tx_route_marker_cat.title   AS 'tx_route_marker_cat.title',
           tx_route_marker_cat.uid     AS 'tx_route_marker_cat.uid',
