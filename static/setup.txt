@@ -73,7 +73,6 @@ plugin.tx_browser_pi1 {
         name    = Route
         select (
           tx_route_path.title         AS 'tx_route_path.title',
-          tx_route_path.image         AS 'tx_route_path.image',
           tx_route_path.uid           AS 'tx_route_path.uid',
           tx_route_path_cat.title     AS 'tx_route_path_cat.title',
           tx_route_path_cat.uid       AS 'tx_route_path_cat.uid',
@@ -286,7 +285,6 @@ plugin.tx_browser_pi1 {
               value (
             <div id="c###TT_CONTENT.UID###-listview-###MODE###" class="###VIEW###view ###VIEW###view-content ###VIEW###view-###MODE### ###VIEW###view-content-###MODE###">
               <!-- ###LISTBODY### begin --><!-- ###LISTBODYITEM### begin -->
-              ###TX_ROUTE_PATH.IMAGE###
               <div class="sbmFloatRight">
                 ###SOCIALMEDIA_BOOKMARKS###
               </div>
