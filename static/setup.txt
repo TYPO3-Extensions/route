@@ -31,45 +31,8 @@ plugin.tx_browser_pi1 {
 
   views {
     list {
-      47676 = Route Auto
+      47676 = Route
       47676 {
-        name    = Route Auto
-        select (
-            tx_route_path.title
-          , tx_route_category.title
-          , tx_route_marker.title
-        )
-        htmlSnippets =
-        htmlSnippets {
-          subparts {
-            listview = TEXT
-            listview {
-              value (
-            <div id="c###TT_CONTENT.UID###-listview-###MODE###" class="###VIEW###view ###VIEW###view-content ###VIEW###view-###MODE### ###VIEW###view-content-###MODE###">
-              <!-- ###LISTBODY### begin --><!-- ###LISTBODYITEM### begin -->
-              <div class="sbmFloatRight">
-                ###SOCIALMEDIA_BOOKMARKS###
-              </div>
-              <h2>
-                ###TX_ROUTE_PATH.TITLE###
-              </h2>
-              <ul>
-                <li>
-                  ###TX_ROUTE_CATEGORY.TITLE###
-                </li>
-                <li>
-                  ###TX_ROUTE_MARKER.TITLE###
-                </li>
-              </ul>
-              <div class="cleaner">&nbsp;</div><!-- ###LISTBODYITEM### end --><!-- ###LISTBODY### end -->
-            </div> <!-- /listview -->
-)
-            }
-          }
-        }
-      }
-      47677 = Route
-      47677 {
         name    = Route
         select (
           tx_route_path.title         AS 'tx_route_path.title',
@@ -314,29 +277,8 @@ plugin.tx_browser_pi1 {
       }
     }
     single {
-      47676 = Route Auto
+      47676 = Route
       47676 {
-        name    = Route Auto
-        select (
-          tx_route_path.title
-        )
-        htmlSnippets =
-        htmlSnippets {
-          subparts {
-            singlebodyrow = TEXT
-            singlebodyrow {
-              value (
-              <div class="socialbookmarks">
-                ###SOCIALMEDIA_BOOKMARKS###
-              </div>
-              ###TX_ROUTE_PATH.TITLE###
-)
-            }
-          }
-        }
-      }
-      47677 = Route
-      47677 {
         name    = Route
         select (
           tx_route_path.title
