@@ -1,26 +1,29 @@
 plugin.tx_browser_pi1 {
   map {
-    map {
-      marker {
-        field {
-          linktoSingle    = tx_org_headquarters.uid
-          latitude        = tx_org_headquarters.mail_lat
-          longitude       = tx_org_headquarters.mail_lon
-          description     = tx_org_headquarters.title
-          category        = tx_org_headquarterscat.title
-          categoryIcon    = tx_org_headquarterscat.icons
-          categoryOffsetX = tx_org_headquarterscat.icon_offset_x
-          categoryOffsetY = tx_org_headquarterscat.icon_offset_y
-        }
-        position {
-          categoryIconLegend  = 0 
-          categoryIconMap     = 0 
-        }
+    enabled = Map +Routes
+    marker {
+      field {
+        linktoSingle    = tx_route_marker.uid
+        latitude        = tx_route_marker.lat
+        longitude       = tx_route_marker.lon
+        description     = tx_route_marker.title
+        category        = tx_route_category.title
+        categoryIcon    = tx_route_category.icons
+        categoryOffsetX = tx_route_category.icon_offset_x
+        categoryOffsetY = tx_route_category.icon_offset_y
+      }
+      position {
+        categoryIconLegend  = 0 
+        categoryIconMap     = 0 
       }
     }
     modules {
       debugging = Error,OSM.Route,OSM.Base,OSM.Filter 
       default   = OSM.Route,OSM.Base,OSM.Filter 
     }
+    path {
+      categoryIcon = uploads/tx_route/
+    }
+    width = 700
   }
 }
