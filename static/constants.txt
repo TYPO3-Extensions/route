@@ -24,6 +24,11 @@ plugin.tx_browser_pi1 {
     path {
       categoryIcon = uploads/tx_route/
     }
+    route {
+      tables {
+        marker = tx_route_marker
+      }
+    }
     width = 700
   }
 }
