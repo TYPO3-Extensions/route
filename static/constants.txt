@@ -7,10 +7,10 @@ plugin.tx_browser_pi1 {
         latitude        = tx_route_marker.lat
         longitude       = tx_route_marker.lon
         description     = tx_route_marker.title
-        category        = tx_route_marker_category.title
-        categoryIcon    = tx_route_marker_category.icons
-        categoryOffsetX = tx_route_marker_category.icon_offset_x
-        categoryOffsetY = tx_route_marker_category.icon_offset_y
+        category        = tx_route_marker_cat.title
+        categoryIcon    = tx_route_marker_cat.icons
+        categoryOffsetX = tx_route_marker_cat.icon_offset_x
+        categoryOffsetY = tx_route_marker_cat.icon_offset_y
       }
       position {
         categoryIconLegend  = 0 
