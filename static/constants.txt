@@ -23,6 +23,20 @@ plugin.tx_browser_pi1 {
     }
     path {
       categoryIcon = uploads/tx_route/
+      field {
+        path {
+          title     = tx_route_path.title
+          geodata   = tx_route_path.gpxdata 
+          color     = tx_route_path.color 
+          lineWidth = tx_route_path.line_width
+        }
+        pathCategory {
+          title = tx_route_path_cat.title
+        }
+        markerCategory {
+          title = tx_route_marker_cat.title
+        }
+      }
     }
     width = 700
   }
