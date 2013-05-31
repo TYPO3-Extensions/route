@@ -18,8 +18,8 @@ plugin.tx_browser_pi1 {
       }
     }
     modules {
-      debugging = Error,OSM.Route,OSM.Base,OSM.Filter 
-      default   = OSM.Route,OSM.Base,OSM.Filter 
+      debugging = 'Error,OSM.Route,OSM.Base,OSM.Filter' 
+      default   = 'OSM.Route,OSM.Base,OSM.Filter'
     }
     path {
       categoryIcon = uploads/tx_route/
