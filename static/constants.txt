@@ -23,6 +23,52 @@ plugin.tx_browser_pi1 {
     }
     path {
       categoryIcon = uploads/tx_route/
+      mapper {
+        tables {
+          local {
+            path    = tx_route_path
+            marker  = tx_route_marker
+          }
+          cat {
+            path    = tx_route_path_cat
+            marker  = tx_route_marker_cat
+          }
+        }
+        fields {
+          local {
+            title {
+              path    = title
+              marker  = title
+            }
+            lat {
+              path    = icon_lat
+              marker  = lat
+            }
+            lon {
+              path    = icon_lon
+              marker  = lon
+            }
+          }
+          cat {
+            title {
+              path    = title
+              marker  = title
+            }
+            icons {
+              path    = icons
+              marker  = icons
+            }
+            iconOffsetX {
+              path    = icons_offset_x
+              marker  = icons_offset_x
+            }
+            iconOffsetY {
+              path    = icons_offset_y
+              marker  = icons_offset_y
+            }
+          }
+        }
+      }
       table {
         path {
           title     = tx_route_path.title
