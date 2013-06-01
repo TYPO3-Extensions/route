@@ -23,7 +23,7 @@ plugin.tx_browser_pi1 {
     }
     path {
       categoryIcon = uploads/tx_route/
-      field {
+      table {
         path {
           title     = tx_route_path.title
           geodata   = tx_route_path.gpxdata 
