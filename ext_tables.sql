@@ -146,6 +146,7 @@ CREATE TABLE tx_route_path (
   iconwidth tinytext,
   icon_lat text NOT NULL,
   icon_lon text NOT NULL,
+  iconposition tinytext,
   color tinytext NOT NULL,
   line_width int(3) DEFAULT '2' NOT NULL,
 

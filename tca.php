@@ -406,7 +406,7 @@ $TCA['tx_route_path'] = array (
       . 'title,short,bodytext,' 
       . 'tx_route_category,' 
       . 'gpxfile, geodata,' 
-      . 'icon,iconwidth,iconheight,icon_lat,icon_lon,color,line_width,' 
+      . 'icon,iconwidth,iconheight,icon_lat,icon_lon,iconposition,color,line_width,' 
       . 'tx_route_marker,' 
       . 'list_title,list_short,map_title,map_short,' 
       . 'address_start,address_end,url,' 
@@ -575,6 +575,19 @@ $TCA['tx_route_path'] = array (
       'l10n_mode' => 'prefixLangTitle',
       'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.icon_lon',
       'config'    => $conf_input_30_trim,
+    ),
+    'iconposition' => array (
+      'exclude'   => 0,
+      'l10n_mode' => 'prefixLangTitle',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.iconposition',
+      'config' => array (
+        'type' => 'radio',
+        'items' => array (
+          array ( 'LLL:EXT:route/locallang_db.xml:tx_route_path.iconposition.beginning', 0 ),
+          array ( 'LLL:EXT:route/locallang_db.xml:tx_route_path.iconposition.center', 0 ),
+          array ( 'LLL:EXT:route/locallang_db.xml:tx_route_path.iconposition.end', 0 ),
+        ),
+      ),
     ),
     'color' => array (
       'exclude'   => $bool_exclude_default,
@@ -959,6 +972,7 @@ $TCA['tx_route_path'] = array (
           'icon,iconwidth,iconheight,' .
           'icon_lat,' .
           'icon_lon,' .
+          'iconposition,' .
           'color,' .
           'line_width,' .
         '--div--;LLL:EXT:route/locallang_db.xml:tx_route_path.div_shortterms,' . 

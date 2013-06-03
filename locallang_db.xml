@@ -47,6 +47,10 @@
       <label index="tx_route_path.color">Color of the Path</label>                        
       <label index="tx_route_path.geodata">Geodata (lat,lon linebreak lon,lat ...)</label>                        
       <label index="tx_route_path.gpxfile">GPX File (an upload is overwriting the data in the field [GPX Data] below)</label>                        
+      <label index="tx_route_path.iconposition">Position of the path icon (without any effect, if longitude and latitude are set)</label>                        
+      <label index="tx_route_path.iconposition.beginning">beginning</label>                        
+      <label index="tx_route_path.iconposition.center">center</label>                        
+      <label index="tx_route_path.iconposition.end">end</label>                        
       <label index="tx_route_path.icon_lat">Latitude of the Path Icon (leave it empty, if center of the route should taken)</label>                        
       <label index="tx_route_path.icon_lon">Longitude of the Path Icon (leave it empty, if center of the route should taken)</label>                        
       <label index="tx_route_path.line_width">Line Width of the Path</label>                        
@@ -126,6 +130,10 @@
       <label index="tx_route_path.color">Farbe des Pfads</label>                        
       <label index="tx_route_path.geodata">Geo-Daten (L<![CDATA[&auml;]]>ngengrad,Breitengrad Umbruch L<![CDATA[&auml;]]>ngengrad,Breitengrad ...)</label>                        
       <label index="tx_route_path.gpxfile">GPX-Datei (das Hochladen <![CDATA[&uuml;]]>berschreibt die Daten im Feld [GPX-Daten] unten)</label>                        
+      <label index="tx_route_path.iconposition">Position des Piktogramms (ohne Effekt, wenn Breiten- und L<![CDATA[&auml;]]>ngengrad gesetzt sind)</label>                        
+      <label index="tx_route_path.iconposition.beginning">Start</label>                        
+      <label index="tx_route_path.iconposition.center">Mitte</label>                        
+      <label index="tx_route_path.iconposition.end">Ende</label>                        
       <label index="tx_route_path.icon_lat">Breitengrad des Piktogramms (leer lassen f<![CDATA[&uuml;]]>r Standard-Wert)</label>                        
       <label index="tx_route_path.icon_lon">L<![CDATA[&auml;]]>ngengrad des Piktogramms (leer lassen f<![CDATA[&uuml;]]>r Standard-Wert)</label>                        
       <label index="tx_route_path.line_width">Linien-St<![CDATA[&auml;]]>rke des Pfads</label>                        
@@ -160,7 +168,7 @@
       <label index="tx_route_marker.url">URL (einer anderen Website)</label>                        
       <label index="wizard.add">Neuen Datensatz erstellen</label>
       <label index="wizard.edit">Markierten Datensatz bearbeiten</label>
-        <label index="wizard.list">Alle Datens<![CDATA[&auml;]]>tze anzeigen</label>
+      <label index="wizard.list">Alle Datens<![CDATA[&auml;]]>tze anzeigen</label>
     </languageKey>
   </data>
 </T3locallang>
