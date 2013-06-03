@@ -405,7 +405,7 @@ $TCA['tx_route_path'] = array (
         'sys_language_uid,l10n_parent,l10n_diffsource,' 
       . 'title,short,bodytext,' 
       . 'tx_route_category,' 
-      . 'gpxfile, gpxdata,' 
+      . 'gpxfile, geodata,' 
       . 'icon,iconwidth,iconheight,icon_lat,icon_lon,color,line_width,' 
       . 'tx_route_marker,' 
       . 'list_title,list_short,map_title,map_short,' 
@@ -526,10 +526,10 @@ $TCA['tx_route_path'] = array (
       'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.gpxfile',
       'config'    => $conf_file_gpx,
     ),
-    'gpxdata' => array (
+    'geodata' => array (
       'exclude'   => 0,
       'l10n_mode' => 'prefixLangTitle',
-      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.gpxdata',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.geodata',
       'config'    => $conf_text_30_05,
     ),
     'icon' => array (
@@ -949,10 +949,10 @@ $TCA['tx_route_path'] = array (
           'title,' .
           'short,' .
           'bodytext;;;richtext[]:rte_transform[mode=ts];,' .
+        '--div--;LLL:EXT:route/locallang_db.xml:tx_route_path.div_gpx,' . 
+          'gpxfile,geodata,' .
         '--div--;LLL:EXT:route/locallang_db.xml:tx_route_path.div_cat,' . 
           'tx_route_category,' .
-        '--div--;LLL:EXT:route/locallang_db.xml:tx_route_path.div_gpx,' . 
-          'gpxfile,gpxdata,' .
         '--div--;LLL:EXT:route/locallang_db.xml:tx_route_path.div_marker,' . 
           'tx_route_marker,' .
         '--div--;LLL:EXT:route/locallang_db.xml:tx_route_path.div_design,' . 

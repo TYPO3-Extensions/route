@@ -139,7 +139,7 @@ CREATE TABLE tx_route_path (
   bodytext mediumtext NOT NULL,
 
   gpxfile text,
-  gpxdata text,
+  geodata text,
 
   icon text,
   iconheight tinytext,

@@ -181,7 +181,7 @@ $TCA['tx_route_path'] = array (
     'tx_browser'  => array (
         'route' => array (
           'gpxfile' => 'gpxfile',  
-          'geodata' => 'gpxdata',  
+          'geodata' => 'geodata',  
         ),
         
     ),
