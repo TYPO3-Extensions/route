@@ -20,25 +20,6 @@ if (!defined ('TYPO3_MODE'))  die ('Access denied.');
 
   $bool_exclude_default = true;
 
-  $arr_wizard_url = array (
-    'type'      => 'input',
-    'size'      => '80',
-    'max'       => '256',
-    'checkbox'  => '',
-    'eval'      => 'trim',
-    'wizards'   => array (
-      '_PADDING'  => '2',
-      'link'      => array (
-        'type'         => 'popup',
-        'title'        => 'Link',
-        'icon'         => 'link_popup.gif',
-        'script'       => 'browse_links.php?mode=wizard',
-        'JSopenParams' => $JSopenParams,
-      ),
-    ),
-    'softref' => 'typolink',
-  );
-
   $conf_file_gpx = array (
     'type'          => 'group',
     'internal_type' => 'file',
@@ -106,12 +87,6 @@ if (!defined ('TYPO3_MODE'))  die ('Access denied.');
     'type' => 'text',
     'cols' => '30', 
     'rows' => '5',
-  );
-  $conf_text_30_05_trimRequired = array (
-    'type' => 'text',
-    'cols' => '30', 
-    'rows' => '5',
-    'eval' => 'trim,required'
   );
   
   $conf_text_50_10 = array (
