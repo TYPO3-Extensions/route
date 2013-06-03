@@ -178,6 +178,13 @@ $TCA['tx_route_path'] = array (
     'dividers2tabs'     => true,
     'dynamicConfigFile' => t3lib_extMgm::extPath( $_EXTKEY ) . 'tca.php',
     'iconfile'          => t3lib_extMgm::extRelPath( $_EXTKEY ) . 'files/img/route.png',
+    'tx_browser'  => array (
+        'route' => array (
+          'gpxfile' => 'gpxfile',  
+          'geodata' => 'gpxdata',  
+        ),
+        
+    ),
   ),
 );
   // Path
