@@ -587,7 +587,7 @@ $TCA['tx_route_path'] = array (
           array ( 'LLL:EXT:route/locallang_db.xml:tx_route_path.iconposition.center',     1 ),
           array ( 'LLL:EXT:route/locallang_db.xml:tx_route_path.iconposition.end',        2 ),
         ),
-        'default' => 1,
+        'default' => 0,
       ),
     ),
     'color' => array (
