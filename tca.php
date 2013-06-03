@@ -583,10 +583,11 @@ $TCA['tx_route_path'] = array (
       'config' => array (
         'type' => 'radio',
         'items' => array (
-          array ( 'LLL:EXT:route/locallang_db.xml:tx_route_path.iconposition.beginning', 0 ),
-          array ( 'LLL:EXT:route/locallang_db.xml:tx_route_path.iconposition.center', 0 ),
-          array ( 'LLL:EXT:route/locallang_db.xml:tx_route_path.iconposition.end', 0 ),
+          array ( 'LLL:EXT:route/locallang_db.xml:tx_route_path.iconposition.beginning',  0 ),
+          array ( 'LLL:EXT:route/locallang_db.xml:tx_route_path.iconposition.center',     1 ),
+          array ( 'LLL:EXT:route/locallang_db.xml:tx_route_path.iconposition.end',        2 ),
         ),
+        'default' => 1,
       ),
     ),
     'color' => array (
