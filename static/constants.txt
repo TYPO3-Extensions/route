@@ -71,10 +71,11 @@ plugin.tx_browser_pi1 {
       }
       table {
         path {
-          title     = tx_route_path.title
-          geodata   = tx_route_path.geodata 
-          color     = tx_route_path.color 
-          lineWidth = tx_route_path.line_width
+          title         = tx_route_path.title
+          geodata       = tx_route_path.geodata 
+          color         = tx_route_path.color 
+          lineWidth     = tx_route_path.line_width
+          iconposition  = tx_route_path.iconposition
         }
         pathCategory {
           title = tx_route_path_cat.title
