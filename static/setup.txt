@@ -33,6 +33,7 @@ plugin.tx_browser_pi1 {
     list {
       47676 = Route
       47676 {
+        navigation < plugin.tx_browser_pi1.navigation
         name    = Route
         select (
           tx_route_path.title               AS 'tx_route_path.title',
