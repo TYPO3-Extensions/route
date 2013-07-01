@@ -339,6 +339,7 @@ plugin.tx_browser_pi1 {
       /* 111218, 3.9.6, dwildt-*/
       /*height:1.4em;*/
     }
+)
   }
 }
   // plugin.tx_browser_pi1
