@@ -323,11 +323,11 @@ plugin.tx_browser_pi1 {
           tx_route_marker.lon,
           tx_route_marker.image,
           tx_route_marker.uid,
-          tx_route_marker_cat.title,
-          tx_route_marker_cat.icons,
-          tx_route_marker_cat.icon_offset_x,
-          tx_route_marker_cat.icon_offset_y,
-          tx_route_marker_cat.uid
+          tx_route_category.title,
+          tx_route_category.icons,
+          tx_route_category.icon_offset_x,
+          tx_route_category.icon_offset_y,
+          tx_route_category.uid
         )
           // table.field.uid: title
         tx_route_marker =
@@ -354,8 +354,8 @@ plugin.tx_browser_pi1 {
           }
         }
           // table.field.uid: title
-        tx_route_marker_cat =
-        tx_route_marker_cat {
+        tx_route_category =
+        tx_route_category {
             // table.field.uid: title
           title = COA
           title {
@@ -379,17 +379,17 @@ plugin.tx_browser_pi1 {
                 // table.field.
               40 = TEXT
               40 {
-                value = tx_route_marker_cat.title.
+                value = tx_route_category.title.
               }
                 // uid
               50 = TEXT
               50 {
-                field = tx_route_marker_cat.uid
+                field = tx_route_category.uid
               }
                 // title
               60 = TEXT
               60 {
-                field = tx_route_marker_cat.title
+                field = tx_route_category.title
                 noTrimWrap = |: ||
               }
               wrap = <li>|</li>
@@ -399,8 +399,8 @@ plugin.tx_browser_pi1 {
                 // relation
               70 = TEXT
               70 {
-                field = MARKER:tx_route_path->tx_route_marker->tx_route_marker_cat->listOf.uid
-                noTrimWrap = |tx_route_path.tx_route_marker.tx_route_marker_cat:  ||
+                field = MARKER:tx_route_path->tx_route_marker->tx_route_category->listOf.uid
+                noTrimWrap = |tx_route_path.tx_route_marker.tx_route_category:  ||
               }
               wrap = <li>|</li>
             }
@@ -427,7 +427,7 @@ plugin.tx_browser_pi1 {
                   ###SOCIALMEDIA_BOOKMARKS###
                 </div>
                 <ul>
-                  ###TX_ROUTE_MARKER_CAT.TITLE###
+                  ###TX_ROUTE_CATEGORY.TITLE###
                 </ul>
                 <!-- ###SINGLEBODYROW### end -->
               </dl>
