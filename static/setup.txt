@@ -314,13 +314,46 @@ plugin.tx_browser_pi1 {
         htmlSnippets =
         htmlSnippets {
           subparts {
-            singlebodyrow = TEXT
-            singlebodyrow {
-              value (
-              <div class="socialbookmarks">
-                ###SOCIALMEDIA_BOOKMARKS###
-              </div>
+            singleview = TEXT
+            singleview {
+<!-- ###AREA_FOR_AJAX_LIST_01### begin -->
+        <div id="c###TT_CONTENT.UID###-singleview-###MODE###" class="singleview singleview-###MODE###">
+          ###RECORD_BROWSER###
+          <div class="ui-widget ui-corner-all">
+            <!-- ###SINGLEBODY### begin -->
+            <h1 class="ui-widget-header ui-corner-top">
               ###TX_ROUTE_PATH.TITLE###
+            </h1>
+            <div class="ui-widget-content ui-corner-bottom">
+              <dl style="font-size:.85em;">
+                <!-- ###SINGLEBODYROW### begin -->
+                <div class="sbmFloatRight">
+                  ###SOCIALMEDIA_BOOKMARKS###
+                </div>
+                <ul>
+                  ###TX_ROUTE_PATH_CAT.TITLE###
+                </ul>
+                ###TX_ROUTE_MARKER.IMAGE###
+                <h3>
+                  ###TX_ROUTE_MARKER.TITLE###
+                </h3>
+                <ul>
+                  ###TX_ROUTE_MARKER_CAT.TITLE###
+                </ul>
+                <!-- ###SINGLEBODYROW### end -->
+              </dl>
+            </div>
+  <!-- ###AREA_FOR_AJAX_LIST_01### end -->
+            <!-- ###BACKBUTTON### begin -->
+            <p class="backbutton">
+              ###BUTTON###
+            </p>
+            <!-- ###BACKBUTTON### end -->
+  <!-- ###AREA_FOR_AJAX_LIST_02### begin -->
+            <!-- ###SINGLEBODY### end -->
+          </div>
+        </div>
+<!-- ###AREA_FOR_AJAX_LIST_02### end -->
 )
             }
           }
