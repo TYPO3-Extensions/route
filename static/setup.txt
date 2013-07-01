@@ -33,7 +33,9 @@ plugin.tx_browser_pi1 {
     list {
       47676 = Route
       47676 {
-        navigation < plugin.tx_browser_pi1.navigation
+        navigation {
+          map < plugin.tx_browser_pi1.navigation.map
+        }
         name    = Route
         select (
           tx_route_path.title               AS 'tx_route_path.title',
@@ -311,19 +313,21 @@ plugin.tx_browser_pi1 {
     single {
       47676 = Marker
       47676 {
-        navigation < plugin.tx_browser_pi1.navigation
+        navigation {
+          map < plugin.tx_browser_pi1.navigation.map
+        }
         name    = Route
         select (
-          tx_route_marker.title             AS 'tx_route_marker.title',
-          tx_route_marker.lat               AS 'tx_route_marker.lat',
-          tx_route_marker.lon               AS 'tx_route_marker.lon',
-          tx_route_marker.image             AS 'tx_route_marker.image',
-          tx_route_marker.uid               AS 'tx_route_marker.uid',
-          tx_route_marker_cat.title         AS 'tx_route_marker_cat.title',
-          tx_route_marker_cat.icons         AS 'tx_route_marker_cat.icons',
-          tx_route_marker_cat.icon_offset_x AS 'tx_route_marker_cat.icon_offset_x',
-          tx_route_marker_cat.icon_offset_y AS 'tx_route_marker_cat.icon_offset_y',
-          tx_route_marker_cat.uid           AS 'tx_route_marker_cat.uid'
+          tx_route_marker.title,
+          tx_route_marker.lat,
+          tx_route_marker.lon,
+          tx_route_marker.image,
+          tx_route_marker.uid,
+          tx_route_marker_cat.title,
+          tx_route_marker_cat.icons,
+          tx_route_marker_cat.icon_offset_x,
+          tx_route_marker_cat.icon_offset_y,
+          tx_route_marker_cat.uid
         )
           // table.field.uid: title
         tx_route_marker =
