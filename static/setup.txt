@@ -340,6 +340,5 @@ plugin.tx_browser_pi1 {
       /*height:1.4em;*/
     }
 )
-  }
 }
   // plugin.tx_browser_pi1
