@@ -18,7 +18,7 @@ if (!defined ('TYPO3_MODE'))  die ('Access denied.');
   // 
   // Other wizards and config drafts
 
-  $bool_exclude_default = true;
+  $bool_exclude_default = false;
 
   $conf_file_gpx = array (
     'type'          => 'group',
