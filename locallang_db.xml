@@ -89,7 +89,6 @@
       <label index="wizard.list">Display all records</label>
     </languageKey>
     <languageKey index="de" type="array">
-      <label index="dummy">dummy</label>
       <label index="palette.time">Auf Zeit beschr<![CDATA[&auml;]]>nkter Zugriff</label>
       <label index="tca_phrase.accessByFeGroup">Auf Gruppen beschr<![CDATA[&auml;]]>nkter Zugriff</label>
       <label index="tca_phrase.color">Farbe</label>
