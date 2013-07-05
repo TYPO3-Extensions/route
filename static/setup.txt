@@ -35,6 +35,7 @@ plugin.tx_browser_pi1 {
       47676 {
         navigation {
           map < plugin.tx_browser_pi1.navigation.map
+          map {
             enabled = Map +Routes
             marker {
               snippets {
@@ -595,6 +596,7 @@ plugin.tx_browser_pi1 {
       47678 {
         navigation {
           map < plugin.tx_browser_pi1.navigation.map
+          map {
             enabled = Map +Routes
             marker {
               snippets {
