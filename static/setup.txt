@@ -449,7 +449,7 @@ plugin.tx_browser_pi1 {
             configuration {
               categories {
                 fields {
-                  marker {
+                  marker2 {
                     categoryIcon    = tx_route_category.icons
                     categoryOffsetX = tx_route_category.icon_offset_x
                     categoryOffsetY = tx_route_category.icon_offset_y
