@@ -31,12 +31,12 @@ plugin.tx_browser_pi1 {
 
   views {
     list {
-      47676 = Route
+      47676 = Route (only list!)
       47676 {
         navigation {
           map < plugin.tx_browser_pi1.navigation.map
         }
-        name    = Route
+        name    = Route (only list!)
         select (
           tx_route_path.title               AS 'tx_route_path.title',
           tx_route_path.geodata             AS 'tx_route_path.geodata',
@@ -309,7 +309,7 @@ plugin.tx_browser_pi1 {
           }
         }
       }
-      47677 = Marker
+      47677 = Marker (only single!)
       47677 {
         navigation {
           map < plugin.tx_browser_pi1.navigation.map
@@ -317,7 +317,7 @@ plugin.tx_browser_pi1 {
             enabled = disabled
           }
         }
-        name    = Marker
+        name    = Marker (only single!)
         select (
           tx_route_marker.title
         )
@@ -344,7 +344,7 @@ plugin.tx_browser_pi1 {
           }
         }
       }
-      47678 = Path
+      47678 = Path (only single!)
       47678 {
         navigation {
           map < plugin.tx_browser_pi1.navigation.map
@@ -352,7 +352,7 @@ plugin.tx_browser_pi1 {
             enabled = disabled
           }
         }
-        name    = Path
+        name    = Path (only single!)
         select (
           tx_route_marker.title
         )
@@ -381,7 +381,7 @@ plugin.tx_browser_pi1 {
       }
     }
     single {
-      47676 = Route
+      47676 = Route (only single!)
       47676 {
         navigation {
           map < plugin.tx_browser_pi1.navigation.map
@@ -389,7 +389,7 @@ plugin.tx_browser_pi1 {
             enabled = disabled
           }
         }
-        name    = Route
+        name    = Route (only single!)
         select (
           tx_route_marker.title
         )
@@ -420,12 +420,12 @@ plugin.tx_browser_pi1 {
           }
         }
       }
-      47677 = Marker
+      47677 = Marker (only list!)
       47677 {
         navigation {
           map < plugin.tx_browser_pi1.navigation.map
         }
-        name    = Route
+        name    = Marker (only list!)
         select (
           tx_route_marker.title,
           tx_route_marker.lat,
@@ -557,12 +557,12 @@ plugin.tx_browser_pi1 {
           }
         }
       }
-      47678 = Path
+      47678 = Path (only list!)
       47678 {
         navigation {
           map < plugin.tx_browser_pi1.navigation.map
         }
-        name    = Path
+        name    = Path (only list!)
         select (
           tx_route_marker.title,
           tx_route_marker.lat,
