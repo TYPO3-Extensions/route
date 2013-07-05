@@ -55,7 +55,7 @@ plugin.tx_browser_pi1 {
             }
           }
         }
-        showUid = {$plugin.tx_browser_pi1.map.aliases.showUid.path}
+        showUid = routeUid
         name    = Route
         select (
           tx_route_path.title               AS 'tx_route_path.title',
@@ -402,6 +402,7 @@ plugin.tx_browser_pi1 {
     single {
       47676 < plugin.tx_browser_pi1.views.list.47676
       47676 {
+        showUid = routeUid
         htmlSnippets =
         htmlSnippets {
           subparts {
@@ -431,27 +432,6 @@ plugin.tx_browser_pi1 {
       }
       47677 = Marker (only single!)
       47677 {
-        navigation {
-          map < plugin.tx_browser_pi1.navigation.map
-          map {
-            marker {
-              snippets {
-                jss {
-                  dynamic {
-                    oxMapConfigModules {
-                      10 {
-                        value = {$plugin.tx_browser_pi1.map.modules.default}
-                      }
-                      20 {
-                        value = {$plugin.tx_browser_pi1.map.modules.debugging}
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
         showUid = {$plugin.tx_browser_pi1.map.aliases.showUid.marker}
         name    = Marker (only single!)
         select (
@@ -587,27 +567,6 @@ plugin.tx_browser_pi1 {
       }
       47678 = Path (only single!)
       47678 {
-        navigation {
-          map < plugin.tx_browser_pi1.navigation.map
-          map22 {
-            marker {
-              snippets {
-                jss {
-                  dynamic {
-                    oxMapConfigModules {
-                      10 {
-                        value = {$plugin.tx_browser_pi1.map.modules.default}
-                      }
-                      20 {
-                        value = {$plugin.tx_browser_pi1.map.modules.debugging}
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
         showUid = {$plugin.tx_browser_pi1.map.aliases.showUid.path}
         name    = Path (only single!)
         select (
