@@ -328,7 +328,6 @@ plugin.tx_browser_pi1 {
             listview {
               value (
             <div id="c###TT_CONTENT.UID###-listview-###MODE###" class="###VIEW###view ###VIEW###view-content ###VIEW###view-###MODE### ###VIEW###view-content-###MODE###">
-              <!-- ###LISTBODY### begin --><!-- ###LISTBODYITEM### begin -->
               <p>
                 Marker don't have any list view.<br />
                 Please use view.list.47676 for routes.
@@ -337,6 +336,7 @@ plugin.tx_browser_pi1 {
                 Marker haben keine Listen-Ansicht.<br />
                 Bitte benutze view.list.47676 f&uuml;r Routen.
               </p>
+              <!-- ###LISTBODY### begin --><!-- ###LISTBODYITEM### begin -->
               <div class="cleaner">&nbsp;</div><!-- ###LISTBODYITEM### end --><!-- ###LISTBODY### end -->
             </div> <!-- /listview -->
 )
