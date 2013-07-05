@@ -31,7 +31,7 @@ plugin.tx_browser_pi1 {
 
   views {
     list {
-      47676 = Route (only list!)
+      47676 = Route
       47676 {
         navigation {
           map < plugin.tx_browser_pi1.navigation.map
@@ -56,7 +56,7 @@ plugin.tx_browser_pi1 {
           }
         }
         showUid = {$plugin.tx_browser_pi1.map.aliases.showUid.path}
-        name    = Route (only list!)
+        name    = Route
         select (
           tx_route_path.title               AS 'tx_route_path.title',
           tx_route_path.geodata             AS 'tx_route_path.geodata',
@@ -400,19 +400,8 @@ plugin.tx_browser_pi1 {
       }
     }
     single {
-      47676 = Route (only single!)
+      47676 < plugin.tx_browser_pi1.views.list.47676
       47676 {
-        navigation {
-          map < plugin.tx_browser_pi1.navigation.map
-          map {
-            enabled = disabled
-          }
-        }
-        showUid = {$plugin.tx_browser_pi1.map.aliases.showUid.path}
-        name    = Route (only single!)
-        select (
-          tx_route_marker.title
-        )
         htmlSnippets =
         htmlSnippets {
           subparts {
