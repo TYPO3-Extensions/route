@@ -123,7 +123,7 @@ plugin.tx_browser_pi1 {
       }
     }
   }
-[globalVar]
+[global]
   // globalVar tx_browser_pi1|markerUid > 0
 
 
@@ -167,5 +167,5 @@ plugin.tx_browser_pi1 {
         }
     }
   }
-[globalVar]
+[global]
   // globalVar tx_browser_pi1|pathUid > 0
