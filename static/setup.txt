@@ -609,10 +609,10 @@ plugin.tx_browser_pi1 {
                   dynamic {
                     oxMapConfigModules {
                       10 {
-                        value = {$plugin.tx_browser_pi1.map.modules.routes.default}
+                        value = {$plugin.tx_browser_pi1.map.modules.default}
                       }
                       20 {
-                        value = {$plugin.tx_browser_pi1.map.modules.routes.debugging}
+                        value = {$plugin.tx_browser_pi1.map.modules.debugging}
                       }
                     }
                   }
