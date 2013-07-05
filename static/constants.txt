@@ -10,11 +10,6 @@ plugin.tx_browser_pi1 {
         categoryIcon    = tx_route_marker_cat.icons
         categoryOffsetX = tx_route_marker_cat.icon_offset_x
         categoryOffsetY = tx_route_marker_cat.icon_offset_y
-
-        category        = tx_route_category.title
-        categoryIcon    = tx_route_category.icons
-        categoryOffsetX = tx_route_category.icon_offset_x
-        categoryOffsetY = tx_route_category.icon_offset_y
       }
       position {
         categoryIconLegend  = 0 
