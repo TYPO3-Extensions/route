@@ -2,7 +2,7 @@
   ///////////////////////////////////////
   //
   // plugin.tx_browser_pi1
-  // globalVar tx_browser_pi1|pathUid > 0
+  // globalVar tx_browser_pi1|markerUid > 0
   //  plugin.tx_browser_pi1
 
 
@@ -99,8 +99,8 @@ plugin.tx_browser_pi1 {
 
 
 
-  // globalVar tx_browser_pi1|pathUid > 0
-[globalVar = GP:tx_browser_pi1|pathUid > 0]
+  // globalVar tx_browser_pi1|markerUid > 0
+[globalVar = GP:tx_browser_pi1|markerUid > 0]
   plugin.tx_browser_pi1 {
     map {
       enabled = Map
@@ -119,4 +119,4 @@ plugin.tx_browser_pi1 {
     }
   }
 [globalVar]
-  // globalVar tx_browser_pi1|pathUid > 0
+  // globalVar tx_browser_pi1|markerUid > 0
