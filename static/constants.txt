@@ -20,10 +20,6 @@ plugin.tx_browser_pi1 {
         categoryIconMap     = 0 
       }
     }
-    modules {
-      debugging = 'Error,OSM.Route,OSM.Base,OSM.Filter' 
-      default   = 'OSM.Route,OSM.Base,OSM.Filter'
-    }
     path {
       categoryIcon = uploads/tx_route/
       mapper {

@@ -35,6 +35,24 @@ plugin.tx_browser_pi1 {
       47676 {
         navigation {
           map < plugin.tx_browser_pi1.navigation.map
+            enabled = Map +Routes
+            marker {
+              snippets {
+                jss {
+                  dynamic {
+                    oxMapConfigModules {
+                      10 {
+                        value = {$plugin.tx_browser_pi1.map.modules.routes.default}
+                      }
+                      20 {
+                        value = {$plugin.tx_browser_pi1.map.modules.routes.debugging}
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
         name    = Route (only list!)
         select (
@@ -313,9 +331,6 @@ plugin.tx_browser_pi1 {
       47677 {
         navigation {
           map < plugin.tx_browser_pi1.navigation.map
-          map {
-            enabled = disabled
-          }
         }
         name    = Marker (only single!)
         select (
@@ -424,6 +439,25 @@ plugin.tx_browser_pi1 {
       47677 {
         navigation {
           map < plugin.tx_browser_pi1.navigation.map
+          map {
+            enabled = Map
+            marker {
+              snippets {
+                jss {
+                  dynamic {
+                    oxMapConfigModules {
+                      10 {
+                        value = {$plugin.tx_browser_pi1.map.modules.default}
+                      }
+                      20 {
+                        value = {$plugin.tx_browser_pi1.map.modules.debugging}
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
         name    = Marker (only list!)
         select (
@@ -561,6 +595,24 @@ plugin.tx_browser_pi1 {
       47678 {
         navigation {
           map < plugin.tx_browser_pi1.navigation.map
+            enabled = Map +Routes
+            marker {
+              snippets {
+                jss {
+                  dynamic {
+                    oxMapConfigModules {
+                      10 {
+                        value = {$plugin.tx_browser_pi1.map.modules.routes.default}
+                      }
+                      20 {
+                        value = {$plugin.tx_browser_pi1.map.modules.routes.debugging}
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
         name    = Path (only list!)
         select (
