@@ -589,8 +589,7 @@ plugin.tx_browser_pi1 {
       47678 {
         navigation {
           map < plugin.tx_browser_pi1.navigation.map
-          map {
-            enabled = Map
+          map22 {
             marker {
               snippets {
                 jss {
