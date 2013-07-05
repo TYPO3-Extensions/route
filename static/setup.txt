@@ -55,6 +55,7 @@ plugin.tx_browser_pi1 {
             }
           }
         }
+        showUid = routeUid
         name    = Route (only list!)
         select (
           tx_route_path.title               AS 'tx_route_path.title',
@@ -334,6 +335,7 @@ plugin.tx_browser_pi1 {
           map < plugin.tx_browser_pi1.navigation.map
         }
         name    = Marker (only single!)
+        showUid = markerUid
         select (
           tx_route_marker.title
         )
@@ -368,6 +370,7 @@ plugin.tx_browser_pi1 {
             enabled = disabled
           }
         }
+        showUid = pathUid
         name    = Path (only single!)
         select (
           tx_route_marker.title
@@ -405,6 +408,7 @@ plugin.tx_browser_pi1 {
             enabled = disabled
           }
         }
+        showUid = routeUid
         name    = Route (only single!)
         select (
           tx_route_marker.title
@@ -460,6 +464,7 @@ plugin.tx_browser_pi1 {
             }
           }
         }
+        showUid = markerUid
         name    = Marker (only list!)
         select (
           tx_route_marker.title,
@@ -616,6 +621,7 @@ plugin.tx_browser_pi1 {
             }
           }
         }
+        showUid = pathUid
         name    = Path (only list!)
         select (
           tx_route_path.title,
