@@ -11,6 +11,16 @@ plugin.tx_browser_pi1 {
         categoryOffsetX = tx_route_marker_cat.icon_offset_x
         categoryOffsetY = tx_route_marker_cat.icon_offset_y
       }
+      field {
+        linktoSingle    = tx_route_path.uid
+        latitude        = tx_route_path.lat
+        longitude       = tx_route_path.lon
+        description     = tx_route_path.title
+        category        = tx_route_category.title
+        categoryIcon    = tx_route_category.icons
+        categoryOffsetX = tx_route_category.icon_offset_x
+        categoryOffsetY = tx_route_category.icon_offset_y
+      }
       position {
         categoryIconLegend  = 0 
         categoryIconMap     = 0 
