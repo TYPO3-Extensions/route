@@ -429,7 +429,7 @@ plugin.tx_browser_pi1 {
           }
         }
       }
-      47677 = Marker (only list!)
+      47677 = Marker (only single!)
       47677 {
         navigation {
           map < plugin.tx_browser_pi1.navigation.map
@@ -453,7 +453,7 @@ plugin.tx_browser_pi1 {
           }
         }
         showUid = {$plugin.tx_browser_pi1.map.aliases.showUid.marker}
-        name    = Marker (only list!)
+        name    = Marker (only single!)
         select (
           tx_route_marker.title,
           tx_route_marker.lat,
@@ -585,7 +585,7 @@ plugin.tx_browser_pi1 {
           }
         }
       }
-      47678 = Path (only list!)
+      47678 = Path (only single!)
       47678 {
         navigation {
           map < plugin.tx_browser_pi1.navigation.map
@@ -610,7 +610,7 @@ plugin.tx_browser_pi1 {
           }
         }
         showUid = {$plugin.tx_browser_pi1.map.aliases.showUid.path}
-        name    = Path (only list!)
+        name    = Path (only single!)
         select (
           tx_route_path.title,
           tx_route_path.geodata,

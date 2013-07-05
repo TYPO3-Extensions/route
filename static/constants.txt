@@ -139,8 +139,8 @@ plugin.tx_browser_pi1 {
       marker {
         field {
           linktoSingle    = tx_route_path.uid
-          latitude        = tx_route_path.lat
-          longitude       = tx_route_path.lon
+          latitude        = tx_route_path.icon_lat
+          longitude       = tx_route_path.icon_lon
           description     = tx_route_path.title
           category        = tx_route_category.title
           categoryIcon    = tx_route_category.icons
