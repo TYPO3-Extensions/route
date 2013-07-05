@@ -165,6 +165,7 @@ plugin.tx_browser_pi1 {
         markerCategory {
           title = tx_route_category.title
         }
+      }
     }
   }
 [global]
