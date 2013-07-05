@@ -716,3 +716,22 @@ plugin.tx_browser_pi1 {
 )
 }
   // plugin.tx_browser_pi1
+
+
+
+  ///////////////////////////////////////
+  //
+  // globalVar tx_browser_pi1|routeUid > 0
+
+[globalVar = GP:tx_browser_pi1|routeUid > 0]
+  plugin.tx_browser_pi1 {
+    views {
+      list {
+        47676 {
+          andWhere := appendString( ' and HUGO' ) 
+        }
+      }
+    }
+  }
+[global]
+  // globalVar tx_browser_pi1|routeUid > 0
