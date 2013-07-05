@@ -445,23 +445,6 @@ plugin.tx_browser_pi1 {
         navigation {
           map < plugin.tx_browser_pi1.navigation.map
           map {
-            enabled = Map
-            configuration {
-              categories {
-                fields {
-                  marker2 {
-                    categoryIcon    = tx_route_category.icons
-                    categoryOffsetX = tx_route_category.icon_offset_x
-                    categoryOffsetY = tx_route_category.icon_offset_y
-                    categoryTitle   = tx_route_category.title
-                    description     = tx_route_marker.title
-                    latitude        = tx_route_marker.lat
-                    longitude       = tx_route_marker.lon
-                    uid             = tx_route_marker.uid
-                  }
-                }
-              }
-            }
             marker {
               snippets {
                 jss {
