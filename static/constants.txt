@@ -1,9 +1,5 @@
 plugin.tx_browser_pi1 {
   map {
-    enabled = Map +Routes
-    enabled {
-      csvViews = 47676
-    }
     marker {
       field {
         linktoSingle    = tx_route_marker.uid
