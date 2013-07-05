@@ -728,7 +728,7 @@ plugin.tx_browser_pi1 {
     views {
       list {
         47676 {
-          andWhere := appendString( ' and HUGO' ) 
+          andWhere := appendString( and HUGO ) 
         }
       }
     }
