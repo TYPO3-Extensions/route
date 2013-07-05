@@ -4,7 +4,7 @@
   // plugin.tx_browser_pi1
   // globalVar 
   //    tx_browser_pi1|markerUid  > 0
-  //    tx_browser_pi1|routeUid   > 0
+  //    tx_browser_pi1|pathUid   > 0
 
 
   // plugin.tx_browser_pi1
@@ -125,3 +125,30 @@ plugin.tx_browser_pi1 {
   }
 [globalVar]
   // globalVar tx_browser_pi1|markerUid > 0
+
+
+  
+  ///////////////////////////////////////
+  //
+  // globalVar tx_browser_pi1|pathUid > 0
+
+[globalVar = GP:tx_browser_pi1|pathUid > 0]
+  plugin.tx_browser_pi1 {
+    map {
+      enabled = Map
+      marker {
+        field {
+          linktoSingle    = tx_route_path.uid
+          latitude        = tx_route_path.lat
+          longitude       = tx_route_path.lon
+          description     = tx_route_path.title
+          category        = tx_route_category.title
+          categoryIcon    = tx_route_category.icons
+          categoryOffsetX = tx_route_category.icon_offset_x
+          categoryOffsetY = tx_route_category.icon_offset_y
+        }
+      }
+    }
+  }
+[globalVar]
+  // globalVar tx_browser_pi1|pathUid > 0
