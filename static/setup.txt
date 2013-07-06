@@ -100,7 +100,10 @@ plugin.tx_browser_pi1 {
           table = tx_route_path
           alias = tx_route_path
         }
-        andWhere  = tx_route_path.pid IN (###PID_LIST###)
+        andWhere = TEXT
+        andWhere {
+          value = tx_route_path.pid IN (###PID_LIST###)
+        }
         joins {
           0 {
             type  = LEFT JOIN
