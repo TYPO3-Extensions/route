@@ -113,7 +113,7 @@ plugin.tx_browser_pi1 {
                 data = GP:tx_browser_pi1|routeUid
               }
             }
-            value       = AND tx_route_path.uid = CAST( {GP:tx_browser_pi1|routeUid} AS SIGNED )
+            value       = AND tx_route_path.uid = {GP:tx_browser_pi1|routeUid}
             insertData  = 1
             noTrimWrap  = | | |
           }
@@ -419,6 +419,12 @@ plugin.tx_browser_pi1 {
     single {
       47676 < plugin.tx_browser_pi1.views.list.47676
       47676 {
+        navigation {
+          map < plugin.tx_browser_pi1.navigation.map
+          map {
+            enabled = disabled
+          }
+        }
         showUid = routeUid
         htmlSnippets =
         htmlSnippets {
