@@ -114,7 +114,7 @@ plugin.tx_browser_pi1 {
               }
             }
             value       = AND tx_route_path.uid = {GP:tx_browser_pi1|routeUid}
-            insertData  = 
+            insertData  = 1
             noTrimWrap  = | | |
           }
         }
