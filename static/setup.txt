@@ -217,6 +217,12 @@ plugin.tx_browser_pi1 {
       }
       47677 = Route (text only)
       47677 {
+        navigation {
+          map < temp.route.navigation.map
+          map {
+            enabled = disabled
+          }
+        }
         showUid   = routeUid
         name      = Route (text only)
         select    < temp.route.sql.select
