@@ -1,13 +1,35 @@
   
   ///////////////////////////////////////
   //
+  // plugin.tx_route
   // plugin.tx_browser_pi1
   // globalVar 
   //    tx_browser_pi1|markerUid  > 0
   //    tx_browser_pi1|pathUid   > 0
 
 
+
+  ///////////////////////////////////////
+  //
+  // plugin.tx_route
+
+plugin.tx_route {
+
+  # cat=Route - Path//100;            type=string;    label= upload folder: Path to the upload folder with an ending slash
+  path.uploadfolder = uploads/tx_route/
+
+  # cat=Route - Pages*//100;          type=+int;      label= route*: Obligate! Uid of the page with the plugin BrowserMap +Routes
+  pages.route = 
+
+}
+  // plugin.tx_route
+
+
+
+  ///////////////////////////////////////
+  //
   // plugin.tx_browser_pi1
+
 plugin.tx_browser_pi1 {
   map {
     enabled = Map +Routes
