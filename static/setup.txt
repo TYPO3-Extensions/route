@@ -205,14 +205,11 @@ plugin.tx_browser_pi1 {
             listview {
               value (
                 <div id="c###TT_CONTENT.UID###-listview-###MODE###" class="###VIEW###view ###VIEW###view-content ###VIEW###view-###MODE### ###VIEW###view-content-###MODE###">
-                  <!-- ###LISTBODY### begin -->###MAP###<!-- ###LISTBODYITEM### begin -->
-                  <div class="sbmFloatRight">
-                    ###SOCIALMEDIA_BOOKMARKS###
-                  </div>
-                  <h2>
-                    ###TX_ROUTE_PATH.TITLE###
-                  </h2>
-                  <div class="cleaner">&nbsp;</div><!-- ###LISTBODYITEM### end --><!-- ###LISTBODY### end -->
+                  <!-- ###LISTBODY### begin -->
+                  ###MAP###
+                    <!-- ###LISTBODYITEM### begin -->
+                    <!-- ###LISTBODYITEM### end -->
+                <!-- ###LISTBODY### end -->
                 </div> <!-- /listview -->
 )
             }
