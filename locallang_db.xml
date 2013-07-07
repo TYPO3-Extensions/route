@@ -47,8 +47,8 @@
       <label index="tx_route_path.color">Color of the Path</label>                        
       <label index="tx_route_path.geodata">Geodata (lat,lon linebreak lon,lat ...)</label>
       <label index="tx_route_path.gpxfile">GPX File (an upload is overwriting the data in the field [GPX Data] below)</label>
-      <label index="tx_route_path.icon_lat">Latitude of the Path Icon</label>
-      <label index="tx_route_path.icon_lon">Longitude of the Path Icon</label>
+      <label index="tx_route_path.icon_lat">Latitude of the category icon</label>
+      <label index="tx_route_path.icon_lon">Longitude of the category icon</label>
       <label index="tx_route_path.line_width">Line Width of the Path</label>                        
       <label index="tx_route_path.list_title">Label in List View (leave it empty, if default value should taken)</label>
       <label index="tx_route_path.list_short">Short in List View (leave it empty, if default value should taken)</label>
