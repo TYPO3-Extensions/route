@@ -85,8 +85,8 @@ switch( true )
 {
   case( $beLanguage == 'de' ):
       // German
-    t3lib_extMgm::addStaticFile($_EXTKEY, 'static/',              'Route');
-    t3lib_extMgm::addStaticFile($_EXTKEY, 'static/css/',          '+Route CSS');
+    t3lib_extMgm::addStaticFile($_EXTKEY, 'static/',                'Route');
+    t3lib_extMgm::addStaticFile($_EXTKEY, 'static/debugging/47676', 'Route (debug 47676)');
 //    switch( true )
 //    {
 //      case( $typo3Version < 4007000 ):
@@ -99,8 +99,8 @@ switch( true )
     break;
   default:
       // English
-    t3lib_extMgm::addStaticFile($_EXTKEY, 'static/',              'Route');
-    t3lib_extMgm::addStaticFile($_EXTKEY, 'static/css/',          '+Route CSS');
+    t3lib_extMgm::addStaticFile($_EXTKEY, 'static/',                'Route');
+    t3lib_extMgm::addStaticFile($_EXTKEY, 'static/debugging/47676', 'Route (debug 47676)');
 //    switch( true )
 //    {
 //      case( $typo3Version < 4007000 ):

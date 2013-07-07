@@ -199,98 +199,73 @@ plugin.tx_browser_pi1 {
         aliases   < temp.route.sql.aliases
         orderBy   < temp.route.sql.orderBy
           // table.field.uid: title
-        tx_route_path =
-        tx_route_path {
-            // table.field.uid: title
-          title = COA
-          title {
-              // table.field.
-            10 = TEXT
-            10 {
-              value = tx_route_path.title.
-            }
-              // uid
-            20 = TEXT
-            20 {
-              field = tx_route_path.uid
-            }
-            30 = TEXT
-            30 {
-              field = tx_route_path.title
-              noTrimWrap = |: ||
-            }
-          }
-        }
-          // table.field.uid: title
-        tx_route_path_cat =
-        tx_route_path_cat {
-            // table.field.uid: title
-          title = COA
-          title {
-            10 = COA
-            10 {
+        XXX {
+          tx_route_path =
+          tx_route_path {
+              // table.field.uid: title
+            title = COA
+            title {
                 // table.field.
               10 = TEXT
               10 {
-                value = tx_route_path_cat.title.
+                value = tx_route_path.title.
               }
                 // uid
               20 = TEXT
               20 {
-                field = tx_route_path_cat.uid
+                field = tx_route_path.uid
               }
-                // title
               30 = TEXT
               30 {
-                field = tx_route_path_cat.title
+                field = tx_route_path.title
                 noTrimWrap = |: ||
               }
-              wrap = <li>|</li>
             }
-            20 = COA
-            20 {
-                // relation
-              40 = TEXT
-              40 {
-                field = PATH:tx_route_path->tx_route_path_cat->listOf.uid
-                noTrimWrap = |tx_route_path.tx_route_path_cat:  ||
+          }
+            // table.field.uid: title
+          tx_route_path_cat =
+          tx_route_path_cat {
+              // table.field.uid: title
+            title = COA
+            title {
+              10 = COA
+              10 {
+                  // table.field.
+                10 = TEXT
+                10 {
+                  value = tx_route_path_cat.title.
+                }
+                  // uid
+                20 = TEXT
+                20 {
+                  field = tx_route_path_cat.uid
+                }
+                  // title
+                30 = TEXT
+                30 {
+                  field = tx_route_path_cat.title
+                  noTrimWrap = |: ||
+                }
+                wrap = <li>|</li>
               }
-              wrap = <li>|</li>
+              20 = COA
+              20 {
+                  // relation
+                40 = TEXT
+                40 {
+                  field = PATH:tx_route_path->tx_route_path_cat->listOf.uid
+                  noTrimWrap = |tx_route_path.tx_route_path_cat:  ||
+                }
+                wrap = <li>|</li>
+              }
             }
           }
-        }
-          // table.field.uid: title
-        tx_route_marker =
-        tx_route_marker {
             // table.field.uid: title
-          title = COA
-          title {
-              // table.field.
-            10 = TEXT
-            10 {
-              value = tx_route_marker.title.
-            }
-              // uid
-            20 = TEXT
-            20 {
-              field = tx_route_marker.uid
-            }
-              // title
-            30 = TEXT
-            30 {
-              field = tx_route_marker.title
-              noTrimWrap = |: ||
-            }
-          }
-        }
-          // table.field.uid: title
-        tx_route_marker_cat =
-        tx_route_marker_cat {
-            // table.field.uid: title
-          title = COA
-          title {
-            10 = COA
-            10 {
+          tx_route_marker =
+          tx_route_marker {
+              // table.field.uid: title
+            title = COA
+            title {
                 // table.field.
               10 = TEXT
               10 {
@@ -301,38 +276,65 @@ plugin.tx_browser_pi1 {
               20 {
                 field = tx_route_marker.uid
               }
-                // pipe
+                // title
               30 = TEXT
               30 {
-                value = |
-              }
-                // table.field.
-              40 = TEXT
-              40 {
-                value = tx_route_marker_cat.title.
-              }
-                // uid
-              50 = TEXT
-              50 {
-                field = tx_route_marker_cat.uid
-              }
-                // title
-              60 = TEXT
-              60 {
-                field = tx_route_marker_cat.title
+                field = tx_route_marker.title
                 noTrimWrap = |: ||
               }
-              wrap = <li>|</li>
             }
-            20 = COA
-            20 {
-                // relation
-              70 = TEXT
-              70 {
-                field = MARKER:tx_route_path->tx_route_marker->tx_route_marker_cat->listOf.uid
-                noTrimWrap = |tx_route_path.tx_route_marker.tx_route_marker_cat:  ||
+          }
+            // table.field.uid: title
+          tx_route_marker_cat =
+          tx_route_marker_cat {
+              // table.field.uid: title
+            title = COA
+            title {
+              10 = COA
+              10 {
+                  // table.field.
+                10 = TEXT
+                10 {
+                  value = tx_route_marker.title.
+                }
+                  // uid
+                20 = TEXT
+                20 {
+                  field = tx_route_marker.uid
+                }
+                  // pipe
+                30 = TEXT
+                30 {
+                  value = |
+                }
+                  // table.field.
+                40 = TEXT
+                40 {
+                  value = tx_route_marker_cat.title.
+                }
+                  // uid
+                50 = TEXT
+                50 {
+                  field = tx_route_marker_cat.uid
+                }
+                  // title
+                60 = TEXT
+                60 {
+                  field = tx_route_marker_cat.title
+                  noTrimWrap = |: ||
+                }
+                wrap = <li>|</li>
               }
-              wrap = <li>|</li>
+              20 = COA
+              20 {
+                  // relation
+                70 = TEXT
+                70 {
+                  field = MARKER:tx_route_path->tx_route_marker->tx_route_marker_cat->listOf.uid
+                  noTrimWrap = |tx_route_path.tx_route_marker.tx_route_marker_cat:  ||
+                }
+                wrap = <li>|</li>
+              }
             }
           }
         }
@@ -350,16 +352,6 @@ plugin.tx_browser_pi1 {
                   <h2>
                     ###TX_ROUTE_PATH.TITLE###
                   </h2>
-                  <ul>
-                    ###TX_ROUTE_PATH_CAT.TITLE###
-                  </ul>
-                  ###TX_ROUTE_MARKER.IMAGE###
-                  <h3>
-                    ###TX_ROUTE_MARKER.TITLE###
-                  </h3>
-                  <ul>
-                    ###TX_ROUTE_MARKER_CAT.TITLE###
-                  </ul>
                   <div class="cleaner">&nbsp;</div><!-- ###LISTBODYITEM### end --><!-- ###LISTBODY### end -->
                 </div> <!-- /listview -->
 )
