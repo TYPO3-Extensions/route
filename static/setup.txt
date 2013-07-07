@@ -16,22 +16,19 @@
   // temp.route.sql
 
 temp.route {
-  sql {
-    navigation {
-      map < plugin.tx_browser_pi1.navigation.map
-      map {
-        enabled = Map +Routes
-        marker {
-          snippets {
-            jss {
-              dynamic {
-                oxMapConfigModules {
-                  10 {
-                    value = {$plugin.tx_browser_pi1.map.modules.routes.default}
-                  }
-                  20 {
-                    value = {$plugin.tx_browser_pi1.map.modules.routes.debugging}
-                  }
+  navigation {
+    map < plugin.tx_browser_pi1.navigation.map
+    map {
+      marker {
+        snippets {
+          jss {
+            dynamic {
+              oxMapConfigModules {
+                10 {
+                  value = {$plugin.tx_browser_pi1.map.modules.routes.default}
+                }
+                20 {
+                  value = {$plugin.tx_browser_pi1.map.modules.routes.debugging}
                 }
               }
             }
@@ -39,6 +36,8 @@ temp.route {
         }
       }
     }
+  }
+  sql {
     select (
       tx_route_path.title               AS 'tx_route_path.title',
       tx_route_path.geodata             AS 'tx_route_path.geodata',
@@ -187,6 +186,9 @@ plugin.tx_browser_pi1 {
       47676 {
         navigation {
           map < temp.route.navigation.map
+          map {
+            enabled = Map +Routes
+          }
         }
         showUid   = routeUid
         name      = Route
