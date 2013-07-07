@@ -644,7 +644,8 @@ plugin.tx_browser_pi1 {
           tx_route_category.icons,
           tx_route_category.icon_offset_x,
           tx_route_category.icon_offset_y,
-          tx_route_category.uid
+          tx_route_category.uid,
+          tx_route_path.title,
         )
         htmlSnippets =
         htmlSnippets {
@@ -666,6 +667,9 @@ plugin.tx_browser_pi1 {
                 <div class="sbmFloatRight">
                   ###SOCIALMEDIA_BOOKMARKS###
                 </div>
+                <ul>
+                  ###TX_ROUTE_PATH.TITLE###
+                </ul>
                 <ul>
                   ###TX_ROUTE_CATEGORY.TITLE###
                 </ul>
