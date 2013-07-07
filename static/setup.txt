@@ -303,7 +303,7 @@ plugin.tx_browser_pi1 {
             noRows.field            = tx_route_path.image_norows
             cols.field              = tx_route_path.imagecols
             border.field            = tx_route_path.image_frames
-            caption.1.1.field         = tx_route_path.imagecaption
+            caption.1.1.field       = tx_route_path.imagecaption
             captionAlign.field      = tx_route_path.imagecaption_position
             layout {
               key.field        = tx_route_path.imageorient
