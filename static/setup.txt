@@ -342,32 +342,27 @@ plugin.tx_browser_pi1 {
             listview = TEXT
             listview {
               value (
-            <div id="c###TT_CONTENT.UID###-listview-###MODE###" class="###VIEW###view ###VIEW###view-content ###VIEW###view-###MODE### ###VIEW###view-content-###MODE###">
-              <!-- ###LISTBODY### begin --><!-- ###LISTBODYITEM### begin -->
-              <div class="sbmFloatRight">
-                ###SOCIALMEDIA_BOOKMARKS###
-              </div>
-              <h2>
-                ###TX_ROUTE_PATH.TITLE###
-              </h2>
-              <ul>
-                ###TX_ROUTE_PATH_CAT.TITLE###
-              </ul>
-              ###TX_ROUTE_MARKER.IMAGE###
-              <h3>
-                ###TX_ROUTE_MARKER.TITLE###
-              </h3>
-              <ul>
-                ###TX_ROUTE_MARKER_CAT.TITLE###
-              </ul>
-              <div class="cleaner">&nbsp;</div><!-- ###LISTBODYITEM### end --><!-- ###LISTBODY### end -->
-            </div> <!-- /listview -->
+                <div id="c###TT_CONTENT.UID###-listview-###MODE###" class="###VIEW###view ###VIEW###view-content ###VIEW###view-###MODE### ###VIEW###view-content-###MODE###">
+                  <!-- ###LISTBODY### begin --><!-- ###LISTBODYITEM### begin -->
+                  <div class="sbmFloatRight">
+                    ###SOCIALMEDIA_BOOKMARKS###
+                  </div>
+                  <h2>
+                    ###TX_ROUTE_PATH.TITLE###
+                  </h2>
+                  <ul>
+                    ###TX_ROUTE_PATH_CAT.TITLE###
+                  </ul>
+                  ###TX_ROUTE_MARKER.IMAGE###
+                  <h3>
+                    ###TX_ROUTE_MARKER.TITLE###
+                  </h3>
+                  <ul>
+                    ###TX_ROUTE_MARKER_CAT.TITLE###
+                  </ul>
+                  <div class="cleaner">&nbsp;</div><!-- ###LISTBODYITEM### end --><!-- ###LISTBODY### end -->
+                </div> <!-- /listview -->
 )
-            }
-            listview >
-            listview = TEXT
-            listview {
-              value =
             }
           }
         }
