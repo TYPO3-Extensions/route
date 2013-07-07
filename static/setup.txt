@@ -387,12 +387,12 @@ plugin.tx_browser_pi1 {
           }
         }
       }
-      47678 = Marker (only single!)
+      47678 = Marker (single only)
       47678 {
         navigation {
           map < plugin.tx_browser_pi1.navigation.map
         }
-        name    = Marker (only single!)
+        name    = Marker (single only)
         showUid = {$plugin.tx_browser_pi1.map.aliases.showUid.marker}
         select (
           tx_route_marker.title
@@ -630,10 +630,10 @@ plugin.tx_browser_pi1 {
           }
         }
       }
-      47678 = Marker (only single!)
+      47678 = Marker (single only)
       47678 {
         showUid = {$plugin.tx_browser_pi1.map.aliases.showUid.marker}
-        name    = Marker (only single!)
+        name    = Marker (single only)
         select (
           tx_route_marker.title,
           tx_route_marker.lat,
@@ -646,83 +646,6 @@ plugin.tx_browser_pi1 {
           tx_route_category.icon_offset_y,
           tx_route_category.uid
         )
-          // table.field.uid: title
-        tx_route_marker =
-        tx_route_marker {
-            // table.field.uid: title
-          title = COA
-          title {
-              // table.field.
-            10 = TEXT
-            10 {
-              value = tx_route_marker.title.
-            }
-              // uid
-            20 = TEXT
-            20 {
-              field = tx_route_marker.uid
-            }
-              // title
-            30 = TEXT
-            30 {
-              field = tx_route_marker.title
-              noTrimWrap = |: ||
-            }
-          }
-        }
-          // table.field.uid: title
-        tx_route_category =
-        tx_route_category {
-            // table.field.uid: title
-          title = COA
-          title {
-            10 = COA
-            10 {
-                // table.field.
-              10 = TEXT
-              10 {
-                value = tx_route_marker.title.
-              }
-                // uid
-              20 = TEXT
-              20 {
-                field = tx_route_marker.uid
-              }
-                // pipe
-              30 = TEXT
-              30 {
-                value = |
-              }
-                // table.field.
-              40 = TEXT
-              40 {
-                value = tx_route_category.title.
-              }
-                // uid
-              50 = TEXT
-              50 {
-                field = tx_route_category.uid
-              }
-                // title
-              60 = TEXT
-              60 {
-                field = tx_route_category.title
-                noTrimWrap = |: ||
-              }
-              wrap = <li>|</li>
-            }
-            20 = COA
-            20 {
-                // relation
-              70 = TEXT
-              70 {
-                field = MARKER:tx_route_path->tx_route_marker->tx_route_category->listOf.uid
-                noTrimWrap = |tx_route_path.tx_route_marker.tx_route_category:  ||
-              }
-              wrap = <li>|</li>
-            }
-          }
-        }
         htmlSnippets =
         htmlSnippets {
           subparts {
