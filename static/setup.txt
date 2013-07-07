@@ -3,8 +3,160 @@
   //
   // INDEX
 
+  // temp.route
+  //    navigation
+  //    sql
   // config
   // plugin.tx_browser_pi1
+
+
+
+  ////////////////////////////////////////
+  //
+  // temp.route.sql
+
+temp.route {
+  sql {
+    navigation {
+      map < plugin.tx_browser_pi1.navigation.map
+      map {
+        enabled = Map +Routes
+        marker {
+          snippets {
+            jss {
+              dynamic {
+                oxMapConfigModules {
+                  10 {
+                    value = {$plugin.tx_browser_pi1.map.modules.routes.default}
+                  }
+                  20 {
+                    value = {$plugin.tx_browser_pi1.map.modules.routes.debugging}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    select (
+      tx_route_path.title               AS 'tx_route_path.title',
+      tx_route_path.geodata             AS 'tx_route_path.geodata',
+      tx_route_path.icon_lat            AS 'tx_route_path.icon_lat',
+      tx_route_path.icon_lon            AS 'tx_route_path.icon_lon',
+      tx_route_path.iconposition        AS 'tx_route_path.iconposition',
+      tx_route_path.color               AS 'tx_route_path.color',
+      tx_route_path.line_width          AS 'tx_route_path.line_width',
+      tx_route_path.uid                 AS 'tx_route_path.uid',
+      tx_route_path_cat.title           AS 'tx_route_path_cat.title',
+      tx_route_path_cat.icons           AS 'tx_route_path_cat.icons',
+      tx_route_path_cat.icon_offset_x   AS 'tx_route_path_cat.icon_offset_x',
+      tx_route_path_cat.icon_offset_y   AS 'tx_route_path_cat.icon_offset_y',
+      tx_route_path_cat.uid             AS 'tx_route_path_cat.uid',
+      tx_route_marker.title             AS 'tx_route_marker.title',
+      tx_route_marker.lat               AS 'tx_route_marker.lat',
+      tx_route_marker.lon               AS 'tx_route_marker.lon',
+      tx_route_marker.image             AS 'tx_route_marker.image',
+      tx_route_marker.uid               AS 'tx_route_marker.uid',
+      tx_route_marker_cat.title         AS 'tx_route_marker_cat.title',
+      tx_route_marker_cat.icons         AS 'tx_route_marker_cat.icons',
+      tx_route_marker_cat.icon_offset_x AS 'tx_route_marker_cat.icon_offset_x',
+      tx_route_marker_cat.icon_offset_y AS 'tx_route_marker_cat.icon_offset_y',
+      tx_route_marker_cat.uid           AS 'tx_route_marker_cat.uid',
+      CONCAT( tx_route_path.uid, '.', tx_route_path_cat.uid ) AS 'PATH:tx_route_path->tx_route_path_cat->listOf.uid',
+      CONCAT( tx_route_path.uid, '.', tx_route_marker.uid, '.', tx_route_marker_cat.uid ) AS 'MARKER:tx_route_path->tx_route_marker->tx_route_marker_cat->listOf.uid'
+    )
+    select {
+      deal_as_table {
+        0 {
+          statement = CONCAT( tx_route_path.uid, '.', tx_route_path_cat.uid )
+          alias     = PATH:tx_route_path->tx_route_path_cat->listOf.uid
+        }
+        1 {
+          statement = CONCAT( tx_route_path.uid, '.', tx_route_marker.uid, '.', tx_route_marker_cat.uid )
+          alias     = MARKER:tx_route_path->tx_route_marker->tx_route_marker_cat->listOf.uid
+        }
+      }
+    }
+    from {
+      table = tx_route_path
+      alias = tx_route_path
+    }
+    andWhere = COA
+    andWhere {
+      10 = TEXT
+      10 {
+        value = tx_route_path.pid IN (###PID_LIST###)
+      }
+      20 = TEXT
+      20 {
+        if {
+          isTrue {
+            data = GP:tx_browser_pi1|routeUid
+          }
+        }
+        value       = AND tx_route_path.uid = {GP:tx_browser_pi1|routeUid}
+        insertData  = 1
+        noTrimWrap  = | | |
+      }
+    }
+    joins {
+      0 {
+        type  = LEFT JOIN
+        table = tx_route_path_mm_tx_route_category
+        alias = tx_route_path_mm_cat
+        on    = tx_route_path.uid = tx_route_path_mm_cat.uid_local
+      }
+      1 {
+        type  = LEFT JOIN
+        table = tx_route_category
+        alias = tx_route_path_cat
+        on    = tx_route_path_cat.uid = tx_route_path_mm_cat.uid_foreign
+      }
+      2 {
+        type  = LEFT JOIN
+        table = tx_route_path_mm_tx_route_marker
+        alias = tx_route_path_mm_marker
+        on    = tx_route_path.uid = tx_route_path_mm_marker.uid_local
+      }
+      3 {
+        type  = LEFT JOIN
+        table = tx_route_marker
+        alias = tx_route_marker
+        on    = tx_route_marker.uid = tx_route_path_mm_marker.uid_foreign
+      }
+      4 {
+        type  = LEFT JOIN
+        table = tx_route_marker_mm_tx_route_category
+        alias = tx_route_marker_mm_cat
+        on    = tx_route_marker.uid = tx_route_marker_mm_cat.uid_local
+      }
+      5 {
+        type  = LEFT JOIN
+        table = tx_route_category
+        alias = tx_route_marker_cat
+        on    = tx_route_marker_cat.uid = tx_route_marker_mm_cat.uid_foreign
+      }
+    }
+    aliases {
+      tables {
+        tx_route_path           = tx_route_path
+        tx_route_path_cat       = tx_route_path_cat
+        tx_route_path_mm_cat    = tx_route_path_mm_tx_route_category
+        tx_route_path_mm_marker = tx_route_path_mm_tx_route_marker
+        tx_route_marker         = tx_route_marker
+        tx_route_marker_cat     = tx_route_marker_cat
+        tx_route_marker_mm_cat  = tx_route_marker_mm_tx_route_category
+      }
+      fields {
+        uid = tx_route_path.uid
+        pid = tx_route_path.pid
+      }
+    }
+    orderBy = tx_route_path.title, tx_route_path_mm_marker.sorting, tx_route_marker_cat.title
+  }
+}
+  // temp.route.sql
 
 
 
@@ -34,144 +186,16 @@ plugin.tx_browser_pi1 {
       47676 = Route
       47676 {
         navigation {
-          map < plugin.tx_browser_pi1.navigation.map
-          map {
-            enabled = Map +Routes
-            marker {
-              snippets {
-                jss {
-                  dynamic {
-                    oxMapConfigModules {
-                      10 {
-                        value = {$plugin.tx_browser_pi1.map.modules.routes.default}
-                      }
-                      20 {
-                        value = {$plugin.tx_browser_pi1.map.modules.routes.debugging}
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
+          map < temp.route.navigation.map
         }
-        showUid = routeUid
-        name    = Route
-        select (
-          tx_route_path.title               AS 'tx_route_path.title',
-          tx_route_path.geodata             AS 'tx_route_path.geodata',
-          tx_route_path.icon_lat            AS 'tx_route_path.icon_lat',
-          tx_route_path.icon_lon            AS 'tx_route_path.icon_lon',
-          tx_route_path.iconposition        AS 'tx_route_path.iconposition',
-          tx_route_path.color               AS 'tx_route_path.color',
-          tx_route_path.line_width          AS 'tx_route_path.line_width',
-          tx_route_path.uid                 AS 'tx_route_path.uid',
-          tx_route_path_cat.title           AS 'tx_route_path_cat.title',
-          tx_route_path_cat.icons           AS 'tx_route_path_cat.icons',
-          tx_route_path_cat.icon_offset_x   AS 'tx_route_path_cat.icon_offset_x',
-          tx_route_path_cat.icon_offset_y   AS 'tx_route_path_cat.icon_offset_y',
-          tx_route_path_cat.uid             AS 'tx_route_path_cat.uid',
-          tx_route_marker.title             AS 'tx_route_marker.title',
-          tx_route_marker.lat               AS 'tx_route_marker.lat',
-          tx_route_marker.lon               AS 'tx_route_marker.lon',
-          tx_route_marker.image             AS 'tx_route_marker.image',
-          tx_route_marker.uid               AS 'tx_route_marker.uid',
-          tx_route_marker_cat.title         AS 'tx_route_marker_cat.title',
-          tx_route_marker_cat.icons         AS 'tx_route_marker_cat.icons',
-          tx_route_marker_cat.icon_offset_x AS 'tx_route_marker_cat.icon_offset_x',
-          tx_route_marker_cat.icon_offset_y AS 'tx_route_marker_cat.icon_offset_y',
-          tx_route_marker_cat.uid           AS 'tx_route_marker_cat.uid',
-          CONCAT( tx_route_path.uid, '.', tx_route_path_cat.uid ) AS 'PATH:tx_route_path->tx_route_path_cat->listOf.uid',
-          CONCAT( tx_route_path.uid, '.', tx_route_marker.uid, '.', tx_route_marker_cat.uid ) AS 'MARKER:tx_route_path->tx_route_marker->tx_route_marker_cat->listOf.uid'
-        )
-        select {
-          deal_as_table {
-            0 {
-              statement = CONCAT( tx_route_path.uid, '.', tx_route_path_cat.uid )
-              alias     = PATH:tx_route_path->tx_route_path_cat->listOf.uid
-            }
-            1 {
-              statement = CONCAT( tx_route_path.uid, '.', tx_route_marker.uid, '.', tx_route_marker_cat.uid )
-              alias     = MARKER:tx_route_path->tx_route_marker->tx_route_marker_cat->listOf.uid
-            }
-          }
-        }
-        from {
-          table = tx_route_path
-          alias = tx_route_path
-        }
-        andWhere = COA
-        andWhere {
-          10 = TEXT
-          10 {
-            value = tx_route_path.pid IN (###PID_LIST###)
-          }
-          20 = TEXT
-          20 {
-            if {
-              isTrue {
-                data = GP:tx_browser_pi1|routeUid
-              }
-            }
-            value       = AND tx_route_path.uid = {GP:tx_browser_pi1|routeUid}
-            insertData  = 1
-            noTrimWrap  = | | |
-          }
-        }
-        joins {
-          0 {
-            type  = LEFT JOIN
-            table = tx_route_path_mm_tx_route_category
-            alias = tx_route_path_mm_cat
-            on    = tx_route_path.uid = tx_route_path_mm_cat.uid_local
-          }
-          1 {
-            type  = LEFT JOIN
-            table = tx_route_category
-            alias = tx_route_path_cat
-            on    = tx_route_path_cat.uid = tx_route_path_mm_cat.uid_foreign
-          }
-          2 {
-            type  = LEFT JOIN
-            table = tx_route_path_mm_tx_route_marker
-            alias = tx_route_path_mm_marker
-            on    = tx_route_path.uid = tx_route_path_mm_marker.uid_local
-          }
-          3 {
-            type  = LEFT JOIN
-            table = tx_route_marker
-            alias = tx_route_marker
-            on    = tx_route_marker.uid = tx_route_path_mm_marker.uid_foreign
-          }
-          4 {
-            type  = LEFT JOIN
-            table = tx_route_marker_mm_tx_route_category
-            alias = tx_route_marker_mm_cat
-            on    = tx_route_marker.uid = tx_route_marker_mm_cat.uid_local
-          }
-          5 {
-            type  = LEFT JOIN
-            table = tx_route_category
-            alias = tx_route_marker_cat
-            on    = tx_route_marker_cat.uid = tx_route_marker_mm_cat.uid_foreign
-          }
-        }
-        aliases {
-          tables {
-            tx_route_path           = tx_route_path
-            tx_route_path_cat       = tx_route_path_cat
-            tx_route_path_mm_cat    = tx_route_path_mm_tx_route_category
-            tx_route_path_mm_marker = tx_route_path_mm_tx_route_marker
-            tx_route_marker         = tx_route_marker
-            tx_route_marker_cat     = tx_route_marker_cat
-            tx_route_marker_mm_cat  = tx_route_marker_mm_tx_route_category
-          }
-          fields {
-            uid = tx_route_path.uid
-            pid = tx_route_path.pid
-          }
-        }
-        orderBy = tx_route_path.title, tx_route_path_mm_marker.sorting, tx_route_marker_cat.title
+        showUid   = routeUid
+        name      = Route
+        select    < temp.route.sql.select
+        from      < temp.route.sql.from
+        andWhere  < temp.route.sql.andWhere
+        joins     < temp.route.sql.joins
+        aliases   < temp.route.sql.aliases
+        orderBy   < temp.route.sql.orderBy
           // table.field.uid: title
         tx_route_path =
         tx_route_path {
@@ -379,53 +403,162 @@ plugin.tx_browser_pi1 {
           }
         }
       }
-      47678 = Path (only single!)
-      47678 {
+    }
+    single {
+      47676 = Route
+      47676 {
         navigation {
-          map < plugin.tx_browser_pi1.navigation.map
+          map < temp.route.navigation.map
           map {
             enabled = disabled
           }
         }
-        showUid = {$plugin.tx_browser_pi1.map.aliases.showUid.path}
-        name    = Path (only single!)
-        select (
-          tx_route_marker.title
-        )
-        htmlSnippets =
-        htmlSnippets {
-          subparts {
-            listview = TEXT
-            listview {
-              value (
-            <div id="c###TT_CONTENT.UID###-listview-###MODE###" class="###VIEW###view ###VIEW###view-content ###VIEW###view-###MODE### ###VIEW###view-content-###MODE###">
-              <p>
-                Paths don't have any list view.<br />
-                Please use view.list.47676 for routes.
-              </p>
-              <p>
-                Pfade haben keine Listen-Ansicht.<br />
-                Bitte benutze view.list.47676 f&uuml;r Routen.
-              </p>
-              <!-- ###LISTBODY### begin --><!-- ###LISTBODYITEM### begin -->
-              <div class="cleaner">&nbsp;</div><!-- ###LISTBODYITEM### end --><!-- ###LISTBODY### end -->
-            </div> <!-- /listview -->
-)
+        showUid   = routeUid
+        name      = Route
+        select    < temp.route.sql.select
+        from      < temp.route.sql.from
+        andWhere  < temp.route.sql.andWhere
+        joins     < temp.route.sql.joins
+        aliases   < temp.route.sql.aliases
+        orderBy   < temp.route.sql.orderBy
+          // table.field.uid: title
+        tx_route_path =
+        tx_route_path {
+            // table.field.uid: title
+          title = COA
+          title {
+              // table.field.
+            10 = TEXT
+            10 {
+              value = tx_route_path.title.
+            }
+              // uid
+            20 = TEXT
+            20 {
+              field = tx_route_path.uid
+            }
+            30 = TEXT
+            30 {
+              field = tx_route_path.title
+              noTrimWrap = |: ||
             }
           }
         }
-      }
-    }
-    single {
-      47676 < plugin.tx_browser_pi1.views.list.47676
-      47676 {
-        navigation {
-          map < plugin.tx_browser_pi1.navigation.map
-          map {
-            enabled = disabled
+          // table.field.uid: title
+        tx_route_path_cat =
+        tx_route_path_cat {
+            // table.field.uid: title
+          title = COA
+          title {
+            10 = COA
+            10 {
+                // table.field.
+              10 = TEXT
+              10 {
+                value = tx_route_path_cat.title.
+              }
+                // uid
+              20 = TEXT
+              20 {
+                field = tx_route_path_cat.uid
+              }
+                // title
+              30 = TEXT
+              30 {
+                field = tx_route_path_cat.title
+                noTrimWrap = |: ||
+              }
+              wrap = <li>|</li>
+            }
+            20 = COA
+            20 {
+                // relation
+              40 = TEXT
+              40 {
+                field = PATH:tx_route_path->tx_route_path_cat->listOf.uid
+                noTrimWrap = |tx_route_path.tx_route_path_cat:  ||
+              }
+              wrap = <li>|</li>
+            }
           }
         }
-        showUid = routeUid
+          // table.field.uid: title
+        tx_route_marker =
+        tx_route_marker {
+            // table.field.uid: title
+          title = COA
+          title {
+              // table.field.
+            10 = TEXT
+            10 {
+              value = tx_route_marker.title.
+            }
+              // uid
+            20 = TEXT
+            20 {
+              field = tx_route_marker.uid
+            }
+              // title
+            30 = TEXT
+            30 {
+              field = tx_route_marker.title
+              noTrimWrap = |: ||
+            }
+          }
+        }
+          // table.field.uid: title
+        tx_route_marker_cat =
+        tx_route_marker_cat {
+            // table.field.uid: title
+          title = COA
+          title {
+            10 = COA
+            10 {
+                // table.field.
+              10 = TEXT
+              10 {
+                value = tx_route_marker.title.
+              }
+                // uid
+              20 = TEXT
+              20 {
+                field = tx_route_marker.uid
+              }
+                // pipe
+              30 = TEXT
+              30 {
+                value = |
+              }
+                // table.field.
+              40 = TEXT
+              40 {
+                value = tx_route_marker_cat.title.
+              }
+                // uid
+              50 = TEXT
+              50 {
+                field = tx_route_marker_cat.uid
+              }
+                // title
+              60 = TEXT
+              60 {
+                field = tx_route_marker_cat.title
+                noTrimWrap = |: ||
+              }
+              wrap = <li>|</li>
+            }
+            20 = COA
+            20 {
+                // relation
+              70 = TEXT
+              70 {
+                field = MARKER:tx_route_path->tx_route_marker->tx_route_marker_cat->listOf.uid
+                noTrimWrap = |tx_route_path.tx_route_marker.tx_route_marker_cat:  ||
+              }
+              wrap = <li>|</li>
+            }
+          }
+        }
         htmlSnippets =
         htmlSnippets {
           subparts {
@@ -463,144 +596,6 @@ plugin.tx_browser_pi1 {
           tx_route_marker.lon,
           tx_route_marker.image,
           tx_route_marker.uid,
-          tx_route_category.title,
-          tx_route_category.icons,
-          tx_route_category.icon_offset_x,
-          tx_route_category.icon_offset_y,
-          tx_route_category.uid
-        )
-          // table.field.uid: title
-        tx_route_marker =
-        tx_route_marker {
-            // table.field.uid: title
-          title = COA
-          title {
-              // table.field.
-            10 = TEXT
-            10 {
-              value = tx_route_marker.title.
-            }
-              // uid
-            20 = TEXT
-            20 {
-              field = tx_route_marker.uid
-            }
-              // title
-            30 = TEXT
-            30 {
-              field = tx_route_marker.title
-              noTrimWrap = |: ||
-            }
-          }
-        }
-          // table.field.uid: title
-        tx_route_category =
-        tx_route_category {
-            // table.field.uid: title
-          title = COA
-          title {
-            10 = COA
-            10 {
-                // table.field.
-              10 = TEXT
-              10 {
-                value = tx_route_marker.title.
-              }
-                // uid
-              20 = TEXT
-              20 {
-                field = tx_route_marker.uid
-              }
-                // pipe
-              30 = TEXT
-              30 {
-                value = |
-              }
-                // table.field.
-              40 = TEXT
-              40 {
-                value = tx_route_category.title.
-              }
-                // uid
-              50 = TEXT
-              50 {
-                field = tx_route_category.uid
-              }
-                // title
-              60 = TEXT
-              60 {
-                field = tx_route_category.title
-                noTrimWrap = |: ||
-              }
-              wrap = <li>|</li>
-            }
-            20 = COA
-            20 {
-                // relation
-              70 = TEXT
-              70 {
-                field = MARKER:tx_route_path->tx_route_marker->tx_route_category->listOf.uid
-                noTrimWrap = |tx_route_path.tx_route_marker.tx_route_category:  ||
-              }
-              wrap = <li>|</li>
-            }
-          }
-        }
-        htmlSnippets =
-        htmlSnippets {
-          subparts {
-            singleview = TEXT
-            singleview {
-              value (
-<!-- ###AREA_FOR_AJAX_LIST_01### begin -->
-        <div id="c###TT_CONTENT.UID###-singleview-###MODE###" class="singleview singleview-###MODE###">
-          ###RECORD_BROWSER###
-          <div class="ui-widget ui-corner-all">
-            <!-- ###SINGLEBODY### begin -->
-            <h1 class="ui-widget-header ui-corner-top">
-              ###TX_ROUTE_MARKER.TITLE###
-            </h1>
-            <div class="ui-widget-content ui-corner-bottom">
-              <dl style="font-size:.85em;">
-                <!-- ###SINGLEBODYROW### begin -->
-                <div class="sbmFloatRight">
-                  ###SOCIALMEDIA_BOOKMARKS###
-                </div>
-                <ul>
-                  ###TX_ROUTE_CATEGORY.TITLE###
-                </ul>
-                <!-- ###SINGLEBODYROW### end -->
-              </dl>
-            </div>
-  <!-- ###AREA_FOR_AJAX_LIST_01### end -->
-            <!-- ###BACKBUTTON### begin -->
-            <p class="backbutton">
-              ###BUTTON###
-            </p>
-            <!-- ###BACKBUTTON### end -->
-  <!-- ###AREA_FOR_AJAX_LIST_02### begin -->
-            <!-- ###SINGLEBODY### end -->
-          </div>
-        </div>
-<!-- ###AREA_FOR_AJAX_LIST_02### end -->
-)
-            }
-          }
-        }
-      }
-      47678 = Path (only single!)
-      47678 {
-        showUid = {$plugin.tx_browser_pi1.map.aliases.showUid.path}
-        name    = Path (only single!)
-        select (
-          tx_route_path.title,
-          tx_route_path.geodata,
-          tx_route_path.icon_lat,
-          tx_route_path.icon_lon,
-          tx_route_path.iconposition,
-          tx_route_path.color,
-          tx_route_path.line_width,
-          tx_route_path.uid,
           tx_route_category.title,
           tx_route_category.icons,
           tx_route_category.icon_offset_x,
