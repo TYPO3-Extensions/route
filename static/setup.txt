@@ -381,7 +381,7 @@ plugin.tx_browser_pi1 {
                     ###TX_ROUTE_PATH.TITLE###
                   </h2>
                   <p>
-                    ###TX_ROUTE_PATH_CAT.TITLE###
+                    ###TX_ROUTE_MARKER.TITLE###
                   </p>
                   <div class="cleaner">&nbsp;</div><!-- ###LISTBODYITEM### end --><!-- ###LISTBODY### end -->
                 </div> <!-- /listview -->
