@@ -584,15 +584,24 @@ plugin.tx_browser_pi1 {
             singleview = TEXT
             singleview {
               value (
+<!-- ###AREA_FOR_AJAX_LIST_01### begin -->
         <div id="c###TT_CONTENT.UID###-singleview-###MODE###" class="singleview singleview-###MODE###">
-          <p>
-            Content
-          </p>
-          <!-- ###SINGLEBODY### begin -->
-          <!-- ###SINGLEBODYROW### begin -->
-          <!-- ###SINGLEBODYROW### end -->
-          <!-- ###SINGLEBODY### end -->
+          <div class="ui-widget ui-corner-all">
+            <!-- ###SINGLEBODY### begin -->
+              ###MAP###
+            <!-- ###SINGLEBODYROW### begin -->
+            <!-- ###SINGLEBODYROW### end -->
+  <!-- ###AREA_FOR_AJAX_LIST_01### end -->
+            <!-- ###BACKBUTTON### begin -->
+            <p class="backbutton">
+              ###BUTTON###
+            </p>
+            <!-- ###BACKBUTTON### end -->
+  <!-- ###AREA_FOR_AJAX_LIST_02### begin -->
+            <!-- ###SINGLEBODY### end -->
+          </div>
         </div>
+<!-- ###AREA_FOR_AJAX_LIST_02### end -->
 )
             }
           }
