@@ -134,19 +134,16 @@ CREATE TABLE tx_route_path (
   l10n_diffsource mediumtext,
 
   title tinytext,
-  tx_route_category tinytext,
   short tinytext,
   bodytext mediumtext NOT NULL,
 
   gpxfile text,
   geodata longtext,
 
-  icon text,
-  iconheight tinytext,
-  iconwidth tinytext,
+  tx_route_category tinytext,
   icon_lat text NOT NULL,
   icon_lon text NOT NULL,
-  iconposition tinytext,
+
   color tinytext NOT NULL,
   line_width int(3) DEFAULT '2' NOT NULL,
 

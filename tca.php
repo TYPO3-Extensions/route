@@ -379,9 +379,9 @@ $TCA['tx_route_path'] = array (
     'showRecordFieldList' =>  
         'sys_language_uid,l10n_parent,l10n_diffsource,' 
       . 'title,short,bodytext,' 
-      . 'tx_route_category,' 
+      . 'tx_route_category,icon_lat,icon_lon,' 
       . 'gpxfile, geodata,' 
-      . 'icon,iconwidth,iconheight,icon_lat,icon_lon,iconposition,color,line_width,' 
+      . 'color,line_width,' 
       . 'tx_route_marker,' 
       . 'list_title,list_short,map_title,map_short,' 
       . 'address_start,address_end,url,' 
@@ -495,50 +495,6 @@ $TCA['tx_route_path'] = array (
         ),
       ),
     ),
-    'gpxfile' => array (
-      'exclude'   => $bool_exclude_default,
-//      'l10n_mode' => 'exclude',
-      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.gpxfile',
-      'config'    => $conf_file_gpx,
-    ),
-    'geodata' => array (
-      'exclude'   => 0,
-      'l10n_mode' => 'prefixLangTitle',
-      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.geodata',
-      'config'    => $conf_text_30_05,
-    ),
-    'icon' => array (
-      'l10n_mode' => 'exclude',
-      'exclude'   => $bool_exclude_default,
-      'label'     => 'LLL:EXT:route/locallang_db.xml:tca_phrase.icon',
-      'config'    => $conf_file_icon,
-    ),
-    'iconwidth' => array (
-      'exclude'   => $bool_exclude_default,
-      'l10n_mode' => 'exclude',
-      'label'     => 'LLL:EXT:cms/locallang_ttc.xml:imagewidth',
-      'config'    => array (
-        'type'      => 'input',
-        'size'      => '10',
-        'max'       => '10',
-        'eval'      => 'trim',
-        'checkbox'  => '0',
-        'default'   => ''
-      ),
-    ),
-    'iconheight' => array (
-      'exclude'   => $bool_exclude_default,
-      'l10n_mode' => 'exclude',
-      'label'     => 'LLL:EXT:cms/locallang_ttc.xml:imageheight',
-      'config'    => array (
-        'type'      => 'input',
-        'size'      => '10',
-        'max'       => '10',
-        'eval'      => 'trim',
-        'checkbox'  => '0',
-        'default'   => ''
-      ),
-    ),
     'icon_lat' => array (
       'exclude'   => 0,
       'l10n_mode' => 'prefixLangTitle',
@@ -551,19 +507,17 @@ $TCA['tx_route_path'] = array (
       'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.icon_lon',
       'config'    => $conf_input_30_trim,
     ),
-    'iconposition' => array (
+    'gpxfile' => array (
+      'exclude'   => $bool_exclude_default,
+//      'l10n_mode' => 'exclude',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.gpxfile',
+      'config'    => $conf_file_gpx,
+    ),
+    'geodata' => array (
       'exclude'   => 0,
       'l10n_mode' => 'prefixLangTitle',
-      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.iconposition',
-      'config' => array (
-        'type' => 'radio',
-        'items' => array (
-          array ( 'LLL:EXT:route/locallang_db.xml:tx_route_path.iconposition.beginning',  0 ),
-          array ( 'LLL:EXT:route/locallang_db.xml:tx_route_path.iconposition.center',     1 ),
-          array ( 'LLL:EXT:route/locallang_db.xml:tx_route_path.iconposition.end',        2 ),
-        ),
-        'default' => 0,
-      ),
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.geodata',
+      'config'    => $conf_text_30_05,
     ),
     'color' => array (
       'exclude'   => $bool_exclude_default,
@@ -942,13 +896,11 @@ $TCA['tx_route_path'] = array (
           'gpxfile,geodata,' .
         '--div--;LLL:EXT:route/locallang_db.xml:tx_route_path.div_cat,' . 
           'tx_route_category,' .
+          'icon_lat,' .
+          'icon_lon,' .
         '--div--;LLL:EXT:route/locallang_db.xml:tx_route_path.div_marker,' . 
           'tx_route_marker,' .
         '--div--;LLL:EXT:route/locallang_db.xml:tx_route_path.div_design,' . 
-          'icon,iconwidth,iconheight,' .
-          'icon_lat,' .
-          'icon_lon,' .
-          'iconposition,' .
           'color,' .
           'line_width,' .
         '--div--;LLL:EXT:route/locallang_db.xml:tx_route_path.div_shortterms,' . 
