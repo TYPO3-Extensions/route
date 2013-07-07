@@ -447,7 +447,7 @@ $TCA['tx_route_path'] = array (
       'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.tx_route_category',
       'config'    => array (
         'type'                => 'select',
-        'size'                => 10,
+        'size'                => 20,
         'minitems'            => 1,
         'maxitems'            => 1,
         'eval'                => 'required',
@@ -500,13 +500,13 @@ $TCA['tx_route_path'] = array (
       'exclude'   => 0,
       'l10n_mode' => 'prefixLangTitle',
       'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.icon_lon',
-      'config'    => $conf_input_30_trim,
+      'config'    => $conf_input_30_trimRequired,
     ),
     'icon_lat' => array (
       'exclude'   => 0,
       'l10n_mode' => 'prefixLangTitle',
       'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.icon_lat',
-      'config'    => $conf_input_30_trim,
+      'config'    => $conf_input_30_trimRequired,
     ),
     'gpxfile' => array (
       'exclude'   => $bool_exclude_default,
