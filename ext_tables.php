@@ -86,30 +86,30 @@ switch( true )
   case( $beLanguage == 'de' ):
       // German
     t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/',          'Route' );
+    switch( true )
+    {
+      case( $typo3Version < 4007000 ):
+        t3lib_extMgm::addStaticFile($_EXTKEY,'static/typo3/4.6/', '+Route: TYPO3 < 4.7 (einbinden!)');
+        break;
+      default:
+        t3lib_extMgm::addStaticFile($_EXTKEY,'static/typo3/4.6/', '+Route: TYPO3 < 4.7 (NICHT einbinden!)');
+        break;
+    }
     t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/dev/47676', '+Route (dev 47676)');
-//    switch( true )
-//    {
-//      case( $typo3Version < 4007000 ):
-//        t3lib_extMgm::addStaticFile($_EXTKEY,'static/typo3/4.6/', '+Flip it!: Basis fuer TYPO3 < 4.7 (einbinden!)');
-//        break;
-//      default:
-//        t3lib_extMgm::addStaticFile($_EXTKEY,'static/typo3/4.6/', '+Flip it!: Basis fuer TYPO3 < 4.7 (NICHT einbinden!)');
-//        break;
-//    }
     break;
   default:
       // English
     t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/',          'Route' );
+    switch( true )
+    {
+      case( $typo3Version < 4007000 ):
+        t3lib_extMgm::addStaticFile($_EXTKEY,'static/typo3/4.6/', '+Route: TYPO3 < 4.7 (obligate!)');
+        break;
+      default:
+        t3lib_extMgm::addStaticFile($_EXTKEY,'static/typo3/4.6/', '+Route: TYPO3 < 4.7 (don\'t use it!)');
+        break;
+    }
     t3lib_extMgm::addStaticFile( $_EXTKEY, 'static/dev/47676', '+Route (dev 47676)' );
-//    switch( true )
-//    {
-//      case( $typo3Version < 4007000 ):
-//        t3lib_extMgm::addStaticFile($_EXTKEY,'static/typo3/4.6/', '+Flip it!: Basis for TYPO3 < 4.7 (obligate!)');
-//        break;
-//      default:
-//        t3lib_extMgm::addStaticFile($_EXTKEY,'static/typo3/4.6/', '+Flip it!: Basis for TYPO3 < 4.7 (don\'t use it!)');
-//        break;
-//    }
     break;
 }
   // Case $beLanguage
