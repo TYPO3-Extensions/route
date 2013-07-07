@@ -43,7 +43,6 @@ temp.route {
       tx_route_path.geodata             AS 'tx_route_path.geodata',
       tx_route_path.icon_lat            AS 'tx_route_path.icon_lat',
       tx_route_path.icon_lon            AS 'tx_route_path.icon_lon',
-      tx_route_path.iconposition        AS 'tx_route_path.iconposition',
       tx_route_path.color               AS 'tx_route_path.color',
       tx_route_path.line_width          AS 'tx_route_path.line_width',
       tx_route_path.uid                 AS 'tx_route_path.uid',
