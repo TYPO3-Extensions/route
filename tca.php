@@ -450,11 +450,10 @@ $TCA['tx_route_path'] = array (
         'size'                => 20,
         'minitems'            => 1,
         'maxitems'            => 1,
-        'trueMinItems'        => 1,
         'MM'                  => 'tx_route_path_mm_tx_route_category',
         'foreign_table'       => 'tx_route_category',
         'foreign_table_where' => 'AND tx_route_category.pid=###CURRENT_PID### AND tx_route_category.deleted = 0 AND tx_route_category.hidden = 0 ORDER BY tx_route_category.title',
-        'items' => array (
+        'XX_items' => array (
           '0' => array (
             '0' => '',
             '1' => '',
