@@ -311,8 +311,8 @@ plugin.tx_browser_pi1 {
             captionAlign.field      = tx_route_path.imagecaption_position
             layout {
               key.field        = tx_route_path.imageorient
-              //key.field        >
-              //key              = 26
+              key.field        >
+              key              = 26
               //default.value    = <div class="csc-textpic csc-textpic-center csc-textpic-above###CLASSES###">###IMAGES###</div><div class="csc-textpic-clear"><!-- --></div>###TEXT###
             }
             stdWrap {
