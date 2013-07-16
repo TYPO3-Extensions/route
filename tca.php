@@ -986,7 +986,7 @@ $TCA['tx_route_marker'] = array (
     'showRecordFieldList' =>  
         'sys_language_uid,l10n_parent,l10n_diffsource,' 
       . 'title,tx_route_category,short,bodytext,' 
-      . 'lat,lon,address,url,' 
+      . 'lon,lat,address,url,' 
       . 'tx_route_path,' 
       . 'list_title,list_short,map_title,map_short,' 
       . 'image,imagecaption,imageseo,imagewidth,imageheight,imageorient,imagecaption,imagecols,imageborder,imagecaption_position,image_link,image_zoom,image_noRows,image_effects,image_compression,' 
@@ -1098,16 +1098,16 @@ $TCA['tx_route_marker'] = array (
       'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.bodytext',
       'config'    => $conf_text_rte,
     ),
-    'lat' => array (
-      'exclude'   => 0,
-      'l10n_mode' => 'prefixLangTitle',
-      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.lat',
-      'config'    => $conf_input_30_trimRequired,
-    ),
     'lon' => array (
       'exclude'   => 0,
       'l10n_mode' => 'prefixLangTitle',
       'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.lon',
+      'config'    => $conf_input_30_trimRequired,
+    ),
+    'lat' => array (
+      'exclude'   => 0,
+      'l10n_mode' => 'prefixLangTitle',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.lat',
       'config'    => $conf_input_30_trimRequired,
     ),
     'address' => array (
@@ -1443,8 +1443,8 @@ $TCA['tx_route_marker'] = array (
           'short,' .
           'bodytext;;;richtext[]:rte_transform[mode=ts];,' .
         '--div--;LLL:EXT:route/locallang_db.xml:tx_route_marker.div_properties,' . 
-          'lat,' .
           'lon,' .
+          'lat,' .
           'address,' .
           'url,' .
         '--div--;LLL:EXT:route/locallang_db.xml:tx_route_marker.div_paths,' . 
