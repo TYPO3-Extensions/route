@@ -745,7 +745,7 @@ plugin.tx_browser_pi1 {
 
 page {
   includeCSS {
-    route = {$plugin.base_jobmarket.paths.css}
+    route = {$plugin.route.path.css}
   }
 }
   // page
