@@ -1102,13 +1102,13 @@ $TCA['tx_route_marker'] = array (
       'exclude'   => 0,
       'l10n_mode' => 'prefixLangTitle',
       'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.lat',
-      'config'    => $conf_input_30_trim,
+      'config'    => $conf_input_30_trimRequired,
     ),
     'lon' => array (
       'exclude'   => 0,
       'l10n_mode' => 'prefixLangTitle',
       'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.lon',
-      'config'    => $conf_input_30_trim,
+      'config'    => $conf_input_30_trimRequired,
     ),
     'address' => array (
       'exclude'   => 0,
