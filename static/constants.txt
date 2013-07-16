@@ -17,10 +17,12 @@ plugin.tx_route {
 
   # cat=Route - Images List View//100;          type=+int;      label= Max height: Max height of images in list views
   images.list.maxHeight = 
-  # cat=Route - Images List View0//101;          type=+int;      label= Max width: Max width of images in list views
+  # cat=Route - Images List View//101;          type=+int;      label= Max width: Max width of images in list views
   images.list.maxWidth = 
 
-  # cat=Route - Path//100;            type=string;    label= upload folder: Path to the upload folder with an ending slash
+  # cat=Route - Path//100;            type=string;    label= CSS: Path to the css file
+  path.css          = EXT:route/files/html/css/route.css
+  # cat=Route - Path//101;            type=string;    label= upload folder: Path to the upload folder with an ending slash
   path.uploadfolder = uploads/tx_route/
 
   # cat=Route - Pages*//100;          type=+int;      label= route*: Obligate! Uid of the page with the plugin BrowserMap +Routes
