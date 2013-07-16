@@ -15,3 +15,8 @@ div.listview-47677 div.csc-textpic-clear {
 DIV.csc-textpic DIV.csc-textpic-single-image IMG {
   margin: 0;
 }
+
+.sbmFloatRight {
+  float:right;
+  padding-left:1em;
+}
