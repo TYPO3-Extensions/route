@@ -92,12 +92,12 @@ plugin.tx_browser_pi1 {
               marker  = icons
             }
             iconOffsetX {
-              path    = icons_offset_x
-              marker  = icons_offset_x
+              path    = icon_offset_x
+              marker  = icon_offset_x
             }
             iconOffsetY {
-              path    = icons_offset_y
-              marker  = icons_offset_y
+              path    = icon_offset_y
+              marker  = icon_offset_y
             }
           }
         }
