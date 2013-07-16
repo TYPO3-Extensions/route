@@ -5,6 +5,10 @@ div.csc-textpic-intext-left-nowrap {
   float:left;
   padding-right:1em;
 }
+div.csc-textpic-intext-right-nowrap {
+  float:right;
+  padding-left:1em;
+}
 div.listview-47677 div.csc-textpic-clear {
   clear:none;
 }

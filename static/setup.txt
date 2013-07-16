@@ -305,7 +305,7 @@ plugin.tx_browser_pi1 {
             }
             textPos.field           >
               // 26: Left beside the text
-            textPos                 = 26
+            //textPos                 = 26
             equalH.field            = tx_route_path.imageheight
             image_compression.field = tx_route_path.image_compression
             image_effects.field     = tx_route_path.image_effects
@@ -317,8 +317,7 @@ plugin.tx_browser_pi1 {
             layout {
               key.field        = tx_route_path.imageorient
               key.field        >
-              key              = 26
-              //default.value    = <div class="csc-textpic csc-textpic-center csc-textpic-above###CLASSES###">###IMAGES###</div><div class="csc-textpic-clear"><!-- --></div>###TEXT###
+              key              = {$plugin.tx_route.images.list.position} 
             }
             stdWrap {
               //prefixComment >
