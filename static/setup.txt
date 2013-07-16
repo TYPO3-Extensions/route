@@ -745,7 +745,7 @@ plugin.tx_browser_pi1 {
 
 page {
   includeCSS {
-    route = {$plugin.route.path.css}
+    route = {$plugin.tx_route.path.css}
   }
 }
   // page
