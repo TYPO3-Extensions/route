@@ -273,7 +273,7 @@ plugin.tx_browser_pi1 {
                 width >
                 height >
                 width   = {$plugin.tx_route.images.list.maxWidth} 
-                height  = {$plugin.tx_route.images.list.height} 
+                height  = {$plugin.tx_route.images.list.maxHeight} 
               }
               imageLinkWrap {
                 ifEmpty {
