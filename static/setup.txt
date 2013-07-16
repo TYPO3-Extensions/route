@@ -257,6 +257,10 @@ plugin.tx_browser_pi1 {
         tx_route_path {
           image < tt_content.image.20
           image {
+              // Display one image only
+            imgMax    = 1
+              // Display the first image
+            imgStart  = 0
             imgList {
               field = tx_route_path.image
             }
