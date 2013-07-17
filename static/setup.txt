@@ -568,18 +568,19 @@ plugin.tx_browser_pi1 {
                 // route list_short or short, if list_short is empty
               20 = COA
               20 {
-                10 < plugin.tx_browser_pi1.displayList.master_templates.map.descriptionWiLinkToSingle.30
+                10 = TEXT
                 10 {
-                  if >
-                }
-                20 = TEXT
-                20 {
                   field     = tx_route_path.short
                   override {
                     field = tx_route_path.list_short
                   }
-                  wrap = <p>|</p>
+                  noTrimWrap = || |
                 }
+                20 < plugin.tx_browser_pi1.displayList.master_templates.map.descriptionWiLinkToSingle.30
+                20 {
+                  if >
+                }
+                wrap = <p>|</p>
               }
               wrap = <div class="list_short-wi_left_img">|</div>
             }
