@@ -458,7 +458,7 @@ plugin.tx_browser_pi1 {
                   <div class="sbmFloatRight">
                     ###SOCIALMEDIA_BOOKMARKS###
                   </div>
-                  ###TX_ROUTE_PATH.IMAGE###
+                  ###TX_ROUTE_PATH.TITLE###
                   <div class="cleaner">&nbsp;</div><!-- ###LISTBODYITEM### end --><!-- ###LISTBODY### end -->
                 </div> <!-- /listview -->
 )
