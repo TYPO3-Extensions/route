@@ -154,8 +154,8 @@ CREATE TABLE tx_route_path (
   map_title tinytext,
   map_short mediumtext,
 
-  address_start text NOT NULL,
-  address_end text NOT NULL,
+  address_start mediumtext NOT NULL,
+  address_end mediumtext NOT NULL,
   url text NOT NULL,
 
   image text,

@@ -20,6 +20,25 @@ if (!defined ('TYPO3_MODE'))  die ('Access denied.');
 
   $bool_exclude_default = false;
 
+  $arr_wizard_url = array (
+    'type'      => 'input',
+    'size'      => '80',
+    'max'       => '256',
+    'checkbox'  => '',
+    'eval'      => 'trim',
+    'wizards'   => array (
+      '_PADDING'  => '2',
+      'link'      => array (
+        'type'         => 'popup',
+        'title'        => 'Link',
+        'icon'         => 'link_popup.gif',
+        'script'       => 'browse_links.php?mode=wizard',
+        'JSopenParams' => $JSopenParams,
+      ),
+    ),
+    'softref' => 'typolink',
+  );
+
   $conf_file_gpx = array (
     'type'          => 'group',
     'internal_type' => 'file',
@@ -639,19 +658,19 @@ $TCA['tx_route_path'] = array (
       'exclude'   => 0,
       'l10n_mode' => 'prefixLangTitle',
       'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.address_start',
-      'config'    => $conf_text_30_05,
+      'config'    => $conf_text_rte,
     ),
     'address_end' => array (
       'exclude'   => 0,
       'l10n_mode' => 'prefixLangTitle',
       'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.address_end',
-      'config'    => $conf_text_30_05,
+      'config'    => $conf_text_rte,
     ),
     'url' => array (
       'exclude'   => 0,
       'l10n_mode' => 'prefixLangTitle',
       'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.url',
-      'config'    => $conf_input_30_trim,
+      'config'    => $arr_wizard_url,
     ),
     'image' => array (
       'exclude'   => $bool_exclude_default,
@@ -910,8 +929,8 @@ $TCA['tx_route_path'] = array (
           'map_title,' .
           'map_short,' .
         '--div--;LLL:EXT:route/locallang_db.xml:tx_route_path.div_address,' . 
-          'address_start,' .
-          'address_end,' .
+          'address_start;;;richtext[]:rte_transform[mode=ts];,' .
+          'address_end;;;richtext[]:rte_transform[mode=ts];,' .
           'url,' .
         '--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.images,' .
           '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.imagefiles;imagefiles,' .
