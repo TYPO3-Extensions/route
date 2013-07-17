@@ -391,7 +391,6 @@ temp.route {
         }
       }
     }
-    renderMethod = simple
     stdWrap {
       prefixComment >
     }
@@ -480,8 +479,6 @@ plugin.tx_browser_pi1 {
           title = COA
           title {
               // route image
-            10 < temp.route.route_cat_image_47
-              // route image
             20 < temp.route.route_image_47
             20 {
                 // Display one image only
@@ -513,13 +510,19 @@ plugin.tx_browser_pi1 {
               wrap = <h2>|</h2>
             }
               // route list_short or short, if list_short is empty
-            40 = TEXT
+            40 = COA
             40 {
-              field     = tx_route_path.short
-              override {
-                field = tx_route_path.list_short
+                // route cat image
+              10 < temp.route.route_cat_image_47
+                // route list_short or short, if list_short is empty
+              40 = TEXT
+              40 {
+                field     = tx_route_path.short
+                override {
+                  field = tx_route_path.list_short
+                }
+                wrap = <p>|</p>
               }
-              wrap = <p>|</p>
             }
           }
         }
