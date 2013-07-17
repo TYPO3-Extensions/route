@@ -585,6 +585,11 @@ plugin.tx_browser_pi1 {
                   field = mapLinkToSingle
                   wrap = xyz|abc
                 }
+                40 < plugin.tx_browser_pi1.navigation.map.marker.addToCData.system.mapLinkToSingle.20
+                40 {
+                  if >
+                }
+
                 wrap = <p>|</p>
               }
               wrap = <div class="list_short-wi_left_img">|</div>
