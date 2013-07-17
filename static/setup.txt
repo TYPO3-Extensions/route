@@ -437,18 +437,18 @@ plugin.tx_browser_pi1 {
               // route list_title or title, if list_title is empty
             30 = TEXT
             30 {
-              field     = tx_route_path.title
+              field     = tx_route_path.list_title
               overwrite {
-                field = tx_route_path.list_title
+                field = tx_route_path.title
               }
               wrap      = <h2>|</h2>
             }
               // route list_short or short, if list_short is empty
             40 = TEXT
             40 {
-              field     = tx_route_path.short
+              field     = tx_route_path.list_short
               overwrite {
-                field = tx_route_path.list_short
+                field = tx_route_path.short
               }
               wrap      = <p>|</p>
             }
