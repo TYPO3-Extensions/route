@@ -648,19 +648,23 @@ plugin.tx_browser_pi1 {
                   noTrimWrap = || |
                 }
                   // link to single view
-                30 = TEXT
-                30 {
+                20 = TEXT
+                20 {
                   value = In detail &raquo;
+                    // de, en
                   lang {
                     de = Mehr Informationen &raquo;
                     en = In detail &raquo;
                   }
+                    // parameter, useCacheHash
                   typolink {
-                    parameter.cObject < temp.route.route_linkToSingle
+                    parameter {
+                        // URL: page id, page type, parameters
+                      cObject < temp.route.route_linkToSingle
+                    }
                     useCacheHash = 1
                   }
                 }
-                40 < temp.route.route_linkToSingle
                 wrap = <p>|</p>
               }
               wrap = <div class="list_short-wi_left_img">|</div>
