@@ -1033,6 +1033,7 @@ plugin.tx_browser_pi1 {
           tx_route_category.icon_offset_y,
           tx_route_category.uid,
           tx_route_path.title,
+          tx_route_path.uid,
         )
         htmlSnippets =
         htmlSnippets {
