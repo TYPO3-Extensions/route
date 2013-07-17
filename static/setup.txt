@@ -841,7 +841,7 @@ plugin.tx_browser_pi1 {
                     }
                     wrap = <p>|</p>
                   }
-                  wrap = <div class="list_short-wi_left_img">|</div>
+                  wrap = <div class="tx_route-cat-icon">|</div>
                 }
               }
             }
