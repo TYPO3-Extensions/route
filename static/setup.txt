@@ -963,10 +963,6 @@ plugin.tx_browser_pi1 {
                   }
                   40 = TEXT
                   40 {
-                    required  = 1
-                    stdWrap {
-                      parseFunc < lib.parseFunc_RTE
-                    }
                     typolink {
                       parameter {
                         field = tx_route_path.url
