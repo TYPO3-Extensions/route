@@ -818,9 +818,13 @@ plugin.tx_browser_pi1 {
                     // route list_short or short, if list_short is empty. Link to single view.
                   20 = COA
                   20 {
-                      // route list_short or short, if list_short is empty
                     10 = TEXT
                     10 {
+                      field     = tx_route_path.short
+                      noTrimWrap = ||<br />|
+                    }
+                    20 = TEXT
+                    20 {
                       field     = tx_route_path.short
                       override {
                         field = tx_route_path.bodytext
