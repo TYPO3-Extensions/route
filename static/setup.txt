@@ -347,7 +347,7 @@ temp.route {
       key >
       key = default
       default {
-        value = ###IMAGS###
+        value = ###IMAGES###
       }
     }
     imgList {
