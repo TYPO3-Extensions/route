@@ -575,7 +575,7 @@ plugin.tx_browser_pi1 {
         andWhere  < temp.route.sql.andWhere
         joins     < temp.route.sql.joins
         aliases   < temp.route.sql.aliases
-        orderBy   < temp.route.sql.orderBy
+        orderBy   = tx_route_path.list_title, tx_route_path.title, tx_route_path_mm_marker.sorting, tx_route_marker_cat.title
         csvLinkToSingleView = tx_route_path.title
         tx_route_path {
             // route image, route title, route cat image, route list short, link to single view
