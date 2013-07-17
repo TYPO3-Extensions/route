@@ -44,7 +44,8 @@ plugin.tx_browser_pi1 {
     enabled = Map +Routes
     icon {
       listNum {
-        categoryIconMap = 1
+        categoryIconMap   = 1
+        categoryIconText  = 2
       }
     }
     marker {
