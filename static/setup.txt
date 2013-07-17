@@ -407,6 +407,7 @@ plugin.tx_browser_pi1 {
         joins     < temp.route.sql.joins
         aliases   < temp.route.sql.aliases
         orderBy   < temp.route.sql.orderBy
+        csvLinkToSingleView = tx_route_path.title
         tx_route_path {
             // route image, route title, marker title
           title = COA
