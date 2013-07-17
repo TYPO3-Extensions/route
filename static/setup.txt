@@ -772,6 +772,10 @@ plugin.tx_browser_pi1 {
       }
       47677 = Route (text only)
       47677 {
+        marker < plugin.tx_browser_pi1.marker
+        marker {
+          my_title >
+        }
         navigation {
           map < temp.route.navigation.map
           map {
