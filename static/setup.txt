@@ -523,6 +523,7 @@ plugin.tx_browser_pi1 {
                 }
                 wrap = <p>|</p>
               }
+              wrap = <div style="display:inline">|</div>
             }
           }
         }
