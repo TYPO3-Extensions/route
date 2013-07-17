@@ -835,8 +835,8 @@ plugin.tx_browser_pi1 {
                     20 = TEXT
                     20 {
                       field = tx_route_path.bodytext
+                      stdWrap.parseFunc < lib.parseFunc_RTE
                     }
-                    stdWrap.parseFunc < lib.parseFunc_RTE
                   }
                   wrap = <div class="tx_route-cat-icon">|</div>
                 }
