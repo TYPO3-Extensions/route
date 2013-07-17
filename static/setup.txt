@@ -810,6 +810,11 @@ plugin.tx_browser_pi1 {
                 40 {
                     // route cat image
                   10 < temp.route.route_cat_image_47
+                  10 {
+                    1 {
+                      imageLinkWrap >
+                    }
+                  }
                     // route list_short or short, if list_short is empty. Link to single view.
                   20 = COA
                   20 {
