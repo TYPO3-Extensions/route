@@ -1128,12 +1128,16 @@ page {
     }
     meta {
       description {
-        field >
-        data = register:browser_description
+        field = tx_route_path.seo_description
+        ifEmpty {
+          data = register:browser_description
+        }
       }
       keywords {
-        field >
-        data = register:browser_keywords
+        field = tx_route_path.seo_keywords
+        ifEmpty {
+          data = register:browser_keywords
+        }
       }
     }
   }
