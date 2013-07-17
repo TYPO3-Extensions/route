@@ -872,27 +872,32 @@ plugin.tx_browser_pi1 {
                       imageLinkWrap >
                     }
                   }
-                    // route list_short or short, if list_short is empty. Link to single view.
-                  20 = COA
+                    // route short
+                  20 = TEXT
                   20 {
-                    10 = TEXT
-                    10 {
-                      field = tx_route_path.short
-                      stdWrap.parseFunc < lib.parseFunc_RTE
+                    field     = tx_route_path.short
+                    required  = 1
+                    stdWrap {
+                      parseFunc < lib.parseFunc_RTE
                     }
-                    20 = TEXT
-                    20 {
-                      field = tx_route_path.short
-                      override {
-                        field = tx_route_path.bodytext
-                      }
-                      noTrimWrap = || |
+                  }
+                    // route bodytext
+                  30 = TEXT
+                  30 {
+                    field     = tx_route_path.bodytext
+                    required  = 1
+                    stdWrap {
+                      parseFunc < lib.parseFunc_RTE
                     }
-                    20 >
-                    20 = TEXT
-                    20 {
-                      field = tx_route_path.bodytext
-                      stdWrap.parseFunc < lib.parseFunc_RTE
+                  }
+                    // marker title
+                  40 = TEXT
+                  40 {
+                    field     = tx_route_marker.title
+                    required  = 1
+                    noTrimWrap  = |Marker title: ||
+                    XXX_stdWrap {
+                      parseFunc < lib.parseFunc_RTE
                     }
                   }
                   wrap = <div class="tx_route-cat-icon">|</div>
