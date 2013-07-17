@@ -6,8 +6,8 @@
   // temp.route
   //    navigation
   //    sql
-  // temp.route
-  //    image
+  // temp.route: route_image_47
+  // temp.route: route_cat_image_47
   // config
   // plugin.tx_browser_pi1
   // page
@@ -185,11 +185,11 @@ temp.route {
 
   ////////////////////////////////////////
   //
-  // temp.route: image
+  // temp.route: route_image_47
 
 temp.route {
-  image_47 < tt_content.image.20
-  image_47 {
+  route_image_47 < tt_content.image.20
+  route_image_47 {
     imgList {
       field = tx_route_path.image
     }
@@ -330,7 +330,158 @@ temp.route {
     }
   }
 }
-  // temp.route: image
+  // temp.route: route_image_47
+
+
+
+  ////////////////////////////////////////
+  //
+  // temp.route: route_cat_image_47
+
+temp.route {
+  route_cat_image_47 < tt_content.image.20
+  route_cat_image_47 {
+    imgList {
+      field = tx_route_path_cat.icons
+    }
+    imgPath = {$plugin.tx_route.path.uploadfolder}
+    1 {
+      file {
+        width {
+          field = tx_route_path.imagewidth
+        }
+        height {
+          field = tx_route_path.imageheight
+        }
+      }
+      imageLinkWrap {
+        ifEmpty {
+          typolink.parameter.field = tx_route_path.image_link
+        }
+        typolink {
+          parameter {
+            field = tx_route_path.image_link
+          }
+          additionalParams  = &tx_browser_pi1[{$plugin.tx_browser_pi1.map.aliases.showUid.path}]=###TX_ROUTE_PATH.UID###
+          useCacheHash      = 1
+          title             = TEXT
+          title {
+            field = tx_route_path.title
+          }
+        }
+        enable = 1
+        enable {
+          field = tx_route_path.image_zoom
+          ifEmpty {
+            typolink {
+              parameter {
+                field = tx_route_path.image_link
+              }
+            }
+          }
+        }
+      }
+    }
+    textPos.field           = tx_route_path.imageorient
+    equalH.field            = tx_route_path.imageheight
+    image_compression.field = tx_route_path.image_compression
+    image_effects.field     = tx_route_path.image_effects
+    noRows.field            = tx_route_path.image_norows
+    cols.field              = tx_route_path.imagecols
+    border.field            = tx_route_path.image_frames
+    caption.1.1.field       = tx_route_path.imagecaption
+    captionAlign.field      = tx_route_path.imagecaption_position
+    layout {
+      key {
+        field = tx_route_path.imageorient
+      }
+    }
+    stdWrap {
+      //prefixComment >
+    }
+      // #43936
+    rendering {
+      singleNoCaption {
+        allStdWrap {
+          innerWrap {
+            cObject {
+              key {
+                field = tx_route_path.imageorient
+              }
+            }
+          }
+        }
+        fallbackRendering {
+          10 {
+            if {
+              isTrue {
+                field = tx_route_path.imagecaption
+              }
+            }
+          }
+          20 {
+            if {
+              isTrue {
+                field = tx_route_path.imagecaption
+              }
+            }
+          }
+          30 {
+            if {
+              isTrue {
+                field = tx_route_path.imagecaption
+              }
+            }
+          }
+          40 {
+            if {
+              isFalse {
+                field = tx_route_path.imagecaption
+              }
+            }
+          }
+        }
+      }
+      noCaption {
+        fallbackRendering {
+          if {
+            isTrue {
+              field = tx_route_path.imagecaption
+            }
+          }
+        }
+      }
+      singleCaption {
+        fallbackRendering {
+          if {
+            isTrue {
+              field = tx_route_path.imagecaption
+            }
+          }
+        }
+      }
+      splitCaption {
+        fallbackRendering {
+          if {
+            isTrue {
+              field = tx_route_path.imagecaption
+            }
+          }
+        }
+      }
+      globalCaption {
+        fallbackRendering {
+          if {
+            isTrue {
+              field = tx_route_path.imagecaption
+            }
+          }
+        }
+      }
+    }
+  }
+}
+  // temp.route: route_cat_image_47
 
 
 
@@ -413,7 +564,29 @@ plugin.tx_browser_pi1 {
           title = COA
           title {
               // route image
-            20 < temp.route.image_47
+            10 < temp.route.route_cat_image_47
+            10 {
+                // Display one image only
+              imgMax    = 1
+                // Display the first image
+              imgStart  = 0
+              1 {
+                file {
+                  width   >
+                  width   = {$plugin.tx_route.images.list.maxWidth} 
+                  height  >
+                  height  = {$plugin.tx_route.images.list.maxHeight} 
+                }
+              }
+              textPos >
+              textPos = {$plugin.tx_route.images.list.position} 
+              layout {
+                key >
+                key = {$plugin.tx_route.images.list.position} 
+              }
+            }
+              // route image
+            20 < temp.route.route_image_47
             20 {
                 // Display one image only
               imgMax    = 1
@@ -437,11 +610,11 @@ plugin.tx_browser_pi1 {
               // route list_title or title, if list_title is empty
             30 = TEXT
             30 {
-              field     = tx_route_path.title
+              field = tx_route_path.title
               override {
                 field = tx_route_path.list_title
               }
-              wrap      = <h2>|</h2>
+              wrap = <h2>|</h2>
             }
               // route list_short or short, if list_short is empty
             40 = TEXT
@@ -450,7 +623,7 @@ plugin.tx_browser_pi1 {
               override {
                 field = tx_route_path.list_short
               }
-              wrap      = <p>|</p>
+              wrap = <p>|</p>
             }
           }
         }
