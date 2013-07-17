@@ -1004,7 +1004,8 @@ $TCA['tx_route_marker'] = array (
   'interface' => array (
     'showRecordFieldList' =>  
         'sys_language_uid,l10n_parent,l10n_diffsource,' 
-      . 'title,tx_route_category,short,bodytext,url,' 
+      . 'title,short,bodytext,url,' 
+      . 'tx_route_category,' 
       . 'lon,lat,address,' 
       . 'tx_route_path,' 
       . 'list_title,list_short,map_title,map_short,' 
@@ -1051,6 +1052,24 @@ $TCA['tx_route_marker'] = array (
       'l10n_mode' => 'prefixLangTitle',
       'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.title',
       'config'    => $conf_input_30_trimRequired,
+    ),
+    'short' => array (
+      'exclude'   => 0,
+      'l10n_mode' => 'prefixLangTitle',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.short',
+      'config'    => $conf_text_30_05,
+    ),
+    'bodytext' => array (
+      'exclude'   => 0,
+      'l10n_mode' => 'prefixLangTitle',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.bodytext',
+      'config'    => $conf_text_rte,
+    ),
+    'url' => array (
+      'exclude'   => 0,
+      'l10n_mode' => 'prefixLangTitle',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.url',
+      'config'    => $arr_wizard_url,
     ),
     'tx_route_category' => array (
       'exclude'   => $bool_exclude_default,
@@ -1104,24 +1123,6 @@ $TCA['tx_route_marker'] = array (
           ),
         ),
       ),
-    ),
-    'short' => array (
-      'exclude'   => 0,
-      'l10n_mode' => 'prefixLangTitle',
-      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.short',
-      'config'    => $conf_text_30_05,
-    ),
-    'bodytext' => array (
-      'exclude'   => 0,
-      'l10n_mode' => 'prefixLangTitle',
-      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.bodytext',
-      'config'    => $conf_text_rte,
-    ),
-    'url' => array (
-      'exclude'   => 0,
-      'l10n_mode' => 'prefixLangTitle',
-      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.url',
-      'config'    => $arr_wizard_url,
     ),
     'lon' => array (
       'exclude'   => 0,
@@ -1458,10 +1459,11 @@ $TCA['tx_route_marker'] = array (
       'showitem' => 
         '--div--;LLL:EXT:route/locallang_db.xml:tx_route_marker.div_marker,' . 
           'title,' .
-          'tx_route_category,' .
           'short,' .
           'bodytext;;;richtext[]:rte_transform[mode=ts];,' .
           'url,' .
+        '--div--;LLL:EXT:route/locallang_db.xml:tx_route_marker.div_cat,' . 
+          'tx_route_category,' .
         '--div--;LLL:EXT:route/locallang_db.xml:tx_route_marker.div_properties,' . 
           'lon,' .
           'lat,' .
