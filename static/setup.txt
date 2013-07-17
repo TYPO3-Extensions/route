@@ -614,53 +614,56 @@ plugin.tx_browser_pi1 {
                 key >
                 key = {$plugin.tx_route.images.list.position} 
               }
-            }
-              // route list_title or title, if list_title is empty
-            30 = TEXT
-            30 {
-              field = tx_route_path.title
-              override {
-                field = tx_route_path.list_title
-              }
-              wrap = <h2>|</h2>
-            }
-              // route cat image, route list_short, link to single view
-            40 = COA
-            40 {
-                // route cat image
-              10 < temp.route.route_cat_image_47
-                // route list_short or short, if list_short is empty. Link to single view.
-              20 = COA
-              20 {
-                  // route list_short or short, if list_short is empty
-                10 = TEXT
-                10 {
-                  field     = tx_route_path.short
+              text = COA
+              text {
+                  // route list_title or title, if list_title is empty
+                30 = TEXT
+                30 {
+                  field = tx_route_path.title
                   override {
-                    field = tx_route_path.list_short
+                    field = tx_route_path.list_title
                   }
-                  noTrimWrap = || |
+                  wrap = <h2>|</h2>
                 }
-                  // link to single view
-                20 = TEXT
-                20 {
-                  value = In detail &raquo;
-                    // de, en
-                  lang {
-                    de = Mehr Informationen &raquo;
-                    en = In detail &raquo;
-                  }
-                  typolink {
-                    parameter {
-                        // URL: page id, page type, parameters
-                      cObject < temp.route.route_linkToSingle
+                  // route cat image, route list_short, link to single view
+                40 = COA
+                40 {
+                    // route cat image
+                  10 < temp.route.route_cat_image_47
+                    // route list_short or short, if list_short is empty. Link to single view.
+                  20 = COA
+                  20 {
+                      // route list_short or short, if list_short is empty
+                    10 = TEXT
+                    10 {
+                      field     = tx_route_path.short
+                      override {
+                        field = tx_route_path.list_short
+                      }
+                      noTrimWrap = || |
                     }
-                    useCacheHash = 1
+                      // link to single view
+                    20 = TEXT
+                    20 {
+                      value = In detail &raquo;
+                        // de, en
+                      lang {
+                        de = Mehr Informationen &raquo;
+                        en = In detail &raquo;
+                      }
+                      typolink {
+                        parameter {
+                            // URL: page id, page type, parameters
+                          cObject < temp.route.route_linkToSingle
+                        }
+                        useCacheHash = 1
+                      }
+                    }
+                    wrap = <p>|</p>
                   }
+                  wrap = <div class="list_short-wi_left_img">|</div>
                 }
-                wrap = <p>|</p>
               }
-              wrap = <div class="list_short-wi_left_img">|</div>
             }
           }
         }
