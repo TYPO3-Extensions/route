@@ -656,7 +656,7 @@ plugin.tx_browser_pi1 {
                     en = In detail &raquo;
                   }
                   typolink {
-                    parameter < temp.route.route_linkToSingle
+                    parameter.cObject < temp.route.route_linkToSingle
                     useCacheHash = 1
                   }
                 }
