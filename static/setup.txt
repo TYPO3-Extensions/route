@@ -409,8 +409,8 @@ plugin.tx_browser_pi1 {
         orderBy   < temp.route.sql.orderBy
         tx_route_path =
         tx_route_path {
-          image_47 < temp.route.image
-          image_47 {
+          image < temp.route.image_47
+          image {
               // Display one image only
             imgMax    = 1
               // Display the first image
