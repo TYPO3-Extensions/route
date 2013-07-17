@@ -5,6 +5,7 @@
   // INDEX
 
   // plugin.tx_browser_pi1.views.list.47677
+  // plugin.tx_browser_pi1.views.single.47677
 
 
 
@@ -38,3 +39,36 @@ plugin.tx_browser_pi1 {
   }
 }
   // plugin.tx_browser_pi1.views.list.47677
+
+
+
+  ////////////////////////////////////////////////////////////////////////////////
+  //
+  // plugin.tx_browser_pi1.views.single.47677
+
+plugin.tx_browser_pi1 {
+  views {
+    single {
+      47677 {
+        tx_route_path {
+          title {
+            20 {
+              caption.1.1 >
+              caption.1 {
+                field = tx_route_path.imagecaption
+              }
+              rendering {
+                singleNoCaption >
+                noCaption       >
+                singleCaption   >
+                splitCaption    >
+                globalCaption   >
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+  // plugin.tx_browser_pi1.views.single.47677
