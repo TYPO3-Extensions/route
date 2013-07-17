@@ -264,6 +264,10 @@ temp.route {
                 field = tx_route_marker.title
               }
               20 < temp.route.route_image_47
+              30 = TEXT
+              30 {
+                value = tx_route_marker.title
+              }
             }
           }
         }
