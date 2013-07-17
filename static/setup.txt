@@ -438,7 +438,7 @@ plugin.tx_browser_pi1 {
             30 = TEXT
             30 {
               field     = tx_route_path.list_title
-              overwrite {
+              override {
                 field = tx_route_path.title
               }
               wrap      = <h2>|</h2>
@@ -447,7 +447,7 @@ plugin.tx_browser_pi1 {
             40 = TEXT
             40 {
               field     = tx_route_path.list_short
-              overwrite {
+              override {
                 field = tx_route_path.short
               }
               wrap      = <p>|</p>
