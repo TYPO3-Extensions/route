@@ -8,7 +8,8 @@ DIV.csc-textpic-clear {
   padding-bottom: 1em;
 }
 
-div.listview-47677 div.tx_route-cat-icon DIV.csc-textpic-imagewrap {
+div.listview-47677 div.tx_route-cat-icon DIV.csc-textpic-imagewrap,
+div.singleview-47677 div.tx_route-cat-icon DIV.csc-textpic-imagewrap {
   clear:none;
 }
 div.singleview-47677 DIV.csc-textpic-left div.tx_route-cat-icon DIV.csc-textpic-imagewrap {
