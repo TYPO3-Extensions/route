@@ -580,6 +580,11 @@ plugin.tx_browser_pi1 {
                 20 {
                   if >
                 }
+                30 = TEXT
+                30 {
+                  field = mapLinkToSingle
+                  wrap = xyz|abc
+                }
                 wrap = <p>|</p>
               }
               wrap = <div class="list_short-wi_left_img">|</div>
