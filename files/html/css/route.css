@@ -1,12 +1,12 @@
-div.csc-textpic-intext-left-nowrap {
+div.xxcsc-textpic-intext-left-nowrap {
   float:left;
   padding-right:1em;
 }
-div.csc-textpic-intext-right-nowrap {
+div.xxcsc-textpic-intext-right-nowrap {
   float:right;
   padding-left:1em;
 }
-DIV.csc-textpic DIV.csc-textpic-single-image IMG {
+DIV.xxcsc-textpic DIV.csc-textpic-single-image IMG {
   margin: 0;
 }
 
