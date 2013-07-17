@@ -668,8 +668,9 @@ plugin.tx_browser_pi1 {
                   }
                 }
               }
-              maxHInText = {$plugin.tx_route.images.list.maxHeight}
-              maxWInText = {$plugin.tx_route.images.list.maxWidth}
+              maxWInText  = {$plugin.tx_route.images.list.maxWidth}
+              equalH      >
+              equalH      = {$plugin.tx_route.images.list.maxHeight}
               textPos >
               textPos = {$plugin.tx_route.images.list.position} 
               layout {
