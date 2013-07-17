@@ -15,8 +15,8 @@
 
 plugin.tx_route {
 
-  # cat=Route - Images List View//100;          type=options[25,26];  label= Position: 25: Right beside the text. 26: Left beside the text.
-  images.list.position = 26 
+  # cat=Route - Images List View//100;          type=options[17,18,25,26];  label= Position: 17: In text right. 18: In text left. 25: Right beside the text. 26: Left beside the text.
+  images.list.position = 18 
   # cat=Route - Images List View//101;          type=string;      label= Max height: Max height of images in list views
   images.list.maxHeight = 60c 
   # cat=Route - Images List View//102;          type=string;      label= Max width: Max width of images in list views
