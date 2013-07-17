@@ -969,7 +969,7 @@ plugin.tx_browser_pi1 {
                     }
                     typolink {
                       parameter {
-                        field = tx_route_path.url
+                        data = field:tx_route_path.url
                       }
                     }
                   }
