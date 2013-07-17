@@ -638,6 +638,7 @@ plugin.tx_browser_pi1 {
                 // route list_short or short, if list_short is empty. Link to single view.
               20 = COA
               20 {
+                  // route list_short or short, if list_short is empty
                 10 = TEXT
                 10 {
                   field     = tx_route_path.short
@@ -646,20 +647,16 @@ plugin.tx_browser_pi1 {
                   }
                   noTrimWrap = || |
                 }
+                  // link to single view
                 30 = TEXT
                 30 {
-                  if {
-                    value   = '{$plugin.tx_browser_pi1.map.popup.behaviour}' 
-                    equals  = 'click'
-                  }
                   value = In detail &raquo;
                   lang {
                     de = Mehr Informationen &raquo;
                     en = In detail &raquo;
                   }
                   typolink {
-                    parameter.data = field:mapLinkToSingle
-                      // 130117
+                    parameter < temp.route.route_linkToSingle
                     useCacheHash = 1
                   }
                 }
