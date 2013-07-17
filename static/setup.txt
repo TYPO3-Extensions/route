@@ -726,6 +726,7 @@ plugin.tx_browser_pi1 {
           map < temp.route.navigation.map
           map {
             enabled = disabled
+            marker.variables.system.categoryIconMap.20.stdWrap.listNum = {$plugin.tx_browser_pi1.map.icon.listNum.categoryIconMapSingle}
           }
         }
         showUid   = {$plugin.tx_browser_pi1.map.aliases.showUid.path}
