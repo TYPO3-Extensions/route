@@ -271,7 +271,8 @@ temp.route {
               40 = IMAGE
               40 {
                 file = EXT:org/res/download.gif
-                imageLinkWrap = 1
+                htmlSpecialChars = 1
+                imageLinkWrap = 0
                 imageLinkWrap {
                   enable = 1
                   typolink {
