@@ -3,6 +3,7 @@
   //
   // INDEX
 
+  // temp.route: route linkToSingle
   // temp.route: route_image_47
   // temp.route: route_cat_image_47
   // temp.route: navigation
@@ -10,6 +11,75 @@
   // config
   // plugin.tx_browser_pi1
   // page
+
+
+
+  ////////////////////////////////////////
+  //
+  // temp.route: route linkToSingle
+
+temp.route {
+  route_linkToSingle = COA
+  route_linkToSingle {
+      // URL: page id, page type, parameters
+    10 = COA
+    10 {
+        // Page uid
+      10 = TEXT
+      10 {
+        data = page:uid
+      }
+        // Page type
+      20 = TEXT
+      20 {
+        value = 0
+        wrap  = ,|
+      }
+        // Parameter
+      30 = COA
+      30 {
+          // ,&tx_browser_pi1[showuid]=
+        10 = TEXT
+        10 {
+          if {
+            isTrue {
+              field = {$plugin.tx_browser_pi1.map.path.mapper.tables.local.path}.uid
+            }
+          }
+          field = {$plugin.tx_browser_pi1.map.path.mapper.tables.local.path}.uid
+          wrap  = ,&tx_browser_pi1[{$plugin.tx_browser_pi1.map.aliases.showUid.path}]=|
+        }
+      }
+    }
+      // target
+    20 = TEXT
+    20 {
+        // [STRING] - (default). Examples: -, _self, _blank, _top
+      value = -
+      noTrimWrap = | | |
+    }
+      // class
+    30 = TEXT
+    30 {
+        // [STRING] - (default)
+      value = -
+      noTrimWrap = | | |
+    }
+      // title
+    40 = TEXT
+    40 {
+      if {
+        isTrue {
+          field =
+        }
+      }
+        // [STRING]
+      field =
+      wrap  = "|"
+    }
+  }
+}
+  // temp.route: route linkToSingle
 
 
 
@@ -447,7 +517,7 @@ temp.route {
     orderBy = tx_route_path.title, tx_route_path_mm_marker.sorting, tx_route_marker_cat.title
   }
 }
-  // temp.route: navigation, sql
+  // temp.route: sql
 
 
 
@@ -560,12 +630,12 @@ plugin.tx_browser_pi1 {
               }
               wrap = <h2>|</h2>
             }
-              // route cat image, route list_short
+              // route cat image, route list_short, link to single view
             40 = COA
             40 {
                 // route cat image
               10 < temp.route.route_cat_image_47
-                // route list_short or short, if list_short is empty
+                // route list_short or short, if list_short is empty. Link to single view.
               20 = COA
               20 {
                 10 = TEXT
@@ -576,20 +646,24 @@ plugin.tx_browser_pi1 {
                   }
                   noTrimWrap = || |
                 }
-                20 < plugin.tx_browser_pi1.displayList.master_templates.map.descriptionWiLinkToSingle.30
-                20 {
-                  if >
-                }
                 30 = TEXT
                 30 {
-                  field = mapLinkToSingle
-                  wrap = xyz|abc
+                  if {
+                    value   = '{$plugin.tx_browser_pi1.map.popup.behaviour}' 
+                    equals  = 'click'
+                  }
+                  value = In detail &raquo;
+                  lang {
+                    de = Mehr Informationen &raquo;
+                    en = In detail &raquo;
+                  }
+                  typolink {
+                    parameter.data = field:mapLinkToSingle
+                      // 130117
+                    useCacheHash = 1
+                  }
                 }
-                40 < plugin.tx_browser_pi1.navigation.map.marker.addToCData.system.mapLinkToSingle.20
-                40 {
-                  if >
-                }
-
+                40 < temp.route.route_linkToSingle
                 wrap = <p>|</p>
               }
               wrap = <div class="list_short-wi_left_img">|</div>
