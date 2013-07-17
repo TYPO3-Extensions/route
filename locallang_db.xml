@@ -64,7 +64,7 @@
       <label index="tx_route_marker.div_design">Design</label>
       <label index="tx_route_marker.div_paths">Paths</label>
       <label index="tx_route_marker.div_marker">Marker (POI)</label>
-      <label index="tx_route_marker.div_properties">Eigenschaften</label>
+      <label index="tx_route_marker.div_properties">Geo data</label>
       <label index="tx_route_marker.div_seo">Search Engines</label>
       <label index="tx_route_marker.div_shortterms">Short Terms</label>
       <label index="tx_route_marker.address">Address of the Marker (POI)</label>
@@ -78,7 +78,7 @@
       <label index="tx_route_marker.short">Short</label>                        
       <label index="tx_route_marker.title">Marker (POI) label</label>                        
       <label index="tx_route_marker.tx_route_category">Category</label>                        
-      <label index="tx_route_marker.tx_route_path">Paths</label>      
+      <label index="tx_route_marker.tx_route_path">Paths (one path maximum)</label>      
       <label index="tx_route_marker.url">URL (of another Website)</label>
       <label index="wizard.add">Add a record</label>
       <label index="wizard.edit">Edit the selected recorded</label>
@@ -116,7 +116,7 @@
       <label index="tx_route_path.div_design">Design</label>
       <label index="tx_route_path.div_gpx">Daten</label>
       <label index="tx_route_path.div_marker">Marken (POI)</label>
-      <label index="tx_route_path.div_properties">Eigenschaften</label>
+      <label index="tx_route_path.div_properties">Geo-Daten</label>
       <label index="tx_route_path.div_path">Pfad</label>
       <label index="tx_route_path.div_seo">Suchmaschinen</label>
       <label index="tx_route_path.div_shortterms">Kurze Bezeichnungen</label>
@@ -156,7 +156,7 @@
       <label index="tx_route_marker.short">Kurzbeschreibung</label>                        
       <label index="tx_route_marker.title">Bezeichnung der Marke (POI)</label>                        
       <label index="tx_route_marker.tx_route_category">Kategorie</label>
-      <label index="tx_route_marker.tx_route_path">Pfade</label>      
+      <label index="tx_route_marker.tx_route_path">Pfade (maximal einen Pfad)</label>      
       <label index="tx_route_marker.url">URL (einer anderen Website)</label>
       <label index="wizard.add">Neuen Datensatz erstellen</label>
       <label index="wizard.edit">Markierten Datensatz bearbeiten</label>

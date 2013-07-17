@@ -1004,8 +1004,8 @@ $TCA['tx_route_marker'] = array (
   'interface' => array (
     'showRecordFieldList' =>  
         'sys_language_uid,l10n_parent,l10n_diffsource,' 
-      . 'title,tx_route_category,short,bodytext,' 
-      . 'lon,lat,address,url,' 
+      . 'title,tx_route_category,short,bodytext,url,' 
+      . 'lon,lat,address,' 
       . 'tx_route_path,' 
       . 'list_title,list_short,map_title,map_short,' 
       . 'image,imagecaption,imageseo,imagewidth,imageheight,imageorient,imagecaption,imagecols,imageborder,imagecaption_position,image_link,image_zoom,image_noRows,image_effects,image_compression,' 
@@ -1117,6 +1117,12 @@ $TCA['tx_route_marker'] = array (
       'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.bodytext',
       'config'    => $conf_text_rte,
     ),
+    'url' => array (
+      'exclude'   => 0,
+      'l10n_mode' => 'prefixLangTitle',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.url',
+      'config'    => $arr_wizard_url,
+    ),
     'lon' => array (
       'exclude'   => 0,
       'l10n_mode' => 'prefixLangTitle',
@@ -1133,13 +1139,7 @@ $TCA['tx_route_marker'] = array (
       'exclude'   => 0,
       'l10n_mode' => 'prefixLangTitle',
       'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.address',
-      'config'    => $conf_text_30_05,
-    ),
-    'url' => array (
-      'exclude'   => 0,
-      'l10n_mode' => 'prefixLangTitle',
-      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.url',
-      'config'    => $conf_input_30_trim,
+      'config'    => $conf_text_rte,
     ),
     'tx_route_path' => array (
       'exclude'   => $bool_exclude_default,
@@ -1461,11 +1461,11 @@ $TCA['tx_route_marker'] = array (
           'tx_route_category,' .
           'short,' .
           'bodytext;;;richtext[]:rte_transform[mode=ts];,' .
+          'url,' .
         '--div--;LLL:EXT:route/locallang_db.xml:tx_route_marker.div_properties,' . 
           'lon,' .
           'lat,' .
-          'address,' .
-          'url,' .
+          'address;;;richtext[]:rte_transform[mode=ts];,' .
         '--div--;LLL:EXT:route/locallang_db.xml:tx_route_marker.div_paths,' . 
           'tx_route_path,' .
         '--div--;LLL:EXT:route/locallang_db.xml:tx_route_marker.div_shortterms,' . 
