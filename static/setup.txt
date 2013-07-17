@@ -509,7 +509,7 @@ plugin.tx_browser_pi1 {
               }
               wrap = <h2>|</h2>
             }
-              // route list_short or short, if list_short is empty
+              // route cat image, route list_short
             40 = COA
             40 {
                 // route cat image
@@ -523,7 +523,7 @@ plugin.tx_browser_pi1 {
                 }
                 wrap = <p>|</p>
               }
-              wrap = <div style="display:inline">|</div>
+              wrap = <div class="list_short-wi_left_img">|</div>
             }
           }
         }

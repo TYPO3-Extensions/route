@@ -16,6 +16,15 @@ DIV.csc-textpic DIV.csc-textpic-single-image IMG {
   margin: 0;
 }
 
+div.listview-47677 div.list_short-wi_left_img div.csc-textpic-single-image {
+  float:left;
+  padding-right:1em;
+}
+div.listview-47677 div.list_short-wi_right_img div.csc-textpic-single-image {
+  float:right;
+  padding-left:1em;
+}
+
 .sbmFloatRight {
   float:right;
   padding-left:1em;
