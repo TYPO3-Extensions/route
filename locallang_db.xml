@@ -55,7 +55,7 @@
       <label index="tx_route_path.map_title">Label in the Map (leave it empty, if value of the list view should taken)</label>
       <label index="tx_route_path.map_short">Short in the Map (leave it empty, if value of the list view should taken)</label>
       <label index="tx_route_path.short">Short</label>                        
-      <label index="tx_route_path.title">Path Label</label>                        
+      <label index="tx_route_path.title">Path label</label>                        
       <label index="tx_route_path.tx_route_category">Category</label>                        
       <label index="tx_route_path.tx_route_marker">Marker (POI)</label>      
       <label index="tx_route_path.url">URL (of another Website)</label>
@@ -76,7 +76,7 @@
       <label index="tx_route_marker.map_title">Label in the Map (leave it empty, if value of the list view should taken)</label>
       <label index="tx_route_marker.map_short">Short in the Map (leave it empty, if value of the list view should taken)</label>
       <label index="tx_route_marker.short">Short</label>                        
-      <label index="tx_route_marker.title">Path Label</label>                        
+      <label index="tx_route_marker.title">Marker (POI) label</label>                        
       <label index="tx_route_marker.tx_route_category">Category</label>                        
       <label index="tx_route_marker.tx_route_path">Paths</label>      
       <label index="tx_route_marker.url">URL (of another Website)</label>
