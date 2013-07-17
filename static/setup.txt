@@ -821,6 +821,7 @@ plugin.tx_browser_pi1 {
                     10 = TEXT
                     10 {
                       field = tx_route_path.short
+                      wrap  = <p>|</p>
                     }
                     20 = TEXT
                     20 {
