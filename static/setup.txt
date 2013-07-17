@@ -407,7 +407,7 @@ plugin.tx_browser_pi1 {
         joins     < temp.route.sql.joins
         aliases   < temp.route.sql.aliases
         orderBy   < temp.route.sql.orderBy
-        tx_route_path =
+        //tx_route_path =
         tx_route_path {
           image < temp.route.image_47
           image {
