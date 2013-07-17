@@ -823,28 +823,11 @@ plugin.tx_browser_pi1 {
                     10 {
                       field     = tx_route_path.short
                       override {
-                        field = tx_route_path.list_short
+                        field = tx_route_path.bodytext
                       }
                       noTrimWrap = || |
                     }
-                      // link to single view
-                    20 = TEXT
-                    20 {
-                      value = In detail &raquo;
-                        // de, en
-                      lang {
-                        de = Mehr Informationen &raquo;
-                        en = In detail &raquo;
-                      }
-                      typolink {
-                        parameter {
-                            // URL: page id, page type, parameters
-                          cObject < temp.route.route_linkToSingle
-                        }
-                        useCacheHash = 1
-                      }
-                    }
-                    wrap = <p>|</p>
+                    stdWrap.parseFunc < lib.parseFunc_RTE
                   }
                   wrap = <div class="tx_route-cat-icon">|</div>
                 }
