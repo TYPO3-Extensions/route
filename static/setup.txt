@@ -877,17 +877,36 @@ plugin.tx_browser_pi1 {
         htmlSnippets =
         htmlSnippets {
           subparts {
-            listview = TEXT
-            listview {
+            singleview = TEXT
+            singleview {
               value (
-                <div id="c###TT_CONTENT.UID###-listview-###MODE###" class="###VIEW###view ###VIEW###view-content ###VIEW###view-###MODE### ###VIEW###view-content-###MODE###">
-                  <!-- ###LISTBODY### begin --><!-- ###LISTBODYITEM### begin -->
-                  <div class="sbmFloatRight">
-                    ###SOCIALMEDIA_BOOKMARKS###
-                  </div>
+<!-- ###AREA_FOR_AJAX_LIST_01### begin -->
+        <div id="c###TT_CONTENT.UID###-singleview-###MODE###" class="singleview singleview-###MODE###">
+          ###RECORD_BROWSER###
+          <div class="ui-widget ui-corner-all">
+            <!-- ###SINGLEBODY### begin -->
+            <h1 class="ui-widget-header ui-corner-top">
+              ###TX_ROUTE_MARKER.TITLE###
+            </h1>
+            <div class="ui-widget-content ui-corner-bottom">
+              <dl style="font-size:.85em;">
+                <!-- ###SINGLEBODYROW### begin -->
                   ###TX_ROUTE_PATH.TITLE###
-                  <div class="cleaner">&nbsp;</div><!-- ###LISTBODYITEM### end --><!-- ###LISTBODY### end -->
-                </div> <!-- /listview -->
+                <!-- ###SINGLEBODYROW### end -->
+              </dl>
+            </div>
+            ###MAP###
+  <!-- ###AREA_FOR_AJAX_LIST_01### end -->
+            <!-- ###BACKBUTTON### begin -->
+            <p class="backbutton">
+              ###BUTTON###
+            </p>
+            <!-- ###BACKBUTTON### end -->
+  <!-- ###AREA_FOR_AJAX_LIST_02### begin -->
+            <!-- ###SINGLEBODY### end -->
+          </div>
+        </div>
+<!-- ###AREA_FOR_AJAX_LIST_02### end -->
 )
             }
           }
