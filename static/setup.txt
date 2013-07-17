@@ -291,6 +291,15 @@ temp.route {
           }
         }
       }
+      imageLinkWrap >
+      imageLinkWrap = 1
+      imageLinkWrap {
+        typolink {
+          parameter     = 8065
+          useCacheHash  = 1
+        }
+        enable = 1
+      }
     }
     stdWrap {
       prefixComment >
@@ -596,7 +605,7 @@ plugin.tx_browser_pi1 {
         orderBy   < temp.route.sql.orderBy
         csvLinkToSingleView = tx_route_path.title
         tx_route_path {
-            // route image, route title, marker title
+            // route image, route title, route cat image, route list short, link to single view
           title = COA
           title {
               // route image
@@ -656,7 +665,6 @@ plugin.tx_browser_pi1 {
                     de = Mehr Informationen &raquo;
                     en = In detail &raquo;
                   }
-                    // parameter, useCacheHash
                   typolink {
                     parameter {
                         // URL: page id, page type, parameters
