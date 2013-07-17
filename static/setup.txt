@@ -668,6 +668,7 @@ plugin.tx_browser_pi1 {
                   }
                 }
               }
+              maxWInText = {$plugin.tx_route.images.list.maxWidth}
               textPos >
               textPos = {$plugin.tx_route.images.list.position} 
               layout {
@@ -1128,16 +1129,12 @@ page {
     }
     meta {
       description {
-        field = tx_route_path.seo_description
-        ifEmpty {
-          data = register:browser_description
-        }
+        field >
+        data = register:browser_description
       }
       keywords {
-        field = tx_route_path.seo_keywords
-        ifEmpty {
-          data = register:browser_keywords
-        }
+        field >
+        data = register:browser_keywords
       }
     }
   }
