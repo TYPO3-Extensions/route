@@ -392,6 +392,9 @@ temp.route {
       tx_route_path.image_effects       AS 'tx_route_path.image_effects',
       tx_route_path.image_compression   AS 'tx_route_path.image_compression',
       tx_route_path.image_frames        AS 'tx_route_path.image_frames',
+      tx_route_path.address_start       AS 'tx_route_path.address_start',
+      tx_route_path.address_end         AS 'tx_route_path.address_end',
+      tx_route_path.url                 AS 'tx_route_path.url',
       tx_route_path.uid                 AS 'tx_route_path.uid',
       tx_route_path_cat.title           AS 'tx_route_path_cat.title',
       tx_route_path_cat.icons           AS 'tx_route_path_cat.icons',
@@ -872,32 +875,102 @@ plugin.tx_browser_pi1 {
                       imageLinkWrap >
                     }
                   }
-                    // route short
-                  20 = TEXT
+                    // route short, route bodytext
+                  20 = COA
                   20 {
-                    field     = tx_route_path.short
-                    required  = 1
-                    stdWrap {
-                      parseFunc < lib.parseFunc_RTE
+                      // route short
+                    10 = TEXT
+                    10 {
+                      field     = tx_route_path.short
+                      required  = 1
+                      stdWrap {
+                        parseFunc < lib.parseFunc_RTE
+                      }
+                    }
+                      // route bodytext
+                    20 = TEXT
+                    20 {
+                      field     = tx_route_path.bodytext
+                      required  = 1
+                      stdWrap {
+                        parseFunc < lib.parseFunc_RTE
+                      }
                     }
                   }
-                    // route bodytext
-                  30 = TEXT
+                    // address start, address end
+                  30 = COA
                   30 {
-                    field     = tx_route_path.bodytext
-                    required  = 1
-                    stdWrap {
-                      parseFunc < lib.parseFunc_RTE
+                      // address start
+                    10 = COA
+                    10 {
+                      if {
+                        isTrue {
+                          field = tx_route_path.address_start
+                        }
+                      }
+                      10 = TEXT
+                      10 {
+                        value = Starting point
+                        lang {
+                          de = Startpunkt
+                          en = Starting point
+                        }
+                        wrap = <h2>|</h2>
+                      }
+                      20 = TEXT
+                      20 {
+                        if {
+                          isTrue {
+                            field = tx_route_path.address_start
+                          }
+                        }
+                        field     = tx_route_path.address_start
+                        stdWrap {
+                          parseFunc < lib.parseFunc_RTE
+                        }
+                      }
+                    }
+                      // address end
+                    20 = COA
+                    20 {
+                      if {
+                        isTrue {
+                          field = tx_route_path.address_end
+                        }
+                      }
+                      10 = TEXT
+                      10 {
+                        value = Destination
+                        lang {
+                          de = Ziel
+                          en = Destination
+                        }
+                        wrap = <h2>|</h2>
+                      }
+                      20 = TEXT
+                      20 {
+                        if {
+                          isTrue {
+                            field = tx_route_path.address_end
+                          }
+                        }
+                        field     = tx_route_path.address_end
+                        stdWrap {
+                          parseFunc < lib.parseFunc_RTE
+                        }
+                      }
                     }
                   }
-                    // marker title
                   40 = TEXT
                   40 {
-                    field     = tx_route_marker.title
                     required  = 1
-                    noTrimWrap  = |Marker title: ||
-                    XXX_stdWrap {
+                    stdWrap {
                       parseFunc < lib.parseFunc_RTE
+                    }
+                    typolink {
+                      parameter {
+                        field = tx_route_path.url
+                      }
                     }
                   }
                   wrap = <div class="tx_route-cat-icon">|</div>
