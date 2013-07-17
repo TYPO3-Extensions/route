@@ -407,27 +407,43 @@ plugin.tx_browser_pi1 {
         joins     < temp.route.sql.joins
         aliases   < temp.route.sql.aliases
         orderBy   < temp.route.sql.orderBy
-        //tx_route_path =
         tx_route_path {
-          image < temp.route.image_47
-          image {
-              // Display one image only
-            imgMax    = 1
-              // Display the first image
-            imgStart  = 0
-            1 {
-              file {
-                width   >
-                width   = {$plugin.tx_route.images.list.maxWidth} 
-                height  >
-                height  = {$plugin.tx_route.images.list.maxHeight} 
+            // route image, route title, marker title
+          title = COA
+          title {
+              // route image
+            20 < temp.route.image_47
+            20 {
+                // Display one image only
+              imgMax    = 1
+                // Display the first image
+              imgStart  = 0
+              1 {
+                file {
+                  width   >
+                  width   = {$plugin.tx_route.images.list.maxWidth} 
+                  height  >
+                  height  = {$plugin.tx_route.images.list.maxHeight} 
+                }
+              }
+              textPos >
+              textPos = {$plugin.tx_route.images.list.position} 
+              layout {
+                key >
+                key = {$plugin.tx_route.images.list.position} 
               }
             }
-            textPos >
-            textPos = {$plugin.tx_route.images.list.position} 
-            layout {
-              key >
-              key = {$plugin.tx_route.images.list.position} 
+              // route title
+            30 = TEXT
+            30 {
+              field = tx_route_path.title
+              wrap = <h2>|</h2>
+            }
+              // marker title
+            40 = TEXT
+            40 {
+              field = tx_route_marker.title
+              wrap = <p>|</p>
             }
           }
         }
@@ -443,12 +459,6 @@ plugin.tx_browser_pi1 {
                     ###SOCIALMEDIA_BOOKMARKS###
                   </div>
                   ###TX_ROUTE_PATH.IMAGE###
-                  <h2>
-                    ###TX_ROUTE_PATH.TITLE###
-                  </h2>
-                  <p>
-                    ###TX_ROUTE_MARKER.TITLE###
-                  </p>
                   <div class="cleaner">&nbsp;</div><!-- ###LISTBODYITEM### end --><!-- ###LISTBODY### end -->
                 </div> <!-- /listview -->
 )
