@@ -341,18 +341,27 @@ temp.route {
 temp.route {
   route_cat_image_47 < tt_content.image.20
   route_cat_image_47 {
+      // Display one image only
+    imgMax    = 1
+    layout {
+      key >
+      key = default
+      default {
+        value = ###IMAGS###
+      }
+    }
     imgList {
       field = tx_route_path_cat.icons
     }
     imgPath = {$plugin.tx_route.path.uploadfolder}
     1 {
       file {
-        width {
-          field = tx_route_path.imagewidth
-        }
-        height {
-          field = tx_route_path.imageheight
-        }
+        width   >
+        width   = {$plugin.tx_route.images.list.maxWidth} 
+        height  >
+        height  = {$plugin.tx_route.images.list.maxHeight} 
+        width   >
+        height  >
       }
       imageLinkWrap {
         ifEmpty {
@@ -382,102 +391,8 @@ temp.route {
         }
       }
     }
-    textPos.field           = tx_route_path.imageorient
-    equalH.field            = tx_route_path.imageheight
-    image_compression.field = tx_route_path.image_compression
-    image_effects.field     = tx_route_path.image_effects
-    noRows.field            = tx_route_path.image_norows
-    cols.field              = tx_route_path.imagecols
-    border.field            = tx_route_path.image_frames
-    caption.1.1.field       = tx_route_path.imagecaption
-    captionAlign.field      = tx_route_path.imagecaption_position
-    layout {
-      key {
-        field = tx_route_path.imageorient
-      }
-    }
     stdWrap {
-      //prefixComment >
-    }
-      // #43936
-    rendering {
-      singleNoCaption {
-        allStdWrap {
-          innerWrap {
-            cObject {
-              key {
-                field = tx_route_path.imageorient
-              }
-            }
-          }
-        }
-        fallbackRendering {
-          10 {
-            if {
-              isTrue {
-                field = tx_route_path.imagecaption
-              }
-            }
-          }
-          20 {
-            if {
-              isTrue {
-                field = tx_route_path.imagecaption
-              }
-            }
-          }
-          30 {
-            if {
-              isTrue {
-                field = tx_route_path.imagecaption
-              }
-            }
-          }
-          40 {
-            if {
-              isFalse {
-                field = tx_route_path.imagecaption
-              }
-            }
-          }
-        }
-      }
-      noCaption {
-        fallbackRendering {
-          if {
-            isTrue {
-              field = tx_route_path.imagecaption
-            }
-          }
-        }
-      }
-      singleCaption {
-        fallbackRendering {
-          if {
-            isTrue {
-              field = tx_route_path.imagecaption
-            }
-          }
-        }
-      }
-      splitCaption {
-        fallbackRendering {
-          if {
-            isTrue {
-              field = tx_route_path.imagecaption
-            }
-          }
-        }
-      }
-      globalCaption {
-        fallbackRendering {
-          if {
-            isTrue {
-              field = tx_route_path.imagecaption
-            }
-          }
-        }
-      }
+      prefixComment >
     }
   }
 }
@@ -565,26 +480,6 @@ plugin.tx_browser_pi1 {
           title {
               // route image
             10 < temp.route.route_cat_image_47
-            10 {
-                // Display one image only
-              imgMax    = 1
-                // Display the first image
-              imgStart  = 0
-              1 {
-                file {
-                  width   >
-                  width   = {$plugin.tx_route.images.list.maxWidth} 
-                  height  >
-                  height  = {$plugin.tx_route.images.list.maxHeight} 
-                }
-              }
-              textPos >
-              textPos = {$plugin.tx_route.images.list.position} 
-              layout {
-                key >
-                key = {$plugin.tx_route.images.list.position} 
-              }
-            }
               // route image
             20 < temp.route.route_image_47
             20 {
