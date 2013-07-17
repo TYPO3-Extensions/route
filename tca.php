@@ -1483,8 +1483,8 @@ $TCA['tx_route_marker'] = array (
           'hidden,' .
           '--palette--;LLL:EXT:route/locallang_db.xml:palette.time;time,' .
           'fe_group,'.
-        '--div--;LLL:EXT:route/locallang_db.xml:tx_route_marker.div_seo,' . 
-          'seo_keywords,seo_description' .
+//        '--div--;LLL:EXT:route/locallang_db.xml:tx_route_marker.div_seo,' . 
+//          'seo_keywords,seo_description' .
         '',
       ),
   ),
