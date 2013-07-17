@@ -616,14 +616,6 @@ plugin.tx_browser_pi1 {
               }
               text = COA
               text {
-                20 = TEXT
-                20 {
-                  value (
-                  <div class="sbmFloatRight">
-                    ###SOCIALMEDIA_BOOKMARKS###
-                  </div>
-)
-                }
                   // route list_title or title, if list_title is empty
                 30 = TEXT
                 30 {
@@ -683,6 +675,9 @@ plugin.tx_browser_pi1 {
               value (
                 <div id="c###TT_CONTENT.UID###-listview-###MODE###" class="###VIEW###view ###VIEW###view-content ###VIEW###view-###MODE### ###VIEW###view-content-###MODE###">
                   <!-- ###LISTBODY### begin --><!-- ###LISTBODYITEM### begin -->
+                  <div class="sbmFloatRight">
+                    ###SOCIALMEDIA_BOOKMARKS###
+                  </div>
                   ###TX_ROUTE_PATH.TITLE###
                   <!-- ###LISTBODYITEM### end --><!-- ###LISTBODY### end -->
                 </div> <!-- /listview -->

@@ -6,15 +6,22 @@ div.xxcsc-textpic-intext-right-nowrap {
   float:right;
   padding-left:1em;
 }
-DIV.xxcsc-textpic DIV.csc-textpic-single-image IMG {
-  margin: 0;
+DIV.csc-textpic DIV.csc-textpic-single-image IMG {
+  margin-bottom: 0;
+}
+DIV.csc-textpic-clear {
+  padding-bottom: 1em;
 }
 
-div.listview-47677 div.list_short-wi_left_img div.csc-textpic-single-image {
+div.listview-47677 div.list_short-wi_left_img DIV.csc-textpic-imagewrap {
+  clear:none;
+}
+
+div.xxxlistview-47677 div.list_short-wi_left_img div.csc-textpic-single-image {
   float:left;
   padding-right:1em;
 }
-div.listview-47677 div.list_short-wi_right_img div.csc-textpic-single-image {
+div.xxxlistview-47677 div.list_short-wi_right_img div.csc-textpic-single-image {
   float:right;
   padding-left:1em;
 }
@@ -23,3 +30,4 @@ div.listview-47677 div.list_short-wi_right_img div.csc-textpic-single-image {
   float:right;
   padding-left:1em;
 }
+
