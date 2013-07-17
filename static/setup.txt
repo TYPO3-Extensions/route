@@ -820,16 +820,20 @@ plugin.tx_browser_pi1 {
                   20 {
                     10 = TEXT
                     10 {
-                      field     = tx_route_path.short
-                      noTrimWrap = ||<br />|
+                      field = tx_route_path.short
                     }
                     20 = TEXT
                     20 {
-                      field     = tx_route_path.short
+                      field = tx_route_path.short
                       override {
                         field = tx_route_path.bodytext
                       }
                       noTrimWrap = || |
+                    }
+                    20 >
+                    20 = TEXT
+                    20 {
+                      field = tx_route_path.bodytext
                     }
                     stdWrap.parseFunc < lib.parseFunc_RTE
                   }
