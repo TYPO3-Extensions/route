@@ -566,13 +566,20 @@ plugin.tx_browser_pi1 {
                 // route cat image
               10 < temp.route.route_cat_image_47
                 // route list_short or short, if list_short is empty
-              40 = TEXT
-              40 {
-                field     = tx_route_path.short
-                override {
-                  field = tx_route_path.list_short
+              20 = COA
+              20 {
+                10 < plugin.tx_browser_pi1.displayList.master_templates.map.descriptionWiLinkToSingle.30
+                10 {
+                  if >
                 }
-                wrap = <p>|</p>
+                20 = TEXT
+                20 {
+                  field     = tx_route_path.short
+                  override {
+                    field = tx_route_path.list_short
+                  }
+                  wrap = <p>|</p>
+                }
               }
               wrap = <div class="list_short-wi_left_img">|</div>
             }
