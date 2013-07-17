@@ -79,7 +79,7 @@
       <label index="tx_route_marker.title">Marker (POI) label</label>                        
       <label index="tx_route_marker.tx_route_category">Category</label>                        
       <label index="tx_route_marker.tx_route_path">Paths (one path maximum)</label>      
-      <label index="tx_route_marker.url">URL (of another Website)</label>
+      <label index="tx_route_marker.url">URL (with further information)</label>
       <label index="wizard.add">Add a record</label>
       <label index="wizard.edit">Edit the selected recorded</label>
       <label index="wizard.list">Display all records</label>
@@ -157,7 +157,7 @@
       <label index="tx_route_marker.title">Bezeichnung der Marke (POI)</label>                        
       <label index="tx_route_marker.tx_route_category">Kategorie</label>
       <label index="tx_route_marker.tx_route_path">Pfade (maximal einen Pfad)</label>      
-      <label index="tx_route_marker.url">URL (einer anderen Website)</label>
+      <label index="tx_route_marker.url">URL (mit weiteren Informationen)</label>
       <label index="wizard.add">Neuen Datensatz erstellen</label>
       <label index="wizard.edit">Markierten Datensatz bearbeiten</label>
       <label index="wizard.list">Alle Datens<![CDATA[&auml;]]>tze anzeigen</label>
