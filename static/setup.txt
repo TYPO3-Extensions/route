@@ -268,10 +268,9 @@ temp.route {
               30 {
                 value = tx_route_marker.title
               }
-              40 = IMAGE
+              40 = TEXT
               40 {
-                file = EXT:org/res/download.gif
-                htmlSpecialChars = 1
+                value = typo3conf/ext/org/res/download.gif
                 imageLinkWrap = 0
                 imageLinkWrap {
                   enable = 1
@@ -292,6 +291,8 @@ temp.route {
                 }
               }
             }
+            description >
+            description < plugin.tx_browser_pi1.displayList.master_templates.map.descriptionWiLinkToSingle
           }
         }
       }
