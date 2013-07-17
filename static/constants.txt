@@ -45,7 +45,7 @@ plugin.tx_browser_pi1 {
     icon {
       listNum {
         categoryIconMap   = 1
-        categoryIconText  = 2
+        categoryIconText  = 0
       }
     }
     marker {

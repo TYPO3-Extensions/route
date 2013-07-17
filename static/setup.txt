@@ -343,6 +343,7 @@ temp.route {
   route_cat_image_47 {
       // Display one image only
     imgMax    = 1
+    imgStart  = {$plugin.tx_browser_pi1.map.icon.listNum.categoryIconText}
     layout {
       key >
       key = default
