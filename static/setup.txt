@@ -3,9 +3,8 @@
   //
   // INDEX
 
-  // temp.route
-  //    navigation
-  //    sql
+  // temp.route: navigation
+  // temp.route: sql
   // temp.route: route_image_47
   // temp.route: route_cat_image_47
   // config
@@ -16,7 +15,7 @@
 
   ////////////////////////////////////////
   //
-  // temp.route: navigation, sql
+  // temp.route: navigation
 
 temp.route {
   navigation {
@@ -37,9 +36,32 @@ temp.route {
             }
           }
         }
+        variables {
+          system {
+            description >
+            description = COA
+            description {
+              10 = TEXT
+              10 {
+                field = tx_route_marker.title
+              }
+              20 < temp.route.route_image_47
+            }
+          }
+        }
       }
     }
   }
+}
+  // temp.route: navigation
+
+
+
+  ////////////////////////////////////////
+  //
+  // temp.route: sql
+
+temp.route {
   sql {
     select (
       tx_route_path.title               AS 'tx_route_path.title',
