@@ -919,11 +919,6 @@ plugin.tx_browser_pi1 {
                       }
                       20 = TEXT
                       20 {
-                        if {
-                          isTrue {
-                            field = tx_route_path.address_start
-                          }
-                        }
                         field     = tx_route_path.address_start
                         stdWrap {
                           parseFunc < lib.parseFunc_RTE
@@ -949,12 +944,7 @@ plugin.tx_browser_pi1 {
                       }
                       20 = TEXT
                       20 {
-                        if {
-                          isTrue {
-                            field = tx_route_path.address_end
-                          }
-                        }
-                        field     = tx_route_path.address_end
+                        field = tx_route_path.address_end
                         stdWrap {
                           parseFunc < lib.parseFunc_RTE
                         }
@@ -963,9 +953,26 @@ plugin.tx_browser_pi1 {
                   }
                   40 = TEXT
                   40 {
-                    typolink {
-                      parameter {
-                        data = field:tx_route_path.url
+                    if {
+                      isTrue {
+                        field = tx_route_path.url
+                      }
+                    }
+                    10 = TEXT
+                    10 {
+                      value = Details
+                      lang {
+                        de = Weitere Informationen
+                        en = Details
+                      }
+                      wrap = <h2>|</h2>
+                    }
+                    20 = TEXT
+                    20 {
+                      typolink {
+                        parameter {
+                          data = field:tx_route_path.url
+                        }
                       }
                     }
                   }
