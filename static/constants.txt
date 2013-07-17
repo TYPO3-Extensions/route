@@ -45,7 +45,7 @@ plugin.tx_browser_pi1 {
     icon {
       listNum {
         categoryIconMap       = 1
-        categoryIconMapSingle = 2
+        categoryIconMapSingle = 2  // No effect, because map uses the list view only!
         categoryIconText      = 0
       }
     }
@@ -173,6 +173,13 @@ plugin.tx_browser_pi1 {
   plugin.tx_browser_pi1 {
     map {
       enabled = Map
+      icon {
+        listNum {
+          categoryIconMap       = 2
+          categoryIconMapSingle = 2  // No effect, because map uses the list view only!
+          categoryIconText      = 2
+        }
+      }
       marker {
         field {
           linktoSingle    = tx_route_path.uid
