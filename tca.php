@@ -33,7 +33,7 @@ if (!defined ('TYPO3_MODE'))  die ('Access denied.');
         'title'        => 'Link',
         'icon'         => 'link_popup.gif',
         'script'       => 'browse_links.php?mode=wizard',
-        'JSopenParams' => $JSopenParams,
+        'JSopenParams' => 'height=800,width=1000,status=0,menubar=0,scrollbars=1',
       ),
     ),
     'softref' => 'typolink',
