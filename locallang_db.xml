@@ -26,7 +26,7 @@
       <label index="tx_route_category.div_path">Paths</label>
       <label index="tx_route_category.div_marker">Marker (POI)</label>
       <label index="tx_route_category.title">Category label</label>
-      <label index="tx_route_category.icons">Icons: 1: legend. 2: map (list view). 3: map (single view)</label>
+      <label index="tx_route_category.icons">Icons: 1: legend. 2: map (list view). 3: map (single view).</label>
       <label index="tx_route_category.icon_offset_x">Move it by x pixel to the right</label>
       <label index="tx_route_category.icon_offset_y">Move it by x pixel to the bottom</label>
       <label index="tx_route_category.tx_route_path">Paths</label>
@@ -105,7 +105,7 @@
       <label index="tx_route_category.div_path">Pfade</label>
       <label index="tx_route_category.div_marker">Marken (POI)</label>
       <label index="tx_route_category.title">Bezeichnung der Kategorie</label>
-      <label index="tx_route_category.icons">Piktogramm: 1: Legende. 2: Karte (Listenansicht). 3: Karte (Detailansicht)</label>
+      <label index="tx_route_category.icons">Piktogramm: 1: Legende. 2: Karte (Listenansicht). 3: Karte (Detailansicht).</label>
       <label index="tx_route_category.icon_offset_x">Um x-Pixel nach rechts verschieben</label>
       <label index="tx_route_category.icon_offset_y">Um x-Pixel nach unten verschieben</label>
       <label index="tx_route_category.tx_route_path">Pfade</label>

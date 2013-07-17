@@ -42,6 +42,11 @@ plugin.tx_route {
 plugin.tx_browser_pi1 {
   map {
     enabled = Map +Routes
+    icon {
+      listNum {
+        categoryIconMap = 1
+      }
+    }
     marker {
       field {
         linktoSingle    = tx_route_marker.uid
