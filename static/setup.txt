@@ -775,6 +775,11 @@ plugin.tx_browser_pi1 {
         marker < plugin.tx_browser_pi1.marker
         marker {
           my_title >
+          my_title = TEXT
+          my_title {
+            value = &nbsp;
+            wrap  = |
+          }
         }
         navigation {
           map < temp.route.navigation.map
