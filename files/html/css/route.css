@@ -1,10 +1,5 @@
-div.xxcsc-textpic-intext-left-nowrap {
-  float:left;
-  padding-right:1em;
-}
-div.xxcsc-textpic-intext-right-nowrap {
-  float:right;
-  padding-left:1em;
+DIV.csc-textpic DIV.csc-textpic-imagewrap UL LI {
+  padding: 0 .3em 0 0;
 }
 DIV.csc-textpic DIV.csc-textpic-single-image IMG {
   margin-bottom: 0;
@@ -13,20 +8,11 @@ DIV.csc-textpic-clear {
   padding-bottom: 1em;
 }
 
-div.listview-47677 div.list_short-wi_left_img DIV.csc-textpic-imagewrap {
+div.listview-47677 div.tx_route-cat-icon DIV.csc-textpic-imagewrap {
   clear:none;
 }
 
-div.xxxlistview-47677 div.list_short-wi_left_img div.csc-textpic-single-image {
-  float:left;
-  padding-right:1em;
-}
-div.xxxlistview-47677 div.list_short-wi_right_img div.csc-textpic-single-image {
-  float:right;
-  padding-left:1em;
-}
-
-.sbmFloatRight {
+div.sbmFloatRight {
   float:right;
   padding-left:1em;
 }
