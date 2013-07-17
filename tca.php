@@ -397,13 +397,13 @@ $TCA['tx_route_path'] = array (
   'interface' => array (
     'showRecordFieldList' =>  
         'sys_language_uid,l10n_parent,l10n_diffsource,' 
-      . 'title,short,bodytext,' 
+      . 'title,short,bodytext,url,' 
       . 'tx_route_category,icon_lon,icon_lat,' 
       . 'gpxfile, geodata,' 
       . 'color,line_width,' 
       . 'tx_route_marker,' 
       . 'list_title,list_short,map_title,map_short,' 
-      . 'address_start,address_end,url,' 
+      . 'address_start,address_end,' 
       . 'image,imagecaption,imageseo,imagewidth,imageheight,imageorient,imagecaption,imagecols,imageborder,imagecaption_position,image_link,image_zoom,image_noRows,image_effects,image_compression,' 
       . 'hidden,starttime,endtime,fe_group,'
       . 'seo_keywords,seo_description' 
@@ -459,6 +459,12 @@ $TCA['tx_route_path'] = array (
       'l10n_mode' => 'prefixLangTitle',
       'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.bodytext',
       'config'    => $conf_text_rte,
+    ),
+    'url' => array (
+      'exclude'   => 0,
+      'l10n_mode' => 'prefixLangTitle',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.url',
+      'config'    => $arr_wizard_url,
     ),
     'tx_route_category' => array (
       'exclude'   => $bool_exclude_default,
@@ -665,12 +671,6 @@ $TCA['tx_route_path'] = array (
       'l10n_mode' => 'prefixLangTitle',
       'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.address_end',
       'config'    => $conf_text_rte,
-    ),
-    'url' => array (
-      'exclude'   => 0,
-      'l10n_mode' => 'prefixLangTitle',
-      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_path.url',
-      'config'    => $arr_wizard_url,
     ),
     'image' => array (
       'exclude'   => $bool_exclude_default,
@@ -912,6 +912,7 @@ $TCA['tx_route_path'] = array (
           'title,' .
           'short,' .
           'bodytext;;;richtext[]:rte_transform[mode=ts];,' .
+          'url,' .
         '--div--;LLL:EXT:route/locallang_db.xml:tx_route_path.div_gpx,' . 
           'gpxfile,geodata,' .
         '--div--;LLL:EXT:route/locallang_db.xml:tx_route_path.div_cat,' . 
@@ -931,7 +932,6 @@ $TCA['tx_route_path'] = array (
         '--div--;LLL:EXT:route/locallang_db.xml:tx_route_path.div_address,' . 
           'address_start;;;richtext[]:rte_transform[mode=ts];,' .
           'address_end;;;richtext[]:rte_transform[mode=ts];,' .
-          'url,' .
         '--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.images,' .
           '--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.imagefiles;imagefiles,' .
           '--palette--;LLL:EXT:route/locallang_db.xml:palette.image_accessibility;image_accessibility,' .

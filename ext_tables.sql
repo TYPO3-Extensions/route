@@ -136,6 +136,7 @@ CREATE TABLE tx_route_path (
   title tinytext,
   short tinytext,
   bodytext mediumtext NOT NULL,
+  url text NOT NULL,
 
   gpxfile text,
   geodata longtext,
@@ -156,7 +157,6 @@ CREATE TABLE tx_route_path (
 
   address_start mediumtext NOT NULL,
   address_end mediumtext NOT NULL,
-  url text NOT NULL,
 
   image text,
   imagecaption text,

@@ -58,7 +58,7 @@
       <label index="tx_route_path.title">Path label</label>                        
       <label index="tx_route_path.tx_route_category">Category</label>                        
       <label index="tx_route_path.tx_route_marker">Marker (POI)</label>      
-      <label index="tx_route_path.url">URL (of another Website)</label>
+      <label index="tx_route_path.url">URL (with further information)</label>
       <label index="tx_route_marker">Marker (POI)</label>                        
       <label index="tx_route_marker.div_control">Controlling</label>
       <label index="tx_route_marker.div_design">Design</label>
@@ -137,7 +137,7 @@
       <label index="tx_route_path.title">Bezeichnung des Pfads</label>                        
       <label index="tx_route_path.tx_route_category">Kategorie</label>                        
       <label index="tx_route_path.tx_route_marker">Marken (POI)</label>      
-      <label index="tx_route_path.url">URL des Pfads (einer anderen Website)</label>
+      <label index="tx_route_path.url">URL (mit weiteren Informationen)</label>
       <label index="tx_route_marker">Marken (POI)</label>                        
       <label index="tx_route_marker.div_control">Steuerung</label>
       <label index="tx_route_marker.div_paths">Pfade</label>
