@@ -391,6 +391,7 @@ temp.route {
         }
       }
     }
+    renderMethod = simple
     stdWrap {
       prefixComment >
     }
