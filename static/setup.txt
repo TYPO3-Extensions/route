@@ -951,7 +951,7 @@ plugin.tx_browser_pi1 {
                       }
                     }
                   }
-                  40 = TEXT
+                  40 = COA
                   40 {
                     if {
                       isTrue {
