@@ -9,8 +9,10 @@
   // temp.route: navigation
   // temp.route: sql
   // config
+  // plugin.tx_browser_pi1 - SEO
   // plugin.tx_browser_pi1
   // page
+  // page - seo
 
 
 
@@ -516,6 +518,61 @@ config {
 
 
 
+  ////////////////////////////////////////
+  //
+  // plugin.tx_browser_pi1 - SEO
+
+plugin.tx_browser_pi1 {
+
+  general_stdWrap >
+
+  displayList {
+    seo {
+      htmlHead {
+        title = 1
+        meta {
+          description = 1
+          keywords    = 1
+        }
+      }
+    }
+  }
+  displaySingle {
+    seo {
+      htmlHead {
+        title = 1
+        meta {
+          description = 1
+          keywords    = 1
+        }
+      }
+    }
+  }
+  _LOCAL_LANG {
+    default {
+      list_mode_47677             = Routen
+      list_mode_47677_titleTag    = TYPO3 Route - Publish your routes with TYPO3!
+      list_mode_47677_keywords    = TYPO3, Route, BrowserMaps, GoogleMaps, OpenStreetMap
+      list_mode_47677_summary     = TYPO3 Route: Publish your routes with TYPO3! BrowserMaps enables to switch from GoogleMaps to OpenStreetMap by one mouse click.
+      single_mode_47677_titleTag  = TYPO3 Route - ###TX_ROUTE_PATH.TITLE###
+      single_mode_47677_keywords  = TYPO3 Route, ###TX_ROUTE_PATH.TITLE###, GoogleMaps, OpenStreetMap
+      single_mode_47677_summary   = TYPO3 Route - ###TX_ROUTE_PATH.TITLE###. Your routes with GoogleMaps and OpenStreetMap
+    }
+    de {
+      list_mode_47677             = Routen
+      list_mode_47677_titleTag    = TYPO3 Route - Ver&ouml;ffentliche Deine Routen mit TYPO3!
+      list_mode_47677_keywords    = TYPO3, Route, BrowserMaps, GoogleMaps, OpenStreetMap
+      list_mode_47677_summary     = TYPO3 Route: Ver&ouml;ffentliche Deine Routen mit TYPO3! BrowserMaps erm&ouml;glicht Dir die Wahl zwischen GoogleMaps und OpenStreetMap
+      single_mode_47677_titleTag  = TYPO3 Route - ###TX_ROUTE_PATH.TITLE###
+      single_mode_47677_keywords  = TYPO3 Route, ###TX_ROUTE_PATH.TITLE###, GoogleMaps, OpenStreetMap
+      single_mode_47677_summary   = TYPO3 Route - ###TX_ROUTE_PATH.TITLE###. Deine Routen mit GoogleMaps und OpenStreetMap
+    }
+  }
+}
+  // plugin.tx_browser_pi1 - SEO
+
+
+
   ////////////////////////////////////////////////////////////////////////////////
   //
   // plugin.tx_browser_pi1
@@ -966,3 +1023,38 @@ page {
 }
   // page
 
+
+
+  ////////////////////////////////////////
+  //
+  // page - seo
+
+[globalVar = GP:tx_browser_pi1|showUid > 0] || [globalVar = GP:tx_browser_pi1|markerUid > 0] || [globalVar = GP:tx_browser_pi1|routeUid > 0]
+  page {
+    config {
+      noPageTitle = 2
+    }
+    headerData {
+      20 = TEXT
+      20 {
+        data = register:browser_htmlTitleTag
+        ifEmpty {
+          field = title
+          noTrimWrap  = |TYPO3 Route: ||
+        }
+        wrap = <title>|</title>
+      }
+    }
+    meta {
+      description {
+        field >
+        data = register:browser_description
+      }
+      keywords {
+        field >
+        data = register:browser_keywords
+      }
+    }
+  }
+[global]
+  // globals: page / SEO
