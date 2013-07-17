@@ -17,17 +17,19 @@ plugin.tx_browser_pi1 {
     list {
       47677 {
         tx_route_path {
-          image {
-            caption.1.1 >
-            caption.1 {
-              field = tx_route_path.imagecaption
-            }
-            rendering {
-              singleNoCaption >
-              noCaption       >
-              singleCaption   >
-              splitCaption    >
-              globalCaption   >
+          title {
+            20 {
+              caption.1.1 >
+              caption.1 {
+                field = tx_route_path.imagecaption
+              }
+              rendering {
+                singleNoCaption >
+                noCaption       >
+                singleCaption   >
+                splitCaption    >
+                globalCaption   >
+              }
             }
           }
         }
