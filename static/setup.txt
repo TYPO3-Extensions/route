@@ -772,15 +772,6 @@ plugin.tx_browser_pi1 {
       }
       47677 = Route (text only)
       47677 {
-        marker < plugin.tx_browser_pi1.marker
-        marker {
-          my_title >
-          my_title = TEXT
-          my_title {
-            value = &nbsp;
-            wrap  = |
-          }
-        }
         navigation {
           map < temp.route.navigation.map
           map {
@@ -894,9 +885,6 @@ plugin.tx_browser_pi1 {
           ###RECORD_BROWSER###
           <div class="ui-widget ui-corner-all">
             <!-- ###SINGLEBODY### begin -->
-            <h1 class="ui-widget-header ui-corner-top">
-              ###TX_ROUTE_MARKER.TITLE###
-            </h1>
             <div class="ui-widget-content ui-corner-bottom">
               <dl style="font-size:.85em;">
                 <!-- ###SINGLEBODYROW### begin -->
