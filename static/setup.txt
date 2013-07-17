@@ -595,17 +595,17 @@ plugin.tx_browser_pi1 {
                   height  >
                   height  = {$plugin.tx_route.images.list.maxHeight} 
                 }
-              }
-              imageLinkWrap >
-              imageLinkWrap = 1
-              imageLinkWrap {
-                enable = 1
-                typolink {
-                  parameter {
-                      // URL: page id, page type, parameters
-                    cObject < temp.route.route_linkToSingle
+                imageLinkWrap >
+                imageLinkWrap = 1
+                imageLinkWrap {
+                  enable = 1
+                  typolink {
+                    parameter {
+                        // URL: page id, page type, parameters
+                      cObject < temp.route.route_linkToSingle
+                    }
+                    useCacheHash  = 1
                   }
-                  useCacheHash  = 1
                 }
               }
               textPos >
