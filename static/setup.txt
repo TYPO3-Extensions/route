@@ -728,150 +728,17 @@ plugin.tx_browser_pi1 {
             enabled = disabled
           }
         }
-        showUid   = {$plugin.tx_browser_pi1.map.aliases.showUid.path}
-        name      = Route (map only)
-        select    < temp.route.sql.select
-        from      < temp.route.sql.from
-        andWhere  < temp.route.sql.andWhere
-        joins     < temp.route.sql.joins
-        aliases   < temp.route.sql.aliases
-        orderBy   < temp.route.sql.orderBy
-          // table.field.uid: title
-        tx_route_path =
+        select = tx_route_path.title 
         tx_route_path {
             // table.field.uid: title
-          title = COA
+          title = TEXT
           title {
-              // table.field.
-            10 = TEXT
-            10 {
-              value = tx_route_path.title.
+            value = Please don't use the view 47676 in the single view. 47676 is for the list view only!
+            lang {
+              de = Bitte verwende die Ansicht 47676 nicht in der Detailansicht. 47676 ist nur f&uuml;r die Listenansicht konfiguriert.
+              en = Please don't use the view 47676 in the single view. 47676 is for the list view only!
             }
-              // uid
-            20 = TEXT
-            20 {
-              field = tx_route_path.uid
-            }
-            30 = TEXT
-            30 {
-              field = tx_route_path.title
-              noTrimWrap = |: ||
-            }
-          }
-        }
-          // table.field.uid: title
-        tx_route_path_cat =
-        tx_route_path_cat {
-            // table.field.uid: title
-          title = COA
-          title {
-            10 = COA
-            10 {
-                // table.field.
-              10 = TEXT
-              10 {
-                value = tx_route_path_cat.title.
-              }
-                // uid
-              20 = TEXT
-              20 {
-                field = tx_route_path_cat.uid
-              }
-                // title
-              30 = TEXT
-              30 {
-                field = tx_route_path_cat.title
-                noTrimWrap = |: ||
-              }
-              wrap = <li>|</li>
-            }
-            20 = COA
-            20 {
-                // relation
-              40 = TEXT
-              40 {
-                field = PATH:tx_route_path->tx_route_path_cat->listOf.uid
-                noTrimWrap = |tx_route_path.tx_route_path_cat:  ||
-              }
-              wrap = <li>|</li>
-            }
-          }
-        }
-          // table.field.uid: title
-        tx_route_marker =
-        tx_route_marker {
-            // table.field.uid: title
-          title = COA
-          title {
-              // table.field.
-            10 = TEXT
-            10 {
-              value = tx_route_marker.title.
-            }
-              // uid
-            20 = TEXT
-            20 {
-              field = tx_route_marker.uid
-            }
-              // title
-            30 = TEXT
-            30 {
-              field = tx_route_marker.title
-              noTrimWrap = |: ||
-            }
-          }
-        }
-          // table.field.uid: title
-        tx_route_marker_cat =
-        tx_route_marker_cat {
-            // table.field.uid: title
-          title = COA
-          title {
-            10 = COA
-            10 {
-                // table.field.
-              10 = TEXT
-              10 {
-                value = tx_route_marker.title.
-              }
-                // uid
-              20 = TEXT
-              20 {
-                field = tx_route_marker.uid
-              }
-                // pipe
-              30 = TEXT
-              30 {
-                value = |
-              }
-                // table.field.
-              40 = TEXT
-              40 {
-                value = tx_route_marker_cat.title.
-              }
-                // uid
-              50 = TEXT
-              50 {
-                field = tx_route_marker_cat.uid
-              }
-                // title
-              60 = TEXT
-              60 {
-                field = tx_route_marker_cat.title
-                noTrimWrap = |: ||
-              }
-              wrap = <li>|</li>
-            }
-            20 = COA
-            20 {
-                // relation
-              70 = TEXT
-              70 {
-                field = MARKER:tx_route_path->tx_route_marker->tx_route_marker_cat->listOf.uid
-                noTrimWrap = |tx_route_path.tx_route_marker.tx_route_marker_cat:  ||
-              }
-              wrap = <li>|</li>
-            }
+            wrap = <p>|</p>
           }
         }
         htmlSnippets =
@@ -884,8 +751,8 @@ plugin.tx_browser_pi1 {
         <div id="c###TT_CONTENT.UID###-singleview-###MODE###" class="singleview singleview-###MODE###">
           <div class="ui-widget ui-corner-all">
             <!-- ###SINGLEBODY### begin -->
-              ###MAP###
             <!-- ###SINGLEBODYROW### begin -->
+              ###TX_ROUTE_PATH.TITLE###
             <!-- ###SINGLEBODYROW### end -->
   <!-- ###AREA_FOR_AJAX_LIST_01### end -->
             <!-- ###BACKBUTTON### begin -->
@@ -912,175 +779,115 @@ plugin.tx_browser_pi1 {
           }
         }
         showUid   = {$plugin.tx_browser_pi1.map.aliases.showUid.path}
-        name      = Route (map only)
+        name      = Route (text only)
         select    < temp.route.sql.select
         from      < temp.route.sql.from
         andWhere  < temp.route.sql.andWhere
         joins     < temp.route.sql.joins
         aliases   < temp.route.sql.aliases
-        orderBy   < temp.route.sql.orderBy
-          // table.field.uid: title
-        tx_route_path =
+        orderBy   = tx_route_path.list_title, tx_route_path.title, tx_route_path_mm_marker.sorting, tx_route_marker_cat.title
+        csvLinkToSingleView = tx_route_path.title
         tx_route_path {
-            // table.field.uid: title
+            // route image, route title, route cat image, route list short, link to single view
           title = COA
           title {
-              // table.field.
-            10 = TEXT
-            10 {
-              value = tx_route_path.title.
-            }
-              // uid
-            20 = TEXT
+              // route image
+            20 < temp.route.route_image_47
             20 {
-              field = tx_route_path.uid
+                // Display one image only
+              imgMax    = 1
+                // Display the first image
+              imgStart  = 0
+              1 {
+                file {
+                  width   >
+                  width   = {$plugin.tx_route.images.list.maxWidth} 
+                  height  >
+                  height  = {$plugin.tx_route.images.list.maxHeight} 
+                }
+                imageLinkWrap >
+                imageLinkWrap = 1
+                imageLinkWrap {
+                  enable = 1
+                  typolink {
+                    parameter {
+                        // URL: page id, page type, parameters
+                      cObject < temp.route.route_linkToSingle
+                    }
+                    useCacheHash  = 1
+                  }
+                }
+              }
+              textPos >
+              textPos = {$plugin.tx_route.images.list.position} 
+              layout {
+                key >
+                key = {$plugin.tx_route.images.list.position} 
+              }
             }
+              // route list_title or title, if list_title is empty
             30 = TEXT
             30 {
               field = tx_route_path.title
-              noTrimWrap = |: ||
-            }
-          }
-        }
-          // table.field.uid: title
-        tx_route_path_cat =
-        tx_route_path_cat {
-            // table.field.uid: title
-          title = COA
-          title {
-            10 = COA
-            10 {
-                // table.field.
-              10 = TEXT
-              10 {
-                value = tx_route_path_cat.title.
+              override {
+                field = tx_route_path.list_title
               }
-                // uid
-              20 = TEXT
+              wrap = <h2>|</h2>
+            }
+              // route cat image, route list_short, link to single view
+            40 = COA
+            40 {
+                // route cat image
+              10 < temp.route.route_cat_image_47
+                // route list_short or short, if list_short is empty. Link to single view.
+              20 = COA
               20 {
-                field = tx_route_path_cat.uid
+                  // route list_short or short, if list_short is empty
+                10 = TEXT
+                10 {
+                  field     = tx_route_path.short
+                  override {
+                    field = tx_route_path.list_short
+                  }
+                  noTrimWrap = || |
+                }
+                  // link to single view
+                20 = TEXT
+                20 {
+                  value = In detail &raquo;
+                    // de, en
+                  lang {
+                    de = Mehr Informationen &raquo;
+                    en = In detail &raquo;
+                  }
+                  typolink {
+                    parameter {
+                        // URL: page id, page type, parameters
+                      cObject < temp.route.route_linkToSingle
+                    }
+                    useCacheHash = 1
+                  }
+                }
+                wrap = <p>|</p>
               }
-                // title
-              30 = TEXT
-              30 {
-                field = tx_route_path_cat.title
-                noTrimWrap = |: ||
-              }
-              wrap = <li>|</li>
-            }
-            20 = COA
-            20 {
-                // relation
-              40 = TEXT
-              40 {
-                field = PATH:tx_route_path->tx_route_path_cat->listOf.uid
-                noTrimWrap = |tx_route_path.tx_route_path_cat:  ||
-              }
-              wrap = <li>|</li>
-            }
-          }
-        }
-          // table.field.uid: title
-        tx_route_marker =
-        tx_route_marker {
-            // table.field.uid: title
-          title = COA
-          title {
-              // table.field.
-            10 = TEXT
-            10 {
-              value = tx_route_marker.title.
-            }
-              // uid
-            20 = TEXT
-            20 {
-              field = tx_route_marker.uid
-            }
-              // title
-            30 = TEXT
-            30 {
-              field = tx_route_marker.title
-              noTrimWrap = |: ||
-            }
-          }
-        }
-          // table.field.uid: title
-        tx_route_marker_cat =
-        tx_route_marker_cat {
-            // table.field.uid: title
-          title = COA
-          title {
-            10 = COA
-            10 {
-                // table.field.
-              10 = TEXT
-              10 {
-                value = tx_route_marker.title.
-              }
-                // uid
-              20 = TEXT
-              20 {
-                field = tx_route_marker.uid
-              }
-                // pipe
-              30 = TEXT
-              30 {
-                value = |
-              }
-                // table.field.
-              40 = TEXT
-              40 {
-                value = tx_route_marker_cat.title.
-              }
-                // uid
-              50 = TEXT
-              50 {
-                field = tx_route_marker_cat.uid
-              }
-                // title
-              60 = TEXT
-              60 {
-                field = tx_route_marker_cat.title
-                noTrimWrap = |: ||
-              }
-              wrap = <li>|</li>
-            }
-            20 = COA
-            20 {
-                // relation
-              70 = TEXT
-              70 {
-                field = MARKER:tx_route_path->tx_route_marker->tx_route_marker_cat->listOf.uid
-                noTrimWrap = |tx_route_path.tx_route_marker.tx_route_marker_cat:  ||
-              }
-              wrap = <li>|</li>
+              wrap = <div class="list_short-wi_left_img">|</div>
             }
           }
         }
         htmlSnippets =
         htmlSnippets {
           subparts {
-            singleview = TEXT
-            singleview {
+            listview = TEXT
+            listview {
               value (
-<!-- ###AREA_FOR_AJAX_LIST_01### begin -->
-        <div id="c###TT_CONTENT.UID###-singleview-###MODE###" class="singleview singleview-###MODE###">
-          <div class="ui-widget ui-corner-all">
-            <!-- ###SINGLEBODY### begin -->
-              ###MAP###
-            <!-- ###SINGLEBODYROW### begin -->
-            <!-- ###SINGLEBODYROW### end -->
-  <!-- ###AREA_FOR_AJAX_LIST_01### end -->
-            <!-- ###BACKBUTTON### begin -->
-            <p class="backbutton">
-              ###BUTTON###
-            </p>
-            <!-- ###BACKBUTTON### end -->
-  <!-- ###AREA_FOR_AJAX_LIST_02### begin -->
-            <!-- ###SINGLEBODY### end -->
-          </div>
-        </div>
-<!-- ###AREA_FOR_AJAX_LIST_02### end -->
+                <div id="c###TT_CONTENT.UID###-listview-###MODE###" class="###VIEW###view ###VIEW###view-content ###VIEW###view-###MODE### ###VIEW###view-content-###MODE###">
+                  <!-- ###LISTBODY### begin --><!-- ###LISTBODYITEM### begin -->
+                  <div class="sbmFloatRight">
+                    ###SOCIALMEDIA_BOOKMARKS###
+                  </div>
+                  ###TX_ROUTE_PATH.TITLE###
+                  <div class="cleaner">&nbsp;</div><!-- ###LISTBODYITEM### end --><!-- ###LISTBODY### end -->
+                </div> <!-- /listview -->
 )
             }
           }
