@@ -264,45 +264,18 @@ temp.route {
         width   >
         height  >
       }
-      imageLinkWrap {
-        ifEmpty {
-          typolink.parameter.field = tx_route_path.image_link
-        }
-        typolink {
-          parameter {
-            field = tx_route_path.image_link
-          }
-          additionalParams  = &tx_browser_pi1[{$plugin.tx_browser_pi1.map.aliases.showUid.path}]=###TX_ROUTE_PATH.UID###
-          useCacheHash      = 1
-          title             = TEXT
-          title {
-            field = tx_route_path.title
-          }
-        }
-        enable = 1
-        enable {
-          field = tx_route_path.image_zoom
-          ifEmpty {
-            typolink {
-              parameter {
-                field = tx_route_path.image_link
-              }
-            }
-          }
-        }
-      }
       imageLinkWrap >
       imageLinkWrap = 1
       imageLinkWrap {
+        enable = 1
         typolink {
-          parameter     = 8065
+          parameter {
+              // URL: page id, page type, parameters
+            cObject < temp.route.route_linkToSingle
+          }
           useCacheHash  = 1
         }
-        enable = 1
       }
-    }
-    stdWrap {
-      prefixComment >
     }
   }
 }
@@ -621,6 +594,18 @@ plugin.tx_browser_pi1 {
                   width   = {$plugin.tx_route.images.list.maxWidth} 
                   height  >
                   height  = {$plugin.tx_route.images.list.maxHeight} 
+                }
+              }
+              imageLinkWrap >
+              imageLinkWrap = 1
+              imageLinkWrap {
+                enable = 1
+                typolink {
+                  parameter {
+                      // URL: page id, page type, parameters
+                    cObject < temp.route.route_linkToSingle
+                  }
+                  useCacheHash  = 1
                 }
               }
               textPos >
