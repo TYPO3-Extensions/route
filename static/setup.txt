@@ -826,7 +826,7 @@ plugin.tx_browser_pi1 {
         de = &laquo; Zur&uuml;ck
         en = &laquo; Back
       }
-      wrap = <a class="backbutton" href="javascript:history.back()">|</a>
+      wrap = <a class="my_backbutton" href="javascript:history.back()">|</a>
     }
   }
 
@@ -1068,7 +1068,7 @@ plugin.tx_browser_pi1 {
             <!-- ###SINGLEBODYROW### end -->
   <!-- ###AREA_FOR_AJAX_LIST_01### end -->
             <!-- ###BACKBUTTON### begin -->
-            <p class="backbutton">
+            <p class="my_backbutton">
               ###MY_BACKBUTTON###
             </p>
             <!-- ###BACKBUTTON### end -->
@@ -1251,7 +1251,7 @@ plugin.tx_browser_pi1 {
             </div>
   <!-- ###AREA_FOR_AJAX_LIST_01### end -->
             <!-- ###BACKBUTTON### begin -->
-            <p class="backbutton">
+            <p class="my_backbutton">
               ###MY_BACKBUTTON###
             </p>
             <!-- ###BACKBUTTON### end -->
@@ -1427,7 +1427,7 @@ plugin.tx_browser_pi1 {
             </div>
   <!-- ###AREA_FOR_AJAX_LIST_01### end -->
             <!-- ###BACKBUTTON### begin -->
-            <p class="backbutton">
+            <p class="my_backbutton">
               ###MY_BACKBUTTON###
             </p>
             <!-- ###BACKBUTTON### end -->

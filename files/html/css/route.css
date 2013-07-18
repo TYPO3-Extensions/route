@@ -1,3 +1,4 @@
+
 DIV.csc-textpic DIV.csc-textpic-imagewrap UL LI {
   padding: 0 .3em 0 0;
 }
@@ -28,3 +29,6 @@ div.sbmFloatRight {
   padding-left:1em;
 }
 
+p.tx_route-backbutton {
+  text-align: right;
+}
