@@ -1375,6 +1375,7 @@ plugin.tx_browser_pi1 {
         navigation {
           map < temp.route.navigation.map
           map {
+            enabled = Map
             marker {
               variables {
                 system {
