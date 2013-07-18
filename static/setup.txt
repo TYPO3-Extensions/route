@@ -6,6 +6,8 @@
   // temp.route: route linkToSingle
   // temp.route: route_image_47
   // temp.route: route_cat_image_47
+  // temp.route: marker_image_47
+  // temp.route: marker_cat_image_47
   // temp.route: navigation
   // temp.route: sql
   // config
@@ -282,6 +284,206 @@ temp.route {
   }
 }
   // temp.route: route_cat_image_47
+
+
+
+  ////////////////////////////////////////
+  //
+  // temp.route: marker_image_47
+
+temp.route {
+  marker_image_47 < tt_content.image.20
+  marker_image_47 {
+    imgList {
+      field = tx_route_marker.image
+    }
+    imgPath = {$plugin.tx_route.path.uploadfolder}
+    1 {
+      file {
+        width {
+          field = tx_route_marker.imagewidth
+        }
+        height {
+          field = tx_route_marker.imageheight
+        }
+      }
+      imageLinkWrap {
+        ifEmpty {
+          typolink.parameter.field = tx_route_marker.image_link
+        }
+        typolink {
+          parameter {
+            field = tx_route_marker.image_link
+          }
+          additionalParams  = &tx_browser_pi1[{$plugin.tx_browser_pi1.map.aliases.showUid.marker}]=###TX_ROUTE_PATH.UID###
+          useCacheHash      = 1
+          title             = TEXT
+          title {
+            field = tx_route_marker.title
+          }
+        }
+        enable = 1
+        enable {
+          field = tx_route_marker.image_zoom
+          ifEmpty {
+            typolink {
+              parameter {
+                field = tx_route_marker.image_link
+              }
+            }
+          }
+        }
+      }
+    }
+    textPos.field           = tx_route_marker.imageorient
+    equalH.field            = tx_route_marker.imageheight
+    image_compression.field = tx_route_marker.image_compression
+    image_effects.field     = tx_route_marker.image_effects
+    noRows.field            = tx_route_marker.image_norows
+    cols.field              = tx_route_marker.imagecols
+    border.field            = tx_route_marker.image_frames
+    caption.1.1.field       = tx_route_marker.imagecaption
+    captionAlign.field      = tx_route_marker.imagecaption_position
+    layout {
+      key {
+        field = tx_route_marker.imageorient
+      }
+    }
+    stdWrap {
+      //prefixComment >
+    }
+      // #43936
+    rendering {
+      singleNoCaption {
+        allStdWrap {
+          innerWrap {
+            cObject {
+              key {
+                field = tx_route_marker.imageorient
+              }
+            }
+          }
+        }
+        fallbackRendering {
+          10 {
+            if {
+              isTrue {
+                field = tx_route_marker.imagecaption
+              }
+            }
+          }
+          20 {
+            if {
+              isTrue {
+                field = tx_route_marker.imagecaption
+              }
+            }
+          }
+          30 {
+            if {
+              isTrue {
+                field = tx_route_marker.imagecaption
+              }
+            }
+          }
+          40 {
+            if {
+              isFalse {
+                field = tx_route_marker.imagecaption
+              }
+            }
+          }
+        }
+      }
+      noCaption {
+        fallbackRendering {
+          if {
+            isTrue {
+              field = tx_route_marker.imagecaption
+            }
+          }
+        }
+      }
+      singleCaption {
+        fallbackRendering {
+          if {
+            isTrue {
+              field = tx_route_marker.imagecaption
+            }
+          }
+        }
+      }
+      splitCaption {
+        fallbackRendering {
+          if {
+            isTrue {
+              field = tx_route_marker.imagecaption
+            }
+          }
+        }
+      }
+      globalCaption {
+        fallbackRendering {
+          if {
+            isTrue {
+              field = tx_route_marker.imagecaption
+            }
+          }
+        }
+      }
+    }
+  }
+}
+  // temp.route: marker_image_47
+
+
+
+  ////////////////////////////////////////
+  //
+  // temp.route: marker_cat_image_47
+
+temp.route {
+  marker_cat_image_47 < tt_content.image.20
+  marker_cat_image_47 {
+      // Display one image only
+    imgMax    = 1
+    imgStart  = {$plugin.tx_browser_pi1.map.icon.listNum.categoryIconText}
+    layout {
+      key >
+      key = default
+      default {
+        value = ###IMAGES###
+      }
+    }
+    imgList {
+      field = tx_route_marker_cat.icons
+    }
+    imgPath = {$plugin.tx_route.path.uploadfolder}
+    1 {
+      file {
+        width   >
+        width   = {$plugin.tx_route.images.list.maxWidth} 
+        height  >
+        height  = {$plugin.tx_route.images.list.maxHeight} 
+        width   >
+        height  >
+      }
+      imageLinkWrap >
+      imageLinkWrap = 1
+      imageLinkWrap {
+        enable = 1
+        typolink {
+          parameter {
+              // URL: page id, page type, parameters
+            cObject < temp.route.route_linkToSingle
+          }
+          useCacheHash  = 1
+        }
+      }
+    }
+  }
+}
+  // temp.route: marker_cat_image_47
 
 
 
@@ -852,7 +1054,6 @@ plugin.tx_browser_pi1 {
         joins     < temp.route.sql.joins
         aliases   < temp.route.sql.aliases
         orderBy   = tx_route_path.list_title, tx_route_path.title, tx_route_path_mm_marker.sorting, tx_route_marker_cat.title
-        csvLinkToSingleView = tx_route_path.title
         tx_route_path {
             // route image, route title, route cat image, route list short, link to single view
           title = COA
@@ -998,6 +1199,9 @@ plugin.tx_browser_pi1 {
             <!-- ###SINGLEBODY### begin -->
             <div class="ui-widget-content ui-corner-bottom">
               <!-- ###SINGLEBODYROW### begin -->
+                <div class="sbmFloatRight">
+                  ###SOCIALMEDIA_BOOKMARKS###
+                </div>
                 ###TX_ROUTE_PATH.TITLE###
               <!-- ###SINGLEBODYROW### end -->
             </div>
@@ -1023,10 +1227,29 @@ plugin.tx_browser_pi1 {
         name    = Marker (single only)
         select (
           tx_route_marker.title,
+          tx_route_marker.short,
+          tx_route_marker.bodytext,
+          tx_route_marker.url,
           tx_route_marker.lat,
           tx_route_marker.lon,
           tx_route_marker.image,
           tx_route_marker.uid,
+          tx_route_marker.image,
+          tx_route_marker.imagecaption,
+          tx_route_marker.imageseo,
+          tx_route_marker.imageheight,
+          tx_route_marker.imagewidth,
+          tx_route_marker.imageorient,
+          tx_route_marker.imagecaption,
+          tx_route_marker.imagecols,
+          tx_route_marker.imageborder,
+          tx_route_marker.imagecaption_position,
+          tx_route_marker.image_link,
+          tx_route_marker.image_zoom,
+          tx_route_marker.image_noRows,
+          tx_route_marker.image_effects,
+          tx_route_marker.image_compression,
+          tx_route_marker.image_frames,
           tx_route_category.title,
           tx_route_category.icons,
           tx_route_category.icon_offset_x,
@@ -1035,6 +1258,109 @@ plugin.tx_browser_pi1 {
           tx_route_path.title,
           tx_route_path.uid,
         )
+        tx_route_marker {
+            // route image, route title, route cat image, route list short, link to single view
+          title = COA
+          title {
+              // route image
+            20 < temp.route.marker_image_47
+            20 {
+              text = COA
+              text {
+                  // route list_title or title, if list_title is empty
+                30 = TEXT
+                30 {
+                  field = tx_route_marker.title
+                  wrap = <h1>|</h1>
+                }
+                  // route cat image, route list_short, link to single view
+                40 = COA
+                40 {
+                    // route cat image
+                  10 < temp.route.route_cat_image_47
+                  10 {
+                    1 {
+                      imageLinkWrap >
+                    }
+                  }
+                    // route short, route bodytext
+                  20 = COA
+                  20 {
+                      // route short
+                    10 = TEXT
+                    10 {
+                      field     = tx_route_marker.short
+                      required  = 1
+                      stdWrap {
+                        parseFunc < lib.parseFunc_RTE
+                      }
+                    }
+                      // route bodytext
+                    20 = TEXT
+                    20 {
+                      field     = tx_route_marker.bodytext
+                      required  = 1
+                      stdWrap {
+                        parseFunc < lib.parseFunc_RTE
+                      }
+                    }
+                  }
+                    // address
+                  30 = COA
+                  30 {
+                    if {
+                      isTrue {
+                        field = tx_route_marker.address
+                      }
+                    }
+                    10 = TEXT
+                    10 {
+                      value = Address
+                      lang {
+                        de = Adresse
+                        en = Address
+                      }
+                      wrap = <h2>|</h2>
+                    }
+                    20 = TEXT
+                    20 {
+                      field     = tx_route_marker.address
+                      stdWrap {
+                        parseFunc < lib.parseFunc_RTE
+                      }
+                    }
+                  }
+                  40 = COA
+                  40 {
+                    if {
+                      isTrue {
+                        field = tx_route_marker.url
+                      }
+                    }
+                    10 = TEXT
+                    10 {
+                      value = Details
+                      lang {
+                        de = Weitere Informationen
+                        en = Details
+                      }
+                      wrap = <h2>|</h2>
+                    }
+                    20 = TEXT
+                    20 {
+                      typolink {
+                        parameter {
+                          data = field:tx_route_marker.url
+                        }
+                      }
+                    }
+                  }
+                  wrap = <div class="tx_route-cat-icon">|</div>
+                }
+              }
+            }
+          }
+        }
         htmlSnippets =
         htmlSnippets {
           subparts {
@@ -1046,25 +1372,14 @@ plugin.tx_browser_pi1 {
           ###RECORD_BROWSER###
           <div class="ui-widget ui-corner-all">
             <!-- ###SINGLEBODY### begin -->
-            <h1 class="ui-widget-header ui-corner-top">
-              ###TX_ROUTE_MARKER.TITLE###
-            </h1>
             <div class="ui-widget-content ui-corner-bottom">
-              <dl style="font-size:.85em;">
-                <!-- ###SINGLEBODYROW### begin -->
+              <!-- ###SINGLEBODYROW### begin -->
                 <div class="sbmFloatRight">
                   ###SOCIALMEDIA_BOOKMARKS###
                 </div>
-                <ul>
-                  ###TX_ROUTE_PATH.TITLE###
-                </ul>
-                <ul>
-                  ###TX_ROUTE_CATEGORY.TITLE###
-                </ul>
-                <!-- ###SINGLEBODYROW### end -->
-              </dl>
+                ###TX_ROUTE_MARKER.TITLE###
+              <!-- ###SINGLEBODYROW### end -->
             </div>
-            ###MAP###
   <!-- ###AREA_FOR_AJAX_LIST_01### end -->
             <!-- ###BACKBUTTON### begin -->
             <p class="backbutton">
