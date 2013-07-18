@@ -257,8 +257,8 @@ temp.route {
       file {
         width   >
         height  >
-        width   = 20
-        height  = 20c
+        width   = {$plugin.tx_route.images.map.maxWidth}
+        height  = {$plugin.tx_route.images.map.maxHeight}
       }
       imageLinkWrap >
     }
@@ -266,7 +266,7 @@ temp.route {
       key >
       key = 26
     }
-    maxWInText  = 20
+    maxWInText  = {$plugin.tx_route.images.map.maxWidth}
     imgMax      = 1
     imgStart    = 0
   }
