@@ -840,7 +840,7 @@ plugin.tx_browser_pi1 {
               variables {
                 system {
                   description >
-                  description < temp.route.route_image_simple_47route_image_47
+                  description < temp.route.route_image_simple_47
                 }
               }
             }
