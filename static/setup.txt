@@ -248,6 +248,39 @@ temp.route {
 
   ////////////////////////////////////////
   //
+  // temp.route: route_image_simple_47
+
+temp.route {
+  route_image_simple_47 < temp.route.route_image_47
+  route_image_simple_47 {
+      // Display one image only
+    imgMax    = 1
+    imgStart  = 0
+    layout {
+      key >
+      key = default
+      default {
+        value = ###IMAGES###
+      }
+    }
+    1 {
+      file {
+        width   >
+        height  >
+        width   = 20
+        height  = 20c
+      }
+      imageLinkWrap >
+      }
+    }
+  }
+}
+  // temp.route: route_cat_image_47
+
+
+
+  ////////////////////////////////////////
+  //
   // temp.route: route_cat_image_47
 
 temp.route {
@@ -807,10 +840,7 @@ plugin.tx_browser_pi1 {
               variables {
                 system {
                   description >
-                  description < temp.route.route_image_47
-                  description {
-                    1.imageLinkWrap = 0
-                  }
+                  description < temp.route.route_image_simple_47route_image_47
                 }
               }
             }
