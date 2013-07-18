@@ -21,7 +21,7 @@ plugin.tx_route {
   images.list.maxHeight = 60c 
   # cat=Route - Images//102;          type=string;      label= Max width in list view: Max width of images in list views
   images.list.maxWidth  = 100
-  # cat=Route - Images//200;          type=options[17,18,25,26];  label= Position in pop ups: 17: In text right. 18: In text left. 25: Right beside the text. 26: Left beside the text.
+  # cat=Route - Images//200;          type=options[default,1,2,8,9,10,17,18,25,26];  label= Position in pop ups: default: above center. 1: above right. 2: above left. 8: below center. 9: below right. 10: below left. 17: In text right. 18: In text left. 25: Right beside the text. 26: Left beside the text.
   images.map.position = 18 
   # cat=Route - Images//201;          type=string;      label= Max height in pop ups: Max height of images in the pop up of the map
   images.map.maxHeight = 40c
