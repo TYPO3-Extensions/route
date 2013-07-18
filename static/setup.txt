@@ -818,6 +818,17 @@ plugin.tx_browser_pi1 {
 
   general_stdWrap >
 
+  marker {
+    my_backbutton = TEXT
+    my_backbutton {
+      value = &laquo; Back
+      lang {
+        de = &laquo; Zur&uuml;ck
+        en = &laquo; Back
+      }
+    }
+  }
+
   views {
     list {
       47676 = Route (map only)
@@ -1057,7 +1068,7 @@ plugin.tx_browser_pi1 {
   <!-- ###AREA_FOR_AJAX_LIST_01### end -->
             <!-- ###BACKBUTTON### begin -->
             <p class="backbutton">
-              ###BUTTON###
+              ###MY_BACKBUTTON###
             </p>
             <!-- ###BACKBUTTON### end -->
   <!-- ###AREA_FOR_AJAX_LIST_02### begin -->
@@ -1240,7 +1251,7 @@ plugin.tx_browser_pi1 {
   <!-- ###AREA_FOR_AJAX_LIST_01### end -->
             <!-- ###BACKBUTTON### begin -->
             <p class="backbutton">
-              ###BUTTON###
+              ###MY_BACKBUTTON###
             </p>
             <!-- ###BACKBUTTON### end -->
   <!-- ###AREA_FOR_AJAX_LIST_02### begin -->
@@ -1416,7 +1427,7 @@ plugin.tx_browser_pi1 {
   <!-- ###AREA_FOR_AJAX_LIST_01### end -->
             <!-- ###BACKBUTTON### begin -->
             <p class="backbutton">
-              ###BUTTON###
+              ###MY_BACKBUTTON###
             </p>
             <!-- ###BACKBUTTON### end -->
   <!-- ###AREA_FOR_AJAX_LIST_02### begin -->
