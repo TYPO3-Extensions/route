@@ -5,8 +5,10 @@
 
   // temp.route: route linkToSingle
   // temp.route: route_image_47
+  // temp.route: route_image_simple_47
   // temp.route: route_cat_image_47
   // temp.route: marker_image_47
+  // temp.route: marker_image_simple_47
   // temp.route: marker_cat_image_47
   // temp.route: navigation
   // temp.route: sql
@@ -495,6 +497,37 @@ temp.route {
 
   ////////////////////////////////////////
   //
+  // temp.route: marker_image_simple_47
+
+temp.route {
+  marker_image_simple_47 < temp.route.marker_image_47
+  marker_image_simple_47 {
+    1 {
+      file {
+        width   >
+        height  >
+        width   = {$plugin.tx_route.images.map.maxWidth}
+        height  = {$plugin.tx_route.images.map.maxHeight}
+      }
+      imageLinkWrap >
+    }
+    equalH >
+    caption >
+    layout {
+      key >
+      key = 26
+    }
+    maxWInText  = {$plugin.tx_route.images.map.maxWidth}
+    imgMax      = 1
+    imgStart    = 0
+  }
+}
+  // temp.route: marker_cat_image_47
+
+
+
+  ////////////////////////////////////////
+  //
   // temp.route: marker_cat_image_47
 
 temp.route {
@@ -842,7 +875,7 @@ plugin.tx_browser_pi1 {
                   description {
                     10 < temp.route.route_image_simple_47
                     10 {
-                        // #i0013: if type != route
+                        // if type == route
                       if =
                       if {
                         value = route
@@ -850,11 +883,10 @@ plugin.tx_browser_pi1 {
                           field = type
                         }
                       }
-                      //10 < temp.route.route_image_simple_47
                     }
-                    20 = COA
+                    20 < temp.route.marker_image_simple_47
                     20 {
-                        // #i0013: if type != route
+                        // if type != route
                       if =
                       if {
                         value = route
@@ -863,8 +895,6 @@ plugin.tx_browser_pi1 {
                         }
                         negate = 1
                       }
-                      10 = TEXT
-                      10.value = Hell!
                     }
                   }
                   //description < temp.route.route_image_simple_47
