@@ -545,42 +545,7 @@ temp.route {
         variables {
           system {
             description >
-            description = COA
-            description {
-              10 = TEXT
-              10 {
-                field = tx_route_marker.title
-              }
-              20 < temp.route.route_image_47
-              30 = TEXT
-              30 {
-                value = tx_route_marker.title
-              }
-              40 = TEXT
-              40 {
-                value = typo3conf/ext/org/res/download.gif
-                imageLinkWrap = 1
-                imageLinkWrap {
-                  enable = 1
-                  typolink {
-                    parameter         = {$plugin.org.pages.downloads} - linktosingle
-                    title = TEXT
-                    title {
-                      value = Download: '###TX_ORG_DOWNLOADS.TITLE###'
-                      lang {
-                        de  = Herunterladen: '###TX_ORG_DOWNLOADS.TITLE###'
-                        en  = Download: '###TX_ORG_DOWNLOADS.TITLE###'
-                      }
-                      insertData = 1
-                    }
-                    additionalParams  = &tx_browser_pi1[downloadsUid]=###TX_ORG_DOWNLOADS.UID###
-                    useCacheHash      = 1
-                  }
-                }
-              }
-            }
-            //description >
-            //description < plugin.tx_browser_pi1.displayList.master_templates.map.descriptionWiLinkToSingle
+            description < plugin.tx_browser_pi1.displayList.master_templates.map.descriptionWiLinkToSingle
           }
         }
       }
