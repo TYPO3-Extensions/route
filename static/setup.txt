@@ -108,10 +108,12 @@ temp.route {
         }
       }
       altText {
-        field = tx_route_path.imageseo
+        field             = tx_route_path.imageseo
+        htmlSpecialChars  = 1
       }
       titleText {
-        field = tx_route_path.imageseo
+        field             = tx_route_path.imageseo
+        htmlSpecialChars  = 1
       }
       imageLinkWrap {
         ifEmpty {
@@ -275,10 +277,12 @@ temp.route {
         height  >
       }
       altText {
-        field = tx_route_path.imageseo
+        field             = tx_route_path.title
+        htmlSpecialChars  = 1
       }
       titleText {
-        field = tx_route_path.imageseo
+        field             = tx_route_path.title
+        htmlSpecialChars  = 1
       }
       imageLinkWrap >
       imageLinkWrap = 1
@@ -320,10 +324,12 @@ temp.route {
         }
       }
       altText {
-        field = tx_route_marker.imageseo
+        field             = tx_route_marker.imageseo
+        htmlSpecialChars  = 1
       }
       titleText {
-        field = tx_route_marker.imageseo
+        field             = tx_route_marker.imageseo
+        htmlSpecialChars  = 1
       }
       imageLinkWrap {
         ifEmpty {
@@ -487,10 +493,12 @@ temp.route {
         height  >
       }
       altText {
-        field = tx_route_marker.imageseo
+        field             = tx_route_marker.title
+        htmlSpecialChars  = 1
       }
       titleText {
-        field = tx_route_marker.imageseo
+        field             = tx_route_marker.title
+        htmlSpecialChars  = 1
       }
       imageLinkWrap >
       imageLinkWrap = 1
