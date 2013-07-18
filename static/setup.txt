@@ -840,10 +840,31 @@ plugin.tx_browser_pi1 {
                   description >
                   description = COA
                   description {
-                    10 = TEXT
+                    10 = COA
                     10 {
-                      field = type
-                      wrap = |type: ||
+                        // #i0013: if type != route
+                      if =
+                      if {
+                        value = route
+                        equals {
+                          field = type
+                        }
+                      }
+                      10 < temp.route.route_image_simple_47
+                    }
+                    20 = COA
+                    20 {
+                        // #i0013: if type != route
+                      if =
+                      if {
+                        value = route
+                        equals {
+                          field = type
+                        }
+                        negate = 1
+                      }
+                      10 = TEXT
+                      10.value = Hell!
                     }
                   }
                   //description < temp.route.route_image_simple_47
