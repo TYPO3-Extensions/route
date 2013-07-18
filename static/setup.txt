@@ -1374,6 +1374,7 @@ plugin.tx_browser_pi1 {
             <!-- ###SINGLEBODY### begin -->
             <div class="ui-widget-content ui-corner-bottom">
               <!-- ###SINGLEBODYROW### begin -->
+                ###MAP###
                 <div class="sbmFloatRight">
                   ###SOCIALMEDIA_BOOKMARKS###
                 </div>
