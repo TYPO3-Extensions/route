@@ -253,16 +253,6 @@ temp.route {
 temp.route {
   route_image_simple_47 < temp.route.route_image_47
   route_image_simple_47 {
-      // Display one image only
-    imgMax    = 1
-    imgStart  = 0
-    layout {
-      key >
-      key = 26
-      default {
-        value = ###IMAGES###
-      }
-    }
     1 {
       file {
         width   >
@@ -272,6 +262,13 @@ temp.route {
       }
       imageLinkWrap >
     }
+    layout {
+      key >
+      key = 26
+    }
+    maxWInText  = 20
+    imgMax      = 1
+    imgStart    = 0
   }
 }
   // temp.route: route_cat_image_47
