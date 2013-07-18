@@ -277,7 +277,7 @@ temp.route {
         height  >
         altText = TEXT
         altText {
-          field             = tx_route_path.title
+          field             = tx_route_path.short
           htmlSpecialChars  = 1
         }
       }
