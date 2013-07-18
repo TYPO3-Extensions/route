@@ -9,11 +9,6 @@ DIV.csc-textpic-clear {
   padding-bottom: 1em;
 }
 
-DIV.csc-textpic-above DIV.csc-textpic-imagewrap,
-DIV.csc-textpic-below DIV.csc-textpic-imagewrap {
-  float:none !important;
-}
-
 div.listview-47677 div.tx_route-cat-icon DIV.csc-textpic-imagewrap,
 div.singleview-47677 div.tx_route-cat-icon DIV.csc-textpic-imagewrap {
   clear:none;
