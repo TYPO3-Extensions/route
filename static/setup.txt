@@ -95,6 +95,7 @@ temp.route {
   // temp.route: route_image_47
 
 temp.route {
+    // tt_content.image.20 version TYPO3 4.7
   route_image_47 < tt_content.image.20
   route_image_47 {
     imgList {
@@ -260,6 +261,7 @@ temp.route {
   // temp.route: route_image_simple_47
 
 temp.route {
+    // tt_content.image.20 version TYPO3 4.7
   route_image_simple_47 < temp.route.route_image_47
   route_image_simple_47 {
     1 {
@@ -292,6 +294,7 @@ temp.route {
   // temp.route: route_cat_image_47
 
 temp.route {
+    // tt_content.image.20 version TYPO3 4.7
   route_cat_image_47 < tt_content.image.20
   route_cat_image_47 {
       // Display one image only
@@ -349,6 +352,7 @@ temp.route {
   // temp.route: marker_image_47
 
 temp.route {
+    // tt_content.image.20 version TYPO3 4.7
   marker_image_47 < tt_content.image.20
   marker_image_47 {
     imgList {
@@ -514,6 +518,7 @@ temp.route {
   // temp.route: marker_image_simple_47
 
 temp.route {
+    // tt_content.image.20 version TYPO3 4.7
   marker_image_simple_47 < temp.route.marker_image_47
   marker_image_simple_47 {
     1 {
@@ -546,6 +551,7 @@ temp.route {
   // temp.route: marker_cat_image_47
 
 temp.route {
+    // tt_content.image.20 version TYPO3 4.7
   marker_cat_image_47 < tt_content.image.20
   marker_cat_image_47 {
       // Display one image only
@@ -624,8 +630,10 @@ temp.route {
         variables {
           system {
             description >
+              // type == route, type != route
             description = COA
             description {
+                // type == route
               10 = COA
               10 {
                   // if type == route
@@ -641,6 +649,7 @@ temp.route {
                   text < plugin.tx_browser_pi1.displayList.master_templates.map.descriptionWiLinkToSingle
                 }
               }
+                // type != route
               20 = COA
               20 {
                   // if type != route
@@ -741,6 +750,7 @@ temp.route {
       table = tx_route_path
       alias = tx_route_path
     }
+      // ###PID_LIST###, tx_route_path.uid if tx_route_path.uid is set
     andWhere = COA
     andWhere {
       10 = TEXT
@@ -975,7 +985,7 @@ plugin.tx_browser_pi1 {
         orderBy   = tx_route_path.list_title, tx_route_path.title, tx_route_path_mm_marker.sorting, tx_route_marker_cat.title
         csvLinkToSingleView = tx_route_path.title
         tx_route_path {
-            // route image, route title, route cat image, route list short, link to single view
+            // image, title, cat image, short, link to single view
           title = COA
           title {
               // route image
@@ -1014,9 +1024,10 @@ plugin.tx_browser_pi1 {
                 key >
                 key = {$plugin.tx_route.images.list.position} 
               }
+                // title, cat image, short, link to single view
               text = COA
               text {
-                  // route list_title or title, if list_title is empty
+                  // title
                 30 = TEXT
                 30 {
                   field = tx_route_path.title
@@ -1025,12 +1036,12 @@ plugin.tx_browser_pi1 {
                   }
                   wrap = <h2>|</h2>
                 }
-                  // route cat image, route list_short, link to single view
+                  // cat image, short, link to single view
                 40 = COA
                 40 {
                     // route cat image
                   10 < temp.route.route_cat_image_47
-                    // route list_short or short, if list_short is empty. Link to single view.
+                    // short, link to single view
                   20 = COA
                   20 {
                       // route list_short or short, if list_short is empty
@@ -1048,7 +1059,7 @@ plugin.tx_browser_pi1 {
                       value = In detail &raquo;
                         // de, en
                       lang {
-                        de = Mehr Informationen &raquo;
+                        de = Details &raquo;
                         en = In detail &raquo;
                       }
                       typolink {
@@ -1190,21 +1201,22 @@ plugin.tx_browser_pi1 {
         aliases   < temp.route.sql.aliases
         orderBy   = tx_route_path.list_title, tx_route_path.title, tx_route_path_mm_marker.sorting, tx_route_marker_cat.title
         tx_route_path {
-            // route image, route title, route cat image, route list short, link to single view
+            // image, title, cat image, short, bodytext, address start, address end, url
           title = COA
           title {
-              // route image
+              // image, title, cat image, short, bodytext, address start, address end, url
             20 < temp.route.route_image_47
             20 {
+                // title, cat image, short, bodytext, address start, address end, url
               text = COA
               text {
-                  // route list_title or title, if list_title is empty
+                  // title
                 30 = TEXT
                 30 {
                   field = tx_route_path.title
                   wrap = <h1>|</h1>
                 }
-                  // route cat image, route list_short, link to single view
+                  // cat image, short, bodytext, address start, address end, url
                 40 = COA
                 40 {
                     // route cat image
@@ -1247,6 +1259,7 @@ plugin.tx_browser_pi1 {
                           field = tx_route_path.address_start
                         }
                       }
+                        // header
                       10 = TEXT
                       10 {
                         value = Starting point
@@ -1256,6 +1269,7 @@ plugin.tx_browser_pi1 {
                         }
                         wrap = <h2>|</h2>
                       }
+                        // content
                       20 = TEXT
                       20 {
                         field     = tx_route_path.address_start
@@ -1272,6 +1286,7 @@ plugin.tx_browser_pi1 {
                           field = tx_route_path.address_end
                         }
                       }
+                        // header
                       10 = TEXT
                       10 {
                         value = Destination
@@ -1281,6 +1296,7 @@ plugin.tx_browser_pi1 {
                         }
                         wrap = <h2>|</h2>
                       }
+                        // content
                       20 = TEXT
                       20 {
                         field = tx_route_path.address_end
@@ -1290,6 +1306,7 @@ plugin.tx_browser_pi1 {
                       }
                     }
                   }
+                    // url
                   40 = COA
                   40 {
                     if {
@@ -1297,6 +1314,7 @@ plugin.tx_browser_pi1 {
                         field = tx_route_path.url
                       }
                     }
+                      // header
                     10 = TEXT
                     10 {
                       value = Details
@@ -1306,6 +1324,7 @@ plugin.tx_browser_pi1 {
                       }
                       wrap = <h2>|</h2>
                     }
+                      // content
                     20 = TEXT
                     20 {
                       typolink {
@@ -1430,21 +1449,22 @@ plugin.tx_browser_pi1 {
           tx_route_path.uid,
         )
         tx_route_marker {
-            // route image, route title, route cat image, route list short, link to single view
+            // image, title, cat image, short, bodytext, address, url
           title = COA
           title {
-              // route image
+              // image, title, cat image, short, bodytext, address, url
             20 < temp.route.marker_image_47
             20 {
+                // title, cat image, short, bodytext, address, url
               text = COA
               text {
-                  // route list_title or title, if list_title is empty
+                  // title
                 30 = TEXT
                 30 {
                   field = tx_route_marker.title
                   wrap = <h1>|</h1>
                 }
-                  // route cat image, route list_short, link to single view
+                  // cat image, short, bodytext, address, url
                 40 = COA
                 40 {
                     // route cat image
@@ -1454,10 +1474,10 @@ plugin.tx_browser_pi1 {
                       imageLinkWrap >
                     }
                   }
-                    // route short, route bodytext
+                    // short, bodytext
                   20 = COA
                   20 {
-                      // route short
+                      // short
                     10 = TEXT
                     10 {
                       field     = tx_route_marker.short
@@ -1466,7 +1486,7 @@ plugin.tx_browser_pi1 {
                         parseFunc < lib.parseFunc_RTE
                       }
                     }
-                      // route bodytext
+                      // bodytext
                     20 = TEXT
                     20 {
                       field     = tx_route_marker.bodytext
@@ -1484,6 +1504,7 @@ plugin.tx_browser_pi1 {
                         field = tx_route_marker.address
                       }
                     }
+                      // header
                     10 = TEXT
                     10 {
                       value = Address
@@ -1493,6 +1514,7 @@ plugin.tx_browser_pi1 {
                       }
                       wrap = <h2>|</h2>
                     }
+                      // content
                     20 = TEXT
                     20 {
                       field     = tx_route_marker.address
@@ -1501,6 +1523,7 @@ plugin.tx_browser_pi1 {
                       }
                     }
                   }
+                    // url
                   40 = COA
                   40 {
                     if {
