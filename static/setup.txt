@@ -840,7 +840,7 @@ plugin.tx_browser_pi1 {
                   description >
                   description = COA
                   description {
-                    10 = COA
+                    10 < temp.route.route_image_simple_47
                     10 {
                         // #i0013: if type != route
                       if =
@@ -850,7 +850,7 @@ plugin.tx_browser_pi1 {
                           field = type
                         }
                       }
-                      10 < temp.route.route_image_simple_47
+                      //10 < temp.route.route_image_simple_47
                     }
                     20 = COA
                     20 {
