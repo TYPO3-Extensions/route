@@ -15,15 +15,15 @@
 
 plugin.tx_route {
 
-  # cat=Route - Images List View//100;          type=options[17,18,25,26];  label= Position: 17: In text right. 18: In text left. 25: Right beside the text. 26: Left beside the text.
+  # cat=Route - Images//100;          type=options[17,18,25,26];  label= Position: 17: In text right. 18: In text left. 25: Right beside the text. 26: Left beside the text.
   images.list.position = 18 
-  # cat=Route - Images List View//101;          type=string;      label= Max height in list view: Max height of images in list views
+  # cat=Route - Images//101;          type=string;      label= Max height in list view: Max height of images in list views
   images.list.maxHeight = 60c 
-  # cat=Route - Images List View//102;          type=string;      label= Max width in list view: Max width of images in list views
+  # cat=Route - Images//102;          type=string;      label= Max width in list view: Max width of images in list views
   images.list.maxWidth  = 100
-  # cat=Route - Images List View//201;          type=string;      label= Max height in pop ups: Max height of images in the pop up of the map
+  # cat=Route - Images//201;          type=string;      label= Max height in pop ups: Max height of images in the pop up of the map
   images.map.maxHeight = 40c
-  # cat=Route - Images List View//202;          type=string;      label= Max width in pop ups: Max width of images in the pop up of the map
+  # cat=Route - Images//202;          type=string;      label= Max width in pop ups: Max width of images in the pop up of the map
   images.map.maxWidth  = 40
 
   # cat=Route - Path//100;            type=string;    label= CSS: Path to the css file
