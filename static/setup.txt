@@ -873,7 +873,7 @@ plugin.tx_browser_pi1 {
                   description >
                   description = COA
                   description {
-                    10 < temp.route.route_image_simple_47
+                    10 = COA
                     10 {
                         // if type == route
                       if =
@@ -883,9 +883,12 @@ plugin.tx_browser_pi1 {
                           field = type
                         }
                       }
-                      text < plugin.tx_browser_pi1.displayList.master_templates.map.descriptionWiLinkToSingle
+                      10 < temp.route.route_image_simple_47
+                      10 {
+                        text < plugin.tx_browser_pi1.displayList.master_templates.map.descriptionWiLinkToSingle
+                      }
                     }
-                    20 < temp.route.marker_image_simple_47
+                    20 = COA
                     20 {
                         // if type != route
                       if =
@@ -896,10 +899,12 @@ plugin.tx_browser_pi1 {
                         }
                         negate = 1
                       }
-                      text < plugin.tx_browser_pi1.displayList.master_templates.map.descriptionWiLinkToSingle
+                      10 < temp.route.marker_image_simple_47
+                      10 {
+                        text < plugin.tx_browser_pi1.displayList.master_templates.map.descriptionWiLinkToSingle
+                      }
                     }
                   }
-                  //description < temp.route.route_image_simple_47
                 }
               }
             }
