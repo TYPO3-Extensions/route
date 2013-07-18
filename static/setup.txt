@@ -275,6 +275,10 @@ temp.route {
         height  = {$plugin.tx_route.images.list.maxHeight} 
         width   >
         height  >
+        altText {
+          field             = tx_route_path.title
+          htmlSpecialChars  = 1
+        }
       }
       altText {
         field             = tx_route_path.title
