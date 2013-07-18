@@ -14,7 +14,8 @@ div.singleview-47677 div.tx_route-cat-icon DIV.csc-textpic-imagewrap {
   clear:none;
 }
 
-.tx-browser_pi1 div.mapview-content {
+.tx-browser_pi1 div.listview-47677 div.mapview-content,
+.tx-browser_pi1 div.singleview-47677 div.mapview-content {
   padding: 1em 0;
 }
 
