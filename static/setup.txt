@@ -258,7 +258,7 @@ temp.route {
     imgStart  = 0
     layout {
       key >
-      key = default
+      key = 26
       default {
         value = ###IMAGES###
       }
