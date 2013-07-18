@@ -156,6 +156,9 @@ temp.route {
     caption.1.1.field       = tx_route_path.imagecaption
     captionAlign.field      = tx_route_path.imagecaption_position
     layout {
+      1 {
+        value = <div class="csc-textpic csc-textpic-right csc-textpic-above###CLASSES###">###IMAGES###<div class="csc-textpic-clear"><!-- --></div>###TEXT###</div><div class="csc-textpic-clear"><!-- --></div>
+      }
       key {
         field = tx_route_path.imageorient
       }
