@@ -559,7 +559,7 @@ temp.route {
               40 = TEXT
               40 {
                 value = typo3conf/ext/org/res/download.gif
-                imageLinkWrap = 0
+                imageLinkWrap = 1
                 imageLinkWrap {
                   enable = 1
                   typolink {
