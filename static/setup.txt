@@ -275,11 +275,6 @@ temp.route {
         height  = {$plugin.tx_route.images.list.maxHeight} 
         width   >
         height  >
-        altText = TEXT
-        altText {
-          field             = tx_route_path.short
-          htmlSpecialChars  = 1
-        }
       }
       altText {
         field             = tx_route_path.title
@@ -584,8 +579,8 @@ temp.route {
                 }
               }
             }
-            description >
-            description < plugin.tx_browser_pi1.displayList.master_templates.map.descriptionWiLinkToSingle
+            //description >
+            //description < plugin.tx_browser_pi1.displayList.master_templates.map.descriptionWiLinkToSingle
           }
         }
       }
