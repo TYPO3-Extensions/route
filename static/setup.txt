@@ -1372,6 +1372,52 @@ plugin.tx_browser_pi1 {
       }
       47678 = Marker (single only)
       47678 {
+        navigation {
+          map < temp.route.navigation.map
+          map {
+            marker {
+              variables {
+                system {
+                  xxdescription >
+                  xxdescription = COA
+                  xxdescription {
+                    10 = COA
+                    10 {
+                        // if type == route
+                      if =
+                      if {
+                        value = route
+                        equals {
+                          field = type
+                        }
+                      }
+                      10 < temp.route.route_image_simple_47
+                      10 {
+                        text < plugin.tx_browser_pi1.displayList.master_templates.map.descriptionWiLinkToSingle
+                      }
+                    }
+                    20 = COA
+                    20 {
+                        // if type != route
+                      if =
+                      if {
+                        value = route
+                        equals {
+                          field = type
+                        }
+                        negate = 1
+                      }
+                      10 < temp.route.marker_image_simple_47
+                      10 {
+                        text < plugin.tx_browser_pi1.displayList.master_templates.map.descriptionWiLinkToSingle
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
         showUid = {$plugin.tx_browser_pi1.map.aliases.showUid.marker}
         name    = Marker (single only)
         select (
