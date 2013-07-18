@@ -83,7 +83,7 @@ plugin.tx_browser_pi1 {
 plugin.tx_browser_pi1 {
   views {
     single {
-      47677 {
+      47678 {
         tx_route_path {
           title {
             20 {
