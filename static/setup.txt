@@ -107,6 +107,12 @@ temp.route {
           field = tx_route_path.imageheight
         }
       }
+      altText {
+        field = tx_route_path.imageseo
+      }
+      titleText {
+        field = tx_route_path.imageseo
+      }
       imageLinkWrap {
         ifEmpty {
           typolink.parameter.field = tx_route_path.image_link
@@ -268,6 +274,12 @@ temp.route {
         width   >
         height  >
       }
+      altText {
+        field = tx_route_path.imageseo
+      }
+      titleText {
+        field = tx_route_path.imageseo
+      }
       imageLinkWrap >
       imageLinkWrap = 1
       imageLinkWrap {
@@ -306,6 +318,12 @@ temp.route {
         height {
           field = tx_route_marker.imageheight
         }
+      }
+      altText {
+        field = tx_route_marker.imageseo
+      }
+      titleText {
+        field = tx_route_marker.imageseo
       }
       imageLinkWrap {
         ifEmpty {
@@ -467,6 +485,12 @@ temp.route {
         height  = {$plugin.tx_route.images.list.maxHeight} 
         width   >
         height  >
+      }
+      altText {
+        field = tx_route_marker.imageseo
+      }
+      titleText {
+        field = tx_route_marker.imageseo
       }
       imageLinkWrap >
       imageLinkWrap = 1
