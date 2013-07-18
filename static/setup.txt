@@ -263,6 +263,7 @@ temp.route {
       imageLinkWrap >
     }
     equalH >
+    caption >
     layout {
       key >
       key = 26
