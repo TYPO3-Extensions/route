@@ -826,6 +826,7 @@ plugin.tx_browser_pi1 {
         de = &laquo; Zur&uuml;ck
         en = &laquo; Back
       }
+      wrap = <a class="backbutton" href="javascript:history.back()">|</a>
     }
   }
 
