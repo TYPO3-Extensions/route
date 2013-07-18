@@ -1579,7 +1579,7 @@ plugin.tx_browser_pi1 {
       /*height:1.4em;*/
     }
     .tx-browser-pi1 .mapview-content {
-      padding: 1em 0;
+      padding: 1em 0 !important;
     }
 )
 }
