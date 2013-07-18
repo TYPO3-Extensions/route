@@ -159,6 +159,9 @@ temp.route {
       1 {
         value = <div class="csc-textpic csc-textpic-right csc-textpic-above###CLASSES###">###IMAGES###<div class="csc-textpic-clear"><!-- --></div>###TEXT###</div><div class="csc-textpic-clear"><!-- --></div>
       }
+      2 {
+        value = <div class="csc-textpic csc-textpic-left csc-textpic-above###CLASSES###">###IMAGES###<div class="csc-textpic-clear"><!-- --></div>###TEXT###</div><div class="csc-textpic-clear"><!-- --></div>
+      }
       key {
         field = tx_route_path.imageorient
       }
@@ -409,6 +412,9 @@ temp.route {
     layout {
       1 {
         value = <div class="csc-textpic csc-textpic-right csc-textpic-above###CLASSES###">###IMAGES###<div class="csc-textpic-clear"><!-- --></div>###TEXT###</div><div class="csc-textpic-clear"><!-- --></div>
+      }
+      2 {
+        value = <div class="csc-textpic csc-textpic-left csc-textpic-above###CLASSES###">###IMAGES###<div class="csc-textpic-clear"><!-- --></div>###TEXT###</div><div class="csc-textpic-clear"><!-- --></div>
       }
       key {
         field = tx_route_marker.imageorient
