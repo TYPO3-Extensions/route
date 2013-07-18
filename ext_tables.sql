@@ -57,13 +57,13 @@ CREATE TABLE tx_route_marker (
 
   title tinytext,
   tx_route_category tinytext,
-  short tinytext,
+  short mediumtext NOT NULL,
   bodytext mediumtext NOT NULL,
 
   lat text NOT NULL,
   lon text NOT NULL,
   address text NOT NULL,
-  url text NOT NULL,
+  url tinytext,
 
   tx_route_path tinytext,
 
@@ -134,9 +134,9 @@ CREATE TABLE tx_route_path (
   l10n_diffsource mediumtext,
 
   title tinytext,
-  short tinytext,
+  short mediumtext NOT NULL,
   bodytext mediumtext NOT NULL,
-  url text NOT NULL,
+  url tinytext,
 
   gpxfile text,
   geodata longtext,

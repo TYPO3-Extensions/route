@@ -25,6 +25,7 @@
   // temp.route: route linkToSingle
 
 temp.route {
+    // link to the single view of a route
   route_linkToSingle = COA
   route_linkToSingle {
       // URL: page id, page type, parameters
