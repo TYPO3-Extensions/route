@@ -838,7 +838,15 @@ plugin.tx_browser_pi1 {
               variables {
                 system {
                   description >
-                  description < temp.route.route_image_simple_47
+                  description = COA
+                  description {
+                    10 = TEXT
+                    10 {
+                      field = type
+                      wrap = |type: ||
+                    }
+                  }
+                  //description < temp.route.route_image_simple_47
                 }
               }
             }
