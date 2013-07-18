@@ -803,6 +803,14 @@ plugin.tx_browser_pi1 {
           map < temp.route.navigation.map
           map {
             enabled = Map +Routes
+            marker {
+              variables {
+                system {
+                  description >
+                  description < temp.route.route_image_47
+                }
+              }
+            }
           }
         }
         showUid   = {$plugin.tx_browser_pi1.map.aliases.showUid.path}
