@@ -611,7 +611,40 @@ temp.route {
         variables {
           system {
             description >
-            description < plugin.tx_browser_pi1.displayList.master_templates.map.descriptionWiLinkToSingle
+            description = COA
+            description {
+              10 = COA
+              10 {
+                  // if type == route
+                if =
+                if {
+                  value = route
+                  equals {
+                    field = type
+                  }
+                }
+                10 < temp.route.route_image_simple_47
+                10 {
+                  text < plugin.tx_browser_pi1.displayList.master_templates.map.descriptionWiLinkToSingle
+                }
+              }
+              20 = COA
+              20 {
+                  // if type != route
+                if =
+                if {
+                  value = route
+                  equals {
+                    field = type
+                  }
+                  negate = 1
+                }
+                10 < temp.route.marker_image_simple_47
+                10 {
+                  text < plugin.tx_browser_pi1.displayList.master_templates.map.descriptionWiLinkToSingle
+                }
+              }
+            }
           }
         }
       }
