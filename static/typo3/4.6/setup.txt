@@ -89,7 +89,7 @@ plugin.tx_browser_pi1 {
             20 {
               caption.1.1 >
               caption.1 {
-                field = tx_route_path.imagecaption
+                field = tx_route_marker.imagecaption
               }
               rendering {
                 singleNoCaption >
