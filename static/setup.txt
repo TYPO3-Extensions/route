@@ -902,47 +902,6 @@ plugin.tx_browser_pi1 {
           map < temp.route.navigation.map
           map {
             enabled = Map +Routes
-            marker {
-              variables {
-                system {
-                  xxdescription >
-                  xxdescription = COA
-                  xxdescription {
-                    10 = COA
-                    10 {
-                        // if type == route
-                      if =
-                      if {
-                        value = route
-                        equals {
-                          field = type
-                        }
-                      }
-                      10 < temp.route.route_image_simple_47
-                      10 {
-                        text < plugin.tx_browser_pi1.displayList.master_templates.map.descriptionWiLinkToSingle
-                      }
-                    }
-                    20 = COA
-                    20 {
-                        // if type != route
-                      if =
-                      if {
-                        value = route
-                        equals {
-                          field = type
-                        }
-                        negate = 1
-                      }
-                      10 < temp.route.marker_image_simple_47
-                      10 {
-                        text < plugin.tx_browser_pi1.displayList.master_templates.map.descriptionWiLinkToSingle
-                      }
-                    }
-                  }
-                }
-              }
-            }
           }
         }
         showUid   = {$plugin.tx_browser_pi1.map.aliases.showUid.path}
@@ -1377,40 +1336,29 @@ plugin.tx_browser_pi1 {
           map {
             enabled = Map
             marker {
-              variables {
-                system {
-                  xxdescription >
-                  xxdescription = COA
-                  xxdescription {
-                    10 = COA
-                    10 {
-                        // if type == route
-                      if =
-                      if {
-                        value = route
-                        equals {
-                          field = type
-                        }
-                      }
-                      10 < temp.route.route_image_simple_47
+              snippets {
+                jss {
+                  dynamic {
+                    oxMapConfigModules {
                       10 {
-                        text < plugin.tx_browser_pi1.displayList.master_templates.map.descriptionWiLinkToSingle
+                        value = {$plugin.tx_browser_pi1.map.modules.default}
+                      }
+                      20 {
+                        value = {$plugin.tx_browser_pi1.map.modules.debugging}
                       }
                     }
-                    20 = COA
+                  }
+                }
+              }
+              variables {
+                system {
+                  description {
                     20 {
-                        // if type != route
-                      if =
-                      if {
-                        value = route
-                        equals {
-                          field = type
-                        }
-                        negate = 1
-                      }
-                      10 < temp.route.marker_image_simple_47
                       10 {
-                        text < plugin.tx_browser_pi1.displayList.master_templates.map.descriptionWiLinkToSingle
+                        text {
+                            // Remove link to single view
+                          30 >
+                        }
                       }
                     }
                   }
