@@ -271,7 +271,6 @@ temp.route {
         height  = 20c
       }
       imageLinkWrap >
-      }
     }
   }
 }
