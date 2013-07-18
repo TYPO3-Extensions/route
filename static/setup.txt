@@ -905,9 +905,9 @@ plugin.tx_browser_pi1 {
             marker {
               variables {
                 system {
-                  description >
-                  description = COA
-                  description {
+                  xxdescription >
+                  xxdescription = COA
+                  xxdescription {
                     10 = COA
                     10 {
                         // if type == route
