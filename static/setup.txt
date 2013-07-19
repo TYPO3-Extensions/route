@@ -1611,7 +1611,7 @@ plugin.tx_browser_pi1 {
   //
   // page
 
-{$plugin.tx_route.pages.object} {
+page {
   includeCSS {
     route = {$plugin.tx_route.path.css}
   }
@@ -1625,7 +1625,7 @@ plugin.tx_browser_pi1 {
   // page - seo
 
 [globalVar = GP:tx_browser_pi1|showUid > 0] || [globalVar = GP:tx_browser_pi1|markerUid > 0] || [globalVar = GP:tx_browser_pi1|routeUid > 0]
-  {$plugin.tx_route.pages.object} {
+  page {
     config {
       noPageTitle = 2
     }
