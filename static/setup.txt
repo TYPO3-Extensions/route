@@ -1601,9 +1601,6 @@ plugin.tx_browser_pi1 {
       /* 111218, 3.9.6, dwildt-*/
       /*height:1.4em;*/
     }
-    .tx-browser-pi1 .mapview-content {
-      padding: 1em 0 !important;
-    }
 )
 }
   // plugin.tx_browser_pi1
