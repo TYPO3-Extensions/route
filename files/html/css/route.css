@@ -2,10 +2,10 @@
 DIV.csc-textpic DIV.csc-textpic-imagewrap UL LI {
   padding: 0 .3em 0 0;
 }
-div.csc-textpic DIV.csc-textpic-single-image IMG {
+DIV.csc-textpic DIV.csc-textpic-single-image IMG {
   margin-bottom: 0;
 }
-div.csc-textpic-clear {
+DIV.csc-textpic-clear {
   padding-bottom: 1em;
 }
 
