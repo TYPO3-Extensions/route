@@ -6,6 +6,7 @@ DIV.csc-textpic DIV.csc-textpic-single-image IMG {
   margin-bottom: 0;
 }
 DIV.csc-textpic-clear {
+  clear:both; /* TYPO3 6.x */
   padding-bottom: 1em;
 }
 
