@@ -1,3 +1,17 @@
+1.1.0
+  13-09-02-16
+  * #51644: Automatic geocoding
+            Effected files:
+            * ext_tables.php
+            * ext_tables.sql
+            * locallang_db.xml
+            * tca.php
+
+1.0.0
+  13-07-16
+  Improvements
+  * #i0001: Manual
+
 0.0.1
   13-04-26
   Initial Release

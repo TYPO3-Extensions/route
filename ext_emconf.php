@@ -17,7 +17,7 @@ $EM_CONF[$_EXTKEY] = array(
                           'You can categorise and filter both: routes and POI.',
 	'category' => 'plugin',
 	'shy' => 0,
-	'version' => '0.0.1',
+	'version' => '1.0.1',
 	'dependencies' => 'browser',
 	'conflicts' => '',
 	'priority' => '',

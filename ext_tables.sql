@@ -60,9 +60,21 @@ CREATE TABLE tx_route_marker (
   short mediumtext NOT NULL,
   bodytext mediumtext NOT NULL,
 
+  address text NOT NULL,
+  areaLevel1 tinytext,
+  areaLevel2 tinytext,
+  street tinytext,
+  zip tinytext,
+  city tinytext,
+  country tinytext,
   lat text NOT NULL,
   lon text NOT NULL,
-  address text NOT NULL,
+  geoupdateprompt text,
+  geoupdateforbidden tinyint(4) unsigned DEFAULT '0' NOT NULL,
+
+  phone tinytext,
+  fax tinytext,
+  email tinytext,
   url tinytext,
 
   tx_route_path tinytext,
@@ -136,12 +148,22 @@ CREATE TABLE tx_route_path (
   title tinytext,
   short mediumtext NOT NULL,
   bodytext mediumtext NOT NULL,
+
+  phone tinytext,
+  fax tinytext,
+  email tinytext,
   url tinytext,
 
   gpxfile text,
   geodata longtext,
 
   tx_route_category tinytext,
+  street tinytext,
+  zip tinytext,
+  city tinytext,
+  country tinytext,
+  geoupdateprompt text,
+  geoupdateforbidden tinyint(4) unsigned DEFAULT '0' NOT NULL,
   icon_lat text NOT NULL,
   icon_lon text NOT NULL,
 

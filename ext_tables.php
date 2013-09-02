@@ -212,6 +212,32 @@ $TCA['tx_route_marker'] = array (
     'dividers2tabs'     => true,
     'dynamicConfigFile' => t3lib_extMgm::extPath( $_EXTKEY ) . 'tca.php',
     'iconfile'          => t3lib_extMgm::extRelPath( $_EXTKEY ) . 'files/img/route.png',
+    'tx_browser'        => array (
+      'geoupdate' => array (
+        'address' => array (
+          'country'     => 'country',
+          'areaLevel1'  => 'areaLevel1',
+          'areaLevel2'  => 'areaLevel2',
+          'location'    => array (
+            'zip'   => 'zip',  
+            'city'  => 'city',  
+          ),
+          'street'  => array (
+            'name'    => 'street',  
+            'number'  => null,  
+          ),
+        ),
+        'api' => array (
+          'prompt'    => 'geoupdateprompt',  
+          'forbidden' => 'geoupdateforbidden',  
+        ),
+        'geodata' => array (
+          'lat'     => 'lat',  
+          'lon'     => 'lon',  
+        ),
+        'update'  => true,  
+      ),
+    ),
   ),
 );
   // Marker
