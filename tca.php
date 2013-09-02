@@ -599,26 +599,10 @@ $TCA['tx_route_marker'] = array (
     'email' => array (
       'exclude' => $bool_exclude_default,
       'label'   => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.email',
-      'config' => array (
-        'type' => 'input',
-        'size' => '80',
-        'wizards' => array(
-          '_PADDING' => 2,
-          'link' => array(
-            'type' => 'popup',
-            'title' => 'Link',
-            'icon' => 'link_popup.gif',
-            'script' => 'browse_links.php?mode=wizard',
-            'JSopenParams' => 'height=300,width=500,status=0,menubar=0,scrollbars=1'
-          )
-        ),
-        'softref' => 'typolink[linkList]'
-      ),
-      'config'  => $conf_input_80_trim,
+      'config'    => $arr_wizard_url,
     ),
     'url' => array (
       'exclude'   => 0,
-      'l10n_mode' => 'prefixLangTitle',
       'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.url',
       'config'    => $arr_wizard_url,
     ),

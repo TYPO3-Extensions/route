@@ -1653,6 +1653,7 @@ plugin.tx_browser_pi1 {
                         // email
                       30 = TEXT
                       30 {
+                        field     = tx_route_marker.email
                         required    = 1
                         typolink {
                           parameter {
@@ -1665,12 +1666,13 @@ plugin.tx_browser_pi1 {
                       40 = TEXT
                       40 {
                         required  = 1
+                        field     = tx_route_marker.url
                         typolink {
                           parameter {
                             data = field:tx_route_marker.url
                           }
                         }
-                        wrap      = <span class="url">|</span><br />
+                        wrap = <span class="url">|</span><br />
                       }
                     }
                   }
