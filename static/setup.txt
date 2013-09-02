@@ -1230,6 +1230,13 @@ plugin.tx_browser_pi1 {
                   20 = COA
                   20 {
                       // route short
+                    9 = TEXT
+                    9 {
+                      field     = tx_route_path.imageorient
+                      required  = 1
+                      wrap      = <h1>|</h1>  
+                    }
+                      // route short
                     10 = TEXT
                     10 {
                       field     = tx_route_path.short
