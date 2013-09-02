@@ -1640,7 +1640,7 @@ plugin.tx_browser_pi1 {
                         // phone
                       10 = TEXT
                       10 {
-                        value       = <span class="label">phone</span>: <span class="content">{field:tx_route_map.phone}</span>
+                        value       = <span class="label">phone</span>: <span class="content">{field:tx_route_marker.phone}</span>
                         lang {
                           de = <span class="label">Tel</span>: <span class="content">{field:tx_route_map.phone}</span>
                           en = <span class="label">phone</span>: <span class="content">{field:tx_route_map.phone}</span>
