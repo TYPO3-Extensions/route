@@ -7,6 +7,9 @@
             * ext_tables.sql
             * locallang_db.xml
             * tca.php
+  * #i0003: Sample data
+            Effected files:
+            * ext_tables_static+adt.sql
   * #i0002: Sample GPX data
             Effected files:
             * res/sample/data/gpx
