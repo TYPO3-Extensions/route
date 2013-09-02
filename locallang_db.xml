@@ -68,7 +68,7 @@
       <label index="tx_route_marker.title">Marker (POI) label</label>                        
       <label index="tx_route_marker.tx_route_category">Category</label>                        
       <label index="tx_route_marker.tx_route_path">Paths (one path maximum)</label>      
-      <label index="tx_route_marker.url">URL (with further information)</label>
+      <label index="tx_route_marker.url">URL</label>
       <label index="tx_route_path">Paths</label>                        
       <label index="tx_route_path.div_cat">Category</label>
       <label index="tx_route_path.div_control">Controlling</label>
@@ -163,7 +163,7 @@
       <label index="tx_route_marker.title">Bezeichnung der Marke (POI)</label>                        
       <label index="tx_route_marker.tx_route_category">Kategorie</label>
       <label index="tx_route_marker.tx_route_path">Pfade (maximal einen Pfad)</label>      
-      <label index="tx_route_marker.url">URL (mit weiteren Informationen)</label>
+      <label index="tx_route_marker.url">URL</label>
       <label index="tx_route_path">Pfade</label>                        
       <label index="tx_route_path.div_address">Adresse</label>
       <label index="tx_route_path.div_cat">Kategorie</label>
