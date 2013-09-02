@@ -1642,19 +1642,23 @@ plugin.tx_browser_pi1 {
                       10 {
                         value       = <span class="label">phone</span>: <span class="content">{field:tx_route_marker.phone}</span>
                         lang {
-                          de = <span class="label">Tel</span>: <span class="content">{field:tx_route_marker.phone}</span>
+                          de = <span class="label">Tel.</span>: <span class="content">{field:tx_route_marker.phone}</span>
                           en = <span class="label">phone</span>: <span class="content">{field:tx_route_marker.phone}</span>
                         }
                         insertData  = 1
                         required    = 1
-                        //field       = tx_route_marker.phone
                         wrap        = <span class="phone">|</span><br />
                       }
                         // fax
                       20 = TEXT
                       20 {
+                        value       = <span class="label">fax</span>: <span class="content">{field:tx_route_marker.fax}</span>
+                        lang {
+                          de = <span class="label">Fax</span>: <span class="content">{field:tx_route_marker.fax}</span>
+                          en = <span class="label">fax</span>: <span class="content">{field:tx_route_marker.fax}</span>
+                        }
+                        insertData  = 1
                         required  = 1
-                        field     = tx_route_marker.fax
                         wrap      = <span class="fax">|</span><br />
                       }
                         // email
