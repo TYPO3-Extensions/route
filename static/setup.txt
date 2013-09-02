@@ -1642,8 +1642,8 @@ plugin.tx_browser_pi1 {
                       10 {
                         value       = <span class="label">phone</span>: <span class="content">{field:tx_route_marker.phone}</span>
                         lang {
-                          de = <span class="label">Tel</span>: <span class="content">{field:tx_route_map.phone}</span>
-                          en = <span class="label">phone</span>: <span class="content">{field:tx_route_map.phone}</span>
+                          de = <span class="label">Tel</span>: <span class="content">{field:tx_route_marker.phone}</span>
+                          en = <span class="label">phone</span>: <span class="content">{field:tx_route_marker.phone}</span>
                         }
                         insertData  = 1
                         required    = 1
