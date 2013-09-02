@@ -1,11 +1,17 @@
 1.1.0
   13-09-02-16
+  Features
   * #51644: Automatic geocoding
             Effected files:
             * ext_tables.php
             * ext_tables.sql
             * locallang_db.xml
             * tca.php
+  * #i0002: Sample GPX data
+            Effected files:
+            * res/sample/data/gpx
+              * 2013.05.08_fernsehturm_siegessaeule.gpx     ( new )
+              * 2013.05.08_reichstag_holocaust-mahnmal.gpx  ( new )
 
 1.0.0
   13-07-16
