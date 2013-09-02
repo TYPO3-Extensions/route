@@ -400,7 +400,7 @@ $TCA['tx_route_marker'] = array (
       . 'title,short,bodytext,' 
       . 'tx_route_category,' 
       . 'address,' 
-      . 'street,zip,city,areaLevel2,areaLevel1,country,geoupdateprompt,geoupdateforbidden,lon,lat,'
+      . 'addressname,street,zip,city,areaLevel2,areaLevel1,country,geoupdateprompt,geoupdateforbidden,lon,lat,'
       . 'phone,fax,email,url,' 
       . 'tx_route_path,' 
       . 'list_title,list_short,map_title,map_short,' 
@@ -939,6 +939,7 @@ $TCA['tx_route_marker'] = array (
         , --div--;LLL:EXT:route/locallang_db.xml:tx_route_marker.div_properties
         , address;;;richtext[]:rte_transform[mode=ts];
         , --div--;LLL:EXT:route/locallang_db.xml:tx_route_marker.div_address
+        , addressname
         , street
         , zip
         , city
