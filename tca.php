@@ -599,10 +599,11 @@ $TCA['tx_route_marker'] = array (
     'email' => array (
       'exclude' => $bool_exclude_default,
       'label'   => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.email',
-      'config'    => $arr_wizard_url,
+      'config'  => $conf_input_80_trim,
     ),
     'url' => array (
       'exclude'   => 0,
+      'l10n_mode' => 'prefixLangTitle',
       'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.url',
       'config'    => $arr_wizard_url,
     ),

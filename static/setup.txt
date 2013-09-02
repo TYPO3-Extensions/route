@@ -1655,10 +1655,10 @@ plugin.tx_browser_pi1 {
                       30 = TEXT
                       30 {
                         field     = tx_route_marker.email
-                        required    = 1
+                        required  = 1
                         typolink {
                           parameter {
-                            data = field:tx_route_marker.email
+                            field = tx_route_marker.email
                           }
                         }
                         noTrimWrap  = |<span class="email">|</span><br />
@@ -1668,10 +1668,9 @@ plugin.tx_browser_pi1 {
                       40 {
                         required  = 1
                         //field     = tx_route_marker.url
-                        value       = Website
+                        value     = Website
                         typolink {
                           parameter {
-                            //data = field:tx_route_marker.url
                             field = tx_route_marker.url
                           }
                         }
