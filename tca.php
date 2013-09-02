@@ -406,7 +406,6 @@ $TCA['tx_route_marker'] = array (
         'sys_language_uid,l10n_parent,l10n_diffsource,' 
       . 'title,short,bodytext,' 
       . 'tx_route_category,' 
-      . 'address,' 
       . 'addressname,street,zip,city,areaLevel2,areaLevel1,country,geoupdateprompt,geoupdateforbidden,lon,lat,'
       . 'phone,fax,email,url,' 
       . 'tx_route_path,' 
@@ -519,12 +518,6 @@ $TCA['tx_route_marker'] = array (
           ),
         ),
       ),
-    ),
-    'address' => array (
-      'exclude'   => 0,
-      'l10n_mode' => 'prefixLangTitle',
-      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.address',
-      'config'    => $conf_text_rte,
     ),
     'addressname' => array (
       'exclude' => 0,
@@ -928,8 +921,6 @@ $TCA['tx_route_marker'] = array (
         , bodytext;;;richtext[]:rte_transform[mode=ts];
         , --div--;LLL:EXT:route/locallang_db.xml:tx_route_marker.div_cat
         , tx_route_category
-        , --div--;LLL:EXT:route/locallang_db.xml:tx_route_marker.div_properties
-        , address;;;richtext[]:rte_transform[mode=ts];
         , --div--;LLL:EXT:route/locallang_db.xml:tx_route_marker.div_address
         , addressname
         , street
