@@ -1502,6 +1502,36 @@ plugin.tx_browser_pi1 {
                     if {
                       isTrue {
                         field = tx_route_marker.address
+                        field >
+                          // address
+                        cObject = COA
+                        cObject {
+                            // addressname
+                          10 = TEXT
+                          10 {
+                            field = tx_route_marker.addressname
+                          }
+                            // street
+                          20 = TEXT
+                          20 {
+                            field = tx_route_marker.street
+                          }
+                            // zip
+                          30 = TEXT
+                          30 {
+                            field = tx_route_marker.zip
+                          }
+                            // city
+                          40 = TEXT
+                          40 {
+                            field = tx_route_marker.city
+                          }
+                            // country
+                          50 = TEXT
+                          50 {
+                            field = tx_route_marker.country
+                          }
+                        }
                       }
                     }
                       // header
@@ -1515,11 +1545,42 @@ plugin.tx_browser_pi1 {
                       wrap = <h2>|</h2>
                     }
                       // content
-                    20 = TEXT
+                    20 = COA
                     20 {
-                      field     = tx_route_marker.address
-                      stdWrap {
-                        parseFunc < lib.parseFunc_RTE
+                        // addressname
+                      10 = TEXT
+                      10 {
+                        required  = 1
+                        field     = tx_route_marker.addressname
+                        wrap      = <span class="addressname">|</span><br />
+                      }
+                        // street
+                      20 = TEXT
+                      20 {
+                        required  = 1
+                        field     = tx_route_marker.street
+                        wrap      = <span class="street">|</span><br />
+                      }
+                        // zip
+                      30 = TEXT
+                      30 {
+                        required    = 1
+                        field       = tx_route_marker.zip
+                        noTrimWrap  = |<span class="zip">|</span> |
+                      }
+                        // city
+                      40 = TEXT
+                      40 {
+                        required  = 1
+                        field     = tx_route_marker.city
+                        wrap      = <span class="city">|</span><br />
+                      }
+                        // country
+                      50 = TEXT
+                      50 {
+                        required  = 1
+                        field     = tx_route_marker.country
+                        wrap      = <span class="country">|</span><br />
                       }
                     }
                   }
