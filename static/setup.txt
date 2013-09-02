@@ -1590,6 +1590,7 @@ plugin.tx_browser_pi1 {
                         field     = tx_route_marker.country
                         wrap      = <span class="country">|</span><br />
                       }
+                      wrap = <p class="address">|</span>
                     }
                   }
                     // contact
@@ -1670,11 +1671,13 @@ plugin.tx_browser_pi1 {
                         value       = Website
                         typolink {
                           parameter {
-                            data = field:tx_route_marker.url
+                            //data = field:tx_route_marker.url
+                            field = tx_route_marker.url
                           }
                         }
                         wrap = <span class="url">|</span>
                       }
+                      wrap = <p class="contact">|</span>
                     }
                   }
                   wrap = <div class="tx_route-cat-icon">|</div>
