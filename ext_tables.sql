@@ -148,22 +148,12 @@ CREATE TABLE tx_route_path (
   title tinytext,
   short mediumtext NOT NULL,
   bodytext mediumtext NOT NULL,
-
-  phone tinytext,
-  fax tinytext,
-  email tinytext,
   url tinytext,
 
   gpxfile text,
   geodata longtext,
 
   tx_route_category tinytext,
-  street tinytext,
-  zip tinytext,
-  city tinytext,
-  country tinytext,
-  geoupdateprompt text,
-  geoupdateforbidden tinyint(4) unsigned DEFAULT '0' NOT NULL,
   icon_lat text NOT NULL,
   icon_lon text NOT NULL,
 
