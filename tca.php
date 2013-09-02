@@ -97,6 +97,13 @@ if (!defined ('TYPO3_MODE'))  die ('Access denied.');
     'eval' => 'trim,required'
   );
   
+  $conf_input_30_trimRequiredDef0 = array (
+    'type' => 'input',
+    'size' => '30',
+    'eval' => 'trim,required',
+    'default' => 0
+  );
+  
   $conf_input_80_trim = array (
     'type' => 'input',
     'size' => '80',
@@ -571,13 +578,13 @@ $TCA['tx_route_marker'] = array (
       'exclude'   => 0,
       'l10n_mode' => 'prefixLangTitle',
       'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.lon',
-      'config'    => $conf_input_30_trimRequired,
+      'config'    => $conf_input_30_trimRequiredDef0,
     ),
     'lat' => array (
       'exclude'   => 0,
       'l10n_mode' => 'prefixLangTitle',
       'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.lat',
-      'config'    => $conf_input_30_trimRequired,
+      'config'    => $conf_input_30_trimRequiredDef0,
     ),
     'phone' => array (
       'exclude' => 0,
