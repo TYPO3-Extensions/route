@@ -61,6 +61,7 @@ CREATE TABLE tx_route_marker (
   bodytext mediumtext NOT NULL,
 
   address text NOT NULL,
+  addressname tinytext,
   areaLevel1 tinytext,
   areaLevel2 tinytext,
   street tinytext,

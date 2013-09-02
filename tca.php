@@ -519,6 +519,11 @@ $TCA['tx_route_marker'] = array (
       'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.address',
       'config'    => $conf_text_rte,
     ),
+    'addressname' => array (
+      'exclude' => 0,
+      'label'   => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.addressname',
+      'config'  => $conf_input_30_trim,
+    ),
     'street' => array (
       'exclude' => 0,
       'label'   => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.street',

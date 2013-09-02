@@ -43,6 +43,7 @@
       <label index="tx_route_marker.div_seo">Search Engines</label>
       <label index="tx_route_marker.div_shortterms">Short Terms</label>
       
+      <label index="tx_route_marker.addressname">Name</label> 
       <label index="tx_route_marker.street">Street</label> 
       <label index="tx_route_marker.city">City</label> 
       <label index="tx_route_marker.areaLevel1">Administrative area level 1</label> 
@@ -137,6 +138,7 @@
       <label index="tx_route_marker.div_seo">Suchmaschinen</label>
       <label index="tx_route_marker.div_shortterms">Kurze Bezeichnungen</label>
 
+      <label index="tx_route_marker.addressname">Name</label> 
       <label index="tx_route_marker.street">Straße</label> 
       <label index="tx_route_marker.city">Ort</label> 
       <label index="tx_route_marker.areaLevel1">Bundesland</label> 
