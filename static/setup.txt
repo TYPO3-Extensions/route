@@ -1419,7 +1419,6 @@ plugin.tx_browser_pi1 {
           tx_route_marker.title,
           tx_route_marker.short,
           tx_route_marker.bodytext,
-          tx_route_marker.url,
           tx_route_marker.lat,
           tx_route_marker.lon,
           tx_route_marker.address,
@@ -1428,6 +1427,10 @@ plugin.tx_browser_pi1 {
           tx_route_marker.zip,
           tx_route_marker.city,
           tx_route_marker.country,
+          tx_route_marker.phone,
+          tx_route_marker.fax,
+          tx_route_marker.email,
+          tx_route_marker.url,
           tx_route_marker.image,
           tx_route_marker.imagecaption,
           tx_route_marker.imageseo,
@@ -1589,29 +1592,85 @@ plugin.tx_browser_pi1 {
                       }
                     }
                   }
-                    // url
+                    // contact
                   40 = COA
                   40 {
                     if {
                       isTrue {
-                        field = tx_route_marker.url
+                          // contact
+                        cObject = COA
+                        cObject {
+                            // phone
+                          10 = TEXT
+                          10 {
+                            field = tx_route_marker.phone
+                          }
+                            // fax
+                          20 = TEXT
+                          20 {
+                            field = tx_route_marker.fax
+                          }
+                            // email
+                          30 = TEXT
+                          30 {
+                            field = tx_route_marker.email
+                          }
+                            // url
+                          40 = TEXT
+                          40 {
+                            field = tx_route_marker.url
+                          }
+                        }
                       }
                     }
+                      // header
                     10 = TEXT
                     10 {
-                      value = Details
+                      value = Contact details
                       lang {
-                        de = Weitere Informationen
-                        en = Details
+                        de = Kontakt
+                        en = Contact details
                       }
                       wrap = <h2>|</h2>
                     }
-                    20 = TEXT
+                      // content
+                    20 = COA
                     20 {
-                      typolink {
-                        parameter {
-                          data = field:tx_route_marker.url
+                        // phone
+                      10 = TEXT
+                      10 {
+                        required  = 1
+                        field     = tx_route_marker.phone
+                        wrap      = <span class="phone">|</span><br />
+                      }
+                        // fax
+                      20 = TEXT
+                      20 {
+                        required  = 1
+                        field     = tx_route_marker.fax
+                        wrap      = <span class="fax">|</span><br />
+                      }
+                        // email
+                      30 = TEXT
+                      30 {
+                        required    = 1
+                        typolink {
+                          parameter {
+                            data = field:tx_route_marker.email
+                          }
                         }
+                        noTrimWrap  = |<span class="email">|</span><br />
+                      }
+                        // url
+                      40 = TEXT
+                      40 {
+                        required  = 1
+                        typolink {
+                          parameter {
+                            data = field:tx_route_marker.url
+                          }
+                        }
+                        wrap      = <span class="url">|</span><br />
                       }
                     }
                   }
