@@ -1666,13 +1666,14 @@ plugin.tx_browser_pi1 {
                       40 = TEXT
                       40 {
                         required  = 1
-                        field     = tx_route_marker.url
+                        //field     = tx_route_marker.url
+                        value       = Website
                         typolink {
                           parameter {
                             data = field:tx_route_marker.url
                           }
                         }
-                        wrap = <span class="url">|</span><br />
+                        wrap = <span class="url">|</span>
                       }
                     }
                   }
