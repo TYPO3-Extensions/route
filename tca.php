@@ -460,12 +460,6 @@ $TCA['tx_route_marker'] = array (
       'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.bodytext',
       'config'    => $conf_text_rte,
     ),
-    'url' => array (
-      'exclude'   => 0,
-      'l10n_mode' => 'prefixLangTitle',
-      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.url',
-      'config'    => $arr_wizard_url,
-    ),
     'tx_route_category' => array (
       'exclude'   => $bool_exclude_default,
       'l10n_mode' => 'exclude',
@@ -519,6 +513,55 @@ $TCA['tx_route_marker'] = array (
         ),
       ),
     ),
+    'address' => array (
+      'exclude'   => 0,
+      'l10n_mode' => 'prefixLangTitle',
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.address',
+      'config'    => $conf_text_rte,
+    ),
+    'street' => array (
+      'exclude' => 0,
+      'label'   => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.street',
+      'config'  => $conf_input_30_trim,
+    ),
+    'zip' => array (
+      'exclude' => 0,
+      'label'   => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.zip',
+      'config'  => $conf_input_30_trim,
+    ),
+    'city' => array (
+      'exclude' => 0,
+      'label'   => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.city',
+      'config'  => $conf_input_30_trim,
+    ),
+    'areaLevel2' => array (
+      'exclude' => 0,
+      'label'   => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.areaLevel2',
+      'config'  => $conf_input_30_trim,
+    ),
+    'areaLevel1' => array (
+      'exclude' => 0,
+      'label'   => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.areaLevel1',
+      'config'  => $conf_input_30_trim,
+    ),
+    'country' => array (
+      'exclude' => 0,
+      'label'   => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.country',
+      'config'  => $conf_input_30_trim,
+    ),
+    'geoupdateprompt'     => array(
+      'exclude' => 0,
+      'label'   => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.geoupdateprompt',
+      'config'    => $conf_text_50_10,
+    ),
+    'geoupdateforbidden'     => array(
+      'exclude' => 0,
+      'label'   => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.geoupdateforbidden',
+      'config'  => array (
+        'type'    => 'check',
+        'default' => '0'
+      )
+    ),
     'lon' => array (
       'exclude'   => 0,
       'l10n_mode' => 'prefixLangTitle',
@@ -531,11 +574,41 @@ $TCA['tx_route_marker'] = array (
       'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.lat',
       'config'    => $conf_input_30_trimRequired,
     ),
-    'address' => array (
+    'phone' => array (
+      'exclude' => 0,
+      'label'   => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.phone',
+      'config'  => $conf_input_30_trim,
+    ),
+    'fax' => array (
+      'exclude' => 0,
+      'label'   => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.fax',
+      'config'  => $conf_input_30_trim,
+    ),
+    'email' => array (
+      'exclude' => $bool_exclude_default,
+      'label'   => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.email',
+      'config' => array (
+        'type' => 'input',
+        'size' => '80',
+        'wizards' => array(
+          '_PADDING' => 2,
+          'link' => array(
+            'type' => 'popup',
+            'title' => 'Link',
+            'icon' => 'link_popup.gif',
+            'script' => 'browse_links.php?mode=wizard',
+            'JSopenParams' => 'height=300,width=500,status=0,menubar=0,scrollbars=1'
+          )
+        ),
+        'softref' => 'typolink[linkList]'
+      ),
+      'config'  => $conf_input_80_trim,
+    ),
+    'url' => array (
       'exclude'   => 0,
       'l10n_mode' => 'prefixLangTitle',
-      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.address',
-      'config'    => $conf_text_rte,
+      'label'     => 'LLL:EXT:route/locallang_db.xml:tx_route_marker.url',
+      'config'    => $arr_wizard_url,
     ),
     'tx_route_path' => array (
       'exclude'   => $bool_exclude_default,
