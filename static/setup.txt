@@ -1509,8 +1509,6 @@ plugin.tx_browser_pi1 {
                   30 {
                     if {
                       isTrue {
-                        field = tx_route_marker.address
-                        field >
                           // address
                         cObject = COA
                         cObject {

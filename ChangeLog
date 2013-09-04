@@ -1,5 +1,12 @@
+1.1.1
+  13-09-05
+  Features
+  * #i0003: Sample data
+            Effected files:
+            * res/ext_tables_static+adt.sql   ( new )
+
 1.1.0
-  13-09-02-16
+  13-09-02
   Features
   * #51644: Automatic geocoding
             Effected files:
@@ -7,9 +14,6 @@
             * ext_tables.sql
             * locallang_db.xml
             * tca.php
-  * #i0003: Sample data
-            Effected files:
-            * ext_tables_static+adt.sql
   * #i0002: Sample GPX data
             Effected files:
             * res/sample/data/gpx
