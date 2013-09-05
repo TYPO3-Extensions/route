@@ -52,7 +52,7 @@ plugin.tx_browser_pi1 {
       listNum {
         categoryIconLegend    = 0
         categoryIconMap       = 1
-        categoryIconMapSingle = 2  // No effect, because map uses the list view only!
+        categoryIconMapSingle = 2
         categoryIconText      = 2
       }
     }
