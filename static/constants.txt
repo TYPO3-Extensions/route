@@ -50,9 +50,10 @@ plugin.tx_browser_pi1 {
     enabled = Map +Routes
     icon {
       listNum {
+        categoryIconLegend    = 1
         categoryIconMap       = 1
         categoryIconMapSingle = 2  // No effect, because map uses the list view only!
-        categoryIconText      = 0
+        categoryIconText      = 2
       }
     }
     marker {
@@ -154,9 +155,9 @@ plugin.tx_browser_pi1 {
       enabled = Map
       icon {
         listNum {
-          categoryIconMap       = 2
-          categoryIconMapSingle = 2  // No effect, because map uses the list view only!
-          categoryIconText      = 2
+          //categoryIconMap       = 2
+          //categoryIconMapSingle = 2  // No effect, because map uses the list view only!
+          //categoryIconText      = 2
         }
       }
       marker {
@@ -187,9 +188,9 @@ plugin.tx_browser_pi1 {
     map {
       icon {
         listNum {
-          categoryIconMap       = 2
-          categoryIconMapSingle = 2  // No effect, because map uses the list view only!
-          categoryIconText      = 2
+          //categoryIconMap       = 2
+          //categoryIconMapSingle = 2  // No effect, because map uses the list view only!
+          //categoryIconText      = 2
         }
       }
     }
