@@ -12,9 +12,11 @@
 
 $EM_CONF[$_EXTKEY] = array(
 	'title' => 'Route - with GoogleMaps or OpenStreetMap',
-	'description' =>  'Publish your routes with GoogleMaps or OpenStreetMap. ' .
-                          'Routes have points of interest (POI). ' . 
-                          'You can categorise and filter both: routes and POI.',
+	'description' =>  'Publish your routes with GoogleMaps or OpenStreetMap. ' 
+                        . 'Routes have points of interest (POI). ' 
+                        . 'You can categorise and filter both: routes and POI. '
+                        . 'Address data can geocoded automatically. '
+                        ,
 	'category' => 'plugin',
 	'shy' => 0,
 	'version' => '1.1.1',
