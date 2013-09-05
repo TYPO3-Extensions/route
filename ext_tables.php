@@ -71,6 +71,8 @@ switch( $beLanguage )
     $beLanguage = 'default';
 }
   // Language for labels of static templates and page tsConfig
+
+$geocodingEnabled = $confArr['geocodingEnabled'];
   // Configuration by the extension manager
 
 
@@ -235,7 +237,7 @@ $TCA['tx_route_marker'] = array (
           'lat'     => 'lat',  
           'lon'     => 'lon',  
         ),
-        'update'  => true,  
+        'update'  => $geocodingEnabled,  
       ),
     ),
   ),
