@@ -618,10 +618,10 @@ temp.route {
             dynamic {
               oxMapConfigModules {
                 10 {
-                  value = {$plugin.tx_browser_pi1.map.modules.routes.default}
+                  value = {$plugin.tx_browser_pi1.map.openlayers.modules.routes.default}
                 }
                 20 {
-                  value = {$plugin.tx_browser_pi1.map.modules.routes.debugging}
+                  value = {$plugin.tx_browser_pi1.map.openlayers.modules.routes.debugging}
                 }
               }
             }
@@ -1388,10 +1388,10 @@ plugin.tx_browser_pi1 {
                   dynamic {
                     oxMapConfigModules {
                       10 {
-                        value = {$plugin.tx_browser_pi1.map.modules.default}
+                        value = {$plugin.tx_browser_pi1.map.openlayers.modules.default}
                       }
                       20 {
-                        value = {$plugin.tx_browser_pi1.map.modules.debugging}
+                        value = {$plugin.tx_browser_pi1.map.openlayers.modules.debugging}
                       }
                     }
                   }
