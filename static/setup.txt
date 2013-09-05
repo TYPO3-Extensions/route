@@ -1422,7 +1422,6 @@ plugin.tx_browser_pi1 {
           tx_route_marker.bodytext,
           tx_route_marker.lat,
           tx_route_marker.lon,
-          tx_route_marker.address,
           tx_route_marker.addressname,
           tx_route_marker.street,
           tx_route_marker.zip,

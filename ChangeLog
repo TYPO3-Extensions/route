@@ -3,7 +3,10 @@
   Features
   * #i0003: Sample data
             Effected files:
-            * res/ext_tables_static+adt.sql   ( new )
+            * res
+              * ext_tables_static+adt.sql   ( new )
+              * sample/data
+                * images.zip                ( new )
 
 1.1.0
   13-09-02
