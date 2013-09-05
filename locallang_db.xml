@@ -98,8 +98,8 @@
       <label index="wizard.list">Display all records</label>
     </languageKey>
     <languageKey index="de" type="array">
-      <label index="palette.time">Auf Zeit beschr<![CDATA[&auml;]]>nkter Zugriff</label>
-      <label index="tca_phrase.accessByFeGroup">Auf Gruppen beschr<![CDATA[&auml;]]>nkter Zugriff</label>
+      <label index="palette.time">Auf Zeit beschränkter Zugriff</label>
+      <label index="tca_phrase.accessByFeGroup">Auf Gruppen beschränkter Zugriff</label>
       <label index="tca_phrase.color">Farbe</label>
       <label index="tca_phrase.files">Dateien</label>
       <label index="tca_phrase.icon">Piktogramm</label>
@@ -145,7 +145,7 @@
       <label index="tx_route_marker.lat">Breitengrad</label>
       <label index="tx_route_marker.list_title">Bezeichnung in Listen-Ansichten (wenn leer: Standard-Wert wird genommen)</label>
       <label index="tx_route_marker.list_short">Kurzbeschreibung in Listen-Ansichten (wenn leer: Standard-Wert wird genommen)</label>
-      <label index="tx_route_marker.lon">L<![CDATA[&auml;]]>ngengrad</label>
+      <label index="tx_route_marker.lon">Längengrad</label>
       <label index="tx_route_marker.map_title">Bezeichnung in Karten (wenn leer: Listen-Wert wird genommen)</label>
       <label index="tx_route_marker.map_short">Kurzbeschreibung in Karten (wenn leer: Listen-Wert wird genommen)</label>
       <label index="tx_route_marker.phone">Telefon</label> 
@@ -170,11 +170,11 @@
       <label index="tx_route_path.address_end">Adresse Pfad-Ende</label>                        
       <label index="tx_route_path.bodytext">Beschreibung</label>                        
       <label index="tx_route_path.color">Farbe des Pfads</label>                        
-      <label index="tx_route_path.geodata">Geo-Daten (L<![CDATA[&auml;]]>ngengrad,Breitengrad Umbruch L<![CDATA[&auml;]]>ngengrad,Breitengrad ...)</label>
+      <label index="tx_route_path.geodata">Geo-Daten (Längengrad,Breitengrad Umbruch Längengrad,Breitengrad ...)</label>
       <label index="tx_route_path.gpxfile">GPX-Datei (das Hochladen <![CDATA[&uuml;]]>berschreibt die Daten im Feld [GPX-Daten] unten)</label>
       <label index="tx_route_path.icon_lat">Breitengrad des Piktogramms</label>                        
-      <label index="tx_route_path.icon_lon">L<![CDATA[&auml;]]>ngengrad des Piktogramms</label>
-      <label index="tx_route_path.line_width">Linien-St<![CDATA[&auml;]]>rke des Pfads</label>                        
+      <label index="tx_route_path.icon_lon">Längengrad des Piktogramms</label>
+      <label index="tx_route_path.line_width">Linien-Stärke des Pfads</label>                        
       <label index="tx_route_path.list_title">Bezeichnung in Listen-Ansichten (wenn leer: Standard-Wert wird genommen)</label>
       <label index="tx_route_path.list_short">Kurzbeschreibung in Listen-Ansichten (wenn leer: Standard-Wert wird genommen)</label>
       <label index="tx_route_path.map_title">Bezeichnung in Karten (wenn leer: Listen-Wert wird genommen)</label>
@@ -186,7 +186,7 @@
       <label index="tx_route_path.url">URL (mit weiteren Informationen)</label>
       <label index="wizard.add">Neuen Datensatz erstellen</label>
       <label index="wizard.edit">Markierten Datensatz bearbeiten</label>
-      <label index="wizard.list">Alle Datens<![CDATA[&auml;]]>tze anzeigen</label>
+      <label index="wizard.list">Alle Datensätze anzeigen</label>
     </languageKey>
   </data>
 </T3locallang>
