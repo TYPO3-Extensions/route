@@ -1684,7 +1684,7 @@ plugin.tx_browser_pi1 {
                       40 {
                         required  = 1
                         //field     = tx_route_marker.url
-                        value     = Website
+                        value     = Website &raquo;
                         typolink {
                           parameter {
                             field = tx_route_marker.url
