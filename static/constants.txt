@@ -33,9 +33,6 @@ plugin.tx_route {
   # cat=Route - Path//101;            type=string;    label= upload folder: Path to the upload folder with an ending slash
   path.uploadfolder = uploads/tx_route/
 
-  # cat=Route - Pages*//101;          type=+int;      label= route*: Obligate! Uid of the page with the plugin BrowserMap +Routes
-  pages.route = 
-
 }
   // plugin.tx_route
 
