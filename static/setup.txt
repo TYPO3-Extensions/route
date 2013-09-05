@@ -1638,26 +1638,34 @@ plugin.tx_browser_pi1 {
                         // phone
                       10 = TEXT
                       10 {
+                        if {
+                          isTrue {
+                            field = tx_route_marker.phone
+                          }
+                        }
                         value       = <span class="label">phone</span>: <span class="content">{field:tx_route_marker.phone}</span>
                         lang {
                           de = <span class="label">Tel.</span>: <span class="content">{field:tx_route_marker.phone}</span>
                           en = <span class="label">phone</span>: <span class="content">{field:tx_route_marker.phone}</span>
                         }
                         insertData  = 1
-                        required    = 1
                         wrap        = <span class="phone">|</span><br />
                       }
                         // fax
                       20 = TEXT
                       20 {
+                        if {
+                          isTrue {
+                            field = tx_route_marker.fax
+                          }
+                        }
                         value       = <span class="label">fax</span>: <span class="content">{field:tx_route_marker.fax}</span>
                         lang {
                           de = <span class="label">Fax</span>: <span class="content">{field:tx_route_marker.fax}</span>
                           en = <span class="label">fax</span>: <span class="content">{field:tx_route_marker.fax}</span>
                         }
                         insertData  = 1
-                        required  = 1
-                        wrap      = <span class="fax">|</span><br />
+                        wrap        = <span class="fax">|</span><br />
                       }
                         // email
                       30 = TEXT
