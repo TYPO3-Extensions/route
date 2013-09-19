@@ -19,7 +19,7 @@ $EM_CONF[$_EXTKEY] = array(
                         ,
 	'category' => 'plugin',
 	'shy' => 0,
-	'version' => '1.1.1',
+	'version' => '1.1.2',
 	'dependencies' => 'browser',
 	'conflicts' => '',
 	'priority' => '',
@@ -39,6 +39,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'constraints' => array(
 		'depends' => array(
 			'browser' => '',
+			'typo3' => '4.5.0-6.1.99',
 		),
 		'conflicts' => array(
 		),
