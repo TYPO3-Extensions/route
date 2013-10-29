@@ -34,3 +34,7 @@ div.sbmFloatRight {
 p.tx_route-backbutton {
   text-align: right;
 }
+
+img.oxMap-tooltip-icon {
+  cursor:pointer;
+}

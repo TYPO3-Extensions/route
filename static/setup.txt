@@ -722,6 +722,7 @@ temp.route {
       tx_route_path_cat.icon_offset_y   AS 'tx_route_path_cat.icon_offset_y',
       tx_route_path_cat.uid             AS 'tx_route_path_cat.uid',
       tx_route_marker.title             AS 'tx_route_marker.title',
+      tx_route_marker.bodytext          AS 'tx_route_marker.bodytext',
       tx_route_marker.lat               AS 'tx_route_marker.lat',
       tx_route_marker.lon               AS 'tx_route_marker.lon',
       tx_route_marker.image             AS 'tx_route_marker.image',
