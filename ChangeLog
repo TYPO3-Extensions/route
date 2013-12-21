@@ -7,6 +7,9 @@
             * ext_tables.sql
             * locallang_db.xml
             * tca.php
+            * static
+              * constants.txt
+              * setup.txt
   Improvements
   * #i0005: showUid in single views removed (because showUid has an effect in list views only)
 
