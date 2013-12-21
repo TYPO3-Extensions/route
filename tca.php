@@ -195,7 +195,7 @@ $TCA['tx_route_category'] = array (
   'interface' => array (
     'showRecordFieldList' =>  
       'type,' . 
-      'title,title_lang_ol,' . 
+      'title,title_lang_ol,formlabelcss,' . 
       'icons,icon_offset_x,icon_offset_y,' .
       'tx_route_marker,' .
       'tx_route_path,' .
@@ -360,7 +360,7 @@ $TCA['tx_route_category'] = array (
   'types' => array (
     '0' => array ( 'showitem' =>
       '--div--;LLL:EXT:route/locallang_db.xml:tx_route_category.div_cat,' .
-        'type,title;;1;;1-1-1,' .
+        'type,title;;1;;1-1-1,formlabelcss,' .
       '--div--;LLL:EXT:route/locallang_db.xml:tx_route_category.div_icon,   ' .
         '--palette--;LLL:EXT:route/locallang_db.xml:tx_route_category.icons;icons,' .
       '--div--;LLL:EXT:route/locallang_db.xml:tx_route_category.div_path,   ' .

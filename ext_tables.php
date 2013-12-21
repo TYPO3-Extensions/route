@@ -180,6 +180,12 @@ $TCA['tx_route_path'] = array (
     'dividers2tabs'     => true,
     'dynamicConfigFile' => t3lib_extMgm::extPath( $_EXTKEY ) . 'tca.php',
     'iconfile'          => t3lib_extMgm::extRelPath( $_EXTKEY ) . 'files/img/route.png',
+    'searchFields'      => 'title,short,bodytext,url,' 
+      . 'tx_route_category,' 
+      . 'tx_route_marker,' 
+      . 'list_title,list_short,map_title,map_short,' 
+      . 'address_start,address_end,' 
+      . 'seo_keywords,seo_description',
     'tx_browser'  => array (
         'route' => array (
           'gpxfile' => 'gpxfile',  
@@ -214,6 +220,7 @@ $TCA['tx_route_marker'] = array (
     'dividers2tabs'     => true,
     'dynamicConfigFile' => t3lib_extMgm::extPath( $_EXTKEY ) . 'tca.php',
     'iconfile'          => t3lib_extMgm::extRelPath( $_EXTKEY ) . 'files/img/route.png',
+    'searchFields'      => 'title,short,bodytext,tx_route_category,addressname,street,zip,city,areaLevel2,areaLevel1,country,phone,fax,email,url,tx_route_path,list_title,list_short,map_title,map_short,seo_keywords,seo_description',
     'tx_browser'        => array (
       'geoupdate' => array (
         'address' => array (
@@ -261,6 +268,7 @@ $TCA['tx_route_category'] = array (
     'dynamicConfigFile' => t3lib_extMgm::extPath( $_EXTKEY ) . 'tca.php',
     'thumbnail'         => 'image',
     'iconfile'          => t3lib_extMgm::extRelPath( $_EXTKEY ) . 'files/img/route.png',
+    'searchFields'      =>  'title,title,title_lang_ol,formlabelcss',
   ),
 );
   // Category
