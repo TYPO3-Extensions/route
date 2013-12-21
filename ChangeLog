@@ -1,5 +1,11 @@
 1.1.5
   13-12-21
+  Feature
+  * #54548: CSS class for form lables
+            Effected files:
+            * ext_tables.sql
+            * locallang_db.xml
+            * tca.php
   Improvements
   * #i0005: showUid in single views removed (because showUid has an effect in list views only)
 

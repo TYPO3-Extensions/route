@@ -26,6 +26,7 @@ CREATE TABLE tx_route_category (
   title tinytext NOT NULL,
   title_lang_ol tinytext,
 
+  formlabelcss varchar(30) default '',
   icons text,
   icon_offset_x int(11) DEFAULT '0' NOT NULL,
   icon_offset_y int(11) DEFAULT '0' NOT NULL,

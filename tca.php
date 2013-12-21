@@ -212,6 +212,11 @@ $TCA['tx_route_category'] = array (
       'label'   => 'LLL:EXT:route/locallang_db.xml:tca_phrase.lang_ol',
       'config'  => $conf_input_30_trim,
     ),
+    'formlabelcss' => array (
+      'exclude' => 0,
+      'label'   => 'LLL:EXT:route/locallang_db.xml:tx_route_category.formlabelcss',
+      'config'  => $conf_input_30,
+    ),
     'icons' => array (
       'exclude'   => $bool_exclude_default,
 //      'l10n_mode' => 'exclude',
