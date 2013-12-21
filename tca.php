@@ -68,18 +68,6 @@ if (!defined ('TYPO3_MODE'))  die ('Access denied.');
   $conf_file_one_image['size']     =  1;
   $conf_file_one_image['maxitems'] = 99;
 
-  $conf_file_icon = array (
-    'type'          => 'group',
-    'internal_type' => 'file',
-    'allowed'       => $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext'],
-    'max_size'      => $GLOBALS['TYPO3_CONF_VARS']['BE']['maxFileSize'],
-    'uploadfolder'  => 'uploads/tx_route',
-    'show_thumbs'   => 1,
-    'size'          => 1,
-    'minitems'      => 0,
-    'maxitems'      => 1,
-  );
-
   $conf_input_30_trim = array (
     'type' => 'input',
     'size' => '30',

@@ -1,3 +1,8 @@
+1.1.5
+  13-12-21
+  Improvements
+  * #i0005: showUid in single views removed (because showUid has an effect in list views only)
+
 1.1.4
   13-10-29
   Improvements

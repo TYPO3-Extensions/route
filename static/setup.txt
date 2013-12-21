@@ -1194,7 +1194,6 @@ plugin.tx_browser_pi1 {
             enabled = disabled
           }
         }
-        showUid   = {$plugin.tx_browser_pi1.map.aliases.showUid.path}
         name      = Route (text only)
         select    < temp.route.sql.select
         from      < temp.route.sql.from
@@ -1415,7 +1414,6 @@ plugin.tx_browser_pi1 {
             }
           }
         }
-        showUid = {$plugin.tx_browser_pi1.map.aliases.showUid.marker}
         name    = Marker (single only)
         select (
           tx_route_marker.title,
