@@ -53,6 +53,16 @@ plugin.tx_browser_pi1 {
       }
       width = 748
     }
+    html {
+      form {
+        label {
+          class {
+            marker  = tx_route_marker_cat.formlabelcss
+            path    = tx_route_path_cat.formlabelcss
+          }
+        }
+      }
+    }
     icon {
       listNum {
         categoryIconLegend    = 0
@@ -68,7 +78,6 @@ plugin.tx_browser_pi1 {
         longitude             = tx_route_marker.lon
         description           = tx_route_marker.title
         category              = tx_route_marker_cat.title
-        categoryFormlabelcss  = tx_route_marker_cat.formlabelcss
         categoryIcon          = tx_route_marker_cat.icons
         categoryOffsetX       = tx_route_marker_cat.icon_offset_x
         categoryOffsetY       = tx_route_marker_cat.icon_offset_y
