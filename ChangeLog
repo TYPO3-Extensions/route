@@ -1,6 +1,10 @@
 1.1.5
   13-12-21
   Features
+  Features
+  * #54575: Evaluate Backend tables route
+            Effected files:
+            * ext_tables.php
   * #54550: TCA search fields
   * #54548: CSS class for form lables
             Effected files:

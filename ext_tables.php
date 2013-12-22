@@ -187,11 +187,14 @@ $TCA['tx_route_path'] = array (
       . 'address_start,address_end,' 
       . 'seo_keywords,seo_description',
     'tx_browser'  => array (
-        'route' => array (
-          'gpxfile' => 'gpxfile',  
-          'geodata' => 'geodata',  
+      'route' => array (
+        'gpxfile' => 'gpxfile',  
+        'geodata' => 'geodata',  
+        'path' => array (
+          'category'  => 'tx_route_category',  
+          'path'      => 'tx_route_path',  
         ),
-        
+      ),
     ),
   ),
 );
@@ -246,6 +249,12 @@ $TCA['tx_route_marker'] = array (
         ),
         'update'  => $geocodingEnabled,  
       ),
+      'route' => array (
+        'marker' => array (
+          'category'  => 'tx_route_category',  
+          'path'      => 'tx_route_path',  
+        ),
+      ),
     ),
   ),
 );
@@ -269,6 +278,14 @@ $TCA['tx_route_category'] = array (
     'thumbnail'         => 'image',
     'iconfile'          => t3lib_extMgm::extRelPath( $_EXTKEY ) . 'files/img/route.png',
     'searchFields'      =>  'title,title,title_lang_ol,formlabelcss',
+    'tx_browser'        => array (
+      'route' => array (
+        'category' => array (
+          'marker'  => 'tx_route_marker',  
+          'path'    => 'tx_route_path',  
+        ),
+      ),
+    ),
   ),
 );
   // Category
