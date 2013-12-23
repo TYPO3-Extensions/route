@@ -192,7 +192,7 @@ $TCA['tx_route_path'] = array (
         'geodata' => 'geodata',  
         'path' => array (
           'category'  => 'tx_route_category',  
-          'path'      => 'tx_route_path',  
+          'marker'    => 'tx_route_marker',  
         ),
       ),
     ),
