@@ -1,3 +1,11 @@
+1.2.2
+  14-01-15
+  * #i0006: Bugfix manual
+
+1.2.1
+  13-12-29
+  * #52899: Properties name and category must have a different value
+
 1.1.5
   13-12-21
   Features
