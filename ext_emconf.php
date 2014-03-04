@@ -12,14 +12,14 @@
 
 $EM_CONF[$_EXTKEY] = array(
 	'title' => 'Route - with GoogleMaps or OpenStreetMap',
-	'description' =>  'Publish your routes with GoogleMaps or OpenStreetMap. ' 
-                        . 'Routes have points of interest (POI). ' 
+	'description' =>  'Publish your routes with GoogleMaps or OpenStreetMap. '
+                        . 'Routes have points of interest (POI). '
                         . 'You can categorise and filter both: routes and POI. '
-                        . 'Address data can geocoded automatically. '
+                        . 'Address data can geocoded automatically. Manual: http://typo3-route.de/typo3conf/ext/route/doc/manual.pdf'
                         ,
 	'category' => 'plugin',
 	'shy' => 0,
-	'version' => '1.2.3',
+	'version' => '1.2.4',
 	'dependencies' => 'browser',
 	'conflicts' => '',
 	'priority' => '',
