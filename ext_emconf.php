@@ -19,7 +19,7 @@ $EM_CONF[$_EXTKEY] = array(
                         ,
 	'category' => 'plugin',
 	'shy' => 0,
-	'version' => '1.2.4',
+	'version' => '1.2.5',
 	'dependencies' => 'browser',
 	'conflicts' => '',
 	'priority' => '',

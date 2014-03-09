@@ -1,3 +1,8 @@
+1.2.5
+  14-03-09
+  Improvement
+  * #i0008: manual: three plugins
+
 1.2.4
   14-03-04
   Improvement
@@ -10,6 +15,7 @@
 
 1.2.1
   13-12-29
+  Improvement
   * #52899: Properties name and category must have a different value
 
 1.1.5
