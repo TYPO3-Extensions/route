@@ -1,7 +1,7 @@
 <?php
 
 $EM_CONF[ $_EXTKEY ] = array(
-  'title' => 'Route - TYPO3 with GoogleMaps or OpenStreetMap',
+  'title' => 'Route - TYPO3 with GoogleMaps and OpenStreetMap',
   'description' => 'Manual: http://typo3-route.de/typo3conf/ext/route/doc/manual.pdf'
                     . 'Publish your routes with GoogleMaps or OpenStreetMap. '
                     . 'Routes have points of interest (POI). '
