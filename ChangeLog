@@ -1,3 +1,12 @@
+6.0.0
+  14-09-26
+  Major Feature
+  * #61911: Major Feature	Accepted	Should have	Upgrade TYPO3 6.2	Dirk Wildt		6.0.0
+  Improvement
+  * #i0009: Corporate Design
+  Bugfix
+	* #52544: Bug	Accepted	Should have	mysql_real_escape_string(): Can't connect to local MySQL server
+
 1.2.5
   14-03-09
   Improvement
