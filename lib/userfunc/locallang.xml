@@ -23,56 +23,55 @@
             title="Route is powered by die-netzmacher.de"
             target="_blank">
             <img src="../../../../typo3conf/ext/route/lib/icons/route_80x80.gif"
-              width="80" 
-              height="80" 
+              width="80"
+              height="80"
               alt="Route is powered by die-netzmacher.de" /></a>
-          <a href="http://die-netzmacher.de/" 
+          <a href="http://die-netzmacher.de/"
             alt="Route is powered by die-netzmacher.de"
             title="Route is powered by die-netzmacher.de"
             target="_blank">
             <img src="../../../../typo3conf/ext/route/lib/icons/die-netzmacher-logo-quadrat.png"
-              width="80" 
-              height="80" 
+              width="80"
+              height="80"
               alt="Route is powered by die-netzmacher.de" /></a>
         </div>
-        <ul style="list-style:outside;margin-left:2em;">
+        <ul style="list-style:inside;">
           <li style="margin-bottom:.6em;">
             <a href="http://typo3.org/extension-manuals/route/"
-              style="text-decoration:underline;"
+              style="background:none;border:none;float:none;text-decoration:underline;"
               alt="Route - online manual"
               title="Route - online manual"
               target="_blank">TYPO3-Route online manual</a>
           </li>
           <li style="margin-bottom:.6em;">
             <a href="../../../../typo3conf/ext/route/doc/manual.pdf"
-              style="text-decoration:underline;"
+              style="background:none;border:none;float:none;text-decoration:underline;"
               alt="Route - PDF manual"
               title="Route - PDF manual"
               target="_blank">TYPO3-Route PDF manual</a>
           </li>
           <li style="margin-bottom:.6em;">
             <a href="http://typo3-route.de/en"
-              style="text-decoration:underline;"
+              style="background:none;border:none;float:none;text-decoration:underline;"
               alt="Route - the Shopping Cart"
               title="Route - the Shopping Cart"
               target="_blank">TYPO3-Route website</a>
           </li>
           <li style="margin-bottom:.6em;">
-            <a href="http://typo3-route.de/forum/" 
-              style="text-decoration:underline;"
+            <a href="http://typo3-route.de/forum/"
+              style="background:none;border:none;float:none;text-decoration:underline;"
               alt="TYPO3-Route - Forum"
               title="TYPO3-Route - Forum"
               target="_blank">TYPO3-Route forum</a>
           </li>
           <li style="margin-bottom:.6em;">
-            <a href="http://die-netzmacher.de/" 
-              style="text-decoration:underline;"
+            <a href="http://die-netzmacher.de/"
+              style="background:none;border:none;float:none;text-decoration:underline;"
               alt="Die Netzmacher - the developers of TYPO3 without PHP."
               title="Die Netzmacher - the developers of TYPO3 without PHP."
               target="_blank">Die Netzmacher - the developers of TYPO3-Route</a>
           </li>
         </ul>
-        </div>
       ]]></label>
       <label index="promptSponsors"><![CDATA[
         <h1 style="text-align:left;">
@@ -92,7 +91,7 @@
         <p style="padding:0 0 1em 0;">
           You like to subsidise the TYPO3-Route project?
           <a href="http://typo3-route.de/en/sponsoring/"
-            style="text-decoration:underline;"
+            style="background:none;border:none;float:none;text-decoration:underline;"
             alt="Your logo with your URL. 120 x 90 pixel."
             title="Your logo with your URL. 120 x 90 pixel."
             target="_blank">
@@ -102,27 +101,27 @@
           alt="Your logo with your URL. 120 x 90 pixel."
           title="Your logo with your URL. 120 x 90 pixel."
           target="_blank">
-          <img src="../../../../typo3conf/ext/route/lib/icons/your-logo_default-blue.gif" 
-            width="120" 
-            height="90" 
+          <img src="../../../../typo3conf/ext/route/lib/icons/your-logo_default-blue.gif"
+            width="120"
+            height="90"
             alt="Your logo with your URL. 120 x 90 pixel." /></a>
         &nbsp;&nbsp;
         <a href="http://typo3-route.de/en/sponsoring/"
           alt="Your logo with your URL. 120 x 90 pixel."
           title="Your logo with your URL. 120 x 90 pixel."
           target="_blank">
-          <img src="../../../../typo3conf/ext/route/lib/icons/your-logo_default-grey.gif" 
-            width="120" 
-            height="90" 
+          <img src="../../../../typo3conf/ext/route/lib/icons/your-logo_default-grey.gif"
+            width="120"
+            height="90"
             alt="Your logo with your URL. 120 x 90 pixel." /></a>
         &nbsp;&nbsp;
         <a href="http://typo3-route.de/en/sponsoring/"
           alt="Your logo with your URL. 120 x 90 pixel."
           title="Your logo with your URL. 120 x 90 pixel."
           target="_blank">
-          <img src="../../../../typo3conf/ext/route/lib/icons/your-logo_default-grey.gif" 
-            width="120" 
-            height="90" 
+          <img src="../../../../typo3conf/ext/route/lib/icons/your-logo_default-grey.gif"
+            width="120"
+            height="90"
             alt="Your logo with your URL. 120 x 90 pixel." /></a>
       ]]></label>
       <label index="typoscriptMissing"><![CDATA[
@@ -148,56 +147,55 @@
             title="Route is powered by die-netzmacher.de"
             target="_blank">
             <img src="../../../../typo3conf/ext/route/lib/icons/route_80x80.gif"
-              width="80" 
-              height="80" 
+              width="80"
+              height="80"
               alt="Route is powered by die-netzmacher.de" /></a>
-          <a href="http://die-netzmacher.de/" 
+          <a href="http://die-netzmacher.de/"
             alt="Route is powered by die-netzmacher.de"
             title="Route is powered by die-netzmacher.de"
             target="_blank">
             <img src="../../../../typo3conf/ext/route/lib/icons/die-netzmacher-logo-quadrat.png"
-              width="80" 
-              height="80" 
+              width="80"
+              height="80"
               alt="Route is powered by die-netzmacher.de" /></a>
         </div>
-        <ul style="list-style:outside;margin-left:2em;">
+        <ul style="list-style:inside;">
           <li style="margin-bottom:.6em;">
             <a href="http://typo3.org/extension-manuals/route/"
-              style="text-decoration:underline;"
+              style="background:none;border:none;float:none;text-decoration:underline;"
               alt="Route - Online-Handbuch"
               title="Route - Online-Handbuch"
               target="_blank">TYPO3-Route Online-Handbuch</a>
           </li>
           <li style="margin-bottom:.6em;">
             <a href="../../../../typo3conf/ext/route/doc/manual.pdf"
-              style="text-decoration:underline;"
+              style="background:none;border:none;float:none;text-decoration:underline;"
               alt="Route - PDF-Handbuch"
               title="Route - PDF-Handbuch"
               target="_blank">TYPO3-Route PDF-Handbuch</a>
           </li>
           <li style="margin-bottom:.6em;">
             <a href="http://typo3-route.de/en"
-              style="text-decoration:underline;"
+              style="background:none;border:none;float:none;text-decoration:underline;"
               alt="Route - the Shopping Cart"
               title="Route - the Shopping Cart"
               target="_blank">TYPO3-Route Website</a>
           </li>
           <li style="margin-bottom:.6em;">
-            <a href="http://typo3-route.de/forum/" 
-              style="text-decoration:underline;"
+            <a href="http://typo3-route.de/forum/"
+              style="background:none;border:none;float:none;text-decoration:underline;"
               alt="TYPO3-Route - Forum"
               title="TYPO3-Route - Forum"
               target="_blank">TYPO3-Route Forum</a>
           </li>
           <li style="margin-bottom:.6em;">
-            <a href="http://die-netzmacher.de/" 
-              style="text-decoration:underline;"
+            <a href="http://die-netzmacher.de/"
+              style="background:none;border:none;float:none;text-decoration:underline;"
               alt="Die Netzmacher - die Entwickler von TYPO3 ohne PHP."
               title="Die Netzmacher - die Entwickler von TYPO3 ohne PHP."
               target="_blank">Die Netzmacher - die Entwickler von TYPO3-Route</a>
           </li>
         </ul>
-        </div>
       ]]></label>
       <label index="promptSponsors"><![CDATA[
         <h1 style="text-align:left;">
@@ -217,7 +215,7 @@
         <p style="padding:0 0 1em 0;">
           M&ouml;chtest Du das TYPO3-Route-Projekt unterst&uuml;tzen?
           <a href="http://typo3-route.de/de/sponsoring/"
-            style="text-decoration:underline;"
+            style="background:none;border:none;float:none;text-decoration:underline;"
             alt="Dein Logo mit Deiner URL. 120 x 90 Pixel."
             title="Dein Logo mit Deiner URL. 120 x 90 Pixel."
             target="_blank">
@@ -227,27 +225,27 @@
           alt="Dein Logo mit Deiner URL. 120 x 90 Pixel."
           title="Dein Logo mit Deiner URL. 120 x 90 Pixel."
           target="_blank">
-          <img src="../../../../typo3conf/ext/route/lib/icons/your-logo_de-blue.gif" 
-            width="120" 
-            height="90" 
+          <img src="../../../../typo3conf/ext/route/lib/icons/your-logo_de-blue.gif"
+            width="120"
+            height="90"
             alt="Dein Logo mit Deiner URL. 120 x 90 Pixel." /></a>
         &nbsp;&nbsp;
         <a href="http://typo3-route.de/de/sponsoring/"
           alt="Dein Logo mit Deiner URL. 120 x 90 Pixel."
           title="Dein Logo mit Deiner URL. 120 x 90 Pixel."
           target="_blank">
-          <img src="../../../../typo3conf/ext/route/lib/icons/your-logo_de-grey.gif" 
-            width="120" 
-            height="90" 
+          <img src="../../../../typo3conf/ext/route/lib/icons/your-logo_de-grey.gif"
+            width="120"
+            height="90"
             alt="Dein Logo mit Deiner URL. 120 x 90 Pixel." /></a>
         &nbsp;&nbsp;
         <a href="http://typo3-route.de/de/sponsoring/"
           alt="Dein Logo mit Deiner URL. 120 x 90 Pixel."
           title="Dein Logo mit Deiner URL. 120 x 90 Pixel."
           target="_blank">
-          <img src="../../../../typo3conf/ext/route/lib/icons/your-logo_de-grey.gif" 
-            width="120" 
-            height="90" 
+          <img src="../../../../typo3conf/ext/route/lib/icons/your-logo_de-grey.gif"
+            width="120"
+            height="90"
             alt="Dein Logo mit Deiner URL. 120 x 90 Pixel." /></a>
       ]]></label>
       <label index="typoscriptMissing"><![CDATA[

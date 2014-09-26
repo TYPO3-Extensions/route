@@ -1,11 +1,14 @@
-  # cat=geocoding/enable/100;      type=boolean; label= Enabled:If geocoding is enabled, latitude and longitude will updated automatically by the Google API. If you are using the Google API you have to publish your address data with Google Maps. And the free use of the API is limited. For details please refer to the FAQ of the Google API at http://developers.google.com/maps/faq
+  # cat=geocoding//100;     type=boolean; label= Enabled:If geocoding is enabled, latitude and longitude will updated automatically by the Google API. If you are using the Google API you have to publish your address data with Google Maps. And the free use of the API is limited. For details please refer to the FAQ of the Google API at http://developers.google.com/maps/faq
 geocodingEnabled  = 0
-  # cat=geocoding/others/199;      type=user[EXT:route/lib/userfunc/class.tx_route_userfunc.php:tx_route_userfunc->promptSponsors]; label=Subsidise the Route project!
+  # cat=geocoding//199;     type=user[EXT:route/lib/userfunc/class.tx_route_userfunc.php:tx_route_userfunc->promptSponsors]; label=Subsidise the Route project!
 geocodingSponsors = 1
 
-  # cat=language/enable/100;      type=options[English,German]; label= Backend Langauge: Language for special backend labels like TypoScript static templates. Property has an effect in the backend only.
+  # cat=language//100;      type=options[English,German]; label= Backend Langauge: Language for special backend labels like TypoScript static templates. Property has an effect in the backend only.
 beLanguage = English
-  # cat=language/others/198;      type=user[EXT:route/lib/userfunc/class.tx_route_userfunc.php:tx_route_userfunc->promptExternalLinks]; label=External Links
-beLanguageExternalLinks = 1
-  # cat=language/others/199;      type=user[EXT:route/lib/userfunc/class.tx_route_userfunc.php:tx_route_userfunc->promptSponsors]; label=Subsidise the Route project!
+  # cat=language//199;      type=user[EXT:route/lib/userfunc/class.tx_route_userfunc.php:tx_route_userfunc->promptSponsors]; label=Subsidise the Route project!
 beLanguageSponsors = 1
+
+  # cat=HELP !//198;      type=user[EXT:route/lib/userfunc/class.tx_route_userfunc.php:tx_route_userfunc->promptExternalLinks]; label=External Links
+helpExternalLinks = 1
+  # cat=HELP !//199;      type=user[EXT:route/lib/userfunc/class.tx_route_userfunc.php:tx_route_userfunc->promptSponsors]; label=Subsidise the Route project!
+helpSponsors = 1
