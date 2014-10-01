@@ -1,0 +1,1 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:route/Configuration/TypoScript/Constants/Plugins/_constants.ts">

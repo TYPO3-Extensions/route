@@ -1,9 +1,9 @@
-  
+
   ///////////////////////////////////////
   //
   // plugin.tx_route
   // plugin.tx_browser_pi1
-  // globalVar 
+  // globalVar
   //    tx_browser_pi1|markerUid  > 0
   //    tx_browser_pi1|routeUid   > 0
 
@@ -16,13 +16,13 @@
 plugin.tx_route {
 
   # cat=Route - Images//100;          type=options[17,18,25,26];  label= Position in list view: 17: In text right. 18: In text left. 25: Right beside the text. 26: Left beside the text.
-  images.list.position = 18 
+  images.list.position = 18
   # cat=Route - Images//101;          type=string;      label= Max height in list view: Max height of images in list views
-  images.list.maxHeight = 60c 
+  images.list.maxHeight = 60c
   # cat=Route - Images//102;          type=string;      label= Max width in list view: Max width of images in list views
   images.list.maxWidth  = 100
   # cat=Route - Images//200;          type=options[default,1,2,8,9,10,17,18,25,26];  label= Position in pop ups: default: above center. 1: above right. 2: above left. 8: below center. 9: below right. 10: below left. 17: In text right. 18: In text left. 25: Right beside the text. 26: Left beside the text.
-  images.map.position = 26 
+  images.map.position = 26
   # cat=Route - Images//201;          type=string;      label= Max height in pop ups: Max height of images in the pop up of the map
   images.map.maxHeight = 60c
   # cat=Route - Images//202;          type=string;      label= Max width in pop ups: Max width of images in the pop up of the map
@@ -44,6 +44,12 @@ plugin.tx_route {
 
 plugin.tx_browser_pi1 {
   map {
+    aliases {
+      showUid {
+        marker  = markerUid
+        path    = routeUid
+      }
+    }
     controlling {
       enabled = Map +Routes
     }
@@ -83,8 +89,8 @@ plugin.tx_browser_pi1 {
         categoryOffsetY       = tx_route_marker_cat.icon_offset_y
       }
       position {
-        categoryIconLegend  = 0 
-        categoryIconMap     = 0 
+        categoryIconLegend  = 0
+        categoryIconMap     = 0
       }
     }
     path {
@@ -157,7 +163,7 @@ plugin.tx_browser_pi1 {
   // plugin.tx_browser_pi1
 
 
-  
+
   ///////////////////////////////////////
   //
   // globalVar tx_browser_pi1|markerUid > 0

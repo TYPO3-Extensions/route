@@ -1,0 +1,1 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:route/Configuration/TypoScript/Setup/Plugins/TxBrowserPi1/Views/47676/Navigation/Map/setup.ts">

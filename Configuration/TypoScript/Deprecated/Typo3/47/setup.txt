@@ -275,10 +275,10 @@ temp.route {
     }
     equalH >
     caption >
-    textPos = {$plugin.tx_route.images.map.position} 
+    textPos = {$plugin.tx_route.images.map.position}
     layout {
       key >
-      key = {$plugin.tx_route.images.map.position} 
+      key = {$plugin.tx_route.images.map.position}
     }
     maxWInText  = {$plugin.tx_route.images.map.maxWidth}
     imgMax      = 1
@@ -314,9 +314,9 @@ temp.route {
     1 {
       file {
         width   >
-        width   = {$plugin.tx_route.images.list.maxWidth} 
+        width   = {$plugin.tx_route.images.list.maxWidth}
         height  >
-        height  = {$plugin.tx_route.images.list.maxHeight} 
+        height  = {$plugin.tx_route.images.list.maxHeight}
         width   >
         height  >
       }
@@ -532,10 +532,10 @@ temp.route {
     }
     equalH >
     caption >
-    textPos = {$plugin.tx_route.images.map.position} 
+    textPos = {$plugin.tx_route.images.map.position}
     layout {
       key >
-      key = {$plugin.tx_route.images.map.position} 
+      key = {$plugin.tx_route.images.map.position}
     }
     maxWInText  = {$plugin.tx_route.images.map.maxWidth}
     imgMax      = 1
@@ -571,9 +571,9 @@ temp.route {
     1 {
       file {
         width   >
-        width   = {$plugin.tx_route.images.list.maxWidth} 
+        width   = {$plugin.tx_route.images.list.maxWidth}
         height  >
-        height  = {$plugin.tx_route.images.list.maxHeight} 
+        height  = {$plugin.tx_route.images.list.maxHeight}
         width   >
         height  >
       }
@@ -960,11 +960,11 @@ plugin.tx_browser_pi1 {
             listview {
               value (
                 <div id="c###TT_CONTENT.UID###-listview-###MODE###" class="###VIEW###view ###VIEW###view-content ###VIEW###view-###MODE### ###VIEW###view-content-###MODE###">
-                  <!-- ###LISTBODY### begin -->
                   ###MAP###
+                  <!-- ###LISTBODY### begin -->
                     <!-- ###LISTBODYITEM### begin -->
                     <!-- ###LISTBODYITEM### end -->
-                <!-- ###LISTBODY### end -->
+                  <!-- ###LISTBODY### end -->
                 </div> <!-- /listview -->
 )
             }
@@ -1002,9 +1002,9 @@ plugin.tx_browser_pi1 {
               1 {
                 file {
                   width   >
-                  width   = {$plugin.tx_route.images.list.maxWidth} 
+                  width   = {$plugin.tx_route.images.list.maxWidth}
                   height  >
-                  height  = {$plugin.tx_route.images.list.maxHeight} 
+                  height  = {$plugin.tx_route.images.list.maxHeight}
                 }
                 imageLinkWrap >
                 imageLinkWrap = 1
@@ -1023,10 +1023,10 @@ plugin.tx_browser_pi1 {
               //equalH      >
               //equalH      = {$plugin.tx_route.images.list.maxHeight}
               textPos >
-              textPos = {$plugin.tx_route.images.list.position} 
+              textPos = {$plugin.tx_route.images.list.position}
               layout {
                 key >
-                key = {$plugin.tx_route.images.list.position} 
+                key = {$plugin.tx_route.images.list.position}
               }
                 // title, cat image, short, link to single view
               text = COA
@@ -1146,7 +1146,7 @@ plugin.tx_browser_pi1 {
             enabled = disabled
           }
         }
-        select = tx_route_path.title 
+        select = tx_route_path.title
         tx_route_path {
             // table.field.uid: title
           title = TEXT

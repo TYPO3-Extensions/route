@@ -1,12 +1,22 @@
 6.0.0
   14-09-26
   Major Feature
+  * #61939: Make TypoScript clear: Different files instead of one file
+            * static removed: Mind manual update!
   * #61911: Upgrade TYPO3 6.2
             * Integration of 4.x-Extensions fixed for 6.2
               * cps_tcatree
+  Feature
+  * #61998: Template for SEO Dynamic Tag 2
+  * #61937: Links depending on record type: record, page, noType, url
+            See #61938 at Browser
   Improvement
   * #i0009: Corporate Design
   Bugfix
+  * #61926: ###MAP### marker in html template is moved from inner ###LISTBODY### to outer ###LISTBODY###
+            (See browser ChangeLog too)
+            Effected files:
+            * static/setup.txt
 	* #52544: mysql_real_escape_string(): Can't connect to local MySQL server
             Solved. See: #61520
 

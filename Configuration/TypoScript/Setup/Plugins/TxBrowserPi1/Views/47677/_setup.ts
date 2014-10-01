@@ -1,0 +1,2 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:route/Configuration/TypoScript/Setup/Plugins/TxBrowserPi1/Views/47677/list.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:route/Configuration/TypoScript/Setup/Plugins/TxBrowserPi1/Views/47677/single.ts">
